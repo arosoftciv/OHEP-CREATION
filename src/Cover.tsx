@@ -18,11 +18,11 @@ export const Cover: React.FC = () => {
   const r = mulberry32(4);
   return (
     <AbsoluteFill style={{background: C.sand, overflow: 'hidden'}}>
-      {/* Arrière-plan : photo réelle OHEL (partie haute du chantier, sans visage) – à remplacer par une réalisation achevée dès réception */}
-      <div style={{position: 'absolute', left: 0, top: 860, width: 1080, height: 520, overflow: 'hidden'}}>
-        <Img src={staticFile('assets/chantier-ohel-01.png')} style={{width: 1080, height: (1080 * 1671) / 941, display: 'block'}} />
-        <AbsoluteFill style={{background: 'linear-gradient(180deg, #f4e9df 0%, rgba(244,233,223,0) 30%, rgba(244,233,223,0) 70%, #f4e9df 100%)'}} />
-        <AbsoluteFill style={{background: 'linear-gradient(90deg, #f4e9df 0%, rgba(244,233,223,0.2) 45%, rgba(244,233,223,0) 100%)'}} />
+      {/* Arrière-plan : réalisation OHEL réelle (façade en BTCS, image extraite de realisation-ohel.mp4) */}
+      <div style={{position: 'absolute', left: 0, top: 820, width: 1080, height: 760, overflow: 'hidden'}}>
+        <Img src={staticFile('assets/realisation-facade.jpg')} style={{width: 1080, height: 1920, display: 'block', objectFit: 'cover', marginTop: -330}} />
+        <AbsoluteFill style={{background: 'linear-gradient(180deg, #f4e9df 0%, rgba(244,233,223,0) 22%, rgba(244,233,223,0) 75%, rgba(244,233,223,0.6) 100%)'}} />
+        <AbsoluteFill style={{background: 'linear-gradient(90deg, rgba(244,233,223,0.85) 0%, rgba(244,233,223,0) 40%, rgba(244,233,223,0) 100%)'}} />
       </div>
       <AbsoluteFill style={{background: 'linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0) 46%)'}} />
       {/* Terre rouge à gauche */}

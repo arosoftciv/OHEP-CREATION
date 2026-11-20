@@ -1,16 +1,23 @@
 import React from 'react';
 import {AbsoluteFill, getStaticFiles, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Img} from 'remotion';
-import {OffthreadVideo} from 'remotion';
+import {OffthreadVideo, Sequence} from 'remotion';
 import {C, FONT, SAFE} from '../theme';
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 export const REALISATION_FILE = 'assets/realisation-ohel.mp4';
-// Début (en secondes) du meilleur extrait de la vidéo de réalisation, à ajuster après visionnage.
-export const REALISATION_START_S = 0;
+// Extraits retenus de la vidéo réelle OHEL (VID-20261120-WA0044), recadrés en 1080×1920 30 i/s
+// par ffmpeg (voir rapport) : 0,0–2,8 s · 8,4–10,8 s · 12,0–14,4 s · 22,8–24,7 s
+const XF = 10;
+const CLIPS = [
+  {file: 'assets/realisation/clip1.mp4', dur: 84, label: 'Façade en BTCS'},
+  {file: 'assets/realisation/clip2.mp4', dur: 72, label: 'Terrasse couverte'},
+  {file: 'assets/realisation/clip3.mp4', dur: 72, label: 'Espaces intérieurs'},
+  {file: 'assets/realisation/clip4.mp4', dur: 56, label: 'Chambre aménagée'},
+];
 
 const hasRealisation = () => {
   try {
-    return getStaticFiles().some((f) => f.name === REALISATION_FILE);
+    return CLIPS.every((c) => getStaticFiles().some((f) => f.name === c.file));
   } catch {
     return false;
   }
@@ -25,13 +32,38 @@ export const S5Projects: React.FC = () => {
   return (
     <AbsoluteFill style={{background: C.anthraciteDeep}}>
       {real ? (
-        <AbsoluteFill style={{transform: `scale(${interpolate(frame, [0, 240], [1.04, 1.0])})`}}>
-          <OffthreadVideo
-            src={staticFile(REALISATION_FILE)}
-            startFrom={Math.round(REALISATION_START_S * fps)}
-            muted
-            style={{width: '100%', height: '100%', objectFit: 'cover'}}
-          />
+        <AbsoluteFill>
+          {CLIPS.map((c, i) => {
+            const from = CLIPS.slice(0, i).reduce((acc, k) => acc + k.dur, 0) - (i ? XF * i : 0);
+            const local = frame - from;
+            if (local < 0 || local > c.dur) return null;
+            const o = i === 0 ? 1 : interpolate(local, [0, XF], [0, 1], clamp);
+            return (
+              <Sequence key={c.file} from={from} durationInFrames={c.dur} layout="none">
+                <AbsoluteFill style={{opacity: o, transform: `scale(${interpolate(local, [0, c.dur], [1.06, 1.0])})`}}>
+                  <OffthreadVideo src={staticFile(c.file)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                </AbsoluteFill>
+                <div
+                  style={{
+                    position: 'absolute',
+                    right: SAFE.right,
+                    top: 1230,
+                    opacity: interpolate(local, [8, 18, c.dur - 10, c.dur], [0, 1, 1, 0], clamp),
+                    fontFamily: FONT,
+                    fontWeight: 800,
+                    fontSize: 34,
+                    color: C.anthracite,
+                    background: 'rgba(255,255,255,0.92)',
+                    padding: '10px 24px',
+                    borderRadius: 30,
+                    borderLeft: `8px solid ${C.green}`,
+                  }}
+                >
+                  {c.label}
+                </div>
+              </Sequence>
+            );
+          })}
         </AbsoluteFill>
       ) : (
         <AbsoluteFill>
