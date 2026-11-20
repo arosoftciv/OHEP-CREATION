@@ -1,0 +1,20 @@
+{
+  "name": "ohel-histoire-btcs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts HistoireBTCS output/video/OHEL_HISTOIRE_BTCS_01.mp4",
+    "cover": "remotion still src/index.ts Cover output/cover/OHEL_HISTOIRE_BTCS_COVER.png"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^5.1.0",
+    "@fontsource/playfair-display": "^5.1.0",
+    "@remotion/cli": "^4.0.300",
+    "@types/react": "^18.3.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.300",
+    "typescript": "^5.6.3"
+  }
+}

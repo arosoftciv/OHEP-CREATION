@@ -1,0 +1,978 @@
+[
+ {
+  "text": "Bien avant nos bâtiments modernes,",
+  "start": 2.5,
+  "end": 4.149,
+  "words": [
+   {
+    "text": "Bien",
+    "start": 2.5,
+    "end": 2.767
+   },
+   {
+    "text": "avant",
+    "start": 2.837,
+    "end": 3.0460000000000003
+   },
+   {
+    "text": "nos",
+    "start": 3.069,
+    "end": 3.185
+   },
+   {
+    "text": "bâtiments",
+    "start": 3.208,
+    "end": 3.661
+   },
+   {
+    "text": "modernes,",
+    "start": 3.684,
+    "end": 4.149
+   }
+  ],
+  "show_end": 4.245
+ },
+ {
+  "text": "la nature nous montrait déjà ce que",
+  "start": 4.265,
+  "end": 6.355,
+  "words": [
+   {
+    "text": "la",
+    "start": 4.265,
+    "end": 4.3580000000000005
+   },
+   {
+    "text": "nature",
+    "start": 4.416,
+    "end": 4.752
+   },
+   {
+    "text": "nous",
+    "start": 4.776,
+    "end": 4.9030000000000005
+   },
+   {
+    "text": "montrait",
+    "start": 4.926,
+    "end": 5.286
+   },
+   {
+    "text": "déjà",
+    "start": 5.3100000000000005,
+    "end": 5.611000000000001
+   },
+   {
+    "text": "ce",
+    "start": 6.053,
+    "end": 6.215
+   },
+   {
+    "text": "que",
+    "start": 6.273,
+    "end": 6.355
+   }
+  ],
+  "show_end": 6.369
+ },
+ {
+  "text": "la terre permet de construire.",
+  "start": 6.388999999999999,
+  "end": 8.073,
+  "words": [
+   {
+    "text": "la",
+    "start": 6.388999999999999,
+    "end": 6.471
+   },
+   {
+    "text": "terre",
+    "start": 6.552,
+    "end": 6.831
+   },
+   {
+    "text": "permet",
+    "start": 6.854,
+    "end": 7.167
+   },
+   {
+    "text": "de",
+    "start": 7.202,
+    "end": 7.272
+   },
+   {
+    "text": "construire.",
+    "start": 7.318,
+    "end": 8.073
+   }
+  ],
+  "show_end": 8.436
+ },
+ {
+  "text": "Regardez les termitières.",
+  "start": 8.456,
+  "end": 9.803,
+  "words": [
+   {
+    "text": "Regardez",
+    "start": 8.456,
+    "end": 8.908999999999999
+   },
+   {
+    "text": "les",
+    "start": 8.943999999999999,
+    "end": 9.036
+   },
+   {
+    "text": "termitières.",
+    "start": 9.071,
+    "end": 9.803
+   }
+  ],
+  "show_end": 10.403
+ },
+ {
+  "text": "Puis, pendant des millénaires,",
+  "start": 12.149000000000001,
+  "end": 13.426,
+  "words": [
+   {
+    "text": "Puis,",
+    "start": 12.149000000000001,
+    "end": 12.381
+   },
+   {
+    "text": "pendant",
+    "start": 12.405000000000001,
+    "end": 12.66
+   },
+   {
+    "text": "des",
+    "start": 12.695,
+    "end": 12.799
+   },
+   {
+    "text": "millénaires,",
+    "start": 12.834,
+    "end": 13.426
+   }
+  ],
+  "show_end": 13.464
+ },
+ {
+  "text": "les peuples ont bâti des habitations,",
+  "start": 13.484,
+  "end": 15.539,
+  "words": [
+   {
+    "text": "les",
+    "start": 13.484,
+    "end": 13.624
+   },
+   {
+    "text": "peuples",
+    "start": 13.659,
+    "end": 14.018
+   },
+   {
+    "text": "ont",
+    "start": 14.053,
+    "end": 14.251000000000001
+   },
+   {
+    "text": "bâti",
+    "start": 14.286,
+    "end": 14.553
+   },
+   {
+    "text": "des",
+    "start": 14.599,
+    "end": 14.703000000000001
+   },
+   {
+    "text": "habitations,",
+    "start": 14.762,
+    "end": 15.539
+   }
+  ],
+  "show_end": 15.844000000000001
+ },
+ {
+  "text": "des villages et des monuments avec la terre.",
+  "start": 15.864,
+  "end": 18.813000000000002,
+  "words": [
+   {
+    "text": "des",
+    "start": 15.864,
+    "end": 15.992
+   },
+   {
+    "text": "villages",
+    "start": 16.027,
+    "end": 16.584
+   },
+   {
+    "text": "et",
+    "start": 17.095,
+    "end": 17.258000000000003
+   },
+   {
+    "text": "des",
+    "start": 17.304000000000002,
+    "end": 17.397
+   },
+   {
+    "text": "monuments",
+    "start": 17.432000000000002,
+    "end": 17.896
+   },
+   {
+    "text": "avec",
+    "start": 17.919,
+    "end": 18.163
+   },
+   {
+    "text": "la",
+    "start": 18.221,
+    "end": 18.291
+   },
+   {
+    "text": "terre.",
+    "start": 18.36,
+    "end": 18.813000000000002
+   }
+  ],
+  "show_end": 19.233999999999998
+ },
+ {
+  "text": "En Afrique,",
+  "start": 19.253999999999998,
+  "end": 19.916,
+  "words": [
+   {
+    "text": "En",
+    "start": 19.253999999999998,
+    "end": 19.439999999999998
+   },
+   {
+    "text": "Afrique,",
+    "start": 19.509999999999998,
+    "end": 19.916
+   }
+  ],
+  "show_end": 19.919
+ },
+ {
+  "text": "ce savoir-faire a traversé les générations.",
+  "start": 19.939,
+  "end": 22.377000000000002,
+  "words": [
+   {
+    "text": "ce",
+    "start": 19.939,
+    "end": 20.055
+   },
+   {
+    "text": "savoir-faire",
+    "start": 20.102,
+    "end": 20.764000000000003
+   },
+   {
+    "text": "a",
+    "start": 20.787,
+    "end": 20.810000000000002
+   },
+   {
+    "text": "traversé",
+    "start": 20.857,
+    "end": 21.424999999999997
+   },
+   {
+    "text": "les",
+    "start": 21.472,
+    "end": 21.564999999999998
+   },
+   {
+    "text": "générations.",
+    "start": 21.588,
+    "end": 22.377000000000002
+   }
+  ],
+  "show_end": 22.977000000000004
+ },
+ {
+  "text": "Mais l'histoire ne s'arrête pas là.",
+  "start": 24.730999999999998,
+  "end": 26.345,
+  "words": [
+   {
+    "text": "Mais",
+    "start": 24.730999999999998,
+    "end": 24.881999999999998
+   },
+   {
+    "text": "l'histoire",
+    "start": 24.904999999999998,
+    "end": 25.392999999999997
+   },
+   {
+    "text": "ne",
+    "start": 25.415999999999997,
+    "end": 25.497
+   },
+   {
+    "text": "s'arrête",
+    "start": 25.543999999999997,
+    "end": 25.857
+   },
+   {
+    "text": "pas",
+    "start": 25.881,
+    "end": 26.02
+   },
+   {
+    "text": "là.",
+    "start": 26.043,
+    "end": 26.345
+   }
+  ],
+  "show_end": 26.708
+ },
+ {
+  "text": "Au vingtième siècle,",
+  "start": 26.727999999999998,
+  "end": 28.005,
+  "words": [
+   {
+    "text": "Au",
+    "start": 26.727999999999998,
+    "end": 26.878999999999998
+   },
+   {
+    "text": "vingtième",
+    "start": 26.936999999999998,
+    "end": 27.308999999999997
+   },
+   {
+    "text": "siècle,",
+    "start": 27.343,
+    "end": 28.005
+   }
+  ],
+  "show_end": 28.159
+ },
+ {
+  "text": "les presses de terre comprimée,",
+  "start": 28.179,
+  "end": 29.735,
+  "words": [
+   {
+    "text": "les",
+    "start": 28.179,
+    "end": 28.307
+   },
+   {
+    "text": "presses",
+    "start": 28.342,
+    "end": 28.701999999999998
+   },
+   {
+    "text": "de",
+    "start": 28.724999999999998,
+    "end": 28.805999999999997
+   },
+   {
+    "text": "terre",
+    "start": 28.863999999999997,
+    "end": 29.084999999999997
+   },
+   {
+    "text": "comprimée,",
+    "start": 29.107999999999997,
+    "end": 29.735
+   }
+  ],
+  "show_end": 29.75
+ },
+ {
+  "text": "dont la CINVA-RAM des années cinquante,",
+  "start": 29.77,
+  "end": 32.346999999999994,
+  "words": [
+   {
+    "text": "dont",
+    "start": 29.77,
+    "end": 30.037
+   },
+   {
+    "text": "la",
+    "start": 30.095,
+    "end": 30.198999999999998
+   },
+   {
+    "text": "CINVA-RAM",
+    "start": 30.291999999999998,
+    "end": 31.058999999999997
+   },
+   {
+    "text": "des",
+    "start": 31.174999999999997,
+    "end": 31.349
+   },
+   {
+    "text": "années",
+    "start": 31.418999999999997,
+    "end": 31.604
+   },
+   {
+    "text": "cinquante,",
+    "start": 31.639,
+    "end": 32.346999999999994
+   }
+  ],
+  "show_end": 32.837999999999994
+ },
+ {
+  "text": "ont contribué à moderniser",
+  "start": 32.858,
+  "end": 34.495,
+  "words": [
+   {
+    "text": "ont",
+    "start": 32.858,
+    "end": 32.997
+   },
+   {
+    "text": "contribué",
+    "start": 33.032,
+    "end": 33.659
+   },
+   {
+    "text": "à",
+    "start": 33.717,
+    "end": 33.751999999999995
+   },
+   {
+    "text": "moderniser",
+    "start": 33.822,
+    "end": 34.495
+   }
+  ],
+  "show_end": 34.51
+ },
+ {
+  "text": "la fabrication des blocs.",
+  "start": 34.53,
+  "end": 35.968999999999994,
+  "words": [
+   {
+    "text": "la",
+    "start": 34.53,
+    "end": 34.587999999999994
+   },
+   {
+    "text": "fabrication",
+    "start": 34.657,
+    "end": 35.308
+   },
+   {
+    "text": "des",
+    "start": 35.354,
+    "end": 35.447
+   },
+   {
+    "text": "blocs.",
+    "start": 35.482,
+    "end": 35.968999999999994
+   }
+  ],
+  "show_end": 36.568999999999996
+ },
+ {
+  "text": "Aujourd'hui, la terre est sélectionnée,",
+  "start": 39.13,
+  "end": 41.173,
+  "words": [
+   {
+    "text": "Aujourd'hui,",
+    "start": 39.13,
+    "end": 39.711000000000006
+   },
+   {
+    "text": "la",
+    "start": 39.73400000000001,
+    "end": 39.815000000000005
+   },
+   {
+    "text": "terre",
+    "start": 39.885000000000005,
+    "end": 40.14
+   },
+   {
+    "text": "est",
+    "start": 40.163000000000004,
+    "end": 40.233000000000004
+   },
+   {
+    "text": "sélectionnée,",
+    "start": 40.268,
+    "end": 41.173
+   }
+  ],
+  "show_end": 41.328
+ },
+ {
+  "text": "préparée, mélangée à un stabilisant adapté,",
+  "start": 41.348000000000006,
+  "end": 44.56400000000001,
+  "words": [
+   {
+    "text": "préparée,",
+    "start": 41.348000000000006,
+    "end": 42.25300000000001
+   },
+   {
+    "text": "mélangée",
+    "start": 42.42700000000001,
+    "end": 42.996
+   },
+   {
+    "text": "à",
+    "start": 43.019000000000005,
+    "end": 43.043000000000006
+   },
+   {
+    "text": "un",
+    "start": 43.112,
+    "end": 43.159000000000006
+   },
+   {
+    "text": "stabilisant",
+    "start": 43.217000000000006,
+    "end": 43.879000000000005
+   },
+   {
+    "text": "adapté,",
+    "start": 43.913000000000004,
+    "end": 44.56400000000001
+   }
+  ],
+  "show_end": 44.985
+ },
+ {
+  "text": "puis comprimée.",
+  "start": 45.005,
+  "end": 46.038000000000004,
+  "words": [
+   {
+    "text": "puis",
+    "start": 45.005,
+    "end": 45.295
+   },
+   {
+    "text": "comprimée.",
+    "start": 45.330000000000005,
+    "end": 46.038000000000004
+   }
+  ],
+  "show_end": 46.638000000000005
+ },
+ {
+  "text": "Après la cure et les contrôles de qualité,",
+  "start": 46.73500000000001,
+  "end": 48.975,
+  "words": [
+   {
+    "text": "Après",
+    "start": 46.73500000000001,
+    "end": 47.06
+   },
+   {
+    "text": "la",
+    "start": 47.083000000000006,
+    "end": 47.141000000000005
+   },
+   {
+    "text": "cure",
+    "start": 47.211000000000006,
+    "end": 47.524
+   },
+   {
+    "text": "et",
+    "start": 47.547000000000004,
+    "end": 47.594
+   },
+   {
+    "text": "les",
+    "start": 47.617000000000004,
+    "end": 47.69800000000001
+   },
+   {
+    "text": "contrôles",
+    "start": 47.733000000000004,
+    "end": 48.139
+   },
+   {
+    "text": "de",
+    "start": 48.163000000000004,
+    "end": 48.232000000000006
+   },
+   {
+    "text": "qualité,",
+    "start": 48.279,
+    "end": 48.975
+   }
+  ],
+  "show_end": 49.397
+ },
+ {
+  "text": "elle devient un Bloc de Terre",
+  "start": 49.417,
+  "end": 51.193000000000005,
+  "words": [
+   {
+    "text": "elle",
+    "start": 49.417,
+    "end": 49.591
+   },
+   {
+    "text": "devient",
+    "start": 49.626000000000005,
+    "end": 50.00900000000001
+   },
+   {
+    "text": "un",
+    "start": 50.078,
+    "end": 50.229000000000006
+   },
+   {
+    "text": "Bloc",
+    "start": 50.287000000000006,
+    "end": 50.566
+   },
+   {
+    "text": "de",
+    "start": 50.647000000000006,
+    "end": 50.728
+   },
+   {
+    "text": "Terre",
+    "start": 50.798,
+    "end": 51.193000000000005
+   }
+  ],
+  "show_end": 51.196
+ },
+ {
+  "text": "Comprimée Stabilisée :",
+  "start": 51.216,
+  "end": 52.621,
+  "words": [
+   {
+    "text": "Comprimée",
+    "start": 51.216,
+    "end": 51.80800000000001
+   },
+   {
+    "text": "Stabilisée :",
+    "start": 51.86600000000001,
+    "end": 52.621
+   }
+  ],
+  "show_end": 53.158
+ },
+ {
+  "text": "le BTCS.",
+  "start": 53.178000000000004,
+  "end": 55.071000000000005,
+  "words": [
+   {
+    "text": "le",
+    "start": 53.178000000000004,
+    "end": 53.306000000000004
+   },
+   {
+    "text": "BTCS.",
+    "start": 53.376000000000005,
+    "end": 55.071000000000005
+   }
+  ],
+  "show_end": 55.67100000000001
+ },
+ {
+  "text": "Et ces blocs prennent place dans",
+  "start": 58.167,
+  "end": 59.619,
+  "words": [
+   {
+    "text": "Et",
+    "start": 58.167,
+    "end": 58.342000000000006
+   },
+   {
+    "text": "ces",
+    "start": 58.388000000000005,
+    "end": 58.504000000000005
+   },
+   {
+    "text": "blocs",
+    "start": 58.539,
+    "end": 58.829
+   },
+   {
+    "text": "prennent",
+    "start": 58.852000000000004,
+    "end": 59.131
+   },
+   {
+    "text": "place",
+    "start": 59.154,
+    "end": 59.479000000000006
+   },
+   {
+    "text": "dans",
+    "start": 59.503,
+    "end": 59.619
+   }
+  ],
+  "show_end": 59.622
+ },
+ {
+  "text": "des projets architecturaux contemporains.",
+  "start": 59.642,
+  "end": 61.917,
+  "words": [
+   {
+    "text": "des",
+    "start": 59.642,
+    "end": 59.723000000000006
+   },
+   {
+    "text": "projets",
+    "start": 59.758,
+    "end": 60.106
+   },
+   {
+    "text": "architecturaux",
+    "start": 60.176,
+    "end": 61.047000000000004
+   },
+   {
+    "text": "contemporains.",
+    "start": 61.081,
+    "end": 61.917
+   }
+  ],
+  "show_end": 62.408
+ },
+ {
+  "text": "En Côte d'Ivoire,",
+  "start": 62.428000000000004,
+  "end": 63.438,
+  "words": [
+   {
+    "text": "En",
+    "start": 62.428000000000004,
+    "end": 62.626000000000005
+   },
+   {
+    "text": "Côte",
+    "start": 62.695,
+    "end": 62.893
+   },
+   {
+    "text": "d'Ivoire,",
+    "start": 62.916000000000004,
+    "end": 63.438
+   }
+  ],
+  "show_end": 63.488
+ },
+ {
+  "text": "OHEL International met ce savoir-faire",
+  "start": 63.508,
+  "end": 66.805,
+  "words": [
+   {
+    "text": "OHEL",
+    "start": 63.508,
+    "end": 64.019
+   },
+   {
+    "text": "International",
+    "start": 64.088,
+    "end": 65.087
+   },
+   {
+    "text": "met",
+    "start": 65.691,
+    "end": 65.969
+   },
+   {
+    "text": "ce",
+    "start": 66.004,
+    "end": 66.12
+   },
+   {
+    "text": "savoir-faire",
+    "start": 66.167,
+    "end": 66.805
+   }
+  ],
+  "show_end": 66.808
+ },
+ {
+  "text": "au service de la construction.",
+  "start": 66.828,
+  "end": 68.44200000000001,
+  "words": [
+   {
+    "text": "au",
+    "start": 66.828,
+    "end": 66.875
+   },
+   {
+    "text": "service",
+    "start": 66.93299999999999,
+    "end": 67.351
+   },
+   {
+    "text": "de",
+    "start": 67.386,
+    "end": 67.45500000000001
+   },
+   {
+    "text": "la",
+    "start": 67.50200000000001,
+    "end": 67.571
+   },
+   {
+    "text": "construction.",
+    "start": 67.629,
+    "end": 68.44200000000001
+   }
+  ],
+  "show_end": 69.042
+ },
+ {
+  "text": "De la terre à l'architecture :",
+  "start": 71.111,
+  "end": 72.701,
+  "words": [
+   {
+    "text": "De",
+    "start": 71.111,
+    "end": 71.20400000000001
+   },
+   {
+    "text": "la",
+    "start": 71.262,
+    "end": 71.343
+   },
+   {
+    "text": "terre",
+    "start": 71.424,
+    "end": 71.715
+   },
+   {
+    "text": "à",
+    "start": 71.738,
+    "end": 71.761
+   },
+   {
+    "text": "l'architecture :",
+    "start": 71.819,
+    "end": 72.701
+   }
+  ],
+  "show_end": 73.25000000000001
+ },
+ {
+  "text": "une histoire qui continue.",
+  "start": 73.27000000000001,
+  "end": 74.71000000000001,
+  "words": [
+   {
+    "text": "une",
+    "start": 73.27000000000001,
+    "end": 73.421
+   },
+   {
+    "text": "histoire",
+    "start": 73.444,
+    "end": 73.897
+   },
+   {
+    "text": "qui",
+    "start": 73.932,
+    "end": 74.06
+   },
+   {
+    "text": "continue.",
+    "start": 74.106,
+    "end": 74.71000000000001
+   }
+  ],
+  "show_end": 75.294
+ },
+ {
+  "text": "OHEL International.",
+  "start": 75.314,
+  "end": 76.997,
+  "words": [
+   {
+    "text": "OHEL",
+    "start": 75.314,
+    "end": 75.82400000000001
+   },
+   {
+    "text": "International.",
+    "start": 75.917,
+    "end": 76.997
+   }
+  ],
+  "show_end": 77.36000000000001
+ },
+ {
+  "text": "Vous avez un projet ?",
+  "start": 77.38000000000001,
+  "end": 78.251,
+  "words": [
+   {
+    "text": "Vous",
+    "start": 77.38000000000001,
+    "end": 77.543
+   },
+   {
+    "text": "avez",
+    "start": 77.61200000000001,
+    "end": 77.775
+   },
+   {
+    "text": "un",
+    "start": 77.81,
+    "end": 77.85600000000001
+   },
+   {
+    "text": "projet ?",
+    "start": 77.903,
+    "end": 78.251
+   }
+  ],
+  "show_end": 78.765
+ },
+ {
+  "text": "Contactez-nous.",
+  "start": 78.785,
+  "end": 79.795,
+  "words": [
+   {
+    "text": "Contactez-nous.",
+    "start": 78.785,
+    "end": 79.795
+   }
+  ],
+  "show_end": 80.595
+ }
+]
