@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import {AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ThreeCanvas} from '@remotion/three';
 import * as THREE from 'three';
 import {C, FONT, SAFE} from '../theme';
@@ -18,7 +18,7 @@ const ParticleBlock: React.FC<{progress: number; opacity: number}> = ({progress,
     const s = new Float32Array(N * 3);
     const d = new Float32Array(N);
     const col = new Float32Array(N * 3);
-    const palette = [new THREE.Color('#c9774a'), new THREE.Color('#9e4e2a'), new THREE.Color('#e3a072'), new THREE.Color('#b4603a')];
+    const palette = [new THREE.Color('#c9774a'), new THREE.Color('#c08446'), new THREE.Color('#e0b070'), new THREE.Color('#9e5a2a')];
     for (let i = 0; i < N; i++) {
       const a = r() * Math.PI * 2;
       const rad = 2.5 + r() * 6;
@@ -72,7 +72,8 @@ export const S2Discovery: React.FC = () => {
   const tilt = interpolate(frame, [0, 120], [0.15, 0.42], {extrapolateRight: 'clamp'});
   const title = spring({frame: frame - 78, fps, config: {damping: 13, stiffness: 110}});
   const sub = spring({frame: frame - 96, fps, config: {damping: 18}});
-  const chips = spring({frame: frame - 140, fps, config: {damping: 18}});
+  const chips = spring({frame: frame - 112, fps, config: {damping: 18}});
+  const photo = spring({frame: frame - 158, fps, config: {damping: 20, stiffness: 90}});
   return (
     <AbsoluteFill style={{background: `radial-gradient(ellipse at 50% 48%, #5a3424 0%, ${C.anthraciteDeep} 70%)`}}>
       <AbsoluteFill>
@@ -86,6 +87,45 @@ export const S2Discovery: React.FC = () => {
           <ShadowCatcher y={-BTCS.H / 2 - 0.55} opacity={0.4 * solid} />
         </ThreeCanvas>
       </AbsoluteFill>
+      {/* Transition vers la photographie réelle des blocs (assets/blocs-btcs-reels.jpg) */}
+      <AbsoluteFill style={{background: `rgba(23,24,26,${0.75 * photo})`, opacity: photo > 0.001 ? 1 : 0}} />
+      <div
+        style={{
+          position: 'absolute',
+          left: 90,
+          top: 560,
+          width: 900,
+          height: 675,
+          borderRadius: 26,
+          overflow: 'hidden',
+          border: `6px solid ${C.white}`,
+          boxShadow: '0 30px 80px rgba(0,0,0,0.6)',
+          opacity: photo,
+          transform: `perspective(1200px) rotateY(${interpolate(photo, [0, 1], [-35, 0])}deg) scale(${interpolate(photo, [0, 1], [0.8, 1])})`,
+          clipPath: `inset(0 ${(1 - photo) * 100}% 0 0 round 26px)`,
+        }}
+      >
+        <Img
+          src={staticFile('assets/blocs-btcs-reels.jpg')}
+          style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${interpolate(frame, [158, 222], [1.08, 1])})`}}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            left: 22,
+            bottom: 22,
+            fontFamily: FONT,
+            fontWeight: 700,
+            fontSize: 28,
+            color: C.white,
+            background: C.red,
+            padding: '8px 20px',
+            borderRadius: 30,
+          }}
+        >
+          Blocs BTCS · photo réelle
+        </div>
+      </div>
       <AbsoluteFill style={{fontFamily: FONT, alignItems: 'center'}}>
         <div
           style={{
@@ -115,14 +155,14 @@ export const S2Discovery: React.FC = () => {
         >
           <div style={{width: interpolate(sub, [0, 1], [0, 260]), height: 8, background: C.red, margin: '0 auto 28px', borderRadius: 4}} />
           <div style={{fontWeight: 800, fontSize: 64, color: C.white, lineHeight: 1.15}}>
-            Bloc de <span style={{color: '#F2A97E'}}>Terre</span> Comprimée
+            Bloc de <span style={{color: '#E9B677'}}>Terre</span> Comprimée
             <br />
             Stabilisée
           </div>
         </div>
         {[
-          {t: 'Rainures longitudinales', x: 120, y: 520},
-          {t: 'Encoches aux extrémités', x: 470, y: 1150},
+          {t: 'Faces planes et nettes', x: 120, y: 520},
+          {t: "Encoches d'emboîtement", x: 470, y: 1150},
         ].map((c, i) => (
           <div
             key={i}
@@ -130,7 +170,7 @@ export const S2Discovery: React.FC = () => {
               position: 'absolute',
               left: c.x,
               top: c.y,
-              opacity: interpolate(chips, [0, 1], [0, 1]) * interpolate(frame, [i * 8 + 140, i * 8 + 150], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+              opacity: (1 - photo) * interpolate(chips, [0, 1], [0, 1]) * interpolate(frame, [i * 8 + 112, i * 8 + 122], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
               fontWeight: 700,
               fontSize: 30,
               color: C.white,
@@ -148,7 +188,7 @@ export const S2Discovery: React.FC = () => {
           </div>
         ))}
       </AbsoluteFill>
-      <IllustrationTag label="Modélisation 3D" />
+      {photo < 0.5 ? <IllustrationTag label="Modélisation 3D" /> : null}
     </AbsoluteFill>
   );
 };

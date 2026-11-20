@@ -2,93 +2,76 @@ import * as THREE from 'three';
 import {mulberry32} from '../random';
 
 /**
- * Modèle simplifié du bloc BTCS.
- * Géométrie relevée visuellement sur les visuels de référence fournis :
- *  - pavé allongé (proportions visuelles, aucune dimension réelle revendiquée)
- *  - 2 rainures longitudinales sur la face supérieure (3 bandes)
- *  - encoche verticale centrale à chaque extrémité
- *  - arêtes légèrement adoucies
- * Tous les paramètres sont regroupés ici pour être ajustés dès réception des
- * photos réelles (assets/blocs-btcs-reels.jpg, assets/reference-geometrie-btcs.jpg).
+ * Modèle simplifié du bloc BTCS OHEL.
+ * Géométrie relevée sur la photographie réelle fournie (assets/blocs-btcs-reels.jpg) :
+ *  - pavé rectangulaire allongé, face supérieure PLANE (pas de rainure)
+ *  - près de chaque extrémité, une encoche verticale sur toute la hauteur,
+ *    sur les deux grandes faces : elle forme le tenon d'emboîtement de l'extrémité
+ *  - arêtes nettes, légèrement adoucies
+ * Proportions purement visuelles : aucune dimension réelle n'est revendiquée.
  */
 export const BTCS = {
   L: 3.0, // longueur (unités scène)
   W: 1.45, // largeur
-  H: 1.0, // hauteur
-  grooveCenters: [-1 / 6, 1 / 6], // en fraction de W
-  grooveWidth: 0.075, // fraction de W
-  grooveDepth: 0.075, // fraction de H
-  endSlotWidth: 0.34, // fraction de W
-  endSlotDepth: 0.055, // fraction de L
-  bevel: 0.018,
+  H: 1.05, // hauteur
+  slotFromEnd: 0.085, // distance encoche ↔ extrémité, fraction de L
+  slotWidth: 0.045, // largeur de l'encoche, fraction de L
+  slotDepth: 0.12, // profondeur de l'encoche dans chaque grande face, fraction de W
+  bevel: 0.02,
 };
 
-const profileShape = (x0: number, x1: number) => {
-  const {W, H, grooveCenters, grooveWidth, grooveDepth} = BTCS;
-  const gw = grooveWidth * W;
-  const gd = grooveDepth * H;
+/** Contour en plan (x = longueur, y = largeur) avec les 4 encoches verticales. */
+const planShape = () => {
+  const {L, W, slotFromEnd, slotWidth, slotDepth} = BTCS;
+  const e = slotFromEnd * L;
+  const w = slotWidth * L;
+  const d = slotDepth * W;
+  const x0 = -L / 2;
+  const x1 = L / 2;
   const s = new THREE.Shape();
-  s.moveTo(x0, 0);
-  s.lineTo(x1, 0);
-  s.lineTo(x1, H);
-  // parcours de la face supérieure de droite à gauche avec rainures
-  const grooves = grooveCenters
-    .map((c) => [c * W - gw / 2, c * W + gw / 2] as const)
-    .filter(([a, b]) => b > x0 && a < x1)
-    .sort((p, q) => q[0] - p[0]);
-  for (const [a, b] of grooves) {
-    const bb = Math.min(b, x1);
-    const aa = Math.max(a, x0);
-    s.lineTo(bb, H);
-    s.lineTo(bb - (bb - aa) * 0.12, H - gd);
-    s.lineTo(aa + (bb - aa) * 0.12, H - gd);
-    s.lineTo(aa, H);
-  }
-  s.lineTo(x0, H);
-  s.lineTo(x0, 0);
+  // grande face avant (y = -W/2), de gauche à droite
+  s.moveTo(x0, -W / 2);
+  s.lineTo(x0 + e, -W / 2);
+  s.lineTo(x0 + e, -W / 2 + d);
+  s.lineTo(x0 + e + w, -W / 2 + d);
+  s.lineTo(x0 + e + w, -W / 2);
+  s.lineTo(x1 - e - w, -W / 2);
+  s.lineTo(x1 - e - w, -W / 2 + d);
+  s.lineTo(x1 - e, -W / 2 + d);
+  s.lineTo(x1 - e, -W / 2);
+  s.lineTo(x1, -W / 2);
+  // extrémité droite
+  s.lineTo(x1, W / 2);
+  // grande face arrière (y = +W/2), de droite à gauche
+  s.lineTo(x1 - e, W / 2);
+  s.lineTo(x1 - e, W / 2 - d);
+  s.lineTo(x1 - e - w, W / 2 - d);
+  s.lineTo(x1 - e - w, W / 2);
+  s.lineTo(x0 + e + w, W / 2);
+  s.lineTo(x0 + e + w, W / 2 - d);
+  s.lineTo(x0 + e, W / 2 - d);
+  s.lineTo(x0 + e, W / 2);
+  s.lineTo(x0, W / 2);
+  s.lineTo(x0, -W / 2);
   return s;
 };
 
-const extrude = (x0: number, x1: number, depth: number) => {
-  const g = new THREE.ExtrudeGeometry(profileShape(x0, x1), {
-    depth,
+/** Renvoie la géométrie du bloc (centrée : x = longueur, y = hauteur, z = largeur). */
+export const buildBtcsGeometries = (): THREE.BufferGeometry[] => {
+  const {H, bevel} = BTCS;
+  const g = new THREE.ExtrudeGeometry(planShape(), {
+    depth: H - 2 * bevel,
     bevelEnabled: true,
-    bevelSize: BTCS.bevel,
-    bevelThickness: BTCS.bevel,
+    bevelSize: bevel,
+    bevelThickness: bevel,
     bevelSegments: 2,
     curveSegments: 1,
   });
-  return g;
-};
-
-/** Renvoie une liste de géométries (centrées : x = longueur, y = hauteur, z = largeur). */
-export const buildBtcsGeometries = (): THREE.BufferGeometry[] => {
-  const {L, W, H, endSlotWidth, endSlotDepth} = BTCS;
-  const e = endSlotDepth * L;
-  const sw = (endSlotWidth * W) / 2;
-  const parts: THREE.BufferGeometry[] = [];
-  // corps principal
-  const body = extrude(-W / 2, W / 2, L - 2 * e);
-  body.translate(0, 0, -(L - 2 * e) / 2);
-  parts.push(body);
-  // extrémités : deux joues latérales de chaque côté, laissant l'encoche centrale
-  for (const side of [-1, 1]) {
-    for (const [a, b] of [
-      [-W / 2, -sw],
-      [sw, W / 2],
-    ]) {
-      const g = extrude(a, b, e);
-      g.translate(0, 0, side > 0 ? (L - 2 * e) / 2 : -(L - 2 * e) / 2 - e);
-      parts.push(g);
-    }
-  }
-  // orientation : longueur sur X, centré verticalement
-  for (const p of parts) {
-    p.rotateY(Math.PI / 2);
-    p.translate(0, -H / 2, 0);
-    p.computeVertexNormals();
-  }
-  return parts;
+  // extrusion selon Z -> verticale (Y)
+  g.rotateX(-Math.PI / 2);
+  g.translate(0, -(H - 2 * bevel) / 2, 0);
+  g.computeVertexNormals();
+  return [g];
 };
 
 /** Texture procédurale de terre comprimée (mate, granuleuse), déterministe. */
@@ -98,7 +81,7 @@ export const makeEarthTextures = (seed = 7) => {
   const color = document.createElement('canvas');
   color.width = color.height = size;
   const ctx = color.getContext('2d')!;
-  ctx.fillStyle = '#b1603b';
+  ctx.fillStyle = '#c08446';
   ctx.fillRect(0, 0, size, size);
   // variations larges
   for (let i = 0; i < 260; i++) {
@@ -106,7 +89,7 @@ export const makeEarthTextures = (seed = 7) => {
     const y = rnd() * size;
     const r = 30 + rnd() * 120;
     const g = ctx.createRadialGradient(x, y, 0, x, y, r);
-    const tone = rnd() > 0.5 ? '200,120,80' : '140,70,40';
+    const tone = rnd() > 0.5 ? '222,170,105' : '150,95,45';
     g.addColorStop(0, `rgba(${tone},0.18)`);
     g.addColorStop(1, `rgba(${tone},0)`);
     ctx.fillStyle = g;
@@ -132,7 +115,7 @@ export const makeEarthTextures = (seed = 7) => {
     const r = rnd() < 0.94 ? 0.5 + rnd() * 1.0 : 1.4 + rnd() * 1.8;
     const dark = rnd() < 0.55;
     const a = 0.06 + rnd() * 0.2;
-    ctx.fillStyle = dark ? `rgba(90,40,20,${a})` : `rgba(230,160,115,${a})`;
+    ctx.fillStyle = dark ? `rgba(105,62,25,${a})` : `rgba(235,195,135,${a})`;
     ctx.beginPath();
     ctx.arc(x, y, r, 0, Math.PI * 2);
     ctx.fill();

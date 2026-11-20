@@ -1,5 +1,5 @@
 # OHEL INTERNATIONAL — « LE BTCS, C'EST QUOI EXACTEMENT ? »
-## Rapport de production — Version 01 (visuel à valider, sans voix-off)
+## Rapport de production — Version 01 rév. B (visuel à valider, sans voix-off)
 
 Date : 20/11/2026 · Concept : « De la terre à la maison »
 
@@ -19,8 +19,8 @@ Date : 20/11/2026 · Concept : « De la terre à la maison »
 |---|---|---|
 | `assets/logo-ohel.png` | ✅ Fourni (PNG transparent 1774×887) | Scène 6 + couverture, fichier original non modifié |
 | Photo chantier OHEL (selfie équipe) | ✅ Fournie | Scène 4 (transition vers le réel), copie identique (SHA-256 vérifié) |
-| `assets/blocs-btcs-reels.jpg` | ❌ **Manquant** | Remplacé provisoirement par l'analyse des deux affiches fournies |
-| `assets/reference-geometrie-btcs.jpg` | ❌ **Manquant** | Idem |
+| `assets/blocs-btcs-reels.jpg` | ✅ Fourni (640×480) | Référence du modèle 3D + photo réelle en fin de scène 2 |
+| `assets/reference-geometrie-btcs.jpg` | ➖ Non fourni | La photo réelle suffit pour la forme ; une vue de l'extrémité permettrait d'affiner le profil exact de l'emboîtement |
 | `assets/realisation-ohel.mp4` | ❌ **Manquant** | Scène 5 : emplacement balisé « Emplacement vidéo » ; intégration automatique dès dépôt du fichier |
 | Affiches « Le BTCS c'est quoi » / « Fabrication du BTCS » | Fournies | **Référence seulement** — non intégrées (images générées par IA comportant de faux logos sur casques/presse) |
 
@@ -35,7 +35,7 @@ Date : 20/11/2026 · Concept : « De la terre à la maison »
 | Temps | Scène | Contenu |
 |---|---|---|
 | 0–5 s | 1. Accroche | Paysage de terre rouge (parallaxe, poussée caméra), particules, « ET SI LA TERRE DEVENAIT VOTRE MAISON ? » en profondeur |
-| 5–12 s | 2. Découverte | 9 000 particules se rassemblent en bloc BTCS 3D, rotation, « BTCS / Bloc de Terre Comprimée Stabilisée », repères rainures/encoches |
+| 5–12 s | 2. Découverte | 9 000 particules se rassemblent en bloc BTCS 3D, rotation, « BTCS / Bloc de Terre Comprimée Stabilisée », repères « faces planes » / « encoches d'emboîtement », puis transition vers la **photo réelle des blocs** |
 | 12–26 s | 3. Fabrication | 1 Préparation (tamisage) · 2 Mélange (terre + stabilisant, sans dosage) · 3 Compression (presse 3D : remplissage, descente, pression, éjection) · 4 Cure (time-lapse lumière, sans durée) et contrôle qualité |
 | 26–35 s | 4. Construction | Le bloc se duplique, mur en appareillage décalé, silhouette de bâtiment, ouverture circulaire vers le **chantier OHEL réel** |
 | 35–43 s | 5. Réalisations | « DES CONSTRUCTIONS MODERNES ET DURABLES » — emplacement de la vidéo réelle |
@@ -46,9 +46,9 @@ Transitions : fondus enchaînés de 12 images entre scènes, 8 images entre éta
 ### 5. Modèle 3D du bloc BTCS
 
 Modèle paramétrique Three.js (`src/three/btcs.ts`) :
-pavé allongé · 2 rainures longitudinales sur la face supérieure (3 bandes) · encoche verticale centrale à chaque extrémité · arêtes adoucies · texture procédurale mate et granuleuse (terre compactée, pas brique cuite).
+pavé rectangulaire allongé · **face supérieure plane** · près de chaque extrémité, **une encoche verticale sur toute la hauteur sur les deux grandes faces** (tenon d'emboîtement) · arêtes nettes légèrement adoucies · teinte **ocre** relevée sur la photo réelle · texture procédurale mate et granuleuse (terre compactée, pas brique cuite).
 
-⚠️ **Géométrie provisoire** : relevée sur les affiches fournies (visuels vraisemblablement générés par IA), faute des photos réelles. Aucune dimension, densité ou résistance n'est indiquée. Dès réception des photos réelles, il suffit d'ajuster les paramètres `BTCS` (proportions, position et profondeur des rainures, largeur et profondeur des encoches) puis de relancer le rendu.
+✅ Géométrie relevée sur la **photographie réelle** fournie (`public/assets/blocs-btcs-reels.jpg`). La version précédente, déduite des affiches IA (rainures supérieures), a été abandonnée. Proportions visuelles uniquement : aucune dimension, densité ou résistance n'est indiquée. Paramètres ajustables : `slotFromEnd`, `slotWidth`, `slotDepth`.
 
 ### 6. Son
 
@@ -61,8 +61,8 @@ pavé allongé · 2 rainures longitudinales sur la face supérieure (3 bandes) �
 | # | Point | Résultat |
 |---|---|---|
 | 1 | Logo identique à l'original | ✅ SHA-256 identique ; affiché via `<Img>` sans filtre, ratio 2:1 conservé ; animation par masque/échelle uniquement |
-| 2 | Blocs conformes aux photos de référence | ⚠️ Conformes aux affiches fournies ; **photos réelles manquantes** |
-| 3 | Rainures et encoches | ✅ 2 rainures supérieures + encoche à chaque extrémité, visibles en scènes 2, 3, 4 et sur la couverture |
+| 2 | Blocs conformes aux photos de référence | ✅ Modèle refait d'après la photo réelle (forme, encoches, teinte ocre) ; la photo réelle est montrée en fin de scène 2 |
+| 3 | Encoches | ✅ Face supérieure plane, encoches verticales près des deux extrémités sur les deux grandes faces, conformes à la photo réelle ; visibles en scènes 2, 3, 4 et sur la couverture |
 | 4 | Aucune brique générique | ✅ Tous les blocs (presse, cure, mur, couverture) utilisent le même modèle BTCS |
 | 5 | Ouvriers masculins illustratifs | ❌ **Non réalisé** : nécessite une génération d'images/vidéos IA photoréalistes (payante, non approuvée). Les étapes sont traitées en motion design 3D et 2D, toutes étiquetées « Illustration animée » |
 | 6 | Intégrité des médias réels | ✅ Photo du chantier non retouchée (recadrage et zoom lent uniquement) ; étiquette « Chantier OHEL · photo réelle » |
@@ -76,11 +76,11 @@ pavé allongé · 2 rainures longitudinales sur la face supérieure (3 bandes) �
 | 14 | FFprobe | ✅ Voir section 1 |
 | 15 | Captures de contrôle | ✅ Planche de 18 images couvrant toutes les scènes, revue avant le rendu final |
 
-Corrections apportées après le premier rendu : cadrage de la presse et de l'aire de cure, coupures du mur, débordement de « CONSTRUISONS AUTREMENT. », couverture (bloc qui masquait un visage), coutures de la texture, taille des blocs à l'entrée de la scène 4, plage de couleurs (full range → plage TV).
+Révision B : modèle 3D refait d'après la photo réelle des blocs (face plane, encoches latérales, teinte ocre), ajout de la photo réelle en scène 2. Corrections apportées après le premier rendu : cadrage de la presse et de l'aire de cure, coupures du mur, débordement de « CONSTRUISONS AUTREMENT. », couverture (bloc qui masquait un visage), coutures de la texture, taille des blocs à l'entrée de la scène 4, plage de couleurs (full range → plage TV).
 
 ### 8. Actions requises côté OHEL
 
-1. Fournir `blocs-btcs-reels.jpg` et `reference-geometrie-btcs.jpg` pour caler précisément la géométrie du bloc.
+1. Optionnel : une photo d'extrémité de bloc (vue de face) pour affiner le profil de l'emboîtement.
 2. Fournir `realisation-ohel.mp4` (et indiquer les meilleurs passages : murs BTCS, vue extérieure, intérieur, chambre).
 3. Confirmer les autorisations de droit à l'image des personnes visibles sur la photo du chantier.
 4. Valider le visuel V1, puis choisir la voix-off : génération ElevenLabs (crédits) ou fichier fourni.
