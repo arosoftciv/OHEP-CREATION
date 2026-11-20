@@ -327,6 +327,11 @@ def w(name, x):
 
 w("voice", voice); w("music", music * fade); w("sfx", sfx)
 w("mix_raw", mix)
+# version visuelle sans voix : musique + effets, sans ducking
+bed = np.tanh((music * fade * 0.62 + sfx * 0.55) * 1.1) / np.tanh(1.1)
+w("bed_raw", bed)
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "public/audio/bed_raw.wav",
+                "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", str(SR), "public/audio/music_sfx.wav"], check=True)
 # normalisation de loudness pour les réseaux sociaux (-14 LUFS, crête -1.5 dBTP)
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "public/audio/mix_raw.wav",
                 "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", str(SR), "public/audio/mix.wav"], check=True)

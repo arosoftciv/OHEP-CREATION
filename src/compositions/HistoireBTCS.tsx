@@ -11,7 +11,10 @@ import {Subtitles} from '../components/Subtitles';
 import {C} from '../theme';
 
 /** Film complet : 6 scènes pilotées par le temps global (synchronisées sur la voix-off réelle). */
-export const HistoireBTCS: React.FC<{subtitles?: boolean}> = ({subtitles = true}) => {
+export type AudioMode = 'full' | 'music' | 'none';
+
+/** audio : 'full' = voix + musique, 'music' = musique + effets sans voix, 'none' = muet. */
+export const HistoireBTCS: React.FC<{subtitles?: boolean; audio?: AudioMode}> = ({subtitles = true, audio = 'full'}) => {
 	return (
 		<AbsoluteFill style={{background: C.night}}>
 			<S1Nature />
@@ -22,7 +25,8 @@ export const HistoireBTCS: React.FC<{subtitles?: boolean}> = ({subtitles = true}
 			<S6Signature />
 			<FilmFinish />
 			{subtitles && <Subtitles hideFrom={77.2} />}
-			<Audio src={staticFile('audio/mix.wav')} />
+			{audio === 'full' && <Audio src={staticFile('audio/mix.wav')} />}
+			{audio === 'music' && <Audio src={staticFile('audio/music_sfx.wav')} />}
 		</AbsoluteFill>
 	);
 };

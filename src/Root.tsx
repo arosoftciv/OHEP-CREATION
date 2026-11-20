@@ -16,7 +16,7 @@ export const RemotionRoot: React.FC = () => (
 			fps={FPS}
 			width={1080}
 			height={1920}
-			defaultProps={{subtitles: true}}
+			defaultProps={{subtitles: false, audio: 'music' as const}}
 		/>
 		<Still id="Cover" component={Cover} width={1080} height={1920} />
 	</>
