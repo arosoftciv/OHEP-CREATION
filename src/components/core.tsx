@@ -133,6 +133,7 @@ export const SourceTag: React.FC<{text: string; start: number; end: number; y?: 
 				borderLeft: `3px solid ${C.ochre}`,
 				background: 'rgba(20,10,5,0.45)',
 				textTransform: 'uppercase',
+				whiteSpace: 'nowrap',
 			}}
 		>
 			{text}

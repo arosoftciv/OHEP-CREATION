@@ -492,7 +492,7 @@ const Hero: React.FC<{t: number}> = ({t}) => {
 					);
 				})}
 			</div>
-			<SourceTag text="Photographie réelle · bloc BTCS" start={50.6} end={57.0} y={1322} x={590} />
+			<SourceTag text="Photographie réelle · bloc BTCS" start={50.6} end={57.0} y={1322} x={540} />
 		</AbsoluteFill>
 	);
 };
