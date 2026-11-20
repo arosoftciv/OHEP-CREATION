@@ -33,7 +33,8 @@ Le dépôt était vide et **aucun des fichiers nommés dans le brief n'a été f
 
 | Média | Usage | Statut à l'écran | Point de vigilance |
 |---|---|---|---|
-| Termitière, savane, presse manuelle, presse hydraulique, ouvrier, tamis, malaxage | Scènes 1, 3, 4 | Dessinés en code (SVG) — mentions « Illustration » / « Reconstitution illustrative » | Aucun |
+| 627444 termitières (photo fournie, remplace l'illustration à la demande du client) | Scène 1 : poussée caméra, médaillon de texture réelle, particules | « Termitières · une analogie naturelle » | **Provenance et droits à confirmer** ; ce sont des termitières « cathédrale » dans une végétation de type australien (eucalyptus, palmiers *Livistona*) : pas un paysage africain — acceptable pour une analogie, à garder en tête |
+| Presse manuelle, presse hydraulique, ouvrier, tamis, malaxage | Scènes 3, 4 | Dessinés en code (SVG) — mention « Reconstitution illustrative » | Aucun |
 | 627193 mosquée | Scène 2 (parallaxe 2,5D, médaillons de détail), couverture | « Photographie · mosquée de style soudanais en terre, nord de la Côte d'Ivoire » | **Confirmer l'identité/le lieu** de l'édifice (style Kong/Kaouara) et **les droits** de la photo |
 | 627115 bloc BTCS | Scènes 3→4 (sortie de presse), bloc héros, couverture | « Photographie réelle » — détouré, animé en 2,5D (aucune géométrie ajoutée) | Confirmer que c'est un bloc OHEL et les droits |
 | 627007 pile de BTCS | Étape 4 ; une face réelle sert de texture aux briques du mur (scène 5) | « Photographie réelle » | Confirmer les droits |
@@ -56,7 +57,7 @@ Le dépôt était vide et **aucun des fichiers nommés dans le brief n'a été f
 
 | Scène | Temps | Contenu | Transition vers la suivante |
 |---|---|---|---|
-| 1 · La nature | 0–11,6 s | Savane au lever du soleil, termitière texturée (éclairage dynamique), poussée caméra, médaillon de texture, titre « LA NATURE CONSTRUIT AVEC LA TERRE. » | Les particules de terre se détachent de la termitière et convergent en un disque lumineux… |
+| 1 · La nature | 0–11,6 s | Photo de termitières (627444), lumière chaude d'ouverture, poussée caméra, médaillon de texture, titre « LA NATURE CONSTRUIT AVEC LA TERRE. » | Les particules de terre se détachent de la termitière et convergent en un disque lumineux… |
 | 2 · L'héritage | 11,6–24 s | …qui s'ouvre sur la mosquée en terre : 3 calques de profondeur, travelling latéral, médaillons « Torons de bois » / « Murs en terre crue » | La façade se fragmente en tesselles qui retombent en terre brute |
 | 3 · Le tournant | 24–38,6 s | Recul caméra, presse manuelle type CINVA-RAM (reconstitution), compteur 1900→1950, cycle remplissage / levier / compression / éjection | Transition de matière (tache de terre) |
 | 4 · Le BTCS | 38,6–57,4 s | 4 étapes : tamisage (ouvrier avec EPI), mélange terre + stabilisant adapté + eau, compression (le bloc réel sort de la presse), cure & contrôle (photo réelle) ; bloc héros 2,5D, « BTCS » épelé, repères « Rainure longitudinale » / « Encoche d'extrémité » | Le bloc se réduit… |
