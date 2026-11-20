@@ -26,6 +26,17 @@ def v(raw):  # temps voix brute -> temps vidéo
     raise ValueError(raw)
 
 
+WORDS = [w for w in json.load(open("assets/audio/voiceover_words.json"))["words"] if w["type"] == "word"]
+def _norm(s): return s.lower().strip(".,:;!?… ")
+def vw(text, n=1):  # temps vidéo du n-ième mot `text`
+    c = 0
+    for w in WORDS:
+        if _norm(w["text"]) == _norm(text):
+            c += 1
+            if c == n: return v(w["start"])
+    raise ValueError(text)
+
+
 def lp(x, f, o=2): return sosfilt(butter(o, f, "low", fs=SR, output="sos"), x)
 def hp(x, f, o=2): return sosfilt(butter(o, f, "high", fs=SR, output="sos"), x)
 def bp(x, lo, hi, o=2): return sosfilt(butter(o, [lo, hi], "band", fs=SR, output="sos"), x)
@@ -266,11 +277,11 @@ add(sfx, whoosh(1.2), 38.2, 0.16)
 add(sfx, earth_pour(2.0), 39.6, 0.25)              # tamisage
 add(sfx, whoosh(0.9), 42.0, 0.12)
 add(sfx, hiss(0.9), 44.6, 0.12)                    # presse hydraulique
-add(sfx, clank(1.4), v(36.78) - 0.02, 0.55)        # "comprimée"
+add(sfx, clank(1.4), vw("comprimée", 2) - 0.02, 0.55)  # "puis comprimée"
 add(sfx, sparkle(1.2, 2600), 47.0, 0.08)           # contrôle qualité
 add(sfx, low_drum(80, 38, 1.6), 49.95, 0.5)        # apparition du bloc héros
-for raw in (44.826, 45.383, 45.859, 46.277):       # B T C S
-    add(sfx, low_drum(160, 90, 0.35), v(raw), 0.22)
+for letter in ("B", "T", "C", "S"):                # B T C S
+    add(sfx, low_drum(160, 90, 0.35), vw(letter), 0.22)
 for i in range(16):                                 # blocs qui s'assemblent
     add(sfx, low_drum(200 + 8 * i, 120, 0.25), 57.6 + i * 0.19, 0.1)
 add(sfx, whoosh(1.0), 60.4, 0.22)                  # traversée du mur

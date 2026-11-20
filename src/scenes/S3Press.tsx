@@ -4,6 +4,7 @@ import {H, KineticTitle, SourceTag, W, useT} from '../components/core';
 import {C, F} from '../theme';
 import {inCubic, lerp, outBack, outCubic, ramp, rnd} from '../animations/easing';
 import {Easing} from 'remotion';
+import {vw} from '../voice';
 
 /* SCÈNE 3 — Le tournant technologique (24 → 38,6 s)
  * 1) Le mur en terre de la photo se désagrège en tesselles qui retombent en terre brute.
@@ -106,8 +107,8 @@ const Disintegration: React.FC<{t: number}> = ({t}) => {
 
 /** Compteur d'années : 1900 → 1950, calé sur « des années cinquante ». */
 const YearCounter: React.FC<{t: number}> = ({t}) => {
-	const a = 29.9;
-	const b = 31.45;
+	const b = vw('cinquante'); // « des années cinquante »
+	const a = b - 1.55;
 	const o = ramp(t, a - 0.3, a + 0.2) * (1 - ramp(t, 33.2, 33.6));
 	if (o <= 0) return null;
 	const year = Math.round(lerp(1900, 1950, ramp(t, a, b, Easing.out(Easing.quad))));

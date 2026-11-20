@@ -8,14 +8,15 @@
 
 | Fichier | Contenu |
 |---|---|
-| `output/video/OHEL_HISTOIRE_BTCS_01.mp4` | Film final, sous-titres incrustés |
+| `output/video/OHEL_HISTOIRE_BTCS_01.mp4` | Film avec voix (Brian) et sous-titres incrustés — version web (CRF 21, 41 Mo env.) ; le master pleine qualité `_MASTER.mp4` reste hors dépôt (>100 Mo) |
+| `output/video/OHEL_HISTOIRE_BTCS_VISUEL_02.mp4` | Version visuelle sans voix ni sous-titres (musique + effets) |
 | `output/cover/OHEL_HISTOIRE_BTCS_COVER.png` | Couverture 1080 × 1920 |
 | `output/OHEL_HISTOIRE_BTCS_VOICEOVER.txt` | Texte de la voix-off avec repères temporels |
 | `output/subtitles/OHEL_HISTOIRE_BTCS_SUBTITLES.srt` | Sous-titres synchronisés mot à mot (32 répliques) |
 | `output/reports/OHEL_HISTOIRE_BTCS_REPORT.md` | Ce rapport |
 | `src/` · `scripts/` | Code source Remotion + scripts audio/médias (régénérables) |
 
-Reproduire : `npm install` → `python3 scripts/prepare_assets.py` → `python3 scripts/build_audio.py` → `python3 scripts/build_subtitles.py` → `npm run render` / `npm run cover`.
+Reproduire : `npm install` → `python3 scripts/prepare_assets.py` → `python3 scripts/fit_timeline.py` → `python3 scripts/build_audio.py` → `python3 scripts/build_subtitles.py` → `npm run render` / `npm run cover`.
 Une version **sans sous-titres incrustés** se rend avec `npx remotion render src/index.ts HistoireBTCS out.mp4 --props='{"subtitles":false}'` (le SRT peut alors être chargé sur la plateforme).
 
 ## 2. ⚠️ Ressources manquantes — à fournir pour la version définitive
@@ -46,8 +47,8 @@ Le dépôt était vide et **aucun des fichiers nommés dans le brief n'a été f
 
 ## 4. Voix-off, musique, sous-titres
 
-- **Voix :** ElevenLabs, « Damien Doré – Deep Narrator » (voix masculine grave, mature, français standard), `eleven_multilingual_v2`, une seule prise, **980 crédits** prélevés sur le quota mensuel inclus (aucun dépassement, aucun coût supplémentaire). Fichier : `assets/audio/voiceover_raw.mp3` (66,5 s).
-- **Synchronisation :** transcription ElevenLabs Scribe (gratuite) → horodatages mot à mot (`assets/audio/voiceover_words.json`). La voix est découpée en 6 segments aux silences naturels et placée sur la timeline (`src/timeline.json`) **sans aucune accélération** ; des pauses sont ajoutées entre les actes. Toutes les animations clés sont calées sur les mots (« termitières », « années cinquante » → compteur 1950, « comprimée » → impact de presse, B-T-C-S → lettres, « OHEL International » → logo).
+- **Voix :** ElevenLabs, **« Brian – Deep, Resonant and Comforting »** (voix standard ElevenLabs, à la demande du client), `eleven_multilingual_v2`, une seule prise, 980 crédits sur le quota mensuel inclus. Voix d'origine anglophone : le français peut garder un léger accent américain. Fichier : `assets/audio/voiceover_raw.mp3` (62,3 s). Une première prise avec la voix « Damien Doré » (980 crédits, générée avant que le client ne demande à valider d'abord le visuel) est archivée dans `assets/audio/archive_damien/`. Total consommé : 1 960 crédits, sans dépassement ni coût supplémentaire.
+- **Synchronisation :** transcription ElevenLabs Scribe (gratuite) → horodatages mot à mot (`assets/audio/voiceover_words.json`). `scripts/fit_timeline.py` recalcule les 6 segments de voix ; la voix est placée **sans aucune accélération**. Les animations clés retrouvent les mots par leur texte (`src/voice.ts`) : « années cinquante » → compteur 1950 (31,8 s), « puis comprimée » → impact de presse (44,9 s), B-T-C-S → lettres (52,0–52,9 s), « OHEL International » → logo (74,9 s), « Vous avez un projet ? » → coordonnées (76,8 s). Changer de voix ne demande que de relancer les scripts.
 - **Musique :** composée **par code** pour ce projet (`scripts/build_audio.py`) — aucun échantillon ni piste tierce, donc aucun droit à acquérir. Évolution en 4 actes : kalimba pentatonique, vent, tambour grave (origines) → pulsation basse/kick et impacts mécaniques à l'arrivée de la presse (transformation) → nappes et progression ré m–si♭–fa–do (architecture) → résolution en ré majeur avec accent sur le logo (OHEL).
 - **Ducking automatique :** la musique baisse d'environ 8 dB pendant la narration (enveloppe de la voix, attaque 60 ms / relâche 450 ms).
 - **Sous-titres :** générés depuis la transcription, incrustés (mot courant mis en valeur) et fournis en SRT.
@@ -88,7 +89,8 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 
 ## 7. Vérification du fichier final
 
-_(complété après rendu)_
+- `OHEL_HISTOIRE_BTCS_01` : 1080 × 1920, 30 i/s, 2 550 images, 85,06 s, H.264 + AAC 48 kHz, −14,6 LUFS intégrés, crête −1,5 dBTP.
+- Captures examinées à 8,8 / 17,8 / 31,8 / 43,0 / 45,0 / 47,6 / 52,5 / 63,6 / 75,4 / 77,6 s : synchronisation voix ↔ animations correcte, sous-titres masqués pendant l'affichage des coordonnées.
 
 ## 8. Points d'attention / suggestions
 

@@ -4,6 +4,7 @@ import {H, KineticTitle, LogoCard, W, useT} from '../components/core';
 import {C, F} from '../theme';
 import {lerp, outBack, outCubic, ramp, rnd} from '../animations/easing';
 import {Easing} from 'remotion';
+import {vw} from '../voice';
 
 /* SCÈNE 6 — La signature de marque (70,4 → 85 s)
  * Le chantier réel OHEL reste en arrière-plan, assombri. Des particules de terre convergent puis
@@ -119,7 +120,7 @@ const Row: React.FC<{icon: React.ReactNode; text: string; k: number; big?: boole
 );
 
 const Contacts: React.FC<{t: number}> = ({t}) => {
-	const a = 77.35; // « Vous avez un projet ? »
+	const a = vw('Vous'); // « Vous avez un projet ? »
 	const head = ramp(t, a, a + 0.5, outBack);
 	if (head <= 0) return null;
 	const k = (i: number) => ramp(t, a + 0.6 + i * 0.35, a + 1.1 + i * 0.35, outCubic);

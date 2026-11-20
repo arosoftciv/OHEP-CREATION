@@ -4,7 +4,7 @@ import {H, KineticTitle, MatterWipe, SourceTag, W, useT} from '../components/cor
 import {Worker} from '../components/Worker';
 import {C, F} from '../theme';
 import {inOutSine, lerp, outBack, outCubic, ramp, rnd} from '../animations/easing';
-import {v} from '../timeline';
+import {vw, vwAfter} from '../voice';
 import {Easing} from 'remotion';
 
 /* SCÈNE 4 — La naissance du BTCS moderne (38,6 → 57,4 s)
@@ -13,12 +13,17 @@ import {Easing} from 'remotion';
  * Le bloc est TOUJOURS montré à partir des photographies réelles (627115, 627007) :
  * aucune géométrie inventée, animation 2,5D uniquement. */
 
+// Étapes calées sur les mots de la voix-off (« mélangée », « puis comprimée », « Après la cure », « Bloc »)
+const T_S2 = vw('mélangée') - 0.2;
+const T_S3 = vw('comprimée', 2) - 0.8;
+const T_S4 = vw('Après') - 0.15;
+const T_HERO = vw('Bloc') - 0.6;
 const STEP = {
-	s1: [38.6, 42.25],
-	s2: [42.25, 44.7],
-	s3: [44.7, 46.65],
-	s4: [46.65, 49.9],
-	hero: [49.9, 58.2],
+	s1: [38.6, T_S2],
+	s2: [T_S2, T_S3],
+	s3: [T_S3, T_S4],
+	s4: [T_S4, T_HERO],
+	hero: [T_HERO, 58.2],
 };
 
 export const S4BTCS: React.FC = () => {
@@ -45,10 +50,10 @@ export const S4BTCS: React.FC = () => {
 			{!inHero && <Progress t={t} />}
 
 			<MatterWipe at={38.15} dur={0.9} seed={5} />
-			<MatterWipe at={41.95} dur={0.6} seed={6} color={C.clay} />
-			<MatterWipe at={44.4} dur={0.6} seed={7} />
-			<MatterWipe at={46.35} dur={0.6} seed={8} color={C.clay} />
-			<MatterWipe at={49.6} dur={0.6} seed={9} color={C.earthDark} />
+			<MatterWipe at={T_S2 - 0.3} dur={0.6} seed={6} color={C.clay} />
+			<MatterWipe at={T_S3 - 0.3} dur={0.6} seed={7} />
+			<MatterWipe at={T_S4 - 0.3} dur={0.6} seed={8} color={C.clay} />
+			<MatterWipe at={T_HERO - 0.3} dur={0.6} seed={9} color={C.earthDark} />
 		</AbsoluteFill>
 	);
 };
@@ -95,7 +100,7 @@ const StepHeader: React.FC<{t: number}> = ({t}) => (
 );
 
 const Progress: React.FC<{t: number}> = ({t}) => {
-	const o = ramp(t, 38.9, 39.4) * (1 - ramp(t, 49.6, 49.9));
+	const o = ramp(t, 38.9, 39.4) * (1 - ramp(t, T_HERO - 0.3, T_HERO));
 	return (
 		<div style={{position: 'absolute', top: 1310, left: 140, width: 800, display: 'flex', gap: 16, opacity: o}}>
 			{STEPS.map((s, i) => {
@@ -160,9 +165,9 @@ const Step1: React.FC<{t: number}> = ({t}) => {
 
 /* ---------- Étape 2 : mélange terre + stabilisant + eau ---------- */
 const Step2: React.FC<{t: number}> = ({t}) => {
-	const k = t - 42.25;
-	const mix = ramp(t, 42.6, 44.4, inOutSine);
-	const water = t > 43.2;
+	const k = t - T_S2;
+	const mix = ramp(t, T_S2 + 0.35, T_S3 - 0.3, inOutSine);
+	const water = t > T_S2 + 0.95;
 	const cx = 540;
 	const cy = 930;
 	return (
@@ -191,7 +196,7 @@ const Step2: React.FC<{t: number}> = ({t}) => {
 				{/* gouttes d'eau */}
 				{water &&
 					Array.from({length: 10}).map((_, i) => {
-						const d0 = 43.2 + i * 0.09;
+						const d0 = T_S2 + 0.95 + i * 0.09;
 						const p = (t - d0) / 0.45;
 						if (p < 0) return null;
 						const x = cx - 90 + rnd(i, 11) * 180;
@@ -200,9 +205,9 @@ const Step2: React.FC<{t: number}> = ({t}) => {
 						return <circle key={i} cx={x} cy={cy - 40 + rnd(i, 12) * 80} r={10 + q * 60} fill="none" stroke="#BFE6F7" strokeWidth={3} opacity={1 - q} />;
 					})}
 			</svg>
-			<Chip t={t} at={42.45} x={110} y={1260} label="TERRE" color={C.clay} />
-			<Chip t={t} at={42.55} x={330} y={1260} label="STABILISANT ADAPTÉ" color="#E8E2D6" dark />
-			<Chip t={t} at={43.25} x={790} y={1260} label="EAU" color="#8FD0F0" dark />
+			<Chip t={t} at={T_S2 + 0.2} x={110} y={1260} label="TERRE" color={C.clay} />
+			<Chip t={t} at={T_S2 + 0.3} x={330} y={1260} label="STABILISANT ADAPTÉ" color="#E8E2D6" dark />
+			<Chip t={t} at={T_S2 + 1.0} x={790} y={1260} label="EAU" color="#8FD0F0" dark />
 		</AbsoluteFill>
 	);
 };
@@ -235,7 +240,7 @@ const Chip: React.FC<{t: number; at: number; x: number; y: number; label: string
 
 /* ---------- Étape 3 : compression mécanique ---------- */
 const Step3: React.FC<{t: number}> = ({t}) => {
-	const hit = v(36.78); // « comprimée »
+	const hit = vw('comprimée', 2); // « puis comprimée »
 	const down = ramp(t, hit - 0.55, hit, Easing.in(Easing.cubic));
 	const up = ramp(t, hit + 0.2, hit + 0.7, outCubic);
 	const ramY = lerp(380, 780, down) - up * 400;
@@ -283,15 +288,15 @@ const Step3: React.FC<{t: number}> = ({t}) => {
 					/>
 				</div>
 			)}
-			<SourceTag text="Presse : illustration · Bloc : photographie réelle" start={44.8} end={46.6} y={1180} />
+			<SourceTag text="Presse : illustration · Bloc : photographie réelle" start={T_S3 + 0.1} end={T_S4 - 0.05} y={1180} />
 		</AbsoluteFill>
 	);
 };
 
 /* ---------- Étape 4 : cure et contrôle qualité (photo réelle 627007) ---------- */
 const Step4: React.FC<{t: number}> = ({t}) => {
-	const k = ramp(t, 46.5, 49.9, (x) => x);
-	const sun = ramp(t, 46.8, 49.4, inOutSine);
+	const k = ramp(t, T_S4 - 0.15, T_HERO, (x) => x);
+	const sun = ramp(t, T_S4 + 0.15, T_HERO - 0.5, inOutSine);
 	return (
 		<AbsoluteFill>
 			<div
@@ -316,9 +321,9 @@ const Step4: React.FC<{t: number}> = ({t}) => {
 				<path d="M700,540 A170,170 0 0 1 1010,540" stroke="rgba(255,243,226,0.5)" strokeWidth={3} fill="none" strokeDasharray="6 8" />
 				<circle cx={855 + Math.cos(Math.PI * (1 - sun)) * 155} cy={540 - Math.sin(Math.PI * sun) * 120} r={22} fill="#FFD27A" />
 			</svg>
-			<Check t={t} at={47.0} y={1110} label="CURE" />
-			<Check t={t} at={v(39.73)} y={1185} label="CONTRÔLE QUALITÉ" />
-			<SourceTag text="Photographie réelle · blocs BTCS" start={46.9} end={49.8} y={580} x={90} />
+			<Check t={t} at={T_S4 + 0.35} y={1110} label="CURE" />
+			<Check t={t} at={vw('qualité')} y={1185} label="CONTRÔLE QUALITÉ" />
+			<SourceTag text="Photographie réelle · blocs BTCS" start={T_S4 + 0.25} end={T_HERO - 0.1} y={580} x={90} />
 		</AbsoluteFill>
 	);
 };
@@ -367,17 +372,17 @@ const Hero: React.FC<{t: number}> = ({t}) => {
 	const sweep = ramp(t, a + 0.8, a + 2.2, inOutSine);
 	const top = 690;
 	const words = [
-		{w: 'BLOC', at: v(41.737)},
-		{w: 'DE', at: v(42.097)},
-		{w: 'TERRE', at: v(42.248)},
-		{w: 'COMPRIMÉE', at: v(42.666)},
-		{w: 'STABILISÉE', at: v(43.316)},
+		{w: 'BLOC', at: vw('Bloc')},
+		{w: 'DE', at: vwAfter('Bloc', 1)},
+		{w: 'TERRE', at: vwAfter('Bloc', 2)},
+		{w: 'COMPRIMÉE', at: vwAfter('Bloc', 3)},
+		{w: 'STABILISÉE', at: vwAfter('Bloc', 4)},
 	];
 	const letters = [
-		{l: 'B', at: v(44.826)},
-		{l: 'T', at: v(45.383)},
-		{l: 'C', at: v(45.859)},
-		{l: 'S', at: v(46.277)},
+		{l: 'B', at: vw('B')},
+		{l: 'T', at: vw('T')},
+		{l: 'C', at: vw('C')},
+		{l: 'S', at: vw('S')},
 	];
 	const lettersOut = ramp(t, 56.9, 57.4);
 	return (
@@ -492,7 +497,7 @@ const Hero: React.FC<{t: number}> = ({t}) => {
 					);
 				})}
 			</div>
-			<SourceTag text="Photographie réelle · bloc BTCS" start={50.6} end={57.0} y={1322} x={540} />
+			<SourceTag text="Photographie réelle · bloc BTCS" start={T_HERO + 0.7} end={57.0} y={1322} x={540} />
 		</AbsoluteFill>
 	);
 };
