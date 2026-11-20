@@ -1,0 +1,99 @@
+# OHEL INTERNATIONAL — « LE BTCS, C'EST QUOI EXACTEMENT ? »
+## Rapport de production — Version 01 (visuel à valider, sans voix-off)
+
+Date : 20/11/2026 · Concept : « De la terre à la maison »
+
+### 1. Livrables
+
+| Fichier | État |
+|---|---|
+| `output/OHEL_BTCS_VIDEO_01.mp4` | ✅ Rendu V1 — H.264 High, yuv420p (BT.709, plage TV), 1080×1920, 30 i/s, 1500 images, 50,0 s, AAC stéréo 48 kHz, faststart |
+| `output/OHEL_BTCS_COUVERTURE_01.png` | ✅ 1080×1920 |
+| `output/OHEL_BTCS_VOICEOVER.txt` | ✅ Script avec repères temporels (non enregistré, conformément à la consigne) |
+| `output/OHEL_BTCS_SUBTITLES.srt` | ✅ 12 sous-titres calés sur les repères du script |
+| Projet source Remotion | ✅ `src/`, `public/`, `scripts/`, `remotion.config.ts` |
+
+### 2. Ressources
+
+| Ressource demandée | Statut | Utilisation |
+|---|---|---|
+| `assets/logo-ohel.png` | ✅ Fourni (PNG transparent 1774×887) | Scène 6 + couverture, fichier original non modifié |
+| Photo chantier OHEL (selfie équipe) | ✅ Fournie | Scène 4 (transition vers le réel), copie identique (SHA-256 vérifié) |
+| `assets/blocs-btcs-reels.jpg` | ❌ **Manquant** | Remplacé provisoirement par l'analyse des deux affiches fournies |
+| `assets/reference-geometrie-btcs.jpg` | ❌ **Manquant** | Idem |
+| `assets/realisation-ohel.mp4` | ❌ **Manquant** | Scène 5 : emplacement balisé « Emplacement vidéo » ; intégration automatique dès dépôt du fichier |
+| Affiches « Le BTCS c'est quoi » / « Fabrication du BTCS » | Fournies | **Référence seulement** — non intégrées (images générées par IA comportant de faux logos sur casques/presse) |
+
+### 3. Palette (extraite du logo officiel, médiane des pixels opaques)
+
+- Vert OHEL `#6DBC01` · Rouge vif OHEL `#F20102` · Rouge foncé OHEL `#B90101`
+- Blanc `#FFFFFF` · Anthracite `#2A2C2E` · Brun-rouge BTCS `#B4603A`
+- Typographie : Montserrat (500 → 900), licence SIL OFL, embarquée localement.
+
+### 4. Structure de la vidéo
+
+| Temps | Scène | Contenu |
+|---|---|---|
+| 0–5 s | 1. Accroche | Paysage de terre rouge (parallaxe, poussée caméra), particules, « ET SI LA TERRE DEVENAIT VOTRE MAISON ? » en profondeur |
+| 5–12 s | 2. Découverte | 9 000 particules se rassemblent en bloc BTCS 3D, rotation, « BTCS / Bloc de Terre Comprimée Stabilisée », repères rainures/encoches |
+| 12–26 s | 3. Fabrication | 1 Préparation (tamisage) · 2 Mélange (terre + stabilisant, sans dosage) · 3 Compression (presse 3D : remplissage, descente, pression, éjection) · 4 Cure (time-lapse lumière, sans durée) et contrôle qualité |
+| 26–35 s | 4. Construction | Le bloc se duplique, mur en appareillage décalé, silhouette de bâtiment, ouverture circulaire vers le **chantier OHEL réel** |
+| 35–43 s | 5. Réalisations | « DES CONSTRUCTIONS MODERNES ET DURABLES » — emplacement de la vidéo réelle |
+| 43–50 s | 6. Appel à l'action | Logo officiel, « CONSTRUISONS AUTREMENT. », question, bouton, puis téléphone → WhatsApp → site, apparition successive |
+
+Transitions : fondus enchaînés de 12 images entre scènes, 8 images entre étapes.
+
+### 5. Modèle 3D du bloc BTCS
+
+Modèle paramétrique Three.js (`src/three/btcs.ts`) :
+pavé allongé · 2 rainures longitudinales sur la face supérieure (3 bandes) · encoche verticale centrale à chaque extrémité · arêtes adoucies · texture procédurale mate et granuleuse (terre compactée, pas brique cuite).
+
+⚠️ **Géométrie provisoire** : relevée sur les affiches fournies (visuels vraisemblablement générés par IA), faute des photos réelles. Aucune dimension, densité ou résistance n'est indiquée. Dès réception des photos réelles, il suffit d'ajuster les paramètres `BTCS` (proportions, position et profondeur des rainures, largeur et profondeur des encoches) puis de relancer le rendu.
+
+### 6. Son
+
+- Habillage **100 % original**, synthétisé par `scripts/make-sound-design.mjs` (aucun échantillon ni musique protégée) : nappe cinématographique discrète, souffle de terre, whooshes de transition, sifflement hydraulique et impact de la presse, posés des blocs, impacts doux sur le logo et les coordonnées.
+- Niveau : environ −25 LUFS, crête −4 dBTP, volontairement bas pour laisser la place à la voix-off.
+- **Voix-off : non générée** (attente de validation du visuel). ElevenLabs est connecté à cette session ; la génération consommera des crédits et sera lancée uniquement sur votre accord. Autre option : déposer un MP3 dans `public/audio/voiceover.mp3`.
+
+### 7. Contrôle qualité
+
+| # | Point | Résultat |
+|---|---|---|
+| 1 | Logo identique à l'original | ✅ SHA-256 identique ; affiché via `<Img>` sans filtre, ratio 2:1 conservé ; animation par masque/échelle uniquement |
+| 2 | Blocs conformes aux photos de référence | ⚠️ Conformes aux affiches fournies ; **photos réelles manquantes** |
+| 3 | Rainures et encoches | ✅ 2 rainures supérieures + encoche à chaque extrémité, visibles en scènes 2, 3, 4 et sur la couverture |
+| 4 | Aucune brique générique | ✅ Tous les blocs (presse, cure, mur, couverture) utilisent le même modèle BTCS |
+| 5 | Ouvriers masculins illustratifs | ❌ **Non réalisé** : nécessite une génération d'images/vidéos IA photoréalistes (payante, non approuvée). Les étapes sont traitées en motion design 3D et 2D, toutes étiquetées « Illustration animée » |
+| 6 | Intégrité des médias réels | ✅ Photo du chantier non retouchée (recadrage et zoom lent uniquement) ; étiquette « Chantier OHEL · photo réelle » |
+| 7 | Téléphone +225 07 07 63 03 35 | ✅ Écran, script et SRT |
+| 8 | Lien WhatsApp | ✅ `https://wa.me/2250707630335` (affiché `wa.me/2250707630335`) |
+| 9 | Synchronisation voix-off | ⏳ Script et SRT calés sur la chronologie ; à revérifier avec l'enregistrement réel |
+| 10 | Lisibilité smartphone | ✅ Textes ≥ 28 px (titres 64 à 230 px), dans les zones de sécurité (haut 230 px, bas 430 px, droite 150 px) |
+| 11 | Pas de déformation des bâtiments | ✅ Photo en `object-fit: cover`, aucun étirement ; aucun bâtiment généré |
+| 12 | Droits à l'image | ⚠️ **À confirmer par OHEL** : la photo du chantier montre des personnes identifiables (équipe féminine). Obtenir les autorisations écrites avant diffusion. Sur la couverture, la photo est recadrée sans visage |
+| 13 | Pas de données techniques inventées | ✅ Aucun dosage, durée de cure, pression, dimension ou résistance ; jauge « PRESSION » sans valeur ; assemblage du mur étiqueté « Illustration – principe d'assemblage » |
+| 14 | FFprobe | ✅ Voir section 1 |
+| 15 | Captures de contrôle | ✅ Planche de 18 images couvrant toutes les scènes, revue avant le rendu final |
+
+Corrections apportées après le premier rendu : cadrage de la presse et de l'aire de cure, coupures du mur, débordement de « CONSTRUISONS AUTREMENT. », couverture (bloc qui masquait un visage), coutures de la texture, taille des blocs à l'entrée de la scène 4, plage de couleurs (full range → plage TV).
+
+### 8. Actions requises côté OHEL
+
+1. Fournir `blocs-btcs-reels.jpg` et `reference-geometrie-btcs.jpg` pour caler précisément la géométrie du bloc.
+2. Fournir `realisation-ohel.mp4` (et indiquer les meilleurs passages : murs BTCS, vue extérieure, intérieur, chambre).
+3. Confirmer les autorisations de droit à l'image des personnes visibles sur la photo du chantier.
+4. Valider le visuel V1, puis choisir la voix-off : génération ElevenLabs (crédits) ou fichier fourni.
+5. Optionnel : approuver la génération IA de scènes d'ouvriers masculins photoréalistes (payante), qui seront marquées comme illustrations.
+
+### 9. Reproduire le rendu
+
+```bash
+npm install
+node scripts/make-sound-design.mjs
+npx remotion render OhelBTCS out/raw.mp4
+ffmpeg -i out/raw.mp4 -vf "scale=in_range=full:out_range=tv,format=yuv420p" -c:v libx264 -profile:v high -crf 18 \
+  -colorspace bt709 -color_primaries bt709 -color_trc bt709 -color_range tv -c:a aac -b:a 192k -movflags +faststart \
+  output/OHEL_BTCS_VIDEO_01.mp4
+npx remotion still Couverture output/OHEL_BTCS_COUVERTURE_01.png
+```

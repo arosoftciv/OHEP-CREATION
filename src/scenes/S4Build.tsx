@@ -27,7 +27,7 @@ export const S4Build: React.FC = () => {
     return out;
   }, [L, H]);
   const wallH = 6 * (H + 0.03);
-  const camZ = interpolate(frame, [0, 30, 140], [10, 10, 35], {easing: Easing.inOut(Easing.cubic), ...clamp});
+  const camZ = interpolate(frame, [0, 30, 140], [15, 15, 35], {easing: Easing.inOut(Easing.cubic), ...clamp});
   const camY = interpolate(frame, [0, 140], [0.6, wallH / 2 + 1.2], clamp);
   const reveal = Easing.inOut(Easing.cubic)(interpolate(frame, [168, 204], [0, 1], clamp));
   const house = interpolate(frame, [112, 160], [0, 1], clamp);
