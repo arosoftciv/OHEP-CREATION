@@ -1,0 +1,21 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "overlap": 12,
+  "scenes": {
+    "hook":      {"start": 0,    "duration": 150},
+    "discovery": {"start": 150,  "duration": 210},
+    "making":    {"start": 360,  "duration": 420},
+    "build":     {"start": 780,  "duration": 270},
+    "projects":  {"start": 1050, "duration": 240},
+    "cta":       {"start": 1290, "duration": 210}
+  },
+  "makingSteps": [
+    {"start": 0,   "duration": 96},
+    {"start": 96,  "duration": 96},
+    {"start": 192, "duration": 132},
+    {"start": 324, "duration": 96}
+  ],
+  "total": 1500
+}

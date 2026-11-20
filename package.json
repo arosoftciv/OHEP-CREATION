@@ -1,0 +1,26 @@
+{
+  "name": "ohel-btcs-video",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render OhelBTCS output/OHEL_BTCS_VIDEO_01.mp4",
+    "still": "remotion still Couverture output/OHEL_BTCS_COUVERTURE_01.png"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^5.3.0",
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/cli": "^4.0.545",
+    "@remotion/fonts": "^4.0.545",
+    "@remotion/media": "^4.0.545",
+    "@remotion/three": "^4.0.545",
+    "@remotion/transitions": "^4.0.545",
+    "@types/react": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.545",
+    "three": "^0.171.0",
+    "typescript": "^7.0.2"
+  }
+}
