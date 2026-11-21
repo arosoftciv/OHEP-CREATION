@@ -6,6 +6,18 @@
 
 ## 1. Livrables
 
+**Versions finales Full HD (à publier) — `output/final/` :**
+
+| Fichier | Format | Usage |
+|---|---|---|
+| `OHEL_HISTOIRE_BTCS_MOBILE_HD_1080x1920.mp4` | vertical 9:16, 1080 × 1920, H.264 High 6 Mb/s, AAC 192 kb/s, 115 s | TikTok, Instagram/Facebook Reels, YouTube Shorts, statut WhatsApp |
+| `OHEL_HISTOIRE_BTCS_ORDINATEUR_HD_1920x1080.mp4` | horizontal 16:9, 1920 × 1080, mêmes réglages | YouTube, Facebook, site web, présentations : film au centre, fond flou, logo/titre à gauche, contact et devis à droite |
+| `output/cover/OHEL_HISTOIRE_BTCS_COVER.jpg` / `..._COVER_ORDINATEUR_1920x1080.jpg` | vignettes mobile / ordinateur | à choisir comme couverture lors de la publication (aussi intégrées dans les MP4) |
+
+Régénération : `scripts/export_final.sh` (après `npm run render` du master).
+
+**Fichiers de travail :**
+
 | Fichier | Contenu |
 |---|---|
 | `output/video/OHEL_HISTOIRE_BTCS_01.mp4` | Film avec voix (Brian) et sous-titres incrustés — version web (CRF 21, 41 Mo env.) ; le master pleine qualité `_MASTER.mp4` reste hors dépôt (>100 Mo) |
