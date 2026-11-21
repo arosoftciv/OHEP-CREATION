@@ -1,7 +1,7 @@
 # OHEL INTERNATIONAL — « L'histoire du BTCS » · Rapport de production
 
 **Version :** 01 (version de contrôle validée → version définitive)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 89,5 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 97,7 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
 **Son :** −14 LUFS intégrés, crête vraie −1,5 dBTP (norme réseaux sociaux)
 
 ## 1. Livrables
@@ -133,3 +133,11 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 
 - Suppression de l'étape « atelier » après « En Côte d'Ivoire… » (deux transitions rapprochées) : la villa (627167) reste à l'écran de sa révélation par les briques jusqu'à la signature (≈ 60–67,5 s), avec un lent mouvement de caméra ; une seule transition (assombrissement) mène à la signature, dont le fond devient la villa floutée.
 - Le visuel « atelier » (affiche 626923) n'est plus utilisé dans le film (il reste sur la couverture).
+
+
+## 13. Prononciation BTCS et nouvelle réplique de contact
+
+- **BTCS = « bé-té-cé-esse »** (auparavant épelé à l'anglaise par la voix) : réenregistré dans la phrase « … le BTCS » et dans les deux mentions de la carte de fin. L'animation B-T-C-S suit les quatre syllabes.
+- **Contact :** « Contactez-nous » est remplacé par « Contactez OHEL International au +225 07 07 63 03 35, par appel ou WhatsApp. » — numéro dicté chiffre par chiffre ; à l'écran, la ligne du numéro puis celle de WhatsApp s'éclairent pendant qu'ils sont prononcés ; bandeau « VOUS AVEZ UN PROJET ? CONTACTEZ OHEL ».
+- Une seule prise pour ces trois passages (440 crédits). Total ElevenLabs du projet : 2 659 crédits, sans dépassement.
+- Durée : 97.7 s (la réplique de contact est plus longue ; les coordonnées restent à l'écran pendant toute la dictée).

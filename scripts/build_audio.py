@@ -276,6 +276,14 @@ for kk, n in enumerate([74, 78, 81, 86]):
 addn(music, kalimba(note(62), 3), W(78.7) + 1.6, 0.14)
 addn(music, kalimba(note(69), 3), W(78.7) + 2.0, 0.12)
 addn(music, kalimba(note(74), 3), W(78.7) + 2.4, 0.12)
+# motif doux sous les coordonnées et la carte de fin (évite une nappe statique)
+motif = [62, 69, 65, 69, 62, 69, 66, 69]
+t = W(78.7) + 3.4
+i = 0
+while t < DUR - 2.0:
+    addn(music, kalimba(note(motif[i % len(motif)]), 1.8), t, 0.07)
+    if i % 4 == 0: addn(music, low_drum(110, 55, 0.6), t, 0.12)
+    t += 60 / 76; i += 1
 
 # ---------------------------------------------------------------- effets sonores (synchronisés à l'image)
 add(sfx, sparkle(2.5, 1800), 8.8, 0.10)            # particules qui se détachent de la termitière

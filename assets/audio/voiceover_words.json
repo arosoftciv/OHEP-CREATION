@@ -525,566 +525,614 @@
   {
    "text": "Après",
    "type": "word",
-   "start": 37.291,
-   "end": 37.581
+   "start": 37.2,
+   "end": 37.537
   },
   {
    "text": "la",
    "type": "word",
-   "start": 37.605,
-   "end": 37.674
+   "start": 37.56,
+   "end": 37.63
   },
   {
    "text": "cure",
    "type": "word",
-   "start": 37.732,
-   "end": 38.011
+   "start": 37.699,
+   "end": 38.013
   },
   {
    "text": "et",
    "type": "word",
-   "start": 38.034,
-   "end": 38.081
+   "start": 38.036,
+   "end": 38.082
   },
   {
    "text": "les",
    "type": "word",
-   "start": 38.104,
-   "end": 38.197
+   "start": 38.106,
+   "end": 38.198
   },
   {
    "text": "contrôles",
    "type": "word",
-   "start": 38.231,
-   "end": 38.638
+   "start": 38.222,
+   "end": 38.57
   },
   {
    "text": "de",
    "type": "word",
-   "start": 38.661,
-   "end": 38.731
+   "start": 38.593,
+   "end": 38.663
   },
   {
    "text": "qualité,",
    "type": "word",
-   "start": 38.789,
-   "end": 39.416
+   "start": 38.709,
+   "end": 39.336
   },
   {
    "text": "elle",
    "type": "word",
-   "start": 39.625,
-   "end": 39.834
+   "start": 39.545,
+   "end": 39.719
   },
   {
    "text": "devient",
    "type": "word",
-   "start": 39.868,
-   "end": 40.286
+   "start": 39.743,
+   "end": 40.137
   },
   {
    "text": "un",
    "type": "word",
-   "start": 40.344,
-   "end": 40.437
+   "start": 40.207,
+   "end": 40.311
   },
   {
    "text": "Bloc",
    "type": "word",
-   "start": 40.519,
-   "end": 40.774
+   "start": 40.381,
+   "end": 40.602
   },
   {
    "text": "de",
    "type": "word",
-   "start": 40.844,
-   "end": 40.925
+   "start": 40.66,
+   "end": 40.741
   },
   {
    "text": "Terre",
    "type": "word",
-   "start": 40.995,
-   "end": 41.215
+   "start": 40.799,
+   "end": 41.02
   },
   {
    "text": "Comprimée",
    "type": "word",
-   "start": 41.238,
-   "end": 41.761
+   "start": 41.043,
+   "end": 41.507
   },
   {
    "text": "Stabilisée",
    "type": "word",
-   "start": 41.784,
-   "end": 42.55
+   "start": 41.531,
+   "end": 42.285
   },
   {
    "text": ":",
    "type": "word",
-   "start": 42.585,
-   "end": 42.678
+   "start": 42.32,
+   "end": 42.39
   },
   {
    "text": "le",
    "type": "word",
-   "start": 43.061,
-   "end": 43.189
+   "start": 42.831,
+   "end": 42.947
   },
   {
    "text": "B.",
    "type": "word",
-   "start": 43.259,
-   "end": 43.328
+   "start": 43.017,
+   "end": 43.307
   },
   {
    "text": "T.",
    "type": "word",
-   "start": 43.502,
-   "end": 43.618
+   "start": 43.307,
+   "end": 43.597
   },
   {
    "text": "C.",
    "type": "word",
-   "start": 43.792,
-   "end": 43.943
+   "start": 43.597,
+   "end": 43.888
   },
   {
    "text": "S.",
    "type": "word",
-   "start": 44.152,
-   "end": 44.396
+   "start": 43.888,
+   "end": 44.178
   },
   {
    "text": "Et",
    "type": "word",
-   "start": 45.093,
-   "end": 45.243
+   "start": 44.843,
+   "end": 44.993
   },
   {
    "text": "ces",
    "type": "word",
-   "start": 45.29,
-   "end": 45.429
+   "start": 45.04,
+   "end": 45.179
   },
   {
    "text": "blocs",
    "type": "word",
-   "start": 45.464,
-   "end": 45.754
+   "start": 45.214,
+   "end": 45.504
   },
   {
    "text": "prennent",
    "type": "word",
-   "start": 45.778,
-   "end": 46.079
+   "start": 45.528,
+   "end": 45.829
   },
   {
    "text": "place",
    "type": "word",
-   "start": 46.103,
-   "end": 46.474
+   "start": 45.853,
+   "end": 46.224
   },
   {
    "text": "dans",
    "type": "word",
-   "start": 46.497,
-   "end": 46.637
+   "start": 46.247,
+   "end": 46.387
   },
   {
    "text": "des",
    "type": "word",
-   "start": 46.66,
-   "end": 46.764
+   "start": 46.41,
+   "end": 46.514
   },
   {
    "text": "projets",
    "type": "word",
-   "start": 46.799,
-   "end": 47.24
+   "start": 46.549,
+   "end": 46.99
   },
   {
    "text": "architecturaux",
    "type": "word",
-   "start": 47.264,
-   "end": 47.983
+   "start": 47.014,
+   "end": 47.733
   },
   {
    "text": "contemporains.",
    "type": "word",
-   "start": 48.018,
-   "end": 48.796
+   "start": 47.768,
+   "end": 48.546
   },
   {
    "text": "En",
    "type": "word",
-   "start": 49.1,
-   "end": 49.239
+   "start": 48.85,
+   "end": 48.989
   },
   {
    "text": "Côte",
    "type": "word",
-   "start": 49.309,
-   "end": 49.472
+   "start": 49.059,
+   "end": 49.222
   },
   {
    "text": "d'Ivoire,",
    "type": "word",
-   "start": 49.495,
-   "end": 50.029
+   "start": 49.245,
+   "end": 49.779
   },
   {
    "text": "OHEL",
    "type": "word",
-   "start": 50.122,
-   "end": 50.331
+   "start": 49.872,
+   "end": 50.081
   },
   {
    "text": "International",
    "type": "word",
-   "start": 50.377,
-   "end": 50.923
+   "start": 50.127,
+   "end": 50.673
   },
   {
    "text": "met",
    "type": "word",
-   "start": 50.981,
-   "end": 51.097
+   "start": 50.731,
+   "end": 50.847
   },
   {
    "text": "ce",
    "type": "word",
-   "start": 51.12,
-   "end": 51.213
+   "start": 50.87,
+   "end": 50.963
   },
   {
    "text": "savoir-faire",
    "type": "word",
-   "start": 51.259,
-   "end": 51.991
+   "start": 51.009,
+   "end": 51.741
   },
   {
    "text": "au",
    "type": "word",
-   "start": 52.014,
-   "end": 52.223
+   "start": 51.764,
+   "end": 51.973
   },
   {
    "text": "service",
    "type": "word",
-   "start": 52.293,
-   "end": 52.687
+   "start": 52.043,
+   "end": 52.437
   },
   {
    "text": "de",
    "type": "word",
-   "start": 52.711,
-   "end": 52.769
+   "start": 52.461,
+   "end": 52.519
   },
   {
    "text": "la",
    "type": "word",
-   "start": 52.815,
-   "end": 52.873
+   "start": 52.565,
+   "end": 52.623
   },
   {
    "text": "construction.",
    "type": "word",
-   "start": 52.92,
-   "end": 53.547
+   "start": 52.67,
+   "end": 53.297
   },
   {
    "text": "De",
    "type": "word",
-   "start": 53.903,
-   "end": 54.019
+   "start": 53.653,
+   "end": 53.769
   },
   {
    "text": "la",
    "type": "word",
-   "start": 54.077,
-   "end": 54.147
+   "start": 53.827,
+   "end": 53.897
   },
   {
    "text": "terre",
    "type": "word",
-   "start": 54.228,
-   "end": 54.449
+   "start": 53.978,
+   "end": 54.199
   },
   {
    "text": "à",
    "type": "word",
-   "start": 54.472,
-   "end": 54.495
+   "start": 54.222,
+   "end": 54.245
   },
   {
    "text": "l'architecture",
    "type": "word",
-   "start": 54.542,
-   "end": 55.343
+   "start": 54.292,
+   "end": 55.093
   },
   {
    "text": ":",
    "type": "word",
-   "start": 55.401,
-   "end": 55.459
+   "start": 55.151,
+   "end": 55.209
   },
   {
    "text": "une",
    "type": "word",
-   "start": 55.842,
-   "end": 55.993
+   "start": 55.592,
+   "end": 55.743
   },
   {
    "text": "histoire",
    "type": "word",
-   "start": 56.016,
-   "end": 56.48
+   "start": 55.766,
+   "end": 56.23
   },
   {
    "text": "qui",
    "type": "word",
-   "start": 56.515,
-   "end": 56.62
+   "start": 56.265,
+   "end": 56.37
   },
   {
    "text": "continue.",
    "type": "word",
-   "start": 56.678,
-   "end": 57.235
+   "start": 56.428,
+   "end": 56.985
   },
   {
    "text": "OHEL",
    "type": "word",
-   "start": 57.73,
-   "end": 57.963
+   "start": 57.48,
+   "end": 57.713
   },
   {
    "text": "International.",
    "type": "word",
-   "start": 58.009,
-   "end": 59.031
+   "start": 57.759,
+   "end": 58.781
   },
   {
    "text": "Vous",
    "type": "word",
-   "start": 59.475,
-   "end": 59.637
+   "start": 59.342,
+   "end": 59.527
   },
   {
    "text": "avez",
    "type": "word",
-   "start": 59.695,
-   "end": 59.823
+   "start": 59.597,
+   "end": 59.736
   },
   {
    "text": "un",
    "type": "word",
-   "start": 59.846,
-   "end": 59.904
+   "start": 59.771,
+   "end": 59.818
   },
   {
    "text": "projet",
    "type": "word",
-   "start": 59.962,
-   "end": 60.369
+   "start": 59.864,
+   "end": 60.236
   },
   {
    "text": "?",
    "type": "word",
-   "start": 60.461,
-   "end": 60.496
+   "start": 60.352,
+   "end": 60.468
   },
   {
-   "text": "Contactez-nous.",
+   "text": "Contactez",
    "type": "word",
-   "start": 60.531,
-   "end": 61.506
+   "start": 60.909,
+   "end": 61.49
+  },
+  {
+   "text": "OHEL",
+   "type": "word",
+   "start": 61.571,
+   "end": 61.768
+  },
+  {
+   "text": "International",
+   "type": "word",
+   "start": 61.815,
+   "end": 62.604
+  },
+  {
+   "text": "au",
+   "type": "word",
+   "start": 62.674,
+   "end": 62.86
+  },
+  {
+   "text": "+225 07 07 63 03 35,",
+   "type": "word",
+   "start": 62.906,
+   "end": 68.99
+  },
+  {
+   "text": "par",
+   "type": "word",
+   "start": 69.373,
+   "end": 69.582
+  },
+  {
+   "text": "appel",
+   "type": "word",
+   "start": 69.628,
+   "end": 70.046
+  },
+  {
+   "text": "ou",
+   "type": "word",
+   "start": 70.22,
+   "end": 70.36
+  },
+  {
+   "text": "WhatsApp.",
+   "type": "word",
+   "start": 70.406,
+   "end": 70.975
   },
   {
    "text": "Tu",
    "type": "word",
-   "start": 62.307,
-   "end": 62.47
+   "start": 72.179,
+   "end": 72.306
   },
   {
    "text": "veux",
    "type": "word",
-   "start": 62.528,
-   "end": 62.632
+   "start": 72.353,
+   "end": 72.446
   },
   {
    "text": "en",
    "type": "word",
-   "start": 62.667,
-   "end": 62.713
+   "start": 72.504,
+   "end": 72.55
   },
   {
    "text": "savoir",
    "type": "word",
-   "start": 62.771,
-   "end": 63.015
+   "start": 72.597,
+   "end": 72.84
   },
   {
    "text": "plus",
    "type": "word",
-   "start": 63.062,
-   "end": 63.364
+   "start": 72.875,
+   "end": 73.142
   },
   {
    "text": "?",
    "type": "word",
-   "start": 63.491,
-   "end": 63.549
+   "start": 73.293,
+   "end": 73.328
   },
   {
    "text": "Abonne-toi",
    "type": "word",
-   "start": 63.99,
-   "end": 64.501
+   "start": 73.839,
+   "end": 74.384
   },
   {
    "text": "pour",
    "type": "word",
-   "start": 64.536,
-   "end": 64.641
+   "start": 74.431,
+   "end": 74.535
   },
   {
    "text": "ne",
    "type": "word",
-   "start": 64.687,
-   "end": 64.757
+   "start": 74.582,
+   "end": 74.651
   },
   {
    "text": "pas",
    "type": "word",
-   "start": 64.803,
-   "end": 64.931
+   "start": 74.71,
+   "end": 74.837
   },
   {
    "text": "rater",
    "type": "word",
-   "start": 64.954,
-   "end": 65.186
+   "start": 74.872,
+   "end": 75.104
   },
   {
    "text": "le",
    "type": "word",
-   "start": 65.209,
-   "end": 65.279
+   "start": 75.139,
+   "end": 75.197
   },
   {
    "text": "prochain",
    "type": "word",
-   "start": 65.326,
-   "end": 65.616
+   "start": 75.244,
+   "end": 75.511
   },
   {
    "text": "numéro.",
    "type": "word",
-   "start": 65.639,
-   "end": 66.162
+   "start": 75.534,
+   "end": 76.01
   },
   {
    "text": "Tu",
    "type": "word",
-   "start": 66.487,
-   "end": 66.626
+   "start": 76.393,
+   "end": 76.521
   },
   {
    "text": "comprendras",
    "type": "word",
-   "start": 66.696,
-   "end": 67.148
+   "start": 76.579,
+   "end": 77.032
   },
   {
    "text": "les",
    "type": "word",
-   "start": 67.172,
-   "end": 67.276
+   "start": 77.055,
+   "end": 77.159
   },
   {
    "text": "avantages",
    "type": "word",
-   "start": 67.334,
-   "end": 67.81
+   "start": 77.217,
+   "end": 77.693
   },
   {
    "text": "du",
    "type": "word",
-   "start": 67.833,
-   "end": 67.926
+   "start": 77.717,
+   "end": 77.798
   },
   {
    "text": "B.",
    "type": "word",
-   "start": 67.996,
-   "end": 68.066
+   "start": 77.867,
+   "end": 78.097
   },
   {
    "text": "T.",
    "type": "word",
-   "start": 68.216,
-   "end": 68.298
+   "start": 78.097,
+   "end": 78.326
   },
   {
    "text": "C.",
    "type": "word",
-   "start": 68.414,
-   "end": 68.53
+   "start": 78.326,
+   "end": 78.555
   },
   {
    "text": "S.,",
    "type": "word",
-   "start": 68.704,
-   "end": 69.122
+   "start": 78.555,
+   "end": 78.785
   },
   {
    "text": "et",
    "type": "word",
-   "start": 69.296,
-   "end": 69.424
+   "start": 78.959,
+   "end": 79.086
   },
   {
    "text": "pourquoi",
    "type": "word",
-   "start": 69.47,
-   "end": 69.842
+   "start": 79.133,
+   "end": 79.4
   },
   {
    "text": "choisir",
    "type": "word",
-   "start": 69.877,
-   "end": 70.364
+   "start": 79.423,
+   "end": 79.806
   },
   {
    "text": "le",
    "type": "word",
-   "start": 70.411,
-   "end": 70.48
+   "start": 79.853,
+   "end": 79.922
   },
   {
    "text": "B.",
    "type": "word",
-   "start": 70.538,
-   "end": 70.597
+   "start": 79.98,
+   "end": 80.247
   },
   {
    "text": "T.",
    "type": "word",
-   "start": 70.747,
-   "end": 70.817
+   "start": 80.247,
+   "end": 80.514
   },
   {
    "text": "C.",
    "type": "word",
-   "start": 70.945,
-   "end": 71.061
+   "start": 80.514,
+   "end": 80.782
   },
   {
    "text": "S.",
    "type": "word",
-   "start": 71.235,
-   "end": 71.827
+   "start": 80.782,
+   "end": 81.049
   }
  ]
 }

@@ -5,6 +5,7 @@ import {C, F} from '../theme';
 import {lerp, outBack, outCubic, ramp, rnd} from '../animations/easing';
 import {Easing} from 'remotion';
 import {vw} from '../voice';
+import {DURATION_S} from '../timeline';
 
 /* SCÈNE 6 — La signature de marque (70,4 → 81 s, puis le logo reste en tête de la carte de fin)
  * Le chantier réel OHEL reste en arrière-plan, assombri. Des particules de terre convergent puis
@@ -22,7 +23,7 @@ export const S6Signature: React.FC = () => {
 	const reveal = ramp(t, 74.85, 75.75, Easing.inOut(Easing.cubic));
 	const conv = ramp(t, 73.9, 75.1, Easing.inOut(Easing.cubic));
 	const textsUp = ramp(t, 74.3, 75.0, Easing.inOut(Easing.cubic));
-	const endFade = ramp(t, 93.1, 93.6);
+	const endFade = ramp(t, DURATION_S - 0.5, DURATION_S);
 	// arrivée de la carte de fin (scène 7) : textes et coordonnées s'effacent, le logo remonte
 	const TG = vw('Tu');
 	const out = ramp(t, TG - 0.75, TG - 0.05, Easing.inOut(Easing.cubic));
@@ -34,15 +35,15 @@ export const S6Signature: React.FC = () => {
 			<AbsoluteFill style={{opacity: dark}}>
 				<Img
 					src={staticFile('img/reference_batiment.jpg')}
-					style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.12, 1.2, ramp(t, 70, 93.6, (x) => x))})`, transformOrigin: '50% 48%', filter: `blur(${lerp(0, 10, dark)}px) saturate(0.85)`}}
+					style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.12, 1.2, ramp(t, 70, DURATION_S, (x) => x))})`, transformOrigin: '50% 48%', filter: `blur(${lerp(0, 10, dark)}px) saturate(0.85)`}}
 				/>
 				<AbsoluteFill style={{background: `linear-gradient(180deg, rgba(20,10,5,0.82), rgba(36,19,10,0.78) 50%, rgba(20,10,5,0.9))`}} />
 			</AbsoluteFill>
 
 			{/* textes d'ouverture, qui remontent pour laisser place au logo */}
 			<div style={{position: 'absolute', inset: 0, opacity: 1 - out, transform: `translateY(${-textsUp * 360}px) scale(${1 - textsUp * 0.22})`, transformOrigin: '50% 30%'}}>
-				<KineticTitle text={"DE LA TERRE\nÀ L'ARCHITECTURE."} start={71.05} end={93.5} y={640} size={72} maxWidth={1000} accent={['TERRE', "L'ARCHITECTURE."]} />
-				<KineticTitle text="une histoire qui continue." start={73.25} end={93.5} y={826} size={60} serif weight={700} color={C.sand} stagger={0.08} />
+				<KineticTitle text={"DE LA TERRE\nÀ L'ARCHITECTURE."} start={71.05} end={999} y={640} size={72} maxWidth={1000} accent={['TERRE', "L'ARCHITECTURE."]} />
+				<KineticTitle text="une histoire qui continue." start={73.25} end={999} y={826} size={60} serif weight={700} color={C.sand} stagger={0.08} />
 			</div>
 
 			{/* particules convergentes */}
@@ -118,8 +119,21 @@ const Tagline: React.FC<{t: number}> = ({t}) => {
 	);
 };
 
-const Row: React.FC<{icon: React.ReactNode; text: string; k: number; big?: boolean}> = ({icon, text, k, big}) => (
-	<div style={{display: 'flex', alignItems: 'center', gap: 20, opacity: k, transform: `translateX(${(1 - k) * -40}px)`}}>
+const Row: React.FC<{icon: React.ReactNode; text: string; k: number; big?: boolean; glow?: number}> = ({icon, text, k, big, glow = 0}) => (
+	<div
+		style={{
+			display: 'flex',
+			alignItems: 'center',
+			gap: 20,
+			opacity: k,
+			transform: `translateX(${(1 - k) * -40}px) scale(${1 + glow * 0.06})`,
+			transformOrigin: '0% 50%',
+			background: `rgba(222,149,80,${0.28 * glow})`,
+			borderRadius: 40,
+			padding: '4px 22px 4px 4px',
+			margin: '0 -22px 0 -4px',
+		}}
+	>
 		<div style={{width: 64, height: 64, borderRadius: 32, background: C.cream, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{icon}</div>
 		<div style={{fontFamily: F.title, fontWeight: big ? 900 : 700, fontSize: big ? 52 : 36, color: C.cream, letterSpacing: big ? 1 : 0.5, whiteSpace: 'nowrap'}}>{text}</div>
 	</div>
@@ -130,6 +144,11 @@ const Contacts: React.FC<{t: number}> = ({t}) => {
 	const head = ramp(t, a, a + 0.5, outBack);
 	if (head <= 0) return null;
 	const k = (i: number) => ramp(t, a + 0.6 + i * 0.35, a + 1.1 + i * 0.35, outCubic);
+	// mise en valeur pendant que le numéro, puis WhatsApp, sont prononcés
+	const tNum = vw('+225 07 07 63 03 35');
+	const tWa = vw('WhatsApp');
+	const glowNum = Math.min(ramp(t, tNum - 0.2, tNum + 0.2), 1 - ramp(t, tWa - 1.4, tWa - 0.9));
+	const glowWa = Math.min(ramp(t, tWa - 1.0, tWa - 0.5), 1 - ramp(t, tWa + 1.2, tWa + 1.7));
 	const phone = (
 		<svg width={34} height={34} viewBox="0 0 24 24">
 			<path fill={C.deep} d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
@@ -164,11 +183,11 @@ const Contacts: React.FC<{t: number}> = ({t}) => {
 					letterSpacing: 1,
 				}}
 			>
-				VOUS AVEZ UN PROJET ? CONTACTEZ-NOUS
+				VOUS AVEZ UN PROJET ? CONTACTEZ OHEL
 			</div>
 			<div style={{display: 'flex', flexDirection: 'column', gap: 18, alignItems: 'flex-start'}}>
-				<Row icon={phone} text="+225 07 07 63 03 35" k={k(0)} big />
-				<Row icon={whatsapp} text="wa.me/2250707630335" k={k(1)} />
+				<Row icon={phone} text="+225 07 07 63 03 35" k={k(0)} big glow={glowNum} />
+				<Row icon={whatsapp} text="WhatsApp : wa.me/2250707630335" k={k(1)} glow={glowWa} />
 				<Row icon={globe} text="ohelintermondial.com" k={k(2)} />
 			</div>
 		</div>

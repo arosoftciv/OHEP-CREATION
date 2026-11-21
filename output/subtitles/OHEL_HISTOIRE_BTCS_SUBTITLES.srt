@@ -67,23 +67,23 @@ Aujourd'hui, la terre est sélectionnée,
 préparée, mélangée à un stabilisant adapté,
 
 18
-00:00:45,100 --> 00:00:46,450
+00:00:45,100 --> 00:00:46,360
 puis comprimée.
 
 19
-00:00:46,470 --> 00:00:48,784
+00:00:46,380 --> 00:00:48,704
 Après la cure et les contrôles de qualité,
 
 20
-00:00:48,805 --> 00:00:50,398
+00:00:48,725 --> 00:00:50,202
 elle devient un Bloc de Terre
 
 21
-00:00:50,418 --> 00:00:52,220
+00:00:50,222 --> 00:00:51,991
 Comprimée Stabilisée :
 
 22
-00:00:52,240 --> 00:00:54,176
+00:00:52,011 --> 00:00:53,958
 le BTCS.
 
 23
@@ -115,30 +115,38 @@ De la terre à l'architecture :
 une histoire qui continue.
 
 30
-00:01:12,188 --> 00:01:13,914
+00:01:12,188 --> 00:01:14,031
 OHEL International.
 
 31
-00:01:13,934 --> 00:01:14,970
+00:01:14,051 --> 00:01:15,544
 Vous avez un projet ?
 
 32
-00:01:14,990 --> 00:01:16,451
-Contactez-nous.
+00:01:15,618 --> 00:01:17,363
+Contactez OHEL International
 
 33
-00:01:17,782 --> 00:01:19,438
-Tu veux en savoir plus ?
+00:01:17,383 --> 00:01:24,062
+au +225 07 07 63 03 35,
 
 34
-00:01:19,465 --> 00:01:21,942
-Abonne-toi pour ne pas rater le prochain numéro.
+00:01:24,082 --> 00:01:26,283
+par appel ou WhatsApp.
 
 35
-00:01:21,962 --> 00:01:24,751
-Tu comprendras les avantages du BTCS.
+00:01:26,862 --> 00:01:28,424
+Tu veux en savoir plus ?
 
 36
-00:01:24,771 --> 00:01:28,002
+00:01:28,522 --> 00:01:31,056
+Abonne-toi pour ne pas rater le prochain numéro.
+
+37
+00:01:31,076 --> 00:01:33,622
+Tu comprendras les avantages du BTCS.
+
+38
+00:01:33,642 --> 00:01:36,419
 et pourquoi choisir le BTCS.
 
