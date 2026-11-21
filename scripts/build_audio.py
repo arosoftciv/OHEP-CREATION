@@ -23,7 +23,8 @@ def W(prefix, n=0, after=0.0):
 
 SC = {k: (v['from'] / 30, (v['from'] + v['duration']) / 30) for k, v in TL['scenes'].items()}
 T_FOUR = W('four')
-T_LOGO = W('projet', 0, 50) + 0.9
+CL = {c['id']: c for c in TL['clips']}
+T_LOGO = W('projet', 0, CL['ohel']['start']) + 0.9
 T_SUB = W('abonnez')
 T_BELL = W('cloche')
 
@@ -167,7 +168,7 @@ while t < b - 0.3:
     bar += 1
 for word in ['soleil', 'toiture', 'murs', 'fenêtres', 'circule']:  # petits accents sur les mots-clés
     add(tone(81, 0.3, 'bell') * 0.05, W(word), pan=0.5)
-for tt in [SC['s2_causes'][0] + 0.05, SC['s3_btcs'][0] - 0.5, W('inertie') - 0.4, W('mais', 0, 33) - 0.4]:
+for tt in [SC['s2_causes'][0] + 0.05, SC['s3_btcs'][0] - 0.5, W('inertie') - 0.4, W('mais', 0, CL['nuance']['start'] - 0.05) - 0.4, CL['comparaison']['start'] - 0.5]:
     add(whoosh(0.9) * 0.45, tt)
 add(boom(0.5) * 0.35, W('bé-té') - 0.05)
 
@@ -188,7 +189,7 @@ while t < b:
     t += 4 * BEAT
     k += 1
 for word in ['toiture', "l'ombre", 'ventilation', 'matériaux']:
-    add(tone(84, 0.6, 'bell') * 0.06, W(word, 0, 38), pan=-0.4)
+    add(tone(84, 0.6, 'bell') * 0.06, W(word, 0, CL['conception']['start'] - 0.05), pan=-0.4)
 
 # ---------------------------------------------------------------- Phase 4 : OHEL & abonnement (positive)
 a, b = SC['s5_ohel'][0], DUR

@@ -18,7 +18,8 @@ MAXC = 30
 INTRO = 1.0  # vignette client en ouverture du MP4 final (scripts/export_final.sh) : SRT et repères décalés d'autant
 SCENE_OF = {
     'hook': 'Scène 1 — Votre maison est un four ?', 'question': 'Scène 2 — D’où vient cette chaleur ?',
-    'causes': None, 'materiau': 'Scène 3 — Le matériau : BTCS et inertie thermique', 'inertie': None, 'nuance': None,
+    'causes': None, 'materiau': 'Scène 3 — Le matériau : BTCS et inertie thermique', 'inertie': None,
+    'comparaison': 'Scène 3 bis — Comparaison de principe : agglo creux / mur plein en BTCS', 'nuance': None,
     'conception': 'Scène 4 — Le confort se conçoit', 'ohel': 'Scène 5 — OHEL INTERNATIONAL',
     'abonnement': 'Scène 6 — Abonnez-vous et activez la cloche', 'projet': 'Scène 7 — Contact', 'contact': None,
 }
@@ -78,7 +79,7 @@ def main():
 
     # Script voix-off
     lines = ['OHEL INTERNATIONAL — Série BTCS · Épisode 2', 'POURQUOI CERTAINES MAISONS SONT-ELLES SI CHAUDES ?', '',
-             'Voix : ElevenLabs « Tony – Warm, Dynamic Podcast Narrator » (français natif), modèle eleven_v4, une seule prise.',
+             'Voix : ElevenLabs « Tony – Warm, Dynamic Podcast Narrator » (français natif), modèle eleven_v4 : une prise principale + une prise pour la comparaison (même voix, même modèle).',
              'Graphies phonétiques données à la voix : « Oël » pour OHEL, « bé-té-cé-esse » pour BTCS, numéro dicté en toutes lettres.',
              'Repères = début de chaque réplique dans le MP4 final (mm:ss.s), vignette d’ouverture de 1 s comprise.', '']
     for c in TL['clips']:
@@ -92,7 +93,8 @@ def main():
               "Il est quatorze heures, à Abidjan. Vous entrez chez vous… et vous avez l'impression d'entrer dans un four ! "
               "Mais d'où vient cette chaleur ? Le soleil chauffe la toiture, les murs et les fenêtres. Quand l'air circule mal, "
               "la chaleur peut s'accumuler à l'intérieur. Le choix du matériau compte aussi. Le bé-té-cé-esse possède une inertie "
-              "thermique, qui peut ralentir les variations de température. Mais ce n'est pas une climatisation naturelle ! "
+              "thermique, qui peut ralentir les variations de température. [Prise 2 :] Face à un agglo creux, un mur plein en bé-té-cé-esse contient plus de matière : il amortit et décale davantage les pics de chaleur. "
+              "Mais ce n'est pas une climatisation naturelle ! "
               "Pour une maison confortable, il faut penser à la toiture, à l'ombre, à la ventilation et aux matériaux. C'est "
               "l'ensemble qui fait la différence. Avec Oël International, découvrez une autre approche de la construction en "
               "bé-té-cé-esse, adaptée à votre projet. Abonnez-vous, et activez la cloche, pour ne manquer aucune de nos prochaines "

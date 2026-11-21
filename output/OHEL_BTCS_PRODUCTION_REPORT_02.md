@@ -2,7 +2,7 @@
 ## « Pourquoi certaines maisons sont-elles si chaudes ? » — Rapport de production
 
 **Version :** 02 (V1 contrôlée → corrections → version finale)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 82,5 s (vignette d'ouverture 1 s + film 81,5 s) · MP4 H.264 High + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 89,7 s (vignette d'ouverture 1 s + film 88,7 s) · MP4 H.264 High + AAC 192 kb/s
 **Structure :** PROBLÈME → EXPLICATION → BTCS → CONCEPTION ADAPTÉE → OHEL → ABONNEMENT → CONTACT
 
 ### 1. Livrables (`output/`)
@@ -41,11 +41,11 @@ Le dépôt principal était vide ; les ressources ont été récupérées sur le
 |---|---|---|
 | 1 · Votre maison est un four ? | 0–8 s | Salon d'Abidjan à 14 h (horloge sur 2 h) en illustration animée, avec le **personnage photographique fourni (630226)** intégré par compositing (profondeur de champ, lumière de contour chaude côté fenêtre, ombre portée, respiration) ; caméra visage → ventilateur → fenêtre surexposée → plan large → poussée dans le mur ; distorsion d'air chaud (feTurbulence/feDisplacementMap) ; « VOTRE MAISON EST UN **FOUR ?** » qui claque sur « four » (secousse, flash) ; « MAIS POURQUOI ? » |
 | 2 · D'où vient cette chaleur ? | 8–22,3 s | Le mur du salon se fend (« VUE EN COUPE ») → maison en coupe ; sur les mots : SOLEIL, TOITURE (flèches rouges, toiture qui rougit), MURS, FENÊTRES (faisceau et tache au sol), VENTILATION (petites flèches hésitantes), chaleur qui s'accumule ; « LE CONFORT NE DÉPEND PAS D'UN SEUL ÉLÉMENT. » ; zoom final dans le mur |
-| 3 · Le matériau : BTCS | 22,3–37,2 s | Le mur devient un appareillage de vraies faces de BTCS, qui éclate en 3D ; le **bloc réel** apparaît (rotation 2,5D, reflet), « B-T-C-S » sur les 4 syllabes, « BLOC DE TERRE COMPRIMÉE STABILISÉE », repères « Rainure longitudinale » / « Encoche d'emboîtement » placés sur la photo ; **L'INERTIE THERMIQUE** : cycle jour → nuit → jour (le mur absorbe et stocke / restitue des deux côtés) + courbes de principe extérieur/intérieur (atténuation, décalage) ; carton « PAS UNE CLIMATISATION NATURELLE » avec la nuance sur le refroidissement nocturne |
-| 4 · Le confort se conçoit | 37,2–50,8 s | Même maison en coupe, améliorée sur les mots : protection de toiture + ventilation des combles, débords et brise-soleil + ombre portée, ventilation traversante, murs BTCS ; étalonnage rouge/orange → ciel bleu, sol naturel ; liste cochée ; « LE CONFORT SE CONÇOIT. » |
-| 5 · OHEL INTERNATIONAL | 50,8–63 s | Masque en forme de maison révélant la façade réelle → vidéo de la façade en BTCS → écran partagé diagonal terrasse/salon → balcon ; « OHEL INTERNATIONAL — UNE AUTRE FAÇON DE CONSTRUIRE » ; logo officiel révélé par masque circulaire sur accent musical (59,3 s) |
-| 6 · Abonnez-vous | 63–70 s | Composant `OhelSubscribeAndContact` : réalisation assombrie, logo en haut, bouton « ABONNEZ-VOUS » + main-curseur qui clique sur « Abonnez-vous » (63,9 s), onde ; cloche qui vibre avec deux ondes et son discret sur « cloche » (65,2 s) ; « ACTIVEZ LA CLOCHE · POUR NE RIEN MANQUER ! ». Le bouton ne passe jamais à « abonné » (clic illustratif) |
-| 7 · Contact et signature | 70–81,5 s | « VOUS AVEZ UN PROJET DE CONSTRUCTION ? », « CONTACTEZ OHEL INTERNATIONAL », **+225 07 07 63 03 35** (chaque groupe de chiffres s'allume quand il est prononcé), « Appel ou WhatsApp », wa.me/2250707630335, ohelintermondial.com, « CONSTRUISONS AUTREMENT. CONSTRUISONS DURABLEMENT. » — coordonnées à l'écran pendant 9 s |
+| 3 · Le matériau : BTCS | 21,6–45 s | Le mur devient un appareillage de vraies faces de BTCS, qui éclate en 3D ; le **bloc réel** apparaît (rotation 2,5D, reflet), « B-T-C-S » sur les 4 syllabes, « BLOC DE TERRE COMPRIMÉE STABILISÉE », repères « Rainure longitudinale » / « Encoche d'emboîtement » placés sur la photo ; **L'INERTIE THERMIQUE** : cycle jour → nuit → jour (le mur absorbe et stocke / restitue des deux côtés) + courbes de principe extérieur/intérieur (atténuation, décalage) ; **comparaison de principe agglo creux / mur plein en BTCS** (voir §14) ; carton « PAS UNE CLIMATISATION NATURELLE » avec la nuance sur le refroidissement nocturne |
+| 4 · Le confort se conçoit | 45–58 s | Même maison en coupe, améliorée sur les mots : protection de toiture + ventilation des combles, débords et brise-soleil + ombre portée, ventilation traversante, murs BTCS ; étalonnage rouge/orange → ciel bleu, sol naturel ; liste cochée ; « LE CONFORT SE CONÇOIT. » |
+| 5 · OHEL INTERNATIONAL | 58–70,2 s | Masque en forme de maison révélant la façade réelle → vidéo de la façade en BTCS → écran partagé diagonal terrasse/salon → balcon ; « OHEL INTERNATIONAL — UNE AUTRE FAÇON DE CONSTRUIRE » ; logo officiel révélé par masque circulaire sur accent musical (59,3 s) |
+| 6 · Abonnez-vous | 70,2–77,2 s | Composant `OhelSubscribeAndContact` : réalisation assombrie, logo en haut, bouton « ABONNEZ-VOUS » + main-curseur qui clique sur « Abonnez-vous » (63,9 s), onde ; cloche qui vibre avec deux ondes et son discret sur « cloche » (65,2 s) ; « ACTIVEZ LA CLOCHE · POUR NE RIEN MANQUER ! ». Le bouton ne passe jamais à « abonné » (clic illustratif) |
+| 7 · Contact et signature | 77,2–88,7 s | « VOUS AVEZ UN PROJET DE CONSTRUCTION ? », « CONTACTEZ OHEL INTERNATIONAL », **+225 07 07 63 03 35** (chaque groupe de chiffres s'allume quand il est prononcé), « Appel ou WhatsApp », wa.me/2250707630335, ohelintermondial.com, « CONSTRUISONS AUTREMENT. CONSTRUISONS DURABLEMENT. » — coordonnées à l'écran pendant 9 s |
 
 Zones de sécurité : textes entre y ≈ 230 et 1 490 px, marges latérales ≥ 70 px ; bande des sous-titres réservée (y 1 340–1 490).
 
@@ -73,7 +73,7 @@ Zones de sécurité : textes entre y ≈ 230 et 1 490 px, marges latérales ≥ 
 
 | Poste | Coût |
 |---|---|
-| Voix ElevenLabs (1 prise, 910 crédits) | Inclus dans l'abonnement Creator (≈ 58 000 crédits restants avant l'opération), **aucun dépassement** |
+| Voix ElevenLabs (prise principale 910 crédits + réplique de comparaison 131 crédits) | Inclus dans l'abonnement Creator (≈ 58 000 crédits restants avant l'opération), **aucun dépassement** |
 | Transcription Scribe | 0 crédit |
 | Musique, effets, animations | 0 (générés par code) |
 | Génération d'images/vidéos IA | **Non utilisée** (aucune autorisation demandée nécessaire) |
@@ -105,11 +105,11 @@ Zones de sécurité : textes entre y ≈ 230 et 1 490 px, marges latérales ≥ 
 
 `ffprobe output/OHEL_BTCS_VIDEO_02.mp4` :
 
-- Vidéo : H.264 High, 1080 × 1920, 30 i/s, yuv420p BT.709 (plage TV), 82,51 s, faststart
+- Vidéo : H.264 High, 1080 × 1920, 30 i/s, yuv420p BT.709 (plage TV), 89,70 s, faststart
 - Image de couverture intégrée (flux MJPEG `attached_pic`) = vignette client
 - Audio : AAC LC, 48 kHz, stéréo, 192 kb/s ; décalage mesuré par corrélation avec le rendu sans vignette : **1,000 s** (synchronisation voix ↔ image intacte)
-- Taille : 34,8 Mo (≈ 3,4 Mb/s)
-- Sonie : −14,5 LUFS intégrés, crête −1,0 dBFS
+- Taille : 36,8 Mo
+- Sonie : −14,5 LUFS intégrés, crête −1,3 dBFS
 - Décodage complet sans aucune erreur (`ffmpeg -v error -f null`)
 - Revue visuelle : planche d'une image toutes les 3 s + images aux transitions et aux moments clés (« four », mots-clés, B-T-C-S, inertie jour/nuit, améliorations, logo, clic, cloche, chiffres du numéro). Le personnage est visible dès la première image.
 - Les fichiers de travail du rendu (`out/`) ne sont pas versionnés.
@@ -169,3 +169,12 @@ Zones de sécurité : textes entre y ≈ 230 et 1 490 px, marges latérales ≥ 
 3. Musique sous licence ou générée par ElevenLabs Music (crédits, à valider).
 4. Plans OHEL supplémentaires en haute définition (chantier, pose de BTCS, finitions) pour enrichir la scène 5.
 5. Maison en coupe en vraie 3D (Three.js) si l'on veut un rendu « maquette ».
+
+### 14. Comparaison BTCS / agglo creux (ajout à la demande du client)
+
+- **Choix validés par le client :** schéma de principe sans chiffres ; référence « brique ordinaire » = **agglo (parpaing) creux en ciment**, le mur le plus courant à Abidjan.
+- **Voix (2e prise, même voix Tony, eleven_v4, 131 crédits, incluse dans l'abonnement) :** « Face à un agglo creux, un mur plein en BTCS contient plus de matière : il amortit et décale davantage les pics de chaleur. » Placée entre l'explication de l'inertie et « Mais ce n'est pas une climatisation naturelle ! ». Niveau identique à la prise principale (−23 LUFS) ; horodatage Scribe.
+- **Animation (31,9–41 s du film, +1 s de vignette dans le MP4) :** deux murs en coupe sous le même soleil — agglo creux (alvéoles d'air) et mur plein en BTCS ; la chaleur traverse l'agglo plus vite et plus fort, le BTCS la freine et la retarde ; points de « matière » (moins / plus) sur « matière » ; trois courbes de principe (extérieur, derrière l'agglo, derrière le BTCS) avec « AMORTI » sur « amortit » et « DÉCALÉ » sur « décale ». Mention « Schéma de principe · sans valeurs mesurées ».
+- **Pourquoi c'est défendable :** à épaisseur comparable, l'agglo creux est en grande partie fait d'air ; le mur plein en BTCS a une masse surfacique plus élevée, donc une plus grande capacité de stockage de chaleur, d'où un amortissement et un déphasage plus importants. **Ce que le film ne dit pas :** que le BTCS isole mieux (en régime permanent, les deux murs sont du même ordre), ni un écart de température chiffré, ni que la maison sera automatiquement plus fraîche. La nuance qui suit rappelle que l'inertie peut aussi retarder le rafraîchissement la nuit, et la scène 4 que le confort dépend de toute la conception.
+- **Pour aller plus loin :** une vraie comparaison mesurée (enregistreurs de température dans une maison BTCS OHEL et une maison en agglo de même orientation, même période, toiture comparable) donnerait des courbes réelles, publiables avec source et date — idéal pour un futur épisode « Nous avons mesuré ».
+- Durée totale portée à 89,7 s (film 88,7 s) : la comparaison ajoute ≈ 8 s ; les temps morts des scènes 2, 4 et 5 ont été raccourcis pour limiter l'allongement.

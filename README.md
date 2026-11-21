@@ -3,7 +3,7 @@ Répertoire de l'entreprise OHEL INTERNATIONAL
 
 ## Série BTCS — Épisode 2 : « Pourquoi certaines maisons sont-elles si chaudes ? »
 
-Vidéo verticale 1080 × 1920, 30 i/s, 82,5 s (vignette client 1 s + film 81,5 s), réalisée en motion design avec Remotion.
+Vidéo verticale 1080 × 1920, 30 i/s, 89,7 s (vignette client 1 s + film 88,7 s), réalisée en motion design avec Remotion.
 
 | Livrable | Fichier |
 |---|---|

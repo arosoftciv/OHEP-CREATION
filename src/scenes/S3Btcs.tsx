@@ -2,7 +2,8 @@ import React from 'react';
 import {AbsoluteFill, Img, interpolate, interpolateColors, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, FONT, SAFE} from '../theme';
 import {Callout, clamp, Grain, lerp, RevealLine, SlamText, Tag, Vignette} from '../components/ui';
-import {relWord, TL} from '../timeline';
+import {clip, rel, relWord, TL} from '../timeline';
+import {WallComparison} from '../components/WallComparison';
 
 const BLOCK_W = 720;
 const BLOCK_SRC = {w: 862, h: 799};
@@ -207,9 +208,11 @@ export const S3Btcs: React.FC = () => {
   const fMat = relWord('s3_btcs', 'matériau');
   const fB = relWord('s3_btcs', 'bé-té');
   const fIn = relWord('s3_btcs', 'inertie');
-  const fMais = relWord('s3_btcs', 'mais', 0, 33);
+  const fMais = relWord('s3_btcs', 'mais', 0, clip('nuance').start - 0.05);
+  const fComp = rel('s3_btcs', clip('comparaison').start);
   const cycleStart = fIn + 8;
-  const cycleEnd = fMais - 6;
+  const cycleEnd = fComp - 8;
+  const compIn = lerp(f, fComp - 12, fComp + 4);
 
   const burst = lerp(f, fB - 50, fB - 10, 0, 1, (t) => t * t);
   const blockIn = spring({frame: f - (fB - 34), fps, config: {damping: 16, stiffness: 70}});
@@ -300,7 +303,7 @@ export const S3Btcs: React.FC = () => {
       </AbsoluteFill>
 
       {/* C. inertie thermique */}
-      <div style={{position: 'absolute', top: 260, left: 0, right: 0, textAlign: 'center', opacity: blockOut * (1 - dim * 0.6)}}>
+      <div style={{position: 'absolute', top: 260, left: 0, right: 0, textAlign: 'center', opacity: blockOut * (1 - compIn)}}>
         <RevealLine at={fIn - 2} style={{fontWeight: 900, fontSize: 92, color: C.white}}>
           L'INERTIE
         </RevealLine>
@@ -308,7 +311,26 @@ export const S3Btcs: React.FC = () => {
           THERMIQUE
         </RevealLine>
       </div>
-      {f >= fIn - 30 ? <InertiaDiagram start={cycleStart} end={cycleEnd} dim={dim} /> : null}
+      {f >= fIn - 30 && compIn < 1 ? (
+        <AbsoluteFill style={{opacity: 1 - compIn}}>
+          <InertiaDiagram start={cycleStart} end={cycleEnd} dim={0} />
+        </AbsoluteFill>
+      ) : null}
+      {/* C bis. comparaison de principe : agglo creux vs mur plein en BTCS */}
+      {f >= fComp - 14 ? (
+        <WallComparison
+          t={{
+            start: fComp - 8,
+            agglo: relWord('s3_btcs', 'agglo'),
+            btcs: relWord('s3_btcs', 'plein'),
+            matiere: relWord('s3_btcs', 'matière'),
+            amortit: relWord('s3_btcs', 'amortit'),
+            decale: relWord('s3_btcs', 'décale'),
+            end: fMais - 6,
+            dim,
+          }}
+        />
+      ) : null}
       {f >= fIn ? <Tag label="Schéma de principe · sans valeurs mesurées" delay={fIn} /> : null}
 
       {/* D. nuance */}

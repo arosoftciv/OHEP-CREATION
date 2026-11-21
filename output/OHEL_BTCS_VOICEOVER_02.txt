@@ -1,7 +1,7 @@
 OHEL INTERNATIONAL — Série BTCS · Épisode 2
 POURQUOI CERTAINES MAISONS SONT-ELLES SI CHAUDES ?
 
-Voix : ElevenLabs « Tony – Warm, Dynamic Podcast Narrator » (français natif), modèle eleven_v4, une seule prise.
+Voix : ElevenLabs « Tony – Warm, Dynamic Podcast Narrator » (français natif), modèle eleven_v4 : une prise principale + une prise pour la comparaison (même voix, même modèle).
 Graphies phonétiques données à la voix : « Oël » pour OHEL, « bé-té-cé-esse » pour BTCS, numéro dicté en toutes lettres.
 Repères = début de chaque réplique dans le MP4 final (mm:ss.s), vignette d’ouverture de 1 s comprise.
 
@@ -14,23 +14,26 @@ Repères = début de chaque réplique dans le MP4 final (mm:ss.s), vignette d’
 [00:11.7] Le soleil chauffe la toiture, les murs et les fenêtres. Quand l'air circule mal, la chaleur peut s'accumuler à l'intérieur.
 
 ## Scène 3 — Le matériau : BTCS et inertie thermique
-[00:23.8] Le choix du matériau compte aussi.
-[00:27.4] Le BTCS possède une inertie thermique, qui peut ralentir les variations de température.
-[00:34.6] Mais ce n'est pas une climatisation naturelle !
+[00:23.1] Le choix du matériau compte aussi.
+[00:26.7] Le BTCS possède une inertie thermique, qui peut ralentir les variations de température.
+
+## Scène 3 bis — Comparaison de principe : agglo creux / mur plein en BTCS
+[00:32.9] Face à un agglo creux, un mur plein en BTCS contient plus de matière : il amortit et décale davantage les pics de chaleur.
+[00:42.0] Mais ce n'est pas une climatisation naturelle !
 
 ## Scène 4 — Le confort se conçoit
-[00:39.0] Pour une maison confortable, il faut penser à la toiture, à l'ombre, à la ventilation et aux matériaux. C'est l'ensemble qui fait la différence.
+[00:46.8] Pour une maison confortable, il faut penser à la toiture, à l'ombre, à la ventilation et aux matériaux. C'est l'ensemble qui fait la différence.
 
 ## Scène 5 — OHEL INTERNATIONAL
-[00:53.0] Avec OHEL INTERNATIONAL, découvrez une autre approche de la construction en BTCS, adaptée à votre projet.
+[01:00.2] Avec OHEL INTERNATIONAL, découvrez une autre approche de la construction en BTCS, adaptée à votre projet.
 
 ## Scène 6 — Abonnez-vous et activez la cloche
-[01:04.6] Abonnez-vous, et activez la cloche, pour ne manquer aucune de nos prochaines vidéos !
+[01:11.8] Abonnez-vous, et activez la cloche, pour ne manquer aucune de nos prochaines vidéos !
 
 ## Scène 7 — Contact
-[01:11.5] Vous avez un projet ?
-[01:13.0] Contactez OHEL INTERNATIONAL au zéro sept, zéro sept, soixante-trois, zéro trois, trente-cinq.
+[01:18.7] Vous avez un projet ?
+[01:20.2] Contactez OHEL INTERNATIONAL au zéro sept, zéro sept, soixante-trois, zéro trois, trente-cinq.
 
 Texte prononcé (tel qu’envoyé à ElevenLabs) :
 
-Il est quatorze heures, à Abidjan. Vous entrez chez vous… et vous avez l'impression d'entrer dans un four ! Mais d'où vient cette chaleur ? Le soleil chauffe la toiture, les murs et les fenêtres. Quand l'air circule mal, la chaleur peut s'accumuler à l'intérieur. Le choix du matériau compte aussi. Le bé-té-cé-esse possède une inertie thermique, qui peut ralentir les variations de température. Mais ce n'est pas une climatisation naturelle ! Pour une maison confortable, il faut penser à la toiture, à l'ombre, à la ventilation et aux matériaux. C'est l'ensemble qui fait la différence. Avec Oël International, découvrez une autre approche de la construction en bé-té-cé-esse, adaptée à votre projet. Abonnez-vous, et activez la cloche, pour ne manquer aucune de nos prochaines vidéos ! Vous avez un projet ? Contactez Oël International au zéro sept, zéro sept, soixante-trois, zéro trois, trente-cinq.
+Il est quatorze heures, à Abidjan. Vous entrez chez vous… et vous avez l'impression d'entrer dans un four ! Mais d'où vient cette chaleur ? Le soleil chauffe la toiture, les murs et les fenêtres. Quand l'air circule mal, la chaleur peut s'accumuler à l'intérieur. Le choix du matériau compte aussi. Le bé-té-cé-esse possède une inertie thermique, qui peut ralentir les variations de température. [Prise 2 :] Face à un agglo creux, un mur plein en bé-té-cé-esse contient plus de matière : il amortit et décale davantage les pics de chaleur. Mais ce n'est pas une climatisation naturelle ! Pour une maison confortable, il faut penser à la toiture, à l'ombre, à la ventilation et aux matériaux. C'est l'ensemble qui fait la différence. Avec Oël International, découvrez une autre approche de la construction en bé-té-cé-esse, adaptée à votre projet. Abonnez-vous, et activez la cloche, pour ne manquer aucune de nos prochaines vidéos ! Vous avez un projet ? Contactez Oël International au zéro sept, zéro sept, soixante-trois, zéro trois, trente-cinq.

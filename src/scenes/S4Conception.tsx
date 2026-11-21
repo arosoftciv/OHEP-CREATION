@@ -3,7 +3,7 @@ import {AbsoluteFill, Img, interpolate, interpolateColors, spring, staticFile, u
 import {HouseSection, ramp} from '../components/HouseSection';
 import {C, FONT, SAFE} from '../theme';
 import {clamp, Grain, lerp, RevealLine, Tag, Vignette} from '../components/ui';
-import {rel, relWord, TL} from '../timeline';
+import {clip, rel, relWord, TL, wordTime} from '../timeline';
 
 const HOUSE_TOP = 290;
 
@@ -37,13 +37,13 @@ export const S4Conception: React.FC = () => {
   const f = useCurrentFrame();
   const dur = TL.scenes.s4_conception.duration;
   const w = {
-    toit: relWord('s4_conception', 'toiture', 0, 38),
+    toit: relWord('s4_conception', 'toiture', 0, clip('conception').start - 0.05),
     ombre: relWord('s4_conception', "l'ombre"),
     vent: relWord('s4_conception', 'ventilation'),
     mat: relWord('s4_conception', 'matériaux'),
     ens: relWord('s4_conception', "l'ensemble"),
   };
-  const fFinal = rel('s4_conception', 46.55);
+  const fFinal = rel('s4_conception', wordTime('différence') + 0.93);
 
   const roofIns = ramp(f, w.toit - 4, w.toit + 20);
   const shade = ramp(f, w.ombre - 4, w.ombre + 22);

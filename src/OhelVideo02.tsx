@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile} from 'remotion';
-import {TL, wordTime} from './timeline';
+import {clip, TL, wordTime} from './timeline';
 import {S1Four} from './scenes/S1Four';
 import {S2Causes} from './scenes/S2Causes';
 import {S3Btcs} from './scenes/S3Btcs';
@@ -11,6 +11,7 @@ import {Captions} from './components/Captions';
 
 const S = TL.scenes;
 const outroStart = S.s6_outro.from / TL.fps;
+const C0 = clip('contact').start - 0.05;
 const at = (prefix: string, n = 0, after = 0) => +(wordTime(prefix, n, after) - outroStart).toFixed(3);
 
 export const OhelVideo02: React.FC<{subtitles?: boolean; audio?: boolean}> = ({subtitles = true, audio = true}) => (
@@ -40,13 +41,13 @@ export const OhelVideo02: React.FC<{subtitles?: boolean; audio?: boolean}> = ({s
           subscribe: at('abonnez'),
           bell: at('cloche'),
           contact: 7.0,
-          question: at('vous', 0, 70),
+          question: at('vous', 0, clip('projet').start - 0.05),
           phone: at('contactez'),
           whatsapp: at('trente-cinq') + 0.9,
           site: at('trente-cinq') + 1.4,
           signature: at('trente-cinq') + 2.1,
         }}
-        phoneDigitCues={[at('zéro', 0, 73), at('zéro', 1, 73), at('soixante'), at('zéro', 2, 73), at('trente-cinq')]}
+        phoneDigitCues={[at('zéro', 0, C0), at('zéro', 1, C0), at('soixante'), at('zéro', 2, C0), at('trente-cinq')]}
       />
     </Sequence>
     {subtitles ? <Captions /> : null}
