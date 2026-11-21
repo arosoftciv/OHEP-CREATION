@@ -137,7 +137,7 @@ const Reference: React.FC<{t: number}> = ({t}) => {
 	const k = ramp(t, 60.2, 62.8, inOutSine);
 	return (
 		<AbsoluteFill style={{opacity: ramp(t, 59.3, 59.9)}}>
-			<Img src={staticFile('img/reference_maisons.jpg')} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.25, 1.08, k)})`}} />
+			<Img src={staticFile('img/reference_batiment.jpg')} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.25, 1.08, k)})`}} />
 			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,10,5,0.55) 0%, rgba(20,10,5,0) 35%, rgba(20,10,5,0) 70%, rgba(20,10,5,0.5) 100%)'}} />
 		</AbsoluteFill>
 	);

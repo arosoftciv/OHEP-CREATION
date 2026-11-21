@@ -70,8 +70,8 @@ c = Image.open("assets/chantier/626894_chantier_equipe.png").convert("RGB")
 c.crop((380, 150, 941, 1147)).resize((1080, 1920), Image.LANCZOS).save(P + "chantier_ohel.jpg", quality=92)
 c.save(P + "chantier_ohel_full.jpg", quality=90)
 
-# 5) Image de référence (627177) — provenance à confirmer, jamais attribuée à OHEL
-Image.open("assets/reference/627177_maisons_rangee.png").convert("RGB").save(P + "reference_maisons.jpg", quality=92)
+# 5) Bâtiment contemporain (627167, choisi par le client à la place de 627177) — non attribué à OHEL à l'écran
+Image.open("assets/reference/627167_maison_contemporaine.png").convert("RGB").resize((1080, 1920), Image.LANCZOS).save(P + "reference_batiment.jpg", quality=92)
 
 # 6) Logo : extrait pixel à pixel de l'affiche fournie (aucune retouche) — TEMPORAIRE en attendant 556713.png
 Image.open("assets/reference/626923_affiche_fabrication.png").convert("RGB").crop((270, 6, 668, 206)).save("assets/logo/ohel_logo_extrait_affiche_TEMPORAIRE.png")

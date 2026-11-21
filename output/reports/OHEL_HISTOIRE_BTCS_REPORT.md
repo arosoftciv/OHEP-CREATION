@@ -39,11 +39,11 @@ Le dépôt était vide et **aucun des fichiers nommés dans le brief n'a été f
 | 627193 mosquée | Scène 2 (parallaxe 2,5D, médaillons de détail), couverture | « Photographie · mosquée de style soudanais en terre, nord de la Côte d'Ivoire » | **Confirmer l'identité/le lieu** de l'édifice (style Kong/Kaouara) et **les droits** de la photo |
 | 627115 bloc BTCS | Scènes 3→4 (sortie de presse), bloc héros, couverture | « Photographie réelle » — détouré, animé en 2,5D (aucune géométrie ajoutée) | Confirmer que c'est un bloc OHEL et les droits |
 | 627007 pile de BTCS | Étape 4 ; une face réelle sert de texture aux briques du mur (scène 5) | « Photographie réelle » | Confirmer les droits |
-| 627177 maisons en blocs de terre | Scène 5, ~2 s, à travers la baie | « Image de référence » — **jamais attribuée à OHEL** | **Provenance inconnue** (photo ou IA ?) : confirmer ou supprimer |
+| 627177 maisons en blocs de terre | **Remplacé à la demande du client** par 627167 | — | — |
 | 626894 chantier (selfie + équipe) | **Retiré à la demande du client** | — | — |
 | 626923 affiche « Fabrication du BTCS » — zone ouvriers + presse | Scène 5 (63–70 s), fond de la scène 6, bas de la couverture | « Fabrication des BTCS · OHEL INTERNATIONAL » | **Choisi par le client.** Visuel d'aspect généré par IA, avec logos OHEL sur casques, gilets et presse : le brief initial demandait d'éviter ce type d'image — décision du client, à assumer en connaissance de cause |
 | 627386 termite | **Non utilisé** | — | Image Shutterstock filigranée, sans licence |
-| 627167 maison sur pelouse | **Non utilisé** | — | Aspect généré par IA : ne doit pas être attribué à OHEL |
+| 627167 maison contemporaine (briques rouges, pelouse) | Scène 5, vue à travers la baie du mur puis plein cadre (≈ 60–63 s) | « Image de référence · architecture contemporaine » — **non attribuée à OHEL** | **Choisie par le client.** Aspect généré par IA ; ne pas la présenter comme une réalisation OHEL sans confirmation |
 | 626898 affiche « Le BTCS, c'est quoi ? » | Non utilisée | — | — |
 
 ## 4. Voix-off, musique, sous-titres
