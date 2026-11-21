@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, Still} from 'remotion';
 import {HistoireBTCS} from './compositions/HistoireBTCS';
 import {Cover} from './compositions/Cover';
+import {DesktopSides} from './compositions/DesktopSides';
 import {DURATION_FRAMES, FPS} from './timeline';
 import {loadFonts} from './theme';
 
@@ -19,5 +20,6 @@ export const RemotionRoot: React.FC = () => (
 			defaultProps={{subtitles: false, audio: 'music' as const}}
 		/>
 		<Still id="Cover" component={Cover} width={1080} height={1920} />
+		<Still id="DesktopSides" component={DesktopSides} width={1920} height={1080} />
 	</>
 );
