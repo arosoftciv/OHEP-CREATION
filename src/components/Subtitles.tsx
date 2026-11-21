@@ -1,5 +1,6 @@
 import React from 'react';
 import subs from '../subtitles.json';
+import timelineData from '../timeline.json';
 import {useT} from './core';
 import {C, F} from '../theme';
 import {ramp, outCubic} from '../animations/easing';
@@ -10,6 +11,9 @@ type Sub = {text: string; start: number; end: number; show_end: number; words: {
 export const Subtitles: React.FC<{y?: number; hideFrom?: number}> = ({y = 1392, hideFrom = 999}) => {
 	const t = useT();
 	if (t >= hideFrom) return null;
+	// pas de sous-titre pendant la vidéo réelle insérée
+	const vi = (timelineData as {videoInsert?: {designStart: number; designEnd: number}}).videoInsert;
+	if (vi && t > vi.designStart - 0.02 && t < vi.designEnd + 0.05) return null;
 	const s = (subs as Sub[]).find((c) => t >= c.start - 0.05 && t <= c.show_end);
 	if (!s) return null;
 	const k = ramp(t, s.start - 0.05, s.start + 0.18, outCubic);

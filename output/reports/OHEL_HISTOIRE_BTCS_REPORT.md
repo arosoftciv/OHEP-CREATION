@@ -1,7 +1,7 @@
 # OHEL INTERNATIONAL — « L'histoire du BTCS » · Rapport de production
 
 **Version :** 01 (version de contrôle validée → version définitive)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 98,1 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 101,6 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
 **Son :** −14 LUFS intégrés, crête vraie −1,5 dBTP (norme réseaux sociaux)
 
 ## 1. Livrables
@@ -147,3 +147,10 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 
 - La voix prononçait « faire » à l'anglaise (« fair »). Les deux phrases concernées (« En Afrique, ce savoir-faire a traversé les générations » et « En Côte d'Ivoire, OHEL International met ce savoir-faire au service de la construction ») ont été réenregistrées avec la graphie phonétique « savoir fer » (139 crédits) puis insérées ; les sous-titres affichent « savoir-faire ».
 - Total ElevenLabs du projet : 2 798 crédits, sans dépassement. Durée : 98,1 s.
+
+
+## 15. Vidéo réelle de la presse + marge autour du logo
+
+- **Vidéo insérée** (`assets/chantier/VID-20261121-WA0012_presse_btcs.mp4`, 11,4 s, 352 × 624, fournie par le client) : presse à BTCS motorisée en fonctionnement. Extrait de 4 s placé à l'étape 3 « Compression mécanique », entre « …puis comprimée. » et « Après la cure… » (≈ 46–50 s). Respiration créée par la déformation du temps (la narration n'est pas coupée), cadre vertical net sur fond flou de la même vidéo (masque la basse résolution), mention « Vidéo réelle · presse à BTCS », son réel de la machine mixé avec la musique baissée, sous-titres masqués pendant l'insertion. Aucun crédit ElevenLabs utilisé.
+- **Logo miniature dégagé** : tous les titres du haut de l'écran sont placés à 30 px minimum sous le logo (zone x 806–1036, y 118–233) ; vérifié sur 16 moments du film.
+- Durée : 101,6 s.

@@ -28,7 +28,7 @@ export const S5Architecture: React.FC = () => {
 			<Wall t={t} />
 			<ReferenceShade t={t} />
 
-			<KineticTitle text={'LA TERRE\nSE RÉINVENTE.'} start={58.6} end={62.5} y={250} size={92} accent={['RÉINVENTE.']} />
+			<KineticTitle text={'LA TERRE\nSE RÉINVENTE.'} start={58.6} end={62.5} y={285} size={92} accent={['RÉINVENTE.']} />
 			<BrandTitle t={t} />
 			<SourceTag text="Image de référence · architecture contemporaine" start={61.3} end={70.1} y={1318} />
 		</AbsoluteFill>
@@ -148,7 +148,7 @@ const BrandTitle: React.FC<{t: number}> = ({t}) => {
 	if (o <= 0) return null;
 	const kicker = ramp(t, 62.5, 63.0, outCubic) * (1 - ramp(t, b - 0.5, b));
 	return (
-		<div style={{position: 'absolute', top: 240, width: W, textAlign: 'center'}}>
+		<div style={{position: 'absolute', top: 275, width: W, textAlign: 'center'}}>
 			<div style={{fontFamily: F.title, fontWeight: 700, fontSize: 30, letterSpacing: 8, color: C.sand, opacity: kicker, textShadow: '0 3px 12px rgba(0,0,0,0.7)'}}>
 				EN CÔTE D'IVOIRE
 			</div>

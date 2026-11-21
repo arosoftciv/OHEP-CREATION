@@ -4,7 +4,7 @@ Vérifie qu'aucun segment ne déborde sur le suivant."""
 import json
 T = json.load(open("src/timeline.json"))
 W = [w for w in json.load(open("assets/audio/voiceover_words.json"))["words"] if w["type"] == "word"]
-ends = ["termitières.", "générations.", "blocs.", "S.", "construction.", "WhatsApp.", None]  # dernier mot de chaque segment
+ends = ["termitières.", "générations.", "blocs.", "comprimée.", "S.", "construction.", "WhatsApp.", None]  # dernier mot de chaque segment
 segs, i = [], 0
 for seg, last in zip(T["voiceSegments"], ends):
     j = i
@@ -13,6 +13,9 @@ for seg, last in zip(T["voiceSegments"], ends):
     seg["rawStart"] = round(max(0, W[i]["start"] - 0.08), 3)
     seg["rawEnd"] = round(W[j]["end"] + 0.15, 3)
     segs.append(seg); i = j + 1
+byid = {x["id"]: x for x in segs}
+if "D1" in byid and "D2" in byid:
+    byid["D2"]["at"] = round(byid["D1"]["at"] + byid["D2"]["rawStart"] - byid["D1"]["rawStart"], 3)
 for a, b in zip(segs, segs[1:] + [None]):
     end = a["at"] + a["rawEnd"] - a["rawStart"]
     lim = b["at"] if b else T["duration"]

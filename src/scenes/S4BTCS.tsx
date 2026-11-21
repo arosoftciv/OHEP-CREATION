@@ -5,6 +5,7 @@ import {Worker} from '../components/Worker';
 import {C, F} from '../theme';
 import {inOutSine, lerp, outBack, outCubic, ramp, rnd} from '../animations/easing';
 import {vw, vwAfter} from '../voice';
+import timelineData from '../timeline.json';
 import {Easing} from 'remotion';
 
 /* SCÈNE 4 — La naissance du BTCS moderne (38,6 → 57,4 s)
@@ -16,7 +17,8 @@ import {Easing} from 'remotion';
 // Étapes calées sur les mots de la voix-off (« mélangée », « puis comprimée », « Après la cure », « Bloc »)
 const T_S2 = vw('mélangée') - 0.2;
 const T_S3 = vw('comprimée', 2) - 0.8;
-const T_S4 = vw('Après') - 0.15;
+// l'étape 4 commence après la vidéo réelle insérée (respiration entre « comprimée » et « Après »)
+const T_S4 = Math.max(vw('Après') - 0.15, ((timelineData as {videoInsert?: {designEnd: number}}).videoInsert?.designEnd ?? 0) + 0.04);
 const T_HERO = vw('Bloc') - 0.6;
 const STEP = {
 	s1: [38.6, T_S2],
@@ -444,7 +446,7 @@ const Hero: React.FC<{t: number}> = ({t}) => {
 			</div>
 
 			{/* BTCS — lettres synchronisées sur l'épellation */}
-			<div style={{position: 'absolute', top: 250, width: W, textAlign: 'center', opacity: 1 - lettersOut}}>
+			<div style={{position: 'absolute', top: 275, width: W, textAlign: 'center', opacity: 1 - lettersOut}}>
 				{letters.map((L, i) => {
 					const k = ramp(t, L.at - 0.05, L.at + 0.35, outBack);
 					return (
@@ -472,7 +474,7 @@ const Hero: React.FC<{t: number}> = ({t}) => {
 			<div
 				style={{
 					position: 'absolute',
-					top: 480,
+					top: 500,
 					width: W,
 					textAlign: 'center',
 					fontFamily: F.title,

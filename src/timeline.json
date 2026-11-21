@@ -21,10 +21,16 @@
       "at": 24.5
     },
     {
-      "id": "D",
+      "id": "D1",
       "rawStart": 29.987,
-      "rawEnd": 44.128,
+      "rawEnd": 36.637,
       "at": 38.95
+    },
+    {
+      "id": "D2",
+      "rawStart": 36.92,
+      "rawEnd": 44.128,
+      "at": 45.883
     },
     {
       "id": "E",
@@ -105,6 +111,18 @@
       98.8,
       101.0,
       0.75
+    ],
+    [
+      45.62,
+      45.86,
+      15.833
     ]
-  ]
+  ],
+  "videoInsert": {
+    "src": "video/presse_btcs.mp4",
+    "designStart": 45.62,
+    "designEnd": 45.86,
+    "srcOffset": 1.0,
+    "label": "Vidéo réelle · presse à BTCS"
+  }
 }

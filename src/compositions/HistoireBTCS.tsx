@@ -8,6 +8,7 @@ import {S5Architecture} from '../scenes/S5Architecture';
 import {S6Signature} from '../scenes/S6Signature';
 import {S7Teaser} from '../scenes/S7Teaser';
 import {FilmFinish, LogoMark} from '../components/core';
+import {RealVideo} from '../components/RealVideo';
 import {Subtitles} from '../components/Subtitles';
 import {C} from '../theme';
 import {vw} from '../voice';
@@ -23,6 +24,7 @@ export const HistoireBTCS: React.FC<{subtitles?: boolean; audio?: AudioMode; log
 			<S2Heritage />
 			<S3Press />
 			<S4BTCS />
+			<RealVideo />
 			<S5Architecture />
 			<S6Signature />
 			<S7Teaser />

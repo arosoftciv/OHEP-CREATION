@@ -55,6 +55,10 @@ chunks = [{"text": " ".join(w["text"] for w in c), "start": c[0]["start"], "end"
 # durée d'affichage : jusqu'au début du sous-titre suivant (max +0.6 s)
 for a, b in zip(chunks, chunks[1:] + [None]):
     a["show_end"] = min(a["end"] + 0.6, b["start"] - 0.02) if b else a["end"] + 0.8
+VI = T.get("videoInsert")
+if VI:  # le sous-titre précédant la vidéo insérée s'arrête avant elle
+    for c in chunks:
+        if c["start"] < VI["designStart"] < c["show_end"]: c["show_end"] = VI["designStart"] - 0.02
 json.dump(chunks, open("src/subtitles.json", "w"), ensure_ascii=False, indent=1)
 
 import sys; sys.path.insert(0, "scripts")

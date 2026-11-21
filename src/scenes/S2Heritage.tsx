@@ -79,7 +79,7 @@ export const S2Heritage: React.FC = () => {
 			<DetailBadge t={t} start={19.0} end={22.6} img="img/mosquee_detail_mur.jpg" label="Murs en terre crue" x={110} y={760} />
 
 			<KineticTitle text="DEPUIS DES MILLÉNAIRES…" start={12.3} end={16.4} y={300} size={80} accent={['MILLÉNAIRES…']} />
-			<KineticTitle text={'NOS ANCÊTRES BÂTISSENT\nAVEC LA TERRE.'} start={16.5} end={23.3} y={270} size={74} accent={['ANCÊTRES', 'TERRE.']} />
+			<KineticTitle text={'NOS ANCÊTRES BÂTISSENT\nAVEC LA TERRE.'} start={16.5} end={23.3} y={295} size={74} accent={['ANCÊTRES', 'TERRE.']} />
 			<SourceTag text="Photographie · mosquée de style soudanais en terre, nord de la Côte d'Ivoire" start={12.6} end={23.2} y={1318} />
 		</AbsoluteFill>
 	);

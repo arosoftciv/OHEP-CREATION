@@ -348,6 +348,21 @@ for i in range(0, len(target), 64):  # par blocs pour la vitesse
 duck = 1 - 0.6 * g  # ~ -8 dB sous la voix
 
 music = lp(music, 14000)
+# ---------------------------------------------------------------- son réel de la vidéo insérée (presse à BTCS)
+amb = np.zeros(N)
+VI = T.get("videoInsert")
+if VI:
+    n0 = to_new(VI["designStart"]) - 0.1; n1 = to_new(VI["designEnd"]) + 0.1
+    _, va = wavfile.read("assets/audio/presse_btcs_son.wav")
+    va = va.astype(np.float64) / 32768
+    seg = va[int(VI["srcOffset"] * SR): int((VI["srcOffset"] + n1 - n0) * SR)].copy()
+    fl_ = int(0.3 * SR)
+    seg[:fl_] *= np.linspace(0, 1, fl_); seg[-fl_:] *= np.linspace(1, 0, fl_)
+    addn(amb, hp(seg, 60), n0, 1.0)
+    win_ = np.zeros(N); i0, i1 = int(n0 * SR), int(n1 * SR)
+    win_[i0:i1] = 1
+    win_ = np.convolve(win_, np.ones(int(0.3 * SR)) / int(0.3 * SR), "same")
+    music *= (1 - 0.65 * win_)  # la musique s'efface sous le son réel
 music *= 0.55 / max(1e-9, np.max(np.abs(music)))
 sfx *= 0.5 / max(1e-9, np.max(np.abs(sfx)))
 fade = np.ones(N); fl = int(2.5 * SR); fade[-fl:] = np.linspace(1, 0, fl) ** 1.5
@@ -378,8 +393,9 @@ mL, mR = stage(mL, mR, 0.55); sL, sR = stage(sL, sR, 0.5); vL, vR = stage(vL, vR
 
 def sat(x): return np.tanh(x * 1.1) / np.tanh(1.1)
 duckS = (1 - 0.35 * g)
-mixL = sat(vL + mL * duck * fade * 0.62 + sL * duckS * 0.55)
-mixR = sat(vR + mR * duck * fade * 0.62 + sR * duckS * 0.55)
+ambK = 0.55 / max(1e-9, np.max(np.abs(amb))) if np.any(amb) else 0
+mixL = sat(vL + mL * duck * fade * 0.62 + sL * duckS * 0.55 + amb * ambK * 0.75)
+mixR = sat(vR + mR * duck * fade * 0.62 + sR * duckS * 0.55 + amb * ambK * 0.75)
 
 
 def w(name, x, y=None):
@@ -390,7 +406,7 @@ def w(name, x, y=None):
 w("voice", voice); w("music", mL * fade, mR * fade); w("sfx", sL, sR)
 w("mix_raw", mixL, mixR)
 # version visuelle sans voix : musique + effets, sans ducking
-w("bed_raw", sat(mL * fade * 0.62 + sL * 0.55), sat(mR * fade * 0.62 + sR * 0.55))
+w("bed_raw", sat(mL * fade * 0.62 + sL * 0.55 + amb * ambK * 0.75), sat(mR * fade * 0.62 + sR * 0.55 + amb * ambK * 0.75))
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "public/audio/bed_raw.wav",
                 "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", str(SR), "public/audio/music_sfx.wav"], check=True)
 # normalisation de loudness pour les réseaux sociaux (-14 LUFS, crête -1.5 dBTP)
