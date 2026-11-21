@@ -99,3 +99,16 @@ bgf = af.resize((int(941 * 1920 / 694), 1920), Image.LANCZOS)
 x0 = (bgf.width - 1080) // 2
 bgf.crop((x0, 0, x0 + 1080, 1920)).filter(ImageFilter.GaussianBlur(28)).save(P + "ohel_atelier_fond.jpg", quality=88)
 print("atelier ok")
+
+# 9) Logo sans fond blanc (demande du client) : le blanc devient transparent, couleurs non modifiées
+lg = Image.open("assets/logo/ohel_logo_extrait_affiche_TEMPORAIRE.png").convert("RGB")
+lg = lg.resize((lg.width * 3, lg.height * 3), Image.LANCZOS)
+c = np.array(lg).astype(float)
+a = np.clip((255 - c.min(axis=2)) / 170.0, 0, 1)
+a[a < 0.1] = 0
+rgb = np.clip((c - 255 * (1 - a[..., None])) / np.maximum(a[..., None], 1e-3), 0, 255)
+out = np.dstack([rgb, a * 255]).astype(np.uint8)
+lt = Image.fromarray(out, "RGBA")
+lt = lt.crop(lt.getbbox())
+lt.save(P + "logo_ohel_transparent.png")
+print("logo transparent", lt.size)

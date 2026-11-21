@@ -78,7 +78,7 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 | 4 | Presses des années 1950 défendables | ✅ CINVA-RAM conçue en 1952 au CINVA, Bogotá (Colombie) ; affichée « Presse CINVA-RAM · Bogotá », « Reconstitution illustrative », aucune fausse archive |
 | 5 | Procédé cohérent | ✅ Sélection/préparation → mélange avec stabilisant adapté + eau → compression → cure & contrôle. Aucun dosage, résistance ni propriété thermique annoncé |
 | 6 | Géométrie des blocs fidèle | ✅ Blocs montrés uniquement via les photos réelles (détourage, 2,5D). La presse illustrée ne montre qu'un parallélépipède schématique |
-| 7 | Logo strictement inchangé | ⚠️ Pixels non modifiés, proportions conservées, révélé par masque (non redessiné) — **mais source provisoire** (extrait d'affiche, voir §2) |
+| 7 | Logo strictement inchangé (miniature en haut à droite : fond blanc rendu transparent à la demande du client, couleurs et formes inchangées) | ⚠️ Pixels non modifiés, proportions conservées, révélé par masque (non redessiné) — **mais source provisoire** (extrait d'affiche, voir §2) |
 | 8 | Bâtiments réels non modifiés | ✅ Recadrages et mouvements de caméra uniquement ; aucun bâtiment IA attribué à OHEL |
 | 9 | Musique évolutive | ✅ 4 actes synchronisés aux scènes |
 | 10 | Voix intelligible | ✅ Musique ≈ 10 dB sous la voix pendant la narration |

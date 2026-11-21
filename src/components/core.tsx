@@ -255,3 +255,25 @@ export const MatterWipe: React.FC<{at: number; dur?: number; color?: string; see
 
 export const fadeIO = (t: number, a: number, b: number, fi = 0.5, fo = 0.5) => win(t, a, b, fi, fo);
 export {clamp01, outCubic};
+
+/** Logo miniature en haut à droite (version sans fond blanc), masqué pendant la signature finale. */
+export const LogoMark: React.FC<{hideFrom: number}> = ({hideFrom}) => {
+	const t = useT();
+	const o = Math.min(ramp(t, 0.6, 1.4), 1 - ramp(t, hideFrom - 0.5, hideFrom));
+	if (o <= 0) return null;
+	const width = 230;
+	return (
+		<Img
+			src={staticFile('img/logo_ohel_transparent.png')}
+			style={{
+				position: 'absolute',
+				top: 118,
+				right: 44,
+				width,
+				height: width * (563 / 1128),
+				opacity: o,
+				filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.55)) drop-shadow(0 3px 8px rgba(0,0,0,0.55))',
+			}}
+		/>
+	);
+};

@@ -6,7 +6,7 @@ import {S3Press} from '../scenes/S3Press';
 import {S4BTCS} from '../scenes/S4BTCS';
 import {S5Architecture} from '../scenes/S5Architecture';
 import {S6Signature} from '../scenes/S6Signature';
-import {FilmFinish} from '../components/core';
+import {FilmFinish, LogoMark} from '../components/core';
 import {Subtitles} from '../components/Subtitles';
 import {C} from '../theme';
 import {vw} from '../voice';
@@ -25,6 +25,7 @@ export const HistoireBTCS: React.FC<{subtitles?: boolean; audio?: AudioMode}> = 
 			<S5Architecture />
 			<S6Signature />
 			<FilmFinish />
+			<LogoMark hideFrom={74.8} />
 			{subtitles && <Subtitles hideFrom={vw('Vous') - 0.05} />}
 			{audio === 'full' && <Audio src={staticFile('audio/mix.wav')} />}
 			{audio === 'music' && <Audio src={staticFile('audio/music_sfx.wav')} />}
