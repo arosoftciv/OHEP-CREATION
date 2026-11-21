@@ -3,12 +3,12 @@ Répertoire de l'entreprise OHEL INTERNATIONAL
 
 ## Série BTCS — Épisode 2 : « Pourquoi certaines maisons sont-elles si chaudes ? »
 
-Vidéo verticale 1080 × 1920, 30 i/s, ≈ 81,5 s, réalisée en motion design avec Remotion.
+Vidéo verticale 1080 × 1920, 30 i/s, 82,5 s (vignette client 1 s + film 81,5 s), réalisée en motion design avec Remotion.
 
 | Livrable | Fichier |
 |---|---|
 | Vidéo finale | `output/OHEL_BTCS_VIDEO_02.mp4` |
-| Couverture | `output/OHEL_BTCS_COVER_02.png` |
+| Couverture (vignette client) | `output/OHEL_BTCS_COVER_02.png` |
 | Texte de la voix-off | `output/OHEL_BTCS_VOICEOVER_02.txt` |
 | Sous-titres | `output/OHEL_BTCS_SUBTITLES_02.srt` |
 | Rapport de production | `output/OHEL_BTCS_PRODUCTION_REPORT_02.md` |
@@ -21,8 +21,8 @@ python3 scripts/build_timeline.py    # découpe/placement de la voix + src/timel
 python3 scripts/build_subtitles.py   # sous-titres incrustés, SRT, texte voix-off
 python3 scripts/build_audio.py       # musique originale + effets + mixage −14 LUFS
 npx remotion render src/index.ts OhelVideo02 out/raw.mp4
-npx remotion still src/index.ts Cover02 output/OHEL_BTCS_COVER_02.png
-bash scripts/export_final.sh         # encodage final + contrôle ffprobe
+npx remotion still src/index.ts Cover02 output/OHEL_BTCS_COVER_02_version_animation.png
+bash scripts/export_final.sh         # vignette en ouverture + couverture intégrée + encodage + ffprobe
 ```
 
 ### Composant réutilisable `OhelSubscribeAndContact`

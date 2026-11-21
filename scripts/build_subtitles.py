@@ -15,6 +15,7 @@ FIX = {
 }
 NUM = {'zéro': '0', 'sept,': '7', 'sept': '7', 'soixante-trois,': '63', 'trois,': '3', 'trente-cinq.': '35.'}
 MAXC = 30
+INTRO = 1.0  # vignette client en ouverture du MP4 final (scripts/export_final.sh) : SRT et repères décalés d'autant
 SCENE_OF = {
     'hook': 'Scène 1 — Votre maison est un four ?', 'question': 'Scène 2 — D’où vient cette chaleur ?',
     'causes': None, 'materiau': 'Scène 3 — Le matériau : BTCS et inertie thermique', 'inertie': None, 'nuance': None,
@@ -70,7 +71,7 @@ def main():
         text = ' '.join(fix(w['text']) for w in g)
         if g[0]['clip'] == 'contact' and g[0]['text'] == 'au':
             text = 'au +225 07 07 63 03 35'
-        srt.append(f'{i}\n{ts(start)} --> {ts(end)}\n{text}\n')
+        srt.append(f'{i}\n{ts(start + INTRO)} --> {ts(end + INTRO)}\n{text}\n')
     (ROOT / 'output').mkdir(exist_ok=True)
     srt_text = '\n'.join(srt)
     (ROOT / 'output/OHEL_BTCS_SUBTITLES_02.srt').write_text(srt_text)
@@ -79,13 +80,13 @@ def main():
     lines = ['OHEL INTERNATIONAL — Série BTCS · Épisode 2', 'POURQUOI CERTAINES MAISONS SONT-ELLES SI CHAUDES ?', '',
              'Voix : ElevenLabs « Tony – Warm, Dynamic Podcast Narrator » (français natif), modèle eleven_v4, une seule prise.',
              'Graphies phonétiques données à la voix : « Oël » pour OHEL, « bé-té-cé-esse » pour BTCS, numéro dicté en toutes lettres.',
-             'Repères = début de chaque réplique dans le film (mm:ss.s).', '']
+             'Repères = début de chaque réplique dans le MP4 final (mm:ss.s), vignette d’ouverture de 1 s comprise.', '']
     for c in TL['clips']:
         ws = [w for w in TL['words'] if w['clip'] == c['id']]
         title = SCENE_OF.get(c['id'])
         if title:
             lines += ['', f'## {title}']
-        m, s = divmod(c['start'], 60)
+        m, s = divmod(c['start'] + INTRO, 60)
         lines.append(f"[{int(m):02d}:{s:04.1f}] " + ' '.join(fix(w['text']) for w in ws))
     lines += ['', 'Texte prononcé (tel qu’envoyé à ElevenLabs) :', '',
               "Il est quatorze heures, à Abidjan. Vous entrez chez vous… et vous avez l'impression d'entrer dans un four ! "

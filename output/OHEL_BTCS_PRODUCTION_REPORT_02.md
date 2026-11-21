@@ -2,17 +2,18 @@
 ## « Pourquoi certaines maisons sont-elles si chaudes ? » — Rapport de production
 
 **Version :** 02 (V1 contrôlée → corrections → version finale)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 81,5 s (2 445 images) · MP4 H.264 High + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 82,5 s (vignette d'ouverture 1 s + film 81,5 s) · MP4 H.264 High + AAC 192 kb/s
 **Structure :** PROBLÈME → EXPLICATION → BTCS → CONCEPTION ADAPTÉE → OHEL → ABONNEMENT → CONTACT
 
 ### 1. Livrables (`output/`)
 
 | Fichier | Contenu |
 |---|---|
-| `OHEL_BTCS_VIDEO_02.mp4` | Film final avec voix-off, musique originale et sous-titres incrustés |
-| `OHEL_BTCS_COVER_02.png` | Couverture TikTok/Reels 1080 × 1920 |
+| `OHEL_BTCS_VIDEO_02.mp4` | Film final avec voix-off, musique originale et sous-titres incrustés ; s'ouvre sur la vignette client (voir §11) |
+| `OHEL_BTCS_COVER_02.png` | **Couverture officielle** : vignette fournie par le client (630196), mise au format 1080 × 1920 |
+| `OHEL_BTCS_COVER_02_version_animation.png` | Couverture générée à partir de l'animation (conservée en alternative) |
 | `OHEL_BTCS_VOICEOVER_02.txt` | Texte de la voix-off avec repères temporels |
-| `OHEL_BTCS_SUBTITLES_02.srt` | 32 sous-titres synchronisés mot à mot (pour un chargement sur la plateforme) |
+| `OHEL_BTCS_SUBTITLES_02.srt` | 32 sous-titres synchronisés mot à mot sur le MP4 final (décalés de 1 s pour la vignette) |
 | `OHEL_BTCS_PRODUCTION_REPORT_02.md` | Ce rapport |
 
 Sources conservées : `src/` (Remotion/React/TypeScript), `scripts/` (voix, sous-titres, musique, export), `public/` (médias préparés), `assets/` (originaux). Procédure de rendu : voir `README.md`.
@@ -104,10 +105,11 @@ Zones de sécurité : textes entre y ≈ 230 et 1 490 px, marges latérales ≥ 
 
 `ffprobe output/OHEL_BTCS_VIDEO_02.mp4` :
 
-- Vidéo : H.264 High, 1080 × 1920, 30 i/s, yuv420p BT.709 (plage TV), **2 445 images** (comptées), 81,51 s, faststart
-- Audio : AAC LC, 48 kHz, stéréo, 192 kb/s
-- Taille : 33,0 Mo (≈ 3,2 Mb/s)
-- Sonie : −14,5 LUFS intégrés, crête −1,3 dBFS
+- Vidéo : H.264 High, 1080 × 1920, 30 i/s, yuv420p BT.709 (plage TV), 82,51 s, faststart
+- Image de couverture intégrée (flux MJPEG `attached_pic`) = vignette client
+- Audio : AAC LC, 48 kHz, stéréo, 192 kb/s ; décalage mesuré par corrélation avec le rendu sans vignette : **1,000 s** (synchronisation voix ↔ image intacte)
+- Taille : 34,8 Mo (≈ 3,4 Mb/s)
+- Sonie : −14,5 LUFS intégrés, crête −1,0 dBFS
 - Décodage complet sans aucune erreur (`ffmpeg -v error -f null`)
 - Revue visuelle : planche d'une image toutes les 3 s + images aux transitions et aux moments clés (« four », mots-clés, B-T-C-S, inertie jour/nuit, améliorations, logo, clic, cloche, chiffres du numéro). Le personnage est visible dès la première image.
 - Les fichiers de travail du rendu (`out/`) ne sont pas versionnés.
@@ -118,3 +120,16 @@ Zones de sécurité : textes entre y ≈ 230 et 1 490 px, marges latérales ≥ 
 2. Vérifier l'orthographe du domaine **ohelintermondial.com** (repris tel que fourni ; la marque s'écrit « OHEL INTERNATIONAL »).
 3. Écouter la voix (Tony) ; en cas de préférence pour une voix plus grave, une nouvelle prise coûte ≈ 910 crédits (inclus dans l'abonnement).
 4. La vidéo de réalisation source est en 576 × 1024 : un original en meilleure définition rendrait la scène 5 plus nette.
+
+### 11. Vignette client intégrée (630196)
+
+- La vignette fournie par le client (`assets/source/630196_vignette_client.png`, 941 × 1672) est mise au format 1080 × 1920 (Lanczos ; écart de ratio 0,05 %, invisible) et devient la **couverture officielle** `output/OHEL_BTCS_COVER_02.png`.
+- Elle **ouvre la vidéo** : affichage 1 s avec léger zoom avant, puis fondu enchaîné de 0,5 s vers la première scène. C'est donc la première image du fichier, proposée par défaut comme couverture par TikTok/Reels/Shorts ; elle est aussi intégrée comme image de couverture du MP4.
+- Le son est décalé d'exactement 1,0 s ; SRT et repères de la voix-off sont décalés d'autant. Réglages : `INTRO` et `XF` dans `scripts/export_final.sh`.
+- **Points de vigilance (décision du client, à assumer en connaissance de cause)** :
+  - La vignette a l'aspect d'une image **générée par IA** : le personnage, le bloc et la maison ne sont pas des photographies OHEL.
+  - Le bloc représenté (rainures multiples sur le dessus, teinte rouge brique) **ne correspond pas à la géométrie des vrais BTCS** montrés dans le film (627115 : une rainure longitudinale, une encoche en sous-face, teinte ocre).
+  - La villa n'est pas une réalisation OHEL identifiée ; elle n'est pas légendée comme telle. À ne pas présenter comme réalisation OHEL dans la légende de publication.
+  - Le bouton reprend le logo YouTube : adapté à YouTube Shorts, moins cohérent sur TikTok/Instagram/Facebook.
+  - Le logo OHEL de la vignette fait partie de l'image fournie (non retouché par nos soins).
+- La couverture issue de l'animation reste disponible : `output/OHEL_BTCS_COVER_02_version_animation.png`.

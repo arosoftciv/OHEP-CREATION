@@ -3,33 +3,33 @@ POURQUOI CERTAINES MAISONS SONT-ELLES SI CHAUDES ?
 
 Voix : ElevenLabs « Tony – Warm, Dynamic Podcast Narrator » (français natif), modèle eleven_v4, une seule prise.
 Graphies phonétiques données à la voix : « Oël » pour OHEL, « bé-té-cé-esse » pour BTCS, numéro dicté en toutes lettres.
-Repères = début de chaque réplique dans le film (mm:ss.s).
+Repères = début de chaque réplique dans le MP4 final (mm:ss.s), vignette d’ouverture de 1 s comprise.
 
 
 ## Scène 1 — Votre maison est un four ?
-[00:00.5] Il est quatorze heures, à Abidjan. Vous entrez chez vous… et vous avez l'impression d'entrer dans un four !
+[00:01.5] Il est quatorze heures, à Abidjan. Vous entrez chez vous… et vous avez l'impression d'entrer dans un four !
 
 ## Scène 2 — D’où vient cette chaleur ?
-[00:08.3] Mais d'où vient cette chaleur ?
-[00:10.7] Le soleil chauffe la toiture, les murs et les fenêtres. Quand l'air circule mal, la chaleur peut s'accumuler à l'intérieur.
+[00:09.3] Mais d'où vient cette chaleur ?
+[00:11.7] Le soleil chauffe la toiture, les murs et les fenêtres. Quand l'air circule mal, la chaleur peut s'accumuler à l'intérieur.
 
 ## Scène 3 — Le matériau : BTCS et inertie thermique
-[00:22.8] Le choix du matériau compte aussi.
-[00:26.4] Le BTCS possède une inertie thermique, qui peut ralentir les variations de température.
-[00:33.6] Mais ce n'est pas une climatisation naturelle !
+[00:23.8] Le choix du matériau compte aussi.
+[00:27.4] Le BTCS possède une inertie thermique, qui peut ralentir les variations de température.
+[00:34.6] Mais ce n'est pas une climatisation naturelle !
 
 ## Scène 4 — Le confort se conçoit
-[00:38.0] Pour une maison confortable, il faut penser à la toiture, à l'ombre, à la ventilation et aux matériaux. C'est l'ensemble qui fait la différence.
+[00:39.0] Pour une maison confortable, il faut penser à la toiture, à l'ombre, à la ventilation et aux matériaux. C'est l'ensemble qui fait la différence.
 
 ## Scène 5 — OHEL INTERNATIONAL
-[00:52.0] Avec OHEL INTERNATIONAL, découvrez une autre approche de la construction en BTCS, adaptée à votre projet.
+[00:53.0] Avec OHEL INTERNATIONAL, découvrez une autre approche de la construction en BTCS, adaptée à votre projet.
 
 ## Scène 6 — Abonnez-vous et activez la cloche
-[01:03.6] Abonnez-vous, et activez la cloche, pour ne manquer aucune de nos prochaines vidéos !
+[01:04.6] Abonnez-vous, et activez la cloche, pour ne manquer aucune de nos prochaines vidéos !
 
 ## Scène 7 — Contact
-[01:10.5] Vous avez un projet ?
-[01:12.0] Contactez OHEL INTERNATIONAL au zéro sept, zéro sept, soixante-trois, zéro trois, trente-cinq.
+[01:11.5] Vous avez un projet ?
+[01:13.0] Contactez OHEL INTERNATIONAL au zéro sept, zéro sept, soixante-trois, zéro trois, trente-cinq.
 
 Texte prononcé (tel qu’envoyé à ElevenLabs) :
 
