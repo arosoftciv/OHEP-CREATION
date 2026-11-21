@@ -14,7 +14,9 @@ from scipy.io import wavfile
 
 SR = 48000
 T = json.load(open("src/timeline.json"))
-DUR = T["duration"]
+import sys; sys.path.insert(0, "scripts")
+from warp import to_new, NEW_DURATION  # temps de conception -> temps final
+DUR = NEW_DURATION
 N = int(DUR * SR)
 rng = np.random.default_rng(7)
 
@@ -45,6 +47,12 @@ def t_(d): return np.arange(int(d * SR)) / SR
 
 
 def add(buf, sig, at, gain=1.0):
+    """Place un son à un instant exprimé en temps de conception (converti en temps final)."""
+    addn(buf, sig, to_new(at), gain)
+
+
+def addn(buf, sig, at, gain=1.0):
+    """Place un son à un instant exprimé directement en temps final."""
     i = int(at * SR)
     if i >= len(buf): return
     j = min(len(buf), i + len(sig))
@@ -173,101 +181,105 @@ music = np.zeros(N)
 sfx = np.zeros(N)
 S = T["scenes"]
 
-# ---- ACTE 1 : origines (0 -> 24 s) — ré mineur pentatonique
-add(music, wind(26) * env_asr(26, 3, 4), 0, 0.22)
+# Les boucles rythmiques sont calculées en temps final (W) pour garder un tempo régulier.
+W = to_new
+# ---- ACTE 1 : origines — ré mineur pentatonique
+addn(music, wind(W(26)) * env_asr(W(26), 3, 4), 0, 0.22)
 penta = [62, 65, 67, 69, 72, 74, 77]  # D F G A C D F
 beat1 = 60 / 76
 pattern = [0, 2, 4, 3, 1, 4, 5, 2]
-t = 1.2
+t = W(1.2)
 k = 0
-while t < 24.5:
+while t < W(24.5):
     n = penta[pattern[k % len(pattern)]]
-    g = 0.16 if t < 11.6 else 0.2
-    add(music, kalimba(note(n)), t, g * (0.8 + 0.4 * rng.random()))
+    g = 0.16 if t < W(11.6) else 0.2
+    addn(music, kalimba(note(n)), t, g * (0.8 + 0.4 * rng.random()))
     if k % 4 == 0 and t > 5:
-        add(music, kalimba(note(n - 12), 3), t, 0.1)
+        addn(music, kalimba(note(n - 12), 3), t, 0.1)
     t += beat1 * (1 if k % 3 else 1.5)
     k += 1
 # tambour grave + shaker à partir de la scène 2
-t = 11.6
-while t < 24.5:
-    add(music, low_drum(), t, 0.38)
-    add(music, low_drum(140, 70, 0.5), t + beat1 * 1.5, 0.18)
-    for s in range(4):
-        add(music, shaker(), t + s * beat1 / 2 + 0.02, 0.06)
+t = W(11.6)
+while t < W(24.5):
+    addn(music, low_drum(), t, 0.38)
+    addn(music, low_drum(140, 70, 0.5), t + beat1 * 1.5, 0.18)
+    for s_ in range(4):
+        addn(music, shaker(), t + s_ * beat1 / 2 + 0.02, 0.06)
     t += beat1 * 2
 add(music, pad([50, 57, 62], 14, 900, 3, 3), 11.0, 0.25)  # bourdon chaud
 add(music, pad([50, 57, 64, 65], 6, 1100, 2, 2.5), 19.5, 0.2)
 
-# ---- ACTE 2 : transformation (24 -> 57.4 s) — la pulsation arrive avec la presse
+# ---- ACTE 2 : transformation — la pulsation arrive avec la presse
 bpm = 96
 b = 60 / bpm
 add(music, pad([50, 57, 60, 65], 9, 1200, 2, 3), 24.0, 0.22)  # transition
-# kalimba qui s'efface progressivement
-t = 24.0
-while t < 30:
-    add(music, kalimba(note(penta[k % 7])), t, 0.14 * (30 - t) / 6)
+t = W(24.0)
+while t < W(30):  # kalimba qui s'efface
+    addn(music, kalimba(note(penta[k % 7])), t, 0.14 * (W(30) - t) / 6)
     t += b; k += 1
 prog2 = [(38, 50), (34, 46), (41, 53), (36, 48)]  # D, Bb, F, C (basses)
-t = 28.2  # "les presses"
+t = W(28.2)  # « les presses »
+END2 = W(57.2)
 bar = 0
-while t < 57.2:
+while t < END2:
     root = prog2[bar % 4][0]
     for i in range(4):
         tt = t + i * b
-        if tt >= 57.2: break
-        add(music, kick(), tt, 0.42 if i % 2 == 0 else 0.25)
-        add(music, bass(root, b * 0.9), tt, 0.22)
-        add(music, shaker(0.08), tt + b / 2, 0.07)
-        if t > 39:
-            add(music, shaker(0.06), tt + b / 4, 0.04)
-            add(music, shaker(0.06), tt + 3 * b / 4, 0.04)
-    if t > 38.6:
+        if tt >= END2: break
+        addn(music, kick(), tt, 0.42 if i % 2 == 0 else 0.25)
+        addn(music, bass(root, b * 0.9), tt, 0.22)
+        addn(music, shaker(0.08), tt + b / 2, 0.07)
+        if t > W(39):
+            addn(music, shaker(0.06), tt + b / 4, 0.04)
+            addn(music, shaker(0.06), tt + 3 * b / 4, 0.04)
+    if t > W(38.6):
         chord = {38: [62, 65, 69], 34: [58, 62, 65], 41: [60, 65, 69], 36: [60, 64, 67]}[root]
-        add(music, pad(chord, 4 * b + 0.4, 1500, 0.4, 0.8), t, 0.16)
+        addn(music, pad(chord, 4 * b + 0.4, 1500, 0.4, 0.8), t, 0.16)
     t += 4 * b
     bar += 1
-# arpège moderne (acte 2b, procédé BTCS)
-t = 39.2
+t = W(39.2)  # arpège moderne (procédé BTCS)
 arp = [62, 69, 74, 77, 74, 69]
 i = 0
-while t < 57.2:
-    add(music, bell(note(arp[i % 6]), 1.2), t, 0.045)
+while t < END2:
+    addn(music, bell(note(arp[i % 6]), 1.2), t, 0.045)
     t += b / 2; i += 1
 
-# ---- ACTE 3 : architecture (57.4 -> 70.4 s) — montée émotionnelle
+# ---- ACTE 3 : architecture — montée émotionnelle
 prog3 = [[50, 62, 65, 69], [46, 58, 62, 65, 70], [41, 57, 60, 65, 69], [48, 60, 64, 67, 72]]
-bar3 = 2 * 60 / 84 * 2  # 2.857 s par accord
-t = 57.4
+bar3 = 2 * 60 / 84 * 2
+t = W(57.4)
+END3 = W(70.2)
 i = 0
-while t < 70.2:
-    d = min(bar3 + 0.6, 70.9 - t)
-    add(music, pad(prog3[i % 4], d, 2200 + 300 * i, 0.6, 0.9), t, 0.34)
-    add(music, bass(prog3[i % 4][0] - 12, bar3), t, 0.3)
+while t < END3:
+    d = min(bar3 + 0.6, W(70.9) - t)
+    addn(music, pad(prog3[i % 4], d, 2200 + 300 * i, 0.6, 0.9), t, 0.34)
+    addn(music, bass(prog3[i % 4][0] - 12, bar3), t, 0.3)
     for j in range(4):
         tt = t + j * bar3 / 4
-        add(music, kick(), tt, 0.4)
-        add(music, low_drum(130, 65, 0.5), tt + bar3 / 8, 0.12)
+        if tt >= END3: break
+        addn(music, kick(), tt, 0.4)
+        addn(music, low_drum(130, 65, 0.5), tt + bar3 / 8, 0.12)
     mel = prog3[i % 4][-1] + 12
-    add(music, bell(note(mel), 3), t, 0.07)
-    add(music, bell(note(mel - 5), 3), t + bar3 / 2, 0.05)
+    addn(music, bell(note(mel), 3), t, 0.07)
+    addn(music, bell(note(mel - 5), 3), t + bar3 / 2, 0.05)
     t += bar3; i += 1
-add(music, whoosh(2.2), 68.6, 0.1)  # montée vers la signature
+add(music, whoosh(2.2), 68.9, 0.1)  # montée vers la signature
 
-# ---- ACTE 4 : OHEL (70.4 -> 85 s) — résolution élégante
-add(music, pad([46, 58, 62, 65], 5.2, 1800, 0.8, 1.5), 70.4, 0.3)           # Bb
-add(music, pad([48, 60, 64, 67], 4.4, 1900, 0.8, 1.5), 74.6, 0.3)           # C
-add(music, pad([50, 62, 66, 69, 74], 11.5, 2300, 1.0, 4.5), 78.6, 0.36)    # D majeur (résolution)
-add(music, bass(34, 4), 70.4, 0.26); add(music, bass(36, 4), 74.6, 0.26); add(music, bass(38, 6), 78.6, 0.3)
+# ---- ACTE 4 : OHEL — résolution élégante (en temps final, ancrée sur la signature)
+t4 = W(70.4)
+addn(music, pad([46, 58, 62, 65], 5.2, 1800, 0.8, 1.5), t4, 0.3)                       # Bb
+addn(music, pad([48, 60, 64, 67], 4.4, 1900, 0.8, 1.5), W(74.6), 0.3)                  # C
+addn(music, pad([50, 62, 66, 69, 74], DUR - W(78.6) + 0.5, 2300, 1.0, 3.5), W(78.6), 0.36)  # D majeur
+addn(music, bass(34, 4), t4, 0.26); addn(music, bass(36, 4), W(74.6), 0.26); addn(music, bass(38, 5), W(78.6), 0.3)
 for kk, n in enumerate([74, 78, 81, 86]):
-    add(music, bell(note(n), 5), 78.7 + kk * 0.32, 0.08)
-add(music, kalimba(note(62), 4), 81.2, 0.14)
-add(music, kalimba(note(69), 4), 81.7, 0.12)
-add(music, kalimba(note(74), 5), 82.3, 0.12)
+    addn(music, bell(note(n), 4), W(78.7) + kk * 0.32, 0.08)
+addn(music, kalimba(note(62), 3), W(78.7) + 1.6, 0.14)
+addn(music, kalimba(note(69), 3), W(78.7) + 2.0, 0.12)
+addn(music, kalimba(note(74), 3), W(78.7) + 2.4, 0.12)
 
 # ---------------------------------------------------------------- effets sonores (synchronisés à l'image)
 add(sfx, sparkle(2.5, 1800), 8.8, 0.10)            # particules qui se détachent de la termitière
-add(sfx, whoosh(1.6), 10.6, 0.22)                  # transition vers le village
+add(sfx, whoosh(2.0), 10.2, 0.22)                  # transition vers le village
 add(sfx, earth_pour(2.5), 24.4, 0.35)              # le mur redevient matière
 add(sfx, whoosh(1.4, rev=True), 26.4, 0.16)        # recul caméra
 add(sfx, earth_pour(1.8), 29.2, 0.3)               # remplissage du moule
@@ -275,17 +287,19 @@ add(sfx, clank(), 33.0, 0.5)                       # compression manuelle (levie
 add(sfx, clank(), 35.2, 0.25)                      # éjection du bloc
 add(sfx, whoosh(1.2), 38.2, 0.16)
 add(sfx, earth_pour(2.0), 39.6, 0.25)              # tamisage
-add(sfx, whoosh(0.9), 42.0, 0.12)
-add(sfx, hiss(0.9), 44.6, 0.12)                    # presse hydraulique
+add(sfx, whoosh(1.0), vw("mélangée") - 0.65, 0.12)
+add(sfx, hiss(0.9), vw("comprimée", 2) - 0.6, 0.12)  # presse hydraulique
 add(sfx, clank(1.4), vw("comprimée", 2) - 0.02, 0.55)  # "puis comprimée"
-add(sfx, sparkle(1.2, 2600), 47.0, 0.08)           # contrôle qualité
-add(sfx, low_drum(80, 38, 1.6), 49.95, 0.5)        # apparition du bloc héros
+add(sfx, sparkle(1.2, 2600), vw("qualité"), 0.08)  # contrôle qualité
+add(sfx, low_drum(80, 38, 1.6), vw("Bloc") - 0.3, 0.5)  # apparition du bloc héros
 for letter in ("B", "T", "C", "S"):                # B T C S
     add(sfx, low_drum(160, 90, 0.35), vw(letter), 0.22)
-for i in range(16):                                 # blocs qui s'assemblent
-    add(sfx, low_drum(200 + 8 * i, 120, 0.25), 57.6 + i * 0.19, 0.1)
-add(sfx, whoosh(1.0), 60.4, 0.22)                  # traversée du mur
-add(sfx, whoosh(1.4), 69.7, 0.18)
+for i in range(11):                                 # assises de blocs qui se posent
+    add(sfx, low_drum(200 + 8 * i, 120, 0.25), 57.75 + i * 0.15, 0.1)
+for i in range(14):                                 # retournement des briques
+    add(sfx, low_drum(420 + 15 * i, 260, 0.12), 59.85 + i * 0.12, 0.05)
+add(sfx, sparkle(1.6, 2200), 60.2, 0.07)
+add(sfx, whoosh(1.4), 69.95, 0.18)
 add(sfx, sparkle(2.0, 2000), 74.4, 0.12)           # particules qui révèlent le logo
 add(sfx, bell(note(86), 4), 75.3, 0.22); add(sfx, low_drum(70, 35, 2.0), 75.3, 0.13)  # accent logo
 

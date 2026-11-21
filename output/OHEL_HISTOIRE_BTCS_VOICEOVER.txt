@@ -1,24 +1,22 @@
 OHEL INTERNATIONAL — L'HISTOIRE DU BTCS
-Voix-off — texte enregistré (ElevenLabs, voix « Brian – Deep, Resonant and Comforting », modèle eleven_multilingual_v2)
-Durée de la voix brute : 62,3 s — placée sans accélération sur une vidéo de 85 s (pauses ajoutées entre les actes).
+Voix-off (ElevenLabs, voix « Brian – Deep, Resonant and Comforting », modèle eleven_multilingual_v2)
+OHEL se prononce « o-el » : les deux passages contenant le nom ont été réenregistrés (graphie « Oël » pour la synthèse)
+et insérés dans la prise d'origine. Durée de la voix : 61,5 s, sans accélération — vidéo de 80.1 s.
 
 [00:02.5] Bien avant nos bâtiments modernes, la nature nous montrait déjà ce que la terre permet de construire. Regardez les termitières.
 
-[00:12.1] Puis, pendant des millénaires, les peuples ont bâti des habitations, des villages et des monuments avec la terre.
+[00:12.8] Puis, pendant des millénaires, les peuples ont bâti des habitations, des villages et des monuments avec la terre.
 En Afrique, ce savoir-faire a traversé les générations.
 
-[00:24.6] Mais l'histoire ne s'arrête pas là.
+[00:25.3] Mais l'histoire ne s'arrête pas là.
 Au vingtième siècle, les presses de terre comprimée, dont la CINVA-RAM des années cinquante, ont contribué à moderniser la fabrication des blocs.
 
-[00:39.0] Aujourd'hui, la terre est sélectionnée, préparée, mélangée à un stabilisant adapté, puis comprimée.
+[00:39.4] Aujourd'hui, la terre est sélectionnée, préparée, mélangée à un stabilisant adapté, puis comprimée.
 Après la cure et les contrôles de qualité, elle devient un Bloc de Terre Comprimée Stabilisée : le BTCS.
 
-[00:58.0] Et ces blocs prennent place dans des projets architecturaux contemporains.
-En Côte d'Ivoire, OHEL INTERNATIONAL met ce savoir-faire au service de la construction.
+[00:57.0] Et ces blocs prennent place dans des projets architecturaux contemporains.
+En Côte d'Ivoire, OHEL INTERNATIONAL (o-el) met ce savoir-faire au service de la construction.
 
-[01:11.1] De la terre à l'architecture : une histoire qui continue.
-OHEL INTERNATIONAL.
+[01:08.4] De la terre à l'architecture : une histoire qui continue.
+OHEL INTERNATIONAL (o-el).
 Vous avez un projet ? Contactez-nous.
-
-Notes de prononciation utilisées pour la synthèse : « Cinva-Ram » (affiché CINVA-RAM), « B. T. C. S. » épelé.
-Voix précédente (Damien Doré) archivée dans assets/audio/archive_damien/.

@@ -42,6 +42,14 @@ while i < n:
         ranges.append([round(i / 2 - 0.25, 2), round(j / 2 - 0.25, 2)])
         i = j
     else: i += 1
+sys.path.insert(0, "scripts")
+from warp import to_design
+ranges = [[round(to_design(max(0, a)), 2), round(to_design(b), 2)] for a, b in ranges]
+merged = []
+for r in ranges:  # pas de retour à la couleur pendant moins de 1,5 s (évite un clignotement)
+    if merged and r[0] - merged[-1][1] < 1.5: merged[-1][1] = r[1]
+    else: merged.append(r)
+ranges = merged
 json.dump(ranges, open("src/logoModes.json", "w"))
 for t, c, w, f in decisions[::4]: print(f"{t:5.1f}s  contraste couleur (min rouge/vert) {c:4.1f}:1  blanc {w:4.1f}:1  -> {'BLANC' if f else 'couleur'}")
 print("plages en blanc :", ranges)

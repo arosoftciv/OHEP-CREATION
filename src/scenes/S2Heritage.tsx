@@ -15,10 +15,10 @@ const IMG_H = 1857;
 
 export const S2Heritage: React.FC = () => {
 	const t = useT();
-	if (t < 10.7 || t > 24.25) return null;
+	if (t < 10.2 || t > 24.25) return null;
 
 	// ouverture circulaire depuis le disque de particules de la scène 1
-	const open = ramp(t, 10.9, 12.3, Easing.inOut(Easing.cubic));
+	const open = ramp(t, 10.3, 11.95, Easing.inOut(Easing.cubic));
 	const R = lerp(0, 1250, open);
 
 	const scale = (H / IMG_H) * lerp(1.16, 1.26, ramp(t, 11, 24, inOutSine));

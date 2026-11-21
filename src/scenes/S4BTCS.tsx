@@ -50,10 +50,10 @@ export const S4BTCS: React.FC = () => {
 			{!inHero && <Progress t={t} />}
 
 			<MatterWipe at={38.15} dur={0.9} seed={5} />
-			<MatterWipe at={T_S2 - 0.3} dur={0.6} seed={6} color={C.clay} />
-			<MatterWipe at={T_S3 - 0.3} dur={0.6} seed={7} />
-			<MatterWipe at={T_S4 - 0.3} dur={0.6} seed={8} color={C.clay} />
-			<MatterWipe at={T_HERO - 0.3} dur={0.6} seed={9} color={C.earthDark} />
+			<MatterWipe at={T_S2 - 0.45} dur={0.9} seed={6} color={C.clay} />
+			<MatterWipe at={T_S3 - 0.45} dur={0.9} seed={7} />
+			<MatterWipe at={T_S4 - 0.45} dur={0.9} seed={8} color={C.clay} />
+			<MatterWipe at={T_HERO - 0.45} dur={0.9} seed={9} color={C.earthDark} />
 		</AbsoluteFill>
 	);
 };
@@ -439,8 +439,8 @@ const Hero: React.FC<{t: number}> = ({t}) => {
 						}}
 					/>
 				</div>
-				<Callout t={t} at={54.9} fx={0.541} fy={0.273} dx={140} dy={-200} label="Rainure longitudinale" out={out} />
-				<Callout t={t} at={55.5} fx={0.222} fy={0.792} dx={-30} dy={110} label="Encoche d'extrémité" out={out} />
+				<Callout t={t} at={vw('S') + 0.5} fx={0.541} fy={0.273} dx={140} dy={-200} label="Rainure longitudinale" out={out} />
+				<Callout t={t} at={vw('S') + 1.1} fx={0.222} fy={0.792} dx={-30} dy={110} label="Encoche d'extrémité" out={out} />
 			</div>
 
 			{/* BTCS — lettres synchronisées sur l'épellation */}

@@ -1,8 +1,10 @@
 import data from './timeline.json';
+import {NEW_DURATION_S} from './warp';
 
 export const FPS = data.fps;
 export const DURATION_S = data.duration;
-export const DURATION_FRAMES = Math.round(DURATION_S * FPS);
+/** Durée finale (après raccourcissement des silences) */
+export const DURATION_FRAMES = Math.round(NEW_DURATION_S * FPS);
 export const SCENES = data.scenes as Record<'s1' | 's2' | 's3' | 's4' | 's5' | 's6', [number, number]>;
 
 /** Convertit un temps de la voix-off brute (horodatage ElevenLabs Scribe) en temps vidéo. */

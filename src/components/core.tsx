@@ -4,12 +4,13 @@ import {C, F} from '../theme';
 import {clamp01, outCubic, ramp, rnd, win} from '../animations/easing';
 import {Easing} from 'remotion';
 import logoModes from '../logoModes.json';
+import {toDesign} from '../warp';
 
 /** Temps global en secondes. */
 export const useT = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	return frame / fps;
+	return toDesign(frame / fps);
 };
 
 export const W = 1080;

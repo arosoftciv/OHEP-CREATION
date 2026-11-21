@@ -1,7 +1,7 @@
 # OHEL INTERNATIONAL — « L'histoire du BTCS » · Rapport de production
 
 **Version :** 01 (version de contrôle validée → version définitive)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 85 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 80 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
 **Son :** −14 LUFS intégrés, crête vraie −1,5 dBTP (norme réseaux sociaux)
 
 ## 1. Livrables
@@ -111,3 +111,11 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 | Aucune réalisation réelle OHEL | Non corrigeable sans fichiers | Photos de bâtiments achevés et d'intérieurs |
 | Accent possible de Brian | Non vérifiable sans écoute | Écoute ; sinon voix française native |
 | Droits des médias | Non vérifiables | Confirmer mosquée, termitières, maison, affiches |
+
+
+## 10. Prononciation, silences, rythme des transitions
+
+- **Prononciation « o-el » :** seules les deux répliques contenant OHEL ont été régénérées (« En Côte d'Ivoire, Oël International… » et « Oël International. », 106 crédits), puis insérées dans la prise Brian d'origine avec niveau égalisé (`scripts/splice_voice.py`). Total consommé sur le projet : 2 066 crédits, sans dépassement.
+- **Silences supprimés :** déformation du temps (`src/warp.ts`, `scripts/warp.py`, régions `warp` de `src/timeline.json`). Pendant la narration le temps n'est pas modifié (synchronisation intacte) ; les longs silences sont raccourcis (pause sur le bloc BTCS 2,2 s → 0,8 s ; pause sur l'atelier 3,1 s → 1,4 s ; fin 5,5 s → 3,3 s ; tenue après « des blocs » 1,8 s → 1,1 s). Durée totale : 85 s → 80.1 s.
+- **Transitions ralenties :** termitière → mosquée (≈ 2,8 s au lieu de 1,4 s), presse → étapes (×1,3), transitions de matière entre les étapes (0,6 → 0,9 s), retournement des briques (1,35 → 1,8 s), passage vers l'atelier (0,7 → 1,1 s).
+- La musique est recalculée dans le temps final (tempo régulier), les sous-titres SRT et les plages du logo blanc aussi.

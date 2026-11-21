@@ -57,7 +57,10 @@ for a, b in zip(chunks, chunks[1:] + [None]):
     a["show_end"] = min(a["end"] + 0.6, b["start"] - 0.02) if b else a["end"] + 0.8
 json.dump(chunks, open("src/subtitles.json", "w"), ensure_ascii=False, indent=1)
 
+import sys; sys.path.insert(0, "scripts")
+from warp import to_new
 def ts(x):
+    x = to_new(x)
     ms = int(round(x * 1000)); h, ms = divmod(ms, 3600000); m, ms = divmod(ms, 60000); s, ms = divmod(ms, 1000)
     return f"{h:02}:{m:02}:{s:02},{ms:03}"
 with open("output/subtitles/OHEL_HISTOIRE_BTCS_SUBTITLES.srt", "w", encoding="utf-8") as f:

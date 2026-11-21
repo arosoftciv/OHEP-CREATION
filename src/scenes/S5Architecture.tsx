@@ -28,7 +28,7 @@ export const S5Architecture: React.FC = () => {
 			<Reference t={t} />
 			<Wall t={t} />
 			<ReferenceShade t={t} />
-			<MatterWipe at={62.45} dur={0.7} seed={12} />
+			<MatterWipe at={62.25} dur={1.1} seed={12} />
 
 			<KineticTitle text={'LA TERRE\nSE RÉINVENTE.'} start={58.6} end={62.5} y={250} size={92} accent={['RÉINVENTE.']} />
 			<BrandTitle t={t} />
@@ -40,8 +40,8 @@ export const S5Architecture: React.FC = () => {
 
 // Retournement des briques : chaque brique pivote comme une carte et révèle au dos sa part du bâtiment
 const FLIP_A = 59.75;
-const FLIP_SPAN = 0.85; // étalement en diagonale
-const FLIP_DUR = 0.5;
+const FLIP_SPAN = 1.15; // étalement en diagonale
+const FLIP_DUR = 0.65;
 const HOUSE = 'img/reference_batiment.jpg';
 
 const Wall: React.FC<{t: number}> = ({t}) => {

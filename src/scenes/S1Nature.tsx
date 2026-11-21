@@ -26,7 +26,7 @@ export const S1Nature: React.FC = () => {
 	const camScale = lerp(1.04, 1.3, push);
 	const dawn = ramp(t, 0, 4.5, inOutSine); // ouverture : la lumière chaude se lève
 	const detach = t - 8.6;
-	const conv = ramp(t, 10.2, 11.35, Easing.inOut(Easing.cubic));
+	const conv = ramp(t, 9.6, 10.95, Easing.inOut(Easing.cubic));
 
 	// projection d'un point de l'image vers l'écran (même transformation que la photo)
 	const proj = (x: number, y: number) => ({

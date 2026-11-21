@@ -764,101 +764,101 @@
     "end": 61.733000000000004
    }
   ],
-  "show_end": 62.096000000000004
+  "show_end": 62.017
  },
  {
   "text": "En Côte d'Ivoire,",
-  "start": 62.11600000000001,
-  "end": 63.150000000000006,
+  "start": 62.037000000000006,
+  "end": 62.96600000000001,
   "words": [
    {
     "text": "En",
-    "start": 62.11600000000001,
-    "end": 62.279
+    "start": 62.037000000000006,
+    "end": 62.176
    },
    {
     "text": "Côte",
-    "start": 62.325,
-    "end": 62.499
+    "start": 62.246,
+    "end": 62.409000000000006
    },
    {
     "text": "d'Ivoire,",
-    "start": 62.523,
-    "end": 63.150000000000006
+    "start": 62.432,
+    "end": 62.96600000000001
    }
   ],
-  "show_end": 63.455
+  "show_end": 63.039
  },
  {
   "text": "OHEL International met ce savoir-faire",
-  "start": 63.475,
-  "end": 65.75,
+  "start": 63.059000000000005,
+  "end": 64.928,
   "words": [
    {
     "text": "OHEL",
-    "start": 63.475,
-    "end": 63.93900000000001
+    "start": 63.059000000000005,
+    "end": 63.26800000000001
    },
    {
     "text": "International",
-    "start": 63.98500000000001,
-    "end": 64.72900000000001
+    "start": 63.31400000000001,
+    "end": 63.86000000000001
    },
    {
     "text": "met",
-    "start": 64.821,
-    "end": 64.96100000000001
+    "start": 63.918000000000006,
+    "end": 64.034
    },
    {
     "text": "ce",
-    "start": 64.99600000000001,
-    "end": 65.08800000000001
+    "start": 64.057,
+    "end": 64.15
    },
    {
     "text": "savoir-faire",
-    "start": 65.14600000000002,
-    "end": 65.75
+    "start": 64.196,
+    "end": 64.928
    }
   ],
-  "show_end": 65.753
+  "show_end": 64.93100000000001
  },
  {
   "text": "au service de la construction.",
-  "start": 65.773,
-  "end": 67.155,
+  "start": 64.95100000000001,
+  "end": 66.48400000000001,
   "words": [
    {
     "text": "au",
-    "start": 65.773,
-    "end": 65.82000000000001
+    "start": 64.95100000000001,
+    "end": 65.16
    },
    {
     "text": "service",
-    "start": 65.86600000000001,
-    "end": 66.191
+    "start": 65.23,
+    "end": 65.624
    },
    {
     "text": "de",
-    "start": 66.215,
-    "end": 66.273
+    "start": 65.648,
+    "end": 65.706
    },
    {
     "text": "la",
-    "start": 66.319,
-    "end": 66.37700000000001
+    "start": 65.75200000000001,
+    "end": 65.81
    },
    {
     "text": "construction.",
-    "start": 66.435,
-    "end": 67.155
+    "start": 65.857,
+    "end": 66.48400000000001
    }
   ],
-  "show_end": 67.755
+  "show_end": 67.084
  },
  {
   "text": "De la terre à l'architecture :",
   "start": 71.08,
-  "end": 72.52,
+  "end": 72.52000000000001,
   "words": [
    {
     "text": "De",
@@ -883,7 +883,7 @@
    {
     "text": "l'architecture :",
     "start": 71.719,
-    "end": 72.52
+    "end": 72.52000000000001
    }
   ],
   "show_end": 72.99900000000001
@@ -914,65 +914,65 @@
     "end": 74.412
    }
   ],
-  "show_end": 74.903
+  "show_end": 74.887
  },
  {
   "text": "OHEL International.",
-  "start": 74.923,
-  "end": 76.27,
+  "start": 74.907,
+  "end": 76.208,
   "words": [
    {
     "text": "OHEL",
-    "start": 74.923,
-    "end": 75.399
+    "start": 74.907,
+    "end": 75.14
    },
    {
     "text": "International.",
-    "start": 75.445,
-    "end": 76.27
+    "start": 75.186,
+    "end": 76.208
    }
   ],
-  "show_end": 76.76100000000001
+  "show_end": 76.632
  },
  {
   "text": "Vous avez un projet ?",
-  "start": 76.781,
-  "end": 77.675,
+  "start": 76.652,
+  "end": 77.54599999999999,
   "words": [
    {
     "text": "Vous",
-    "start": 76.781,
-    "end": 76.943
+    "start": 76.652,
+    "end": 76.814
    },
    {
     "text": "avez",
-    "start": 77.001,
-    "end": 77.12899999999999
+    "start": 76.872,
+    "end": 77.0
    },
    {
     "text": "un",
-    "start": 77.152,
-    "end": 77.21000000000001
+    "start": 77.023,
+    "end": 77.081
    },
    {
     "text": "projet ?",
-    "start": 77.268,
-    "end": 77.675
+    "start": 77.13900000000001,
+    "end": 77.54599999999999
    }
   ],
-  "show_end": 77.817
+  "show_end": 77.688
  },
  {
   "text": "Contactez-nous.",
-  "start": 77.83699999999999,
-  "end": 78.812,
+  "start": 77.708,
+  "end": 78.68299999999999,
   "words": [
    {
     "text": "Contactez-nous.",
-    "start": 77.83699999999999,
-    "end": 78.812
+    "start": 77.708,
+    "end": 78.68299999999999
    }
   ],
-  "show_end": 79.612
+  "show_end": 79.48299999999999
  }
 ]
