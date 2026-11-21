@@ -10,7 +10,7 @@
 
 | Fichier | Format | Usage |
 |---|---|---|
-| `OHEL_HISTOIRE_BTCS_MOBILE_HD_1080x1920.mp4` | vertical 9:16, 1080 × 1920, H.264 High 6 Mb/s, AAC 192 kb/s, 115 s | TikTok, Instagram/Facebook Reels, YouTube Shorts, statut WhatsApp |
+| `OHEL_HISTOIRE_BTCS_MOBILE_HD_1080x1920.mp4` | vertical 9:16, 1080 × 1920, H.264 High 6 Mb/s, AAC 192 kb/s, 116 s | TikTok, Instagram/Facebook Reels, YouTube Shorts, statut WhatsApp |
 | `OHEL_HISTOIRE_BTCS_ORDINATEUR_HD_1920x1080.mp4` | horizontal 16:9, 1920 × 1080, mêmes réglages | YouTube, Facebook, site web, présentations : film au centre, fond flou, logo/titre à gauche, contact et devis à droite |
 | `output/cover/OHEL_HISTOIRE_BTCS_COVER.jpg` / `..._COVER_ORDINATEUR_1920x1080.jpg` | vignettes mobile / ordinateur | à choisir comme couverture lors de la publication (aussi intégrées dans les MP4) |
 
@@ -185,3 +185,10 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 - Une seule prise pour ces deux répliques (534 crédits). Total ElevenLabs du projet : 3 332 crédits, sans dépassement.
 - **Vignette** : l'image fournie par le client (`assets/reference/629046_vignette_client.jpg`) devient la couverture officielle (`output/cover/OHEL_HISTOIRE_BTCS_COVER.jpg`, 1080 × 1920) et est intégrée comme image de couverture dans les MP4. L'ancienne couverture générée est conservée (`..._COVER_ancienne_version.png`). Remarque : l'image contient un bloc et des scènes d'aspect généré par IA ; à utiliser en connaissance de cause.
 - Durée : 115.2 s.
+
+
+## 19. Vignette intégrée dans la vidéo
+
+- Les deux versions finales s'ouvrent sur la vignette (mobile : 1080 × 1920 ; ordinateur : version 16:9) : affichage ≈ 1 s avec léger zoom, puis fondu de 0,5 s vers la première scène. C'est donc la première image du fichier, proposée par défaut comme couverture par TikTok/Reels ; elle reste aussi intégrée comme image de couverture du MP4.
+- Le son est décalé d'exactement 1,0 s (mesuré par corrélation) : la synchronisation voix ↔ image est inchangée. Durée : 116,2 s.
+- `scripts/export_final.sh` produit les deux versions (paramètres `INTRO` et `XF` en tête du script).
