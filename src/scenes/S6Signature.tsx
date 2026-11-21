@@ -6,7 +6,7 @@ import {lerp, outBack, outCubic, ramp, rnd} from '../animations/easing';
 import {Easing} from 'remotion';
 import {vw} from '../voice';
 
-/* SCÈNE 6 — La signature de marque (70,4 → 85 s)
+/* SCÈNE 6 — La signature de marque (70,4 → 81 s, puis le logo reste en tête de la carte de fin)
  * Le chantier réel OHEL reste en arrière-plan, assombri. Des particules de terre convergent puis
  * un masque circulaire révèle le logo : le fichier du logo est affiché tel quel, jamais redessiné.
  * Accent musical sur « OHEL International » (75,3 s). */
@@ -22,7 +22,10 @@ export const S6Signature: React.FC = () => {
 	const reveal = ramp(t, 74.85, 75.75, Easing.inOut(Easing.cubic));
 	const conv = ramp(t, 73.9, 75.1, Easing.inOut(Easing.cubic));
 	const textsUp = ramp(t, 74.3, 75.0, Easing.inOut(Easing.cubic));
-	const endFade = ramp(t, 84.4, 85.0);
+	const endFade = ramp(t, 93.1, 93.6);
+	// arrivée de la carte de fin (scène 7) : textes et coordonnées s'effacent, le logo remonte
+	const TG = vw('Tu');
+	const out = ramp(t, TG - 0.75, TG - 0.05, Easing.inOut(Easing.cubic));
 	const cardScale = lerp(0.92, 1, ramp(t, 74.9, 76.2, outCubic));
 
 	return (
@@ -31,15 +34,15 @@ export const S6Signature: React.FC = () => {
 			<AbsoluteFill style={{opacity: dark}}>
 				<Img
 					src={staticFile('img/ohel_atelier_fond.jpg')}
-					style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.16, 1.24, ramp(t, 70, 85, (x) => x))})`, filter: `blur(${lerp(0, 10, dark)}px) saturate(0.85)`}}
+					style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.16, 1.24, ramp(t, 70, 93.6, (x) => x))})`, filter: `blur(${lerp(0, 10, dark)}px) saturate(0.85)`}}
 				/>
 				<AbsoluteFill style={{background: `linear-gradient(180deg, rgba(20,10,5,0.82), rgba(36,19,10,0.78) 50%, rgba(20,10,5,0.9))`}} />
 			</AbsoluteFill>
 
 			{/* textes d'ouverture, qui remontent pour laisser place au logo */}
-			<div style={{position: 'absolute', inset: 0, transform: `translateY(${-textsUp * 360}px) scale(${1 - textsUp * 0.22})`, transformOrigin: '50% 30%'}}>
-				<KineticTitle text={"DE LA TERRE\nÀ L'ARCHITECTURE."} start={71.05} end={84.3} y={640} size={72} maxWidth={1000} accent={['TERRE', "L'ARCHITECTURE."]} />
-				<KineticTitle text="une histoire qui continue." start={73.25} end={84.3} y={826} size={60} serif weight={700} color={C.sand} stagger={0.08} />
+			<div style={{position: 'absolute', inset: 0, opacity: 1 - out, transform: `translateY(${-textsUp * 360}px) scale(${1 - textsUp * 0.22})`, transformOrigin: '50% 30%'}}>
+				<KineticTitle text={"DE LA TERRE\nÀ L'ARCHITECTURE."} start={71.05} end={93.5} y={640} size={72} maxWidth={1000} accent={['TERRE', "L'ARCHITECTURE."]} />
+				<KineticTitle text="une histoire qui continue." start={73.25} end={93.5} y={826} size={60} serif weight={700} color={C.sand} stagger={0.08} />
 			</div>
 
 			{/* particules convergentes */}
@@ -69,8 +72,9 @@ export const S6Signature: React.FC = () => {
 					style={{
 						position: 'absolute',
 						left: 540 - LOGO_W / 2,
-						top: LOGO_TOP,
-						transform: `scale(${cardScale})`,
+						top: lerp(LOGO_TOP, 150, out),
+						transform: `scale(${cardScale * lerp(1, 0.62, out)})`,
+						transformOrigin: '50% 0%',
 						clipPath: `circle(${lerp(0, 75, reveal)}% at 50% 50%)`,
 					}}
 				>
@@ -91,8 +95,10 @@ export const S6Signature: React.FC = () => {
 				}}
 			/>
 
-			<Tagline t={t} />
-			<Contacts t={t} />
+			<div style={{position: 'absolute', inset: 0, opacity: 1 - out}}>
+				<Tagline t={t} />
+				<Contacts t={t} />
+			</div>
 
 			<AbsoluteFill style={{background: '#000', opacity: endFade * 0.35}} />
 		</AbsoluteFill>

@@ -1,7 +1,7 @@
 # OHEL INTERNATIONAL — « L'histoire du BTCS » · Rapport de production
 
 **Version :** 01 (version de contrôle validée → version définitive)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 80 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 89,5 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
 **Son :** −14 LUFS intégrés, crête vraie −1,5 dBTP (norme réseaux sociaux)
 
 ## 1. Livrables
@@ -119,3 +119,11 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 - **Silences supprimés :** déformation du temps (`src/warp.ts`, `scripts/warp.py`, régions `warp` de `src/timeline.json`). Pendant la narration le temps n'est pas modifié (synchronisation intacte) ; les longs silences sont raccourcis (pause sur le bloc BTCS 2,2 s → 0,8 s ; pause sur l'atelier 3,1 s → 1,4 s ; fin 5,5 s → 3,3 s ; tenue après « des blocs » 1,8 s → 1,1 s). Durée totale : 85 s → 80.1 s.
 - **Transitions ralenties :** termitière → mosquée (≈ 2,8 s au lieu de 1,4 s), presse → étapes (×1,3), transitions de matière entre les étapes (0,6 → 0,9 s), retournement des briques (1,35 → 1,8 s), passage vers l'atelier (0,7 → 1,1 s).
 - La musique est recalculée dans le temps final (tempo régulier), les sous-titres SRT et les plages du logo blanc aussi.
+
+
+## 11. Carte de fin « série éducative »
+
+- Voix (Brian, 153 crédits) : « Tu veux en savoir plus ? Abonne-toi pour ne pas rater le prochain numéro. Tu comprendras les avantages du BTCS, et pourquoi choisir le BTCS. » — ajoutée après « Contactez-nous » (`scripts/splice_voice.py`, segment G).
+- Scène 7 (`src/scenes/S7Teaser.tsx`) : le logo remonte en tête, titre « TU VEUX EN SAVOIR PLUS ? », bouton « S'ABONNER » qui passe à « ABONNÉ ✓ » (cloche, onde) sur « numéro », carte « PROCHAIN NUMÉRO » (1. Les avantages du BTCS · 2. Pourquoi choisir le BTCS) synchronisée sur « avantages » / « pourquoi », rappel des coordonnées en bas.
+- Remarque de ton : le film vouvoie (« Vous avez un projet ? Contactez-nous. ») puis tutoie dans la carte de fin, comme demandé ; à harmoniser si besoin.
+- Durée totale : 89.5 s. Total ElevenLabs consommé sur le projet : 2 219 crédits, sans dépassement.

@@ -1,7 +1,7 @@
 OHEL INTERNATIONAL — L'HISTOIRE DU BTCS
 Voix-off (ElevenLabs, voix « Brian – Deep, Resonant and Comforting », modèle eleven_multilingual_v2)
 OHEL se prononce « o-el » : les deux passages contenant le nom ont été réenregistrés (graphie « Oël » pour la synthèse)
-et insérés dans la prise d'origine. Durée de la voix : 61,5 s, sans accélération — vidéo de 80.1 s.
+et insérés dans la prise d'origine. Durée de la voix : 71,8 s (dont l'appel à l'abonnement), sans accélération — vidéo de 89.5 s.
 
 [00:02.5] Bien avant nos bâtiments modernes, la nature nous montrait déjà ce que la terre permet de construire. Regardez les termitières.
 
@@ -20,3 +20,6 @@ En Côte d'Ivoire, OHEL INTERNATIONAL (o-el) met ce savoir-faire au service de l
 [01:08.4] De la terre à l'architecture : une histoire qui continue.
 OHEL INTERNATIONAL (o-el).
 Vous avez un projet ? Contactez-nous.
+
+[01:17.8] Tu veux en savoir plus ? Abonne-toi pour ne pas rater le prochain numéro.
+Tu comprendras les avantages du BTCS, et pourquoi choisir le BTCS.

@@ -301,6 +301,11 @@ for i in range(14):                                 # retournement des briques
 add(sfx, sparkle(1.6, 2200), 60.2, 0.07)
 add(sfx, whoosh(1.4), 69.95, 0.18)
 add(sfx, sparkle(2.0, 2000), 74.4, 0.12)           # particules qui révèlent le logo
+# carte de fin (abonnement)
+add(sfx, whoosh(1.3), vw("Tu") - 0.85, 0.14)
+add(sfx, low_drum(260, 160, 0.25), vw("Abonne-toi") - 0.1, 0.12)
+add(sfx, bell(note(93), 1.6), vw("numéro") + 0.05, 0.12); add(sfx, bell(note(98), 1.6), vw("numéro") + 0.15, 0.08)
+add(sfx, sparkle(0.8, 2600), vw("avantages") - 0.1, 0.06); add(sfx, sparkle(0.8, 2600), vw("pourquoi") - 0.1, 0.06)
 add(sfx, bell(note(86), 4), 75.3, 0.22); add(sfx, low_drum(70, 35, 2.0), 75.3, 0.13)  # accent logo
 
 # ---------------------------------------------------------------- voix-off

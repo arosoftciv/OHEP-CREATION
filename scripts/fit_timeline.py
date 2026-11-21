@@ -4,7 +4,7 @@ Vérifie qu'aucun segment ne déborde sur le suivant."""
 import json
 T = json.load(open("src/timeline.json"))
 W = [w for w in json.load(open("assets/audio/voiceover_words.json"))["words"] if w["type"] == "word"]
-ends = ["termitières.", "générations.", "blocs.", "S.", "construction.", None]  # dernier mot de chaque segment
+ends = ["termitières.", "générations.", "blocs.", "S.", "construction.", "Contactez-nous.", None]  # dernier mot de chaque segment
 segs, i = [], 0
 for seg, last in zip(T["voiceSegments"], ends):
     j = i

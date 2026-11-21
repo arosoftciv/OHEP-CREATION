@@ -973,6 +973,158 @@
     "end": 78.68299999999999
    }
   ],
-  "show_end": 79.48299999999999
+  "show_end": 79.28299999999999
+ },
+ {
+  "text": "Tu veux en savoir plus ?",
+  "start": 81.38,
+  "end": 82.437,
+  "words": [
+   {
+    "text": "Tu",
+    "start": 81.38,
+    "end": 81.543
+   },
+   {
+    "text": "veux",
+    "start": 81.601,
+    "end": 81.705
+   },
+   {
+    "text": "en",
+    "start": 81.74000000000001,
+    "end": 81.786
+   },
+   {
+    "text": "savoir",
+    "start": 81.844,
+    "end": 82.088
+   },
+   {
+    "text": "plus ?",
+    "start": 82.13499999999999,
+    "end": 82.437
+   }
+  ],
+  "show_end": 83.03699999999999
+ },
+ {
+  "text": "Abonne-toi pour ne pas rater le prochain numéro.",
+  "start": 83.063,
+  "end": 85.23500000000001,
+  "words": [
+   {
+    "text": "Abonne-toi",
+    "start": 83.063,
+    "end": 83.57400000000001
+   },
+   {
+    "text": "pour",
+    "start": 83.60900000000001,
+    "end": 83.714
+   },
+   {
+    "text": "ne",
+    "start": 83.75999999999999,
+    "end": 83.83000000000001
+   },
+   {
+    "text": "pas",
+    "start": 83.876,
+    "end": 84.00399999999999
+   },
+   {
+    "text": "rater",
+    "start": 84.02699999999999,
+    "end": 84.25900000000001
+   },
+   {
+    "text": "le",
+    "start": 84.28200000000001,
+    "end": 84.352
+   },
+   {
+    "text": "prochain",
+    "start": 84.399,
+    "end": 84.689
+   },
+   {
+    "text": "numéro.",
+    "start": 84.71199999999999,
+    "end": 85.23500000000001
+   }
+  ],
+  "show_end": 85.54
+ },
+ {
+  "text": "Tu comprendras les avantages du BTCS.",
+  "start": 85.56,
+  "end": 88.195,
+  "words": [
+   {
+    "text": "Tu",
+    "start": 85.56,
+    "end": 85.69900000000001
+   },
+   {
+    "text": "comprendras",
+    "start": 85.769,
+    "end": 86.221
+   },
+   {
+    "text": "les",
+    "start": 86.245,
+    "end": 86.34899999999999
+   },
+   {
+    "text": "avantages",
+    "start": 86.40700000000001,
+    "end": 86.88300000000001
+   },
+   {
+    "text": "du",
+    "start": 86.906,
+    "end": 86.999
+   },
+   {
+    "text": "BTCS.",
+    "start": 87.06899999999999,
+    "end": 88.195
+   }
+  ],
+  "show_end": 88.349
+ },
+ {
+  "text": "et pourquoi choisir le BTCS.",
+  "start": 88.369,
+  "end": 90.9,
+  "words": [
+   {
+    "text": "et",
+    "start": 88.369,
+    "end": 88.49700000000001
+   },
+   {
+    "text": "pourquoi",
+    "start": 88.543,
+    "end": 88.91499999999999
+   },
+   {
+    "text": "choisir",
+    "start": 88.94999999999999,
+    "end": 89.43700000000001
+   },
+   {
+    "text": "le",
+    "start": 89.48400000000001,
+    "end": 89.553
+   },
+   {
+    "text": "BTCS.",
+    "start": 89.61099999999999,
+    "end": 90.9
+   }
+  ],
+  "show_end": 91.7
  }
 ]

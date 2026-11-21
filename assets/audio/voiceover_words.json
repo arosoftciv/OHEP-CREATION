@@ -899,6 +899,192 @@
    "type": "word",
    "start": 60.531,
    "end": 61.506
+  },
+  {
+   "text": "Tu",
+   "type": "word",
+   "start": 62.307,
+   "end": 62.47
+  },
+  {
+   "text": "veux",
+   "type": "word",
+   "start": 62.528,
+   "end": 62.632
+  },
+  {
+   "text": "en",
+   "type": "word",
+   "start": 62.667,
+   "end": 62.713
+  },
+  {
+   "text": "savoir",
+   "type": "word",
+   "start": 62.771,
+   "end": 63.015
+  },
+  {
+   "text": "plus",
+   "type": "word",
+   "start": 63.062,
+   "end": 63.364
+  },
+  {
+   "text": "?",
+   "type": "word",
+   "start": 63.491,
+   "end": 63.549
+  },
+  {
+   "text": "Abonne-toi",
+   "type": "word",
+   "start": 63.99,
+   "end": 64.501
+  },
+  {
+   "text": "pour",
+   "type": "word",
+   "start": 64.536,
+   "end": 64.641
+  },
+  {
+   "text": "ne",
+   "type": "word",
+   "start": 64.687,
+   "end": 64.757
+  },
+  {
+   "text": "pas",
+   "type": "word",
+   "start": 64.803,
+   "end": 64.931
+  },
+  {
+   "text": "rater",
+   "type": "word",
+   "start": 64.954,
+   "end": 65.186
+  },
+  {
+   "text": "le",
+   "type": "word",
+   "start": 65.209,
+   "end": 65.279
+  },
+  {
+   "text": "prochain",
+   "type": "word",
+   "start": 65.326,
+   "end": 65.616
+  },
+  {
+   "text": "numéro.",
+   "type": "word",
+   "start": 65.639,
+   "end": 66.162
+  },
+  {
+   "text": "Tu",
+   "type": "word",
+   "start": 66.487,
+   "end": 66.626
+  },
+  {
+   "text": "comprendras",
+   "type": "word",
+   "start": 66.696,
+   "end": 67.148
+  },
+  {
+   "text": "les",
+   "type": "word",
+   "start": 67.172,
+   "end": 67.276
+  },
+  {
+   "text": "avantages",
+   "type": "word",
+   "start": 67.334,
+   "end": 67.81
+  },
+  {
+   "text": "du",
+   "type": "word",
+   "start": 67.833,
+   "end": 67.926
+  },
+  {
+   "text": "B.",
+   "type": "word",
+   "start": 67.996,
+   "end": 68.066
+  },
+  {
+   "text": "T.",
+   "type": "word",
+   "start": 68.216,
+   "end": 68.298
+  },
+  {
+   "text": "C.",
+   "type": "word",
+   "start": 68.414,
+   "end": 68.53
+  },
+  {
+   "text": "S.,",
+   "type": "word",
+   "start": 68.704,
+   "end": 69.122
+  },
+  {
+   "text": "et",
+   "type": "word",
+   "start": 69.296,
+   "end": 69.424
+  },
+  {
+   "text": "pourquoi",
+   "type": "word",
+   "start": 69.47,
+   "end": 69.842
+  },
+  {
+   "text": "choisir",
+   "type": "word",
+   "start": 69.877,
+   "end": 70.364
+  },
+  {
+   "text": "le",
+   "type": "word",
+   "start": 70.411,
+   "end": 70.48
+  },
+  {
+   "text": "B.",
+   "type": "word",
+   "start": 70.538,
+   "end": 70.597
+  },
+  {
+   "text": "T.",
+   "type": "word",
+   "start": 70.747,
+   "end": 70.817
+  },
+  {
+   "text": "C.",
+   "type": "word",
+   "start": 70.945,
+   "end": 71.061
+  },
+  {
+   "text": "S.",
+   "type": "word",
+   "start": 71.235,
+   "end": 71.827
   }
  ]
 }
