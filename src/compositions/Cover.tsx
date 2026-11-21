@@ -32,7 +32,7 @@ export const Cover: React.FC = () => {
 						<stop offset="1" stopColor={C.night} />
 					</linearGradient>
 				</defs>
-				<image href={staticFile('img/chantier_ohel.jpg')} x={0} y={640} width={1080} height={1920} preserveAspectRatio="xMidYMin slice" clipPath="url(#bottomClip)" />
+				<image href={staticFile('img/ohel_atelier.jpg')} x={-260} y={1270} width={1500} height={1105} preserveAspectRatio="xMidYMin slice" clipPath="url(#bottomClip)" />
 				<path d={`${tear(690, 18, 5)} L1080,1330 L0,1330 Z`} fill="url(#band)" />
 				<path d={tear(690, 18, 5)} stroke={C.ochre} strokeWidth={6} fill="none" />
 				<path d={tear(1300, 22, 2)} stroke={C.ochre} strokeWidth={6} fill="none" />

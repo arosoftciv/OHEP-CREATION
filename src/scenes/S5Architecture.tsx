@@ -33,7 +33,7 @@ export const S5Architecture: React.FC = () => {
 			<KineticTitle text={'LA TERRE\nSE RÉINVENTE.'} start={58.6} end={62.5} y={250} size={92} accent={['RÉINVENTE.']} />
 			<BrandTitle t={t} />
 			<SourceTag text="Image de référence · architecture contemporaine" start={61.3} end={62.6} y={1318} />
-			<SourceTag text="Chantier réel · OHEL INTERNATIONAL · Côte d'Ivoire" start={63.0} end={70.1} y={1318} />
+			<SourceTag text="Fabrication des BTCS · OHEL INTERNATIONAL" start={63.0} end={70.1} y={1318} />
 		</AbsoluteFill>
 	);
 };
@@ -143,17 +143,24 @@ const Reference: React.FC<{t: number}> = ({t}) => {
 	);
 };
 
-/** Chantier réel OHEL (photo recadrée sur le chantier). Reste visible pendant le début de la scène 6. */
+/** Atelier OHEL (visuel de l'affiche 626923, choisi par le client) : cadre plein largeur sur fond flouté
+ * de la même image. Reste visible pendant le début de la scène 6. */
+const IMG_H = Math.round((694 * 1080) / 941);
 const Chantier: React.FC<{t: number}> = ({t}) => {
 	if (t < 62.6) return null;
 	const k = ramp(t, 62.6, 71.6, (x) => x);
+	const top = 600;
 	return (
 		<AbsoluteFill>
-			<Img
-				src={staticFile('img/chantier_ohel.jpg')}
-				style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.04, 1.16, k)}) translateY(${lerp(0, -30, k)}px)`, filter: 'saturate(1.08) contrast(1.04)'}}
-			/>
-			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,10,5,0.65) 0%, rgba(20,10,5,0.1) 32%, rgba(20,10,5,0) 60%, rgba(20,10,5,0.55) 100%)'}} />
+			<Img src={staticFile('img/ohel_atelier_fond.jpg')} style={{width: '100%', height: '100%', transform: `scale(${lerp(1.05, 1.12, k)})`}} />
+			<AbsoluteFill style={{background: 'rgba(20,10,5,0.45)'}} />
+			<div style={{position: 'absolute', left: 0, top, width: W, height: IMG_H, overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,0.55)'}}>
+				<Img
+					src={staticFile('img/ohel_atelier.jpg')}
+					style={{width: '100%', height: '100%', transform: `scale(${lerp(1.02, 1.14, k)}) translateX(${lerp(10, -25, k)}px)`, transformOrigin: '40% 50%', filter: 'saturate(1.04)'}}
+				/>
+			</div>
+			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,10,5,0.55) 0%, rgba(20,10,5,0) 30%)'}} />
 		</AbsoluteFill>
 	);
 };

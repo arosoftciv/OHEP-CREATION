@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, staticFile} from 'remotion';
+import {AbsoluteFill, Img, staticFile} from 'remotion';
 import {H, KineticTitle, SourceTag, W, useT} from '../components/core';
 import {C, F} from '../theme';
 import {inCubic, lerp, outBack, outCubic, ramp, rnd} from '../animations/easing';
@@ -12,8 +12,6 @@ import {vw} from '../voice';
  *    illustration technique stylisée, mention « Reconstitution illustrative ».
  * 3) Cycle : remplissage du moule → levier → compression → éjection du bloc. */
 
-const COLS = 16;
-const ROWS = 28;
 
 export const S3Press: React.FC = () => {
 	const t = useT();
@@ -56,51 +54,71 @@ const Blueprint: React.FC<{t: number}> = ({t}) => {
 	);
 };
 
-/** Le mur (détail réel de la photo) se fragmente et retombe en terre. */
+/** Dissolution en sable : la façade (même cadrage que la fin de la scène 2) s'efface de haut en bas
+ * le long d'un front lumineux ; des grains de terre s'en détachent et retombent en tas. */
+const DISSOLVE_A = 24.15;
+const DISSOLVE_B = 26.6;
+
 const Disintegration: React.FC<{t: number}> = ({t}) => {
-	if (t > 27.6) return null;
-	const tw = W / COLS;
-	const th = H / ROWS;
+	if (t > 28.6) return null;
 	const scale = (H / 1857) * 1.26;
 	const dispW = 1488 * scale;
 	const hgt = 1857 * scale;
 	const xB = -(dispW - W);
 	const xS = xB * 0.72 - 60;
 	const yO = -150;
+	const p = ramp(t, DISSOLVE_A, DISSOLVE_B, Easing.inOut(Easing.sin));
+	const edge = lerp(-260, H + 220, p);
+	const ciel = staticFile('img/mosquee_ciel.jpg');
 	const bld = staticFile('img/mosquee_edifice.png');
-	const sky = staticFile('img/mosquee_ciel.jpg');
 	return (
 		<AbsoluteFill>
-			{Array.from({length: COLS * ROWS}).map((_, i) => {
-				const c = i % COLS;
-				const r = Math.floor(i / COLS);
-				const delay = 24.15 + (1 - r / ROWS) * 0.9 + rnd(i, 1) * 0.9;
-				const k = Math.max(0, t - delay);
-				const fall = 0.5 * 2600 * k * k;
-				const dx = (rnd(i, 2) - 0.5) * 260 * k;
-				const rot = (rnd(i, 3) - 0.5) * 540 * k;
-				const shrink = Math.max(0, 1 - k * 1.25);
-				if (shrink <= 0) return null;
-				const tint = Math.min(1, k * 2.2);
-				return (
-					<div
-						key={i}
-						style={{
-							position: 'absolute',
-							left: c * tw,
-							top: r * th,
-							width: tw + 1,
-							height: th + 1,
-							backgroundImage: `url(${bld}), url(${sky})`,
-							backgroundSize: `${dispW}px ${hgt}px, ${dispW * 1.1}px ${hgt}px`,
-							backgroundPosition: `${xB - c * tw}px ${yO - r * th}px, ${xS - c * tw}px ${yO - r * th}px`,
-							transform: `translate(${dx}px, ${fall}px) rotate(${rot}deg) scale(${shrink})`,
-							borderRadius: tint * 40 + '%',
-							boxShadow: `inset 0 0 0 200px rgba(201,107,54,${tint * 0.85})`,
-						}}
-					/>
-				);
-			})}
+			{p < 1 && (
+				<svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
+					<defs>
+						{/* bord irrégulier : bruit fractal qui déforme le front */}
+						<filter id="crumble" x="-10%" y="-20%" width="120%" height="140%">
+							<feTurbulence type="fractalNoise" baseFrequency="0.018 0.05" numOctaves={4} seed={8} />
+							<feDisplacementMap in="SourceGraphic" scale={170} xChannelSelector="R" yChannelSelector="G" />
+							<feGaussianBlur stdDeviation={3} />
+						</filter>
+						<mask id="dissolveMask" maskUnits="userSpaceOnUse" x={0} y={0} width={W} height={H}>
+							<rect x={-200} y={edge} width={W + 400} height={H + 600} fill="#fff" filter="url(#crumble)" />
+						</mask>
+						<linearGradient id="grade" x1="0" y1="0" x2="0" y2="1">
+							<stop offset="0" stopColor="rgba(255,160,80,0.10)" />
+							<stop offset="0.45" stopColor="rgba(255,140,60,0.06)" />
+							<stop offset="1" stopColor="rgba(60,25,10,0.45)" />
+						</linearGradient>
+					</defs>
+					<g mask="url(#dissolveMask)">
+						<image href={ciel} x={xS} y={yO} width={dispW * 1.1} height={hgt} preserveAspectRatio="none" />
+						<image href={bld} x={xB} y={yO} width={dispW} height={hgt} preserveAspectRatio="none" />
+						<rect width={W} height={H} fill="url(#grade)" style={{mixBlendMode: 'multiply'}} />
+					</g>
+					{/* liseré incandescent qui suit le front */}
+					<rect x={-200} y={edge - 18} width={W + 400} height={36} fill="rgba(255,185,105,0.55)" filter="url(#crumble)" style={{mixBlendMode: 'screen'}} />
+				</svg>
+			)}
+			{/* grains de terre qui se détachent du front et s'évanouissent en tombant */}
+			<svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
+				{Array.from({length: 1400}).map((_, i) => {
+					const x0 = rnd(i, 51) * W;
+					const y0 = 600 + rnd(i, 52) * (H - 600);
+					const pe = (y0 + 260) / (H + 220 + 260);
+					const te = DISSOLVE_A + Math.asin(Math.min(1, Math.max(0, pe)) * 2 - 1) / Math.PI * (DISSOLVE_B - DISSOLVE_A) + (DISSOLVE_B - DISSOLVE_A) / 2 + (rnd(i, 59) - 0.5) * 0.15;
+					const k = t - te;
+					if (k < 0) return null;
+					const life = 0.9 + rnd(i, 53) * 0.9;
+					if (k > life) return null;
+					const x = x0 + (rnd(i, 54) - 0.5) * 140 * k + Math.sin(k * 4 + i) * 8;
+					const y = y0 - 30 * k * (rnd(i, 55) > 0.6 ? 1 : 0) + 0.5 * 1100 * k * k;
+					const r = 1.4 + rnd(i, 56) * 3.6;
+					const o = Math.min(1, k * 8) * (1 - k / life);
+					const col = rnd(i, 57) > 0.5 ? '238,160,90' : rnd(i, 58) > 0.5 ? '205,112,56' : '246,206,150';
+					return <circle key={i} cx={x} cy={y} r={r} fill={`rgba(${col},${o})`} />;
+				})}
+			</svg>
 		</AbsoluteFill>
 	);
 };
@@ -138,9 +156,9 @@ const YearCounter: React.FC<{t: number}> = ({t}) => {
 
 /** Presse manuelle : illustration technique. Coordonnées locales, origine au sol au centre. */
 const PressRig: React.FC<{t: number}> = ({t}) => {
-	const show = ramp(t, 26.6, 27.4);
+	const show = ramp(t, 26.2, 26.9);
 	if (show <= 0) return null;
-	const pull = ramp(t, 26.8, 28.6, Easing.inOut(Easing.cubic));
+	const pull = ramp(t, 26.3, 28.4, Easing.inOut(Easing.cubic));
 	const camScale = lerp(1.9, 1.0, pull);
 	const exitK = ramp(t, 37.9, 38.7, inCubic);
 

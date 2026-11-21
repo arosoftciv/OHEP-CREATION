@@ -90,3 +90,12 @@ plate = Image.fromarray(sk.clip(0, 255).astype(np.uint8)).filter(ImageFilter.Gau
 plate = plate.resize((W * S, H * S), Image.LANCZOS)
 plate.save(P + "mosquee_ciel.jpg", quality=92)
 print("ciel ok")
+
+# 8) Visuel « atelier OHEL » (affiche 626923, choisi par le client pour remplacer la photo d'équipe) :
+#    zone ouvriers + presse, sans le logo ni les textes de l'affiche
+af = Image.open("assets/reference/626923_affiche_fabrication.png").convert("RGB").crop((0, 228, 941, 922))
+af.resize((1080, int(694 * 1080 / 941)), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.5, percent=60, threshold=2)).save(P + "ohel_atelier.jpg", quality=93)
+bgf = af.resize((int(941 * 1920 / 694), 1920), Image.LANCZOS)
+x0 = (bgf.width - 1080) // 2
+bgf.crop((x0, 0, x0 + 1080, 1920)).filter(ImageFilter.GaussianBlur(28)).save(P + "ohel_atelier_fond.jpg", quality=88)
+print("atelier ok")
