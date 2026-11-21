@@ -18,7 +18,6 @@ const ROWS = 11;
 const COLS = 7;
 const WALL_X = (W - (COLS - 0.5) * (BW + GAP)) / 2 - BW / 2;
 const WALL_BOTTOM = 1420;
-const WINDOW = {r0: 4, r1: 7, c0: 2, c1: 4}; // baie (rangées/colonnes laissées vides)
 
 export const S5Architecture: React.FC = () => {
 	const t = useT();
@@ -28,6 +27,7 @@ export const S5Architecture: React.FC = () => {
 			<Chantier t={t} />
 			<Reference t={t} />
 			<Wall t={t} />
+			<ReferenceShade t={t} />
 			<MatterWipe at={62.45} dur={0.7} seed={12} />
 
 			<KineticTitle text={'LA TERRE\nSE RÉINVENTE.'} start={58.6} end={62.5} y={250} size={92} accent={['RÉINVENTE.']} />
@@ -38,45 +38,33 @@ export const S5Architecture: React.FC = () => {
 	);
 };
 
-const wallBgPath = (open: boolean) => {
-	let d = `M${-W * 2},${-H * 2} H${W * 3} V${H * 3} H${-W * 2} Z`;
-	if (!open) return d;
-	for (let r = WINDOW.r0; r <= WINDOW.r1; r++) {
-		const odd = r % 2 === 1;
-		const half = (BW + GAP) / 2;
-		const x0 = WALL_X + WINDOW.c0 * (BW + GAP) + (odd ? half : 0) - (odd ? GAP : GAP);
-		const x1 = WALL_X + (odd ? WINDOW.c1 : WINDOW.c1 + 1) * (BW + GAP) + (odd ? half : 0);
-		const y0 = WALL_BOTTOM - (r + 1) * (BH + GAP) - GAP;
-		const y1 = y0 + BH + GAP * 2;
-		d += ` M${x0},${y0} H${x1} V${y1} H${x0} Z`;
-	}
-	return d;
-};
+// Retournement des briques : chaque brique pivote comme une carte et révèle au dos sa part du bâtiment
+const FLIP_A = 59.75;
+const FLIP_SPAN = 0.85; // étalement en diagonale
+const FLIP_DUR = 0.5;
+const HOUSE = 'img/reference_batiment.jpg';
 
 const Wall: React.FC<{t: number}> = ({t}) => {
-	if (t > 61.6) return null;
+	if (t > FLIP_A + FLIP_SPAN + FLIP_DUR + 0.2) return null;
 	const appear = ramp(t, 57.1, 57.6);
-	// traversée de la baie
-	const fly = ramp(t, 60.25, 61.5, Easing.in(Easing.cubic));
-	const winCx = WALL_X + ((WINDOW.c0 + WINDOW.c1 + 1) / 2) * (BW + GAP);
-	const winCy = WALL_BOTTOM - ((WINDOW.r0 + WINDOW.r1 + 1) / 2) * (BH + GAP);
-	const s = lerp(1, 9, fly);
+	const house = staticFile(HOUSE);
 	const bricks: React.ReactNode[] = [];
 	let idx = 0;
 	for (let r = 0; r < ROWS; r++) {
 		const offset = r % 2 ? (BW + GAP) / 2 : 0;
 		for (let c = 0; c < COLS; c++) {
-			const inWindow = r >= WINDOW.r0 && r <= WINDOW.r1 && c >= WINDOW.c0 && c <= WINDOW.c1 - (r % 2 ? 1 : 0);
-			if (inWindow) continue;
 			const x = WALL_X + c * (BW + GAP) + offset;
 			const y = WALL_BOTTOM - (r + 1) * (BH + GAP);
 			if (x + BW < -20 || x > W + 20) continue;
-			const d = 57.55 + r * 0.2 + c * 0.03 + rnd(idx, 3) * 0.05;
+			const d = 57.55 + r * 0.15 + c * 0.03 + rnd(idx, 3) * 0.05;
 			const k = ramp(t, d, d + 0.45, outCubic);
+			const fd = FLIP_A + ((c + (ROWS - 1 - r)) / (COLS + ROWS - 2)) * FLIP_SPAN + rnd(idx, 9) * 0.08;
+			const f = ramp(t, fd, fd + FLIP_DUR, Easing.inOut(Easing.cubic));
 			idx++;
 			if (k <= 0) continue;
 			const sx = lerp(540 - BW / 2, x, k);
 			const sy = lerp(800, y, k);
+			const face: React.CSSProperties = {position: 'absolute', inset: 0, backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', borderRadius: 3};
 			bricks.push(
 				<div
 					key={`${r}-${c}`}
@@ -86,60 +74,70 @@ const Wall: React.FC<{t: number}> = ({t}) => {
 						top: sy,
 						width: BW,
 						height: BH,
-						backgroundImage: `url(${staticFile('img/btcs_face.jpg')})`,
-						backgroundSize: `${BW * 1.6}px ${BH * 1.6}px`,
-						backgroundPosition: `${-rnd(idx, 5) * BW * 0.5}px ${-rnd(idx, 6) * BH * 0.5}px`,
-						boxShadow: 'inset 0 -6px 10px rgba(0,0,0,0.35), inset 0 4px 6px rgba(255,220,170,0.25), 0 6px 12px rgba(0,0,0,0.35)',
-						borderRadius: 3,
+						perspective: 700,
 						transform: `scale(${lerp(0.4, 1, k)}) rotate(${(1 - k) * (rnd(idx, 7) - 0.5) * 40}deg)`,
 						opacity: k,
 					}}
-				/>,
+				>
+					<div style={{position: 'absolute', inset: 0, transformStyle: 'preserve-3d', transform: `rotateY(${f * 180}deg) scale(${1 + Math.sin(f * Math.PI) * 0.12})`}}>
+						{/* face avant : texture réelle de BTCS */}
+						<div
+							style={{
+								...face,
+								backgroundImage: `url(${staticFile('img/btcs_face.jpg')})`,
+								backgroundSize: `${BW * 1.6}px ${BH * 1.6}px`,
+								backgroundPosition: `${-rnd(idx, 5) * BW * 0.5}px ${-rnd(idx, 6) * BH * 0.5}px`,
+								boxShadow: 'inset 0 -6px 10px rgba(0,0,0,0.35), inset 0 4px 6px rgba(255,220,170,0.25), 0 6px 12px rgba(0,0,0,0.35)',
+							}}
+						/>
+						{/* dos : la part correspondante du bâtiment */}
+						<div
+							style={{
+								...face,
+								transform: 'rotateY(180deg)',
+								backgroundImage: `url(${house})`,
+								backgroundSize: `${W}px ${H}px`,
+								backgroundPosition: `${-x}px ${-y}px`,
+								borderRadius: lerp(3, 0, f),
+							}}
+						/>
+					</div>
+				</div>,
 			);
 		}
 	}
+	// le fond sombre autour du mur s'efface pendant le retournement (le bâtiment est dessous)
+	const bgOut = ramp(t, FLIP_A, FLIP_A + FLIP_SPAN + FLIP_DUR * 0.5, Easing.inOut(Easing.cubic));
 	return (
 		<AbsoluteFill style={{opacity: appear}}>
-			<AbsoluteFill style={{transform: `scale(${s})`, transformOrigin: `${winCx}px ${winCy}px`, opacity: 1 - ramp(t, 61.2, 61.55)}}>
-				{/* fond chaud percé à l'emplacement de la baie */}
-				<svg width={W} height={H} style={{position: 'absolute', inset: 0, overflow: 'visible'}}>
-					<defs>
-						<radialGradient id="wallBg" cx="0.5" cy="0.55" r="0.7">
-							<stop offset="0" stopColor="#4E2A16" />
-							<stop offset="0.6" stopColor={C.deep} />
-							<stop offset="1" stopColor={C.night} />
-						</radialGradient>
-					</defs>
-					<path fillRule="evenodd" fill="url(#wallBg)" d={wallBgPath(t > 59.35)} />
-				</svg>
-				{/* lumière dans la baie */}
-				<div
-					style={{
-						position: 'absolute',
-						left: winCx - 260,
-						top: winCy - 220,
-						width: 520,
-						height: 440,
-						background: 'radial-gradient(ellipse, rgba(255,214,150,0.55), rgba(255,214,150,0) 70%)',
-						opacity: ramp(t, 59.4, 60.2),
-					}}
-				/>
-				{bricks}
-			</AbsoluteFill>
-			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,10,5,0.7) 0%, rgba(20,10,5,0) 30%)', opacity: 1 - ramp(t, 60.4, 61.2)}} />
+			<AbsoluteFill style={{background: `radial-gradient(ellipse at 50% 55%, #4E2A16 0%, ${C.deep} 60%, ${C.night} 100%)`, opacity: 1 - bgOut}} />
+			{bricks}
+			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,10,5,0.7) 0%, rgba(20,10,5,0) 30%)', opacity: 1 - bgOut}} />
 		</AbsoluteFill>
 	);
 };
 
-/** Image de référence (provenance à confirmer) : visible à travers la baie puis plein cadre. */
+/** Bâtiment contemporain (627167) : sous le mur, révélé par le retournement des briques, puis plein cadre. */
 const Reference: React.FC<{t: number}> = ({t}) => {
-	if (t < 59.3 || t > 63.3) return null;
-	const k = ramp(t, 60.2, 62.8, inOutSine);
+	if (t < FLIP_A - 0.1 || t > 63.3) return null;
+	const k = ramp(t, FLIP_A + FLIP_SPAN + FLIP_DUR, 63.0, inOutSine);
 	return (
-		<AbsoluteFill style={{opacity: ramp(t, 59.3, 59.9)}}>
-			<Img src={staticFile('img/reference_batiment.jpg')} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.25, 1.08, k)})`}} />
-			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,10,5,0.55) 0%, rgba(20,10,5,0) 35%, rgba(20,10,5,0) 70%, rgba(20,10,5,0.5) 100%)'}} />
+		<AbsoluteFill>
+			<Img src={staticFile(HOUSE)} style={{width: W, height: H, transform: `scale(${lerp(1.0, 1.07, k)})`}} />
 		</AbsoluteFill>
+	);
+};
+
+/** Voile de lisibilité au-dessus du bâtiment (après le retournement). */
+const ReferenceShade: React.FC<{t: number}> = ({t}) => {
+	if (t < FLIP_A || t > 63.3) return null;
+	return (
+		<AbsoluteFill
+			style={{
+				background: 'linear-gradient(180deg, rgba(20,10,5,0.55) 0%, rgba(20,10,5,0) 35%, rgba(20,10,5,0) 70%, rgba(20,10,5,0.5) 100%)',
+				opacity: ramp(t, FLIP_A + 0.3, FLIP_A + FLIP_SPAN + FLIP_DUR),
+			}}
+		/>
 	);
 };
 

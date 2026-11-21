@@ -43,7 +43,7 @@ Le dépôt était vide et **aucun des fichiers nommés dans le brief n'a été f
 | 626894 chantier (selfie + équipe) | **Retiré à la demande du client** | — | — |
 | 626923 affiche « Fabrication du BTCS » — zone ouvriers + presse | Scène 5 (63–70 s), fond de la scène 6, bas de la couverture | « Fabrication des BTCS · OHEL INTERNATIONAL » | **Choisi par le client.** Visuel d'aspect généré par IA, avec logos OHEL sur casques, gilets et presse : le brief initial demandait d'éviter ce type d'image — décision du client, à assumer en connaissance de cause |
 | 627386 termite | **Non utilisé** | — | Image Shutterstock filigranée, sans licence |
-| 627167 maison contemporaine (briques rouges, pelouse) | Scène 5, vue à travers la baie du mur puis plein cadre (≈ 60–63 s) | « Image de référence · architecture contemporaine » — **non attribuée à OHEL** | **Choisie par le client.** Aspect généré par IA ; ne pas la présenter comme une réalisation OHEL sans confirmation |
+| 627167 maison contemporaine (briques rouges, pelouse) | Scène 5, révélé par le retournement des briques puis plein cadre (≈ 59,8–63 s) | « Image de référence · architecture contemporaine » — **non attribuée à OHEL** | **Choisie par le client.** Aspect généré par IA ; ne pas la présenter comme une réalisation OHEL sans confirmation |
 | 626898 affiche « Le BTCS, c'est quoi ? » | Non utilisée | — | — |
 
 ## 4. Voix-off, musique, sous-titres
@@ -63,7 +63,7 @@ Le dépôt était vide et **aucun des fichiers nommés dans le brief n'a été f
 | 2 · L'héritage | 11,6–24 s | …qui s'ouvre sur la mosquée en terre : 3 calques de profondeur, travelling latéral, médaillons « Torons de bois » / « Murs en terre crue » | La façade s'effrite de haut en bas le long d'un front irrégulier et lumineux ; des grains de terre tombent |
 | 3 · Le tournant | 24–38,6 s | Recul caméra, presse manuelle type CINVA-RAM (reconstitution), compteur 1900→1950, cycle remplissage / levier / compression / éjection | Transition de matière (tache de terre) |
 | 4 · Le BTCS | 38,6–57,4 s | 4 étapes : tamisage (ouvrier avec EPI), mélange terre + stabilisant adapté + eau, compression (le bloc réel sort de la presse), cure & contrôle (photo réelle) ; bloc héros 2,5D, « BTCS » épelé, repères « Rainure longitudinale » / « Encoche d'extrémité » | Le bloc se réduit… |
-| 5 · L'architecture | 57,4–70,4 s | …et se duplique en mur (texture réelle de BTCS) avec une baie ; traversée de la baie → image de référence → visuel « fabrication des BTCS » OHEL, « EN CÔTE D'IVOIRE · OHEL INTERNATIONAL » | L'image s'assombrit et se floute |
+| 5 · L'architecture | 57,4–70,4 s | …et se duplique en mur (texture réelle de BTCS) ; les briques se retournent en diagonale comme des cartes et révèlent le bâtiment (627167) → visuel « fabrication des BTCS » OHEL, « EN CÔTE D'IVOIRE · OHEL INTERNATIONAL » | L'image s'assombrit et se floute |
 | 6 · Signature | 70,4–85 s | « DE LA TERRE À L'ARCHITECTURE. / une histoire qui continue. », particules qui convergent puis masque circulaire révélant le logo (non modifié), « Construisons autrement. Construisons durablement. », coordonnées | Fin |
 
 Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 64 px (interfaces TikTok / Reels / Shorts).
