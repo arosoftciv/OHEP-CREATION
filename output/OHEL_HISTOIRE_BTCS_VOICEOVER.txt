@@ -1,8 +1,8 @@
 OHEL INTERNATIONAL — L'HISTOIRE DU BTCS
 Voix-off (ElevenLabs, voix « Brian – Deep, Resonant and Comforting », modèle eleven_multilingual_v2)
-Prononciations imposées : OHEL = « o-el » (écrit « Oël » pour la synthèse) ; BTCS = « bé-té-cé-esse » ; savoir-faire = « savoir fer ».
-Les passages concernés ont été réenregistrés et insérés dans la prise d'origine (scripts/splice_voice.py).
-Durée de la voix : 81 s, sans accélération — vidéo de 97.7 s.
+Prononciations imposées : OHEL = « o-el » ; BTCS = « bé-té-cé-esse » ; savoir-faire = « savoir fer ».
+Les passages corrigés ont été réenregistrés et insérés dans la prise d'origine (scripts/splice_voice.py).
+Vidéo de 115.2 s.
 
 [00:02.5] Bien avant nos bâtiments modernes, la nature nous montrait déjà ce que la terre permet de construire. Regardez les termitières.
 
@@ -13,15 +13,18 @@ En Afrique, ce savoir-faire a traversé les générations.
 Au vingtième siècle, les presses de terre comprimée, dont la CINVA-RAM des années cinquante, ont contribué à moderniser la fabrication des blocs.
 
 [00:39.4] Aujourd'hui, la terre est sélectionnée, préparée, mélangée à un stabilisant adapté, puis comprimée.
-Après la cure et les contrôles de qualité, elle devient un Bloc de Terre Comprimée Stabilisée : le BTCS (bé-té-cé-esse).
+[vidéo réelle : presse à BTCS]
+Après la cure et les contrôles de qualité, elle devient un Bloc de Terre Comprimée Stabilisée : le BTCS.
 
-[00:57.0] Et ces blocs prennent place dans des projets architecturaux contemporains.
-En Côte d'Ivoire, OHEL INTERNATIONAL (o-el) met ce savoir-faire au service de la construction.
+[01:00.6] Et ces blocs prennent place dans des projets architecturaux contemporains.
+En Côte d'Ivoire, OHEL INTERNATIONAL met ce savoir-faire au service de la construction.
 
-[01:08.4] De la terre à l'architecture : une histoire qui continue.
+[01:12.2] De la terre à l'architecture : une histoire qui continue.
 OHEL INTERNATIONAL.
 
-[01:14.1] Vous avez un projet ? Contactez OHEL INTERNATIONAL au +225 07 07 63 03 35, par appel ou WhatsApp.
+[01:17.8] Écoles, hôtels, logements, bureaux, commerces : quel que soit votre projet, OHEL INTERNATIONAL vous accompagne.
+Contactez-nous dès maintenant pour demander un devis : au +225 07 07 63 03 35, par appel ou WhatsApp,
+ou par e-mail à contact@ohelintermondial.com.
 
-[01:26.9] Tu veux en savoir plus ? Abonne-toi pour ne pas rater le prochain numéro.
-Tu comprendras les avantages du BTCS, et pourquoi choisir le BTCS.
+[01:41.7] Vous voulez en savoir plus ? Abonnez-vous et activez la cloche de notification pour ne pas rater le prochain numéro :
+vous découvrirez les avantages du BTCS, et pourquoi le choisir.

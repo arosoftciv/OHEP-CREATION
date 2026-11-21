@@ -13,11 +13,11 @@ import {vw} from '../voice';
 
 export const S7Teaser: React.FC = () => {
 	const t = useT();
-	const TG = vw('Tu');
+	const TG = vw('voulez') - 0.25;
 	if (t < TG - 0.5) return null;
 	return (
 		<AbsoluteFill>
-			<KineticTitle text={"TU VEUX EN SAVOIR\nPLUS ?"} start={TG} end={99} y={420} size={72} accent={['PLUS']} />
+			<KineticTitle text={"VOUS VOULEZ EN\nSAVOIR PLUS ?"} start={TG} end={999} y={420} size={72} accent={['PLUS']} />
 			<SubscribeButton t={t} />
 			<div
 				style={{
@@ -30,8 +30,8 @@ export const S7Teaser: React.FC = () => {
 					fontWeight: 700,
 					fontSize: 46,
 					color: C.sand,
-					opacity: ramp(t, vw('pour') - 0.1, vw('pour') + 0.4, outCubic),
-					transform: `translateY(${(1 - ramp(t, vw('pour') - 0.1, vw('pour') + 0.4, outCubic)) * 20}px)`,
+					opacity: ramp(t, vw('pour', 2) - 0.1, vw('pour', 2) + 0.4, outCubic),
+					transform: `translateY(${(1 - ramp(t, vw('pour', 2) - 0.1, vw('pour', 2) + 0.4, outCubic)) * 20}px)`,
 					textShadow: '0 3px 14px rgba(0,0,0,0.6)',
 				}}
 			>
@@ -49,26 +49,29 @@ export const S7Teaser: React.FC = () => {
 					fontWeight: 700,
 					fontSize: 30,
 					color: C.cream,
-					opacity: ramp(t, vw('Tu', 2), vw('Tu', 2) + 0.6) * 0.9,
+					opacity: ramp(t, vw('découvrirez'), vw('découvrirez') + 0.6) * 0.9,
 				}}
 			>
-				+225 07 07 63 03 35 · ohelintermondial.com
+				+225 07 07 63 03 35 · contact@ohelintermondial.com
 			</div>
 		</AbsoluteFill>
 	);
 };
 
 const SubscribeButton: React.FC<{t: number}> = ({t}) => {
-	const a = vw('Abonne-toi');
-	const tap = vw('numéro') + 0.05;
+	const a = vw('Abonnez-vous');
+	const tap = vw('activez') - 0.1;
+	const tBell = vw('cloche');
 	const k = ramp(t, a - 0.15, a + 0.35, outBack);
 	if (k <= 0) return null;
 	const press = t > tap - 0.12 && t < tap + 0.12 ? 1 - Math.abs(t - tap) / 0.12 : 0;
 	const done = t >= tap;
-	const ring = done ? Math.sin((t - tap) * 30) * 18 * Math.max(0, 1 - (t - tap) / 0.8) : 0;
+	const bellOn = t >= tBell;
+	const ring = bellOn ? Math.sin((t - tBell) * 30) * 22 * Math.max(0, 1 - (t - tBell) / 1.0) : 0;
+	const bellK = ramp(t, tap + 0.1, tap + 0.45, outBack);
 	const ripple = ramp(t, tap, tap + 0.6, outCubic);
 	return (
-		<div style={{position: 'absolute', top: 650, width: W, display: 'flex', justifyContent: 'center'}}>
+		<div style={{position: 'absolute', top: 650, width: W, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 22}}>
 			<div
 				style={{
 					position: 'relative',
@@ -87,9 +90,6 @@ const SubscribeButton: React.FC<{t: number}> = ({t}) => {
 					boxShadow: '0 16px 40px rgba(0,0,0,0.45)',
 				}}
 			>
-				<svg width={46} height={46} viewBox="0 0 24 24" style={{transform: `rotate(${ring}deg)`, transformOrigin: '50% 10%'}}>
-					<path fill="#fff" d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z" />
-				</svg>
 				{done ? 'ABONNÉ ✓' : "S'ABONNER"}
 				{ripple > 0 && ripple < 1 && (
 					<div
@@ -107,12 +107,32 @@ const SubscribeButton: React.FC<{t: number}> = ({t}) => {
 					/>
 				)}
 			</div>
+			{/* bouton cloche : s'allume sur « cloche » */}
+			{bellK > 0 && (
+				<div
+					style={{
+						width: 96,
+						height: 96,
+						borderRadius: 48,
+						background: bellOn ? C.ochre : '#3A3F45',
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+						transform: `scale(${bellK * (bellOn ? 1 + 0.12 * Math.max(0, 1 - (t - tBell) / 0.5) : 1)})`,
+						boxShadow: bellOn ? `0 0 ${40 * Math.max(0.3, 1 - (t - tBell) / 1.2)}px rgba(222,149,80,0.8)` : '0 16px 40px rgba(0,0,0,0.45)',
+					}}
+				>
+					<svg width={54} height={54} viewBox="0 0 24 24" style={{transform: `rotate(${ring}deg)`, transformOrigin: '50% 10%'}}>
+						<path fill={bellOn ? C.deep : '#fff'} d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2z" />
+					</svg>
+				</div>
+			)}
 		</div>
 	);
 };
 
 const NextEpisode: React.FC<{t: number}> = ({t}) => {
-	const a = vw('Tu', 2) - 0.25;
+	const a = vw('découvrirez') - 0.25;
 	const k = ramp(t, a, a + 0.5, outCubic);
 	if (k <= 0) return null;
 	const items = [

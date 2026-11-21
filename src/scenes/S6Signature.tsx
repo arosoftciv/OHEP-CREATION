@@ -25,7 +25,7 @@ export const S6Signature: React.FC = () => {
 	const textsUp = ramp(t, 74.3, 75.0, Easing.inOut(Easing.cubic));
 	const endFade = ramp(t, DURATION_S - 0.5, DURATION_S);
 	// arrivée de la carte de fin (scène 7) : textes et coordonnées s'effacent, le logo remonte
-	const TG = vw('Tu');
+	const TG = vw('voulez') - 0.25;
 	const out = ramp(t, TG - 0.75, TG - 0.05, Easing.inOut(Easing.cubic));
 	const cardScale = lerp(0.92, 1, ramp(t, 74.9, 76.2, outCubic));
 
@@ -109,10 +109,12 @@ export const S6Signature: React.FC = () => {
 const Tagline: React.FC<{t: number}> = ({t}) => {
 	const k1 = ramp(t, 76.0, 76.6, outCubic);
 	const k2 = ramp(t, 76.5, 77.1, outCubic);
-	if (k1 <= 0) return null;
+	// le slogan cède la place aux types de projets quand la réplique de contact commence
+	const out = ramp(t, vw('Écoles') - 0.5, vw('Écoles') - 0.1);
+	if (k1 <= 0 || out >= 1) return null;
 	const style: React.CSSProperties = {fontFamily: F.serif, fontStyle: 'italic', fontWeight: 700, fontSize: 46, color: C.cream, lineHeight: 1.18, textShadow: '0 4px 18px rgba(0,0,0,0.6)'};
 	return (
-		<div style={{position: 'absolute', top: LOGO_TOP + LOGO_H + 36, width: W, textAlign: 'center'}}>
+		<div style={{position: 'absolute', top: LOGO_TOP + LOGO_H + 36, width: W, textAlign: 'center', opacity: 1 - out}}>
 			<div style={{...style, opacity: k1, transform: `translateY(${(1 - k1) * 20}px)`}}>Construisons autrement.</div>
 			<div style={{...style, color: C.ochre, opacity: k2, transform: `translateY(${(1 - k2) * 20}px)`}}>Construisons durablement.</div>
 		</div>
@@ -124,7 +126,7 @@ const Row: React.FC<{icon: React.ReactNode; text: string; k: number; big?: boole
 		style={{
 			display: 'flex',
 			alignItems: 'center',
-			gap: 20,
+			gap: 18,
 			opacity: k,
 			transform: `translateX(${(1 - k) * -40}px) scale(${1 + glow * 0.06})`,
 			transformOrigin: '0% 50%',
@@ -134,62 +136,110 @@ const Row: React.FC<{icon: React.ReactNode; text: string; k: number; big?: boole
 			margin: '0 -22px 0 -4px',
 		}}
 	>
-		<div style={{width: 64, height: 64, borderRadius: 32, background: C.cream, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{icon}</div>
-		<div style={{fontFamily: F.title, fontWeight: big ? 900 : 700, fontSize: big ? 52 : 36, color: C.cream, letterSpacing: big ? 1 : 0.5, whiteSpace: 'nowrap'}}>{text}</div>
+		<div style={{width: 58, height: 58, borderRadius: 29, background: C.cream, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{icon}</div>
+		<div style={{fontFamily: F.title, fontWeight: big ? 900 : 700, fontSize: big ? 50 : 34, color: C.cream, letterSpacing: big ? 1 : 0.3, whiteSpace: 'nowrap'}}>{text}</div>
 	</div>
 );
 
+const PROJECTS = [
+	{label: 'ÉCOLES', word: 'Écoles'},
+	{label: 'HÔTELS', word: 'hôtels'},
+	{label: 'LOGEMENTS', word: 'logements'},
+	{label: 'BUREAUX', word: 'bureaux'},
+	{label: 'COMMERCES', word: 'commerces'},
+];
+
 const Contacts: React.FC<{t: number}> = ({t}) => {
-	const a = vw('Vous'); // « Vous avez un projet ? »
-	const head = ramp(t, a, a + 0.5, outBack);
-	if (head <= 0) return null;
-	const k = (i: number) => ramp(t, a + 0.6 + i * 0.35, a + 1.1 + i * 0.35, outCubic);
-	// mise en valeur pendant que le numéro, puis WhatsApp, sont prononcés
+	const a = vw('Écoles'); // début de la réplique de contact
+	if (t < a - 0.2) return null;
+	const tDevis = vw('devis');
 	const tNum = vw('+225 07 07 63 03 35');
 	const tWa = vw('WhatsApp');
-	const glowNum = Math.min(ramp(t, tNum - 0.2, tNum + 0.2), 1 - ramp(t, tWa - 1.4, tWa - 0.9));
-	const glowWa = Math.min(ramp(t, tWa - 1.0, tWa - 0.5), 1 - ramp(t, tWa + 1.2, tWa + 1.7));
+	const tMail = vw('e-mail');
+	const head = ramp(t, tDevis - 0.6, tDevis - 0.1, outBack);
+	const kNum = ramp(t, tNum - 0.3, tNum + 0.2, outCubic);
+	const kWa = ramp(t, tWa - 0.3, tWa + 0.2, outCubic);
+	const kMail = ramp(t, tMail - 0.3, tMail + 0.2, outCubic);
+	// mise en valeur pendant que chaque coordonnée est prononcée
+	const glowNum = Math.min(ramp(t, tNum - 0.2, tNum + 0.2), 1 - ramp(t, tWa - 1.0, tWa - 0.6));
+	const glowWa = Math.min(ramp(t, tWa - 0.6, tWa - 0.2), 1 - ramp(t, tMail - 0.4, tMail));
+	const glowMail = Math.min(ramp(t, tMail - 0.2, tMail + 0.2), 1 - ramp(t, tMail + 3.0, tMail + 3.5));
 	const phone = (
-		<svg width={34} height={34} viewBox="0 0 24 24">
+		<svg width={32} height={32} viewBox="0 0 24 24">
 			<path fill={C.deep} d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
 		</svg>
 	);
 	const whatsapp = (
-		<svg width={36} height={36} viewBox="0 0 24 24">
+		<svg width={34} height={34} viewBox="0 0 24 24">
 			<path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" />
 			<path fill="#fff" d="M8.3 7.2c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3 0 .6.5.9 1.2 1.7 2 2.2.8.5 1.2.6 1.4.4l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.4.4 0 .3 0 1.1-.6 1.6-.5.5-1.4.8-2.2.6-1.6-.4-3.1-1.3-4.4-2.6-1.2-1.2-2-2.6-2.3-3.7-.2-.8 0-1.9.6-2.7z" />
 		</svg>
 	);
+	const mail = (
+		<svg width={32} height={32} viewBox="0 0 24 24" fill="none" stroke={C.deep} strokeWidth={2}>
+			<rect x={3} y={5} width={18} height={14} rx={2} />
+			<path d="M3 7l9 6 9-6" />
+		</svg>
+	);
 	const globe = (
-		<svg width={34} height={34} viewBox="0 0 24 24" fill="none" stroke={C.deep} strokeWidth={2}>
+		<svg width={32} height={32} viewBox="0 0 24 24" fill="none" stroke={C.deep} strokeWidth={2}>
 			<circle cx={12} cy={12} r={9} />
 			<path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18" />
 		</svg>
 	);
 	return (
-		<div style={{position: 'absolute', top: LOGO_TOP + LOGO_H + 180, left: 0, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-			<div
-				style={{
-					fontFamily: F.title,
-					fontWeight: 900,
-					fontSize: 32,
-					color: C.deep,
-					whiteSpace: 'nowrap',
-					background: C.ochre,
-					padding: '10px 30px',
-					borderRadius: 40,
-					transform: `scale(${head})`,
-					marginBottom: 26,
-					letterSpacing: 1,
-				}}
-			>
-				VOUS AVEZ UN PROJET ? CONTACTEZ OHEL
+		<>
+			{/* types de projets, cités un à un */}
+			<div style={{position: 'absolute', top: LOGO_TOP + LOGO_H + 34, left: 60, width: W - 120, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12}}>
+				{PROJECTS.map((p) => {
+					const k = ramp(t, vw(p.word) - 0.1, vw(p.word) + 0.3, outBack);
+					return (
+						<div
+							key={p.label}
+							style={{
+								fontFamily: F.title,
+								fontWeight: 800,
+								fontSize: 30,
+								letterSpacing: 1,
+								color: C.cream,
+								border: `2px solid ${C.ochre}`,
+								background: 'rgba(20,10,5,0.55)',
+								padding: '8px 18px',
+								borderRadius: 30,
+								opacity: Math.min(1, k * 1.5),
+								transform: `scale(${0.6 + 0.4 * Math.min(1, k)})`,
+							}}
+						>
+							{p.label}
+						</div>
+					);
+				})}
 			</div>
-			<div style={{display: 'flex', flexDirection: 'column', gap: 18, alignItems: 'flex-start'}}>
-				<Row icon={phone} text="+225 07 07 63 03 35" k={k(0)} big glow={glowNum} />
-				<Row icon={whatsapp} text="WhatsApp : wa.me/2250707630335" k={k(1)} glow={glowWa} />
-				<Row icon={globe} text="ohelintermondial.com" k={k(2)} />
+			<div style={{position: 'absolute', top: LOGO_TOP + LOGO_H + 190, left: 0, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+				<div
+					style={{
+						fontFamily: F.title,
+						fontWeight: 900,
+						fontSize: 34,
+						color: C.deep,
+						whiteSpace: 'nowrap',
+						background: C.ochre,
+						padding: '10px 30px',
+						borderRadius: 40,
+						transform: `scale(${head})`,
+						marginBottom: 24,
+						letterSpacing: 1,
+					}}
+				>
+					DEMANDEZ VOTRE DEVIS
+				</div>
+				<div style={{display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-start'}}>
+					<Row icon={phone} text="+225 07 07 63 03 35" k={kNum} big glow={glowNum} />
+					<Row icon={whatsapp} text="Appel ou WhatsApp" k={kWa} glow={glowWa} />
+					<Row icon={mail} text="contact@ohelintermondial.com" k={kMail} glow={glowMail} />
+					<Row icon={globe} text="ohelintermondial.com" k={kMail * ramp(t, tMail + 0.6, tMail + 1.1)} />
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };

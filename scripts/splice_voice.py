@@ -2,6 +2,7 @@
   - « Oël » (prononciation o-el) : voiceover_patch_oel
   - « bé-té-cé-esse », nouvelle réplique de contact, carte de fin : voiceover_patch_btcs_contact
   - « savoir-faire » prononcé « savoir fer » (deux phrases) : voiceover_patch_savoirfaire
+  - contact (types de projets, devis, téléphone, WhatsApp, e-mail) + carte de fin (cloche) : voiceover_patch_contact2
 Les horodatages mot à mot sont recalculés par décalage (pas de nouvelle transcription).
 « bé-té-cé-esse » est découpé en 4 jetons B. T. C. S. (animation lettre par lettre) ;
 le numéro dicté devient un seul jeton « +225 07 07 63 03 35 ».
@@ -22,9 +23,10 @@ SRC = {
     "oel": (load("assets/audio/voiceover_patch_oel.mp3"), words("assets/audio/voiceover_patch_oel_words.json")),
     "fix": (load("assets/audio/voiceover_patch_btcs_contact.mp3"), words("assets/audio/voiceover_patch_btcs_contact_words.json")),
     "sf": (load("assets/audio/voiceover_patch_savoirfaire.mp3"), words("assets/audio/voiceover_patch_savoirfaire_words.json")),
+    "c2": (load("assets/audio/voiceover_patch_contact2.mp3"), words("assets/audio/voiceover_patch_contact2_words.json")),
 }
 ref = rms(raw[int(30.2 * SR):int(44.4 * SR)])
-GAIN = {"raw": 1.0, "oel": ref / rms(SRC["oel"][0][:int(4.45 * SR)]), "fix": ref / rms(SRC["fix"][0]), "sf": ref / rms(SRC["sf"][0])}
+GAIN = {"raw": 1.0, "oel": ref / rms(SRC["oel"][0][:int(4.45 * SR)]), "fix": ref / rms(SRC["fix"][0]), "sf": ref / rms(SRC["sf"][0]), "c2": ref / rms(SRC["c2"][0])}
 
 pieces = [
     ("raw", 0.0, 15.20),       # … avec la terre.
@@ -36,9 +38,9 @@ pieces = [
     ("raw", 54.30, 58.30),     # De la terre à l'architecture : une histoire qui continue.
     ("oel", 4.62, 6.034),      # Oël International.
     ("silence", 0, 0.45),
-    ("fix", 7.25, 19.25),      # Vous avez un projet ? Contactez Oël International au … par appel ou WhatsApp.
-    ("silence", 0, 0.8),
-    ("fix", 19.45, 28.47),     # Tu veux en savoir plus ? … pourquoi choisir le bé-té-cé-esse.
+    ("c2", 0.0, 22.90),        # Écoles, hôtels, … contactez-nous … devis … e-mail à contact@ohelintermondial.com.
+    ("silence", 0, 0.6),
+    ("c2", 22.95, 34.737),     # Vous voulez en savoir plus ? Abonnez-vous et activez la cloche … pourquoi le choisir.
 ]
 
 def fix_tokens(ws):
@@ -56,6 +58,11 @@ def fix_tokens(ws):
             j = i
             while not ws[j]["text"].startswith("trente-cinq"): j += 1
             out.append({**w, "text": "+225 07 07 63 03 35,", "end": ws[j]["end"]})
+            i = j + 1; continue
+        if t == "contact" and i + 1 < len(ws) and ws[i + 1]["text"] == "arobase":
+            j = i
+            while not ws[j]["text"].startswith("com"): j += 1
+            out.append({**w, "text": "contact@ohelintermondial.com" + ws[j]["text"][3:], "end": ws[j]["end"]})
             i = j + 1; continue
         if t == "Oël": w = {**w, "text": "OHEL"}
         if t == "savoir" and i + 1 < len(ws) and ws[i + 1]["text"].startswith("fer"):

@@ -30,7 +30,7 @@ export const HistoireBTCS: React.FC<{subtitles?: boolean; audio?: AudioMode; log
 			<S7Teaser />
 			<FilmFinish />
 			{logoMark && <LogoMark hideFrom={74.8} />}
-			{subtitles && <Subtitles hideFrom={vw('Vous') - 0.05} />}
+			{subtitles && <Subtitles hideFrom={vw('Écoles') - 0.05} />}
 			{audio === 'full' && <Audio src={staticFile('audio/mix.wav')} />}
 			{audio === 'music' && <Audio src={staticFile('audio/music_sfx.wav')} />}
 		</AbsoluteFill>

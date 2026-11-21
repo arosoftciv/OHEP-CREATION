@@ -932,255 +932,407 @@
     "end": 76.208
    }
   ],
-  "show_end": 76.74900000000001
+  "show_end": 76.63799999999999
  },
  {
-  "text": "Vous avez un projet ?",
-  "start": 76.769,
-  "end": 77.663,
+  "text": "Écoles, hôtels, logements, bureaux,",
+  "start": 76.65799999999999,
+  "end": 79.595,
   "words": [
    {
-    "text": "Vous",
-    "start": 76.769,
-    "end": 76.95400000000001
+    "text": "Écoles,",
+    "start": 76.65799999999999,
+    "end": 77.285
    },
    {
-    "text": "avez",
-    "start": 77.024,
-    "end": 77.163
+    "text": "hôtels,",
+    "start": 77.34299999999999,
+    "end": 78.074
    },
    {
-    "text": "un",
-    "start": 77.19800000000001,
-    "end": 77.245
+    "text": "logements,",
+    "start": 78.225,
+    "end": 78.887
    },
    {
-    "text": "projet ?",
-    "start": 77.291,
-    "end": 77.663
+    "text": "bureaux,",
+    "start": 79.061,
+    "end": 79.595
    }
   ],
-  "show_end": 78.26299999999999
+  "show_end": 79.726
  },
  {
-  "text": "Contactez OHEL International",
-  "start": 78.336,
-  "end": 80.031,
+  "text": "commerces : quel que soit votre projet,",
+  "start": 79.746,
+  "end": 82.602,
   "words": [
    {
-    "text": "Contactez",
-    "start": 78.336,
-    "end": 78.917
+    "text": "commerces :",
+    "start": 79.746,
+    "end": 80.292
    },
    {
+    "text": "quel",
+    "start": 81.012,
+    "end": 81.186
+   },
+   {
+    "text": "que",
+    "start": 81.267,
+    "end": 81.37199999999999
+   },
+   {
+    "text": "soit",
+    "start": 81.418,
+    "end": 81.60399999999998
+   },
+   {
+    "text": "votre",
+    "start": 81.63900000000001,
+    "end": 81.894
+   },
+   {
+    "text": "projet,",
+    "start": 81.952,
+    "end": 82.602
+   }
+  ],
+  "show_end": 82.79100000000001
+ },
+ {
+  "text": "OHEL International vous accompagne.",
+  "start": 82.811,
+  "end": 84.553,
+  "words": [
+   {
     "text": "OHEL",
-    "start": 78.99799999999999,
-    "end": 79.195
+    "start": 82.811,
+    "end": 83.113
    },
    {
     "text": "International",
-    "start": 79.24199999999999,
-    "end": 80.031
+    "start": 83.148,
+    "end": 83.75200000000001
+   },
+   {
+    "text": "vous",
+    "start": 83.798,
+    "end": 83.91399999999999
+   },
+   {
+    "text": "accompagne.",
+    "start": 83.96099999999998,
+    "end": 84.553
    }
   ],
-  "show_end": 80.081
+  "show_end": 84.974
  },
  {
-  "text": "au +225 07 07 63 03 35,",
-  "start": 80.101,
-  "end": 86.417,
+  "text": "Contactez-nous dès maintenant",
+  "start": 84.994,
+  "end": 86.24799999999999,
+  "words": [
+   {
+    "text": "Contactez-nous",
+    "start": 84.994,
+    "end": 85.714
+   },
+   {
+    "text": "dès",
+    "start": 85.749,
+    "end": 85.82999999999998
+   },
+   {
+    "text": "maintenant",
+    "start": 85.86500000000001,
+    "end": 86.24799999999999
+   }
+  ],
+  "show_end": 86.26299999999999
+ },
+ {
+  "text": "pour demander un devis :",
+  "start": 86.28299999999999,
+  "end": 87.27000000000001,
+  "words": [
+   {
+    "text": "pour",
+    "start": 86.28299999999999,
+    "end": 86.399
+   },
+   {
+    "text": "demander",
+    "start": 86.445,
+    "end": 86.81700000000001
+   },
+   {
+    "text": "un",
+    "start": 86.84,
+    "end": 86.886
+   },
+   {
+    "text": "devis :",
+    "start": 86.93299999999999,
+    "end": 87.27000000000001
+   }
+  ],
+  "show_end": 87.70200000000001
+ },
+ {
+  "text": "au +225 07 07 63 03 35, par appel ou WhatsApp,",
+  "start": 87.72200000000001,
+  "end": 95.83699999999999,
   "words": [
    {
     "text": "au",
-    "start": 80.101,
-    "end": 80.287
+    "start": 87.72200000000001,
+    "end": 87.93100000000001
    },
    {
     "text": "+225 07 07 63 03 35,",
-    "start": 80.333,
-    "end": 86.417
-   }
-  ],
-  "show_end": 86.78000000000002
- },
- {
-  "text": "par appel ou WhatsApp.",
-  "start": 86.80000000000001,
-  "end": 88.40199999999999,
-  "words": [
+    "start": 87.989,
+    "end": 94.34
+   },
    {
     "text": "par",
-    "start": 86.80000000000001,
-    "end": 87.00899999999999
+    "start": 94.66499999999999,
+    "end": 94.862
    },
    {
     "text": "appel",
-    "start": 87.055,
-    "end": 87.47299999999998
+    "start": 94.89699999999999,
+    "end": 95.18699999999998
    },
    {
     "text": "ou",
-    "start": 87.64699999999999,
-    "end": 87.787
+    "start": 95.23400000000001,
+    "end": 95.28
    },
    {
-    "text": "WhatsApp.",
-    "start": 87.833,
-    "end": 88.40199999999999
+    "text": "WhatsApp,",
+    "start": 95.338,
+    "end": 95.83699999999999
    }
   ],
-  "show_end": 89.00199999999998
+  "show_end": 95.841
  },
  {
-  "text": "Tu veux en savoir plus ?",
-  "start": 89.58,
-  "end": 90.54299999999999,
+  "text": "ou par e-mail à contact@ohelintermondial.com.",
+  "start": 95.86099999999999,
+  "end": 99.40199999999999,
   "words": [
    {
-    "text": "Tu",
-    "start": 89.58,
-    "end": 89.707
+    "text": "ou",
+    "start": 95.86099999999999,
+    "end": 95.953
    },
    {
-    "text": "veux",
-    "start": 89.75399999999999,
-    "end": 89.847
+    "text": "par",
+    "start": 96.012,
+    "end": 96.15100000000001
+   },
+   {
+    "text": "e-mail",
+    "start": 96.197,
+    "end": 96.511
+   },
+   {
+    "text": "à",
+    "start": 96.62700000000001,
+    "end": 96.662
+   },
+   {
+    "text": "contact@ohelintermondial.com.",
+    "start": 96.755,
+    "end": 99.40199999999999
+   }
+  ],
+  "show_end": 100.00199999999998
+ },
+ {
+  "text": "Vous voulez en savoir plus ?",
+  "start": 100.38,
+  "end": 101.46,
+  "words": [
+   {
+    "text": "Vous",
+    "start": 100.38,
+    "end": 100.554
+   },
+   {
+    "text": "voulez",
+    "start": 100.578,
+    "end": 100.77499999999999
    },
    {
     "text": "en",
-    "start": 89.905,
-    "end": 89.951
+    "start": 100.798,
+    "end": 100.845
    },
    {
     "text": "savoir",
-    "start": 89.99799999999999,
-    "end": 90.241
+    "start": 100.90299999999999,
+    "end": 101.158
    },
    {
     "text": "plus ?",
-    "start": 90.276,
-    "end": 90.54299999999999
+    "start": 101.205,
+    "end": 101.46
    }
   ],
-  "show_end": 91.14299999999999
+  "show_end": 102.032
  },
  {
-  "text": "Abonne-toi pour ne pas rater le prochain numéro.",
-  "start": 91.24,
-  "end": 93.41099999999999,
+  "text": "Abonnez-vous et activez la cloche de notification",
+  "start": 102.05199999999999,
+  "end": 104.804,
   "words": [
    {
-    "text": "Abonne-toi",
-    "start": 91.24,
-    "end": 91.785
+    "text": "Abonnez-vous",
+    "start": 102.05199999999999,
+    "end": 102.725
    },
    {
+    "text": "et",
+    "start": 102.807,
+    "end": 102.969
+   },
+   {
+    "text": "activez",
+    "start": 103.01599999999999,
+    "end": 103.37599999999999
+   },
+   {
+    "text": "la",
+    "start": 103.41,
+    "end": 103.469
+   },
+   {
+    "text": "cloche",
+    "start": 103.515,
+    "end": 103.77
+   },
+   {
+    "text": "de",
+    "start": 103.794,
+    "end": 103.863
+   },
+   {
+    "text": "notification",
+    "start": 103.945,
+    "end": 104.804
+   }
+  ],
+  "show_end": 105.062
+ },
+ {
+  "text": "pour ne pas rater le prochain numéro :",
+  "start": 105.082,
+  "end": 106.661,
+  "words": [
+   {
     "text": "pour",
-    "start": 91.832,
-    "end": 91.93599999999999
+    "start": 105.082,
+    "end": 105.256
    },
    {
     "text": "ne",
-    "start": 91.98299999999999,
-    "end": 92.05199999999999
+    "start": 105.315,
+    "end": 105.396
    },
    {
     "text": "pas",
-    "start": 92.11099999999999,
-    "end": 92.238
+    "start": 105.46499999999999,
+    "end": 105.628
    },
    {
     "text": "rater",
-    "start": 92.273,
-    "end": 92.505
+    "start": 105.651,
+    "end": 105.895
    },
    {
     "text": "le",
-    "start": 92.53999999999999,
-    "end": 92.598
+    "start": 105.91799999999999,
+    "end": 105.976
    },
    {
     "text": "prochain",
-    "start": 92.645,
-    "end": 92.91199999999999
+    "start": 106.02199999999999,
+    "end": 106.301
    },
    {
-    "text": "numéro.",
-    "start": 92.93499999999999,
-    "end": 93.41099999999999
+    "text": "numéro :",
+    "start": 106.324,
+    "end": 106.661
    }
   ],
-  "show_end": 93.774
+  "show_end": 107.261
  },
  {
-  "text": "Tu comprendras les avantages du BTCS.",
-  "start": 93.794,
-  "end": 96.18599999999999,
+  "text": "vous découvrirez les avantages du BTCS.",
+  "start": 107.392,
+  "end": 110.50399999999999,
   "words": [
    {
-    "text": "Tu",
-    "start": 93.794,
-    "end": 93.922
+    "text": "vous",
+    "start": 107.392,
+    "end": 107.566
    },
    {
-    "text": "comprendras",
-    "start": 93.97999999999999,
-    "end": 94.43299999999999
+    "text": "découvrirez",
+    "start": 107.601,
+    "end": 108.309
    },
    {
     "text": "les",
-    "start": 94.45599999999999,
-    "end": 94.55999999999999
+    "start": 108.356,
+    "end": 108.484
    },
    {
     "text": "avantages",
-    "start": 94.618,
-    "end": 95.094
+    "start": 108.553,
+    "end": 109.145
    },
    {
     "text": "du",
-    "start": 95.118,
-    "end": 95.199
+    "start": 109.169,
+    "end": 109.29599999999999
    },
    {
     "text": "BTCS.",
-    "start": 95.268,
-    "end": 96.18599999999999
+    "start": 109.378,
+    "end": 110.50399999999999
    }
   ],
-  "show_end": 96.34
+  "show_end": 110.635
  },
  {
-  "text": "et pourquoi choisir le BTCS.",
-  "start": 96.36,
-  "end": 98.44999999999999,
+  "text": "et pourquoi le choisir.",
+  "start": 110.655,
+  "end": 112.094,
   "words": [
    {
     "text": "et",
-    "start": 96.36,
-    "end": 96.487
+    "start": 110.655,
+    "end": 110.782
    },
    {
     "text": "pourquoi",
-    "start": 96.53399999999999,
-    "end": 96.80099999999999
-   },
-   {
-    "text": "choisir",
-    "start": 96.824,
-    "end": 97.207
+    "start": 110.829,
+    "end": 111.154
    },
    {
     "text": "le",
-    "start": 97.25399999999999,
-    "end": 97.323
+    "start": 111.17699999999999,
+    "end": 111.235
    },
    {
-    "text": "BTCS.",
-    "start": 97.381,
-    "end": 98.44999999999999
+    "text": "choisir.",
+    "start": 111.27,
+    "end": 112.094
    }
   ],
-  "show_end": 99.24999999999999
+  "show_end": 112.89399999999999
  }
 ]

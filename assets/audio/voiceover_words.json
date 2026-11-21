@@ -865,274 +865,412 @@
    "end": 58.96
   },
   {
-   "text": "Vous",
+   "text": "Écoles,",
    "type": "word",
-   "start": 59.521,
-   "end": 59.706
+   "start": 59.41,
+   "end": 60.037
   },
   {
-   "text": "avez",
+   "text": "hôtels,",
    "type": "word",
-   "start": 59.776,
-   "end": 59.915
+   "start": 60.095,
+   "end": 60.826
   },
   {
-   "text": "un",
+   "text": "logements,",
    "type": "word",
-   "start": 59.95,
-   "end": 59.997
+   "start": 60.977,
+   "end": 61.639
   },
   {
-   "text": "projet",
+   "text": "bureaux,",
    "type": "word",
-   "start": 60.043,
-   "end": 60.415
+   "start": 61.813,
+   "end": 62.347
   },
   {
-   "text": "?",
+   "text": "commerces",
    "type": "word",
-   "start": 60.531,
-   "end": 60.647
+   "start": 62.498,
+   "end": 63.044
   },
   {
-   "text": "Contactez",
+   "text": ":",
    "type": "word",
-   "start": 61.088,
-   "end": 61.669
+   "start": 63.218,
+   "end": 63.253
+  },
+  {
+   "text": "quel",
+   "type": "word",
+   "start": 63.764,
+   "end": 63.938
+  },
+  {
+   "text": "que",
+   "type": "word",
+   "start": 64.019,
+   "end": 64.124
+  },
+  {
+   "text": "soit",
+   "type": "word",
+   "start": 64.17,
+   "end": 64.356
+  },
+  {
+   "text": "votre",
+   "type": "word",
+   "start": 64.391,
+   "end": 64.646
+  },
+  {
+   "text": "projet,",
+   "type": "word",
+   "start": 64.704,
+   "end": 65.354
   },
   {
    "text": "OHEL",
    "type": "word",
-   "start": 61.75,
-   "end": 61.947
+   "start": 65.563,
+   "end": 65.865
   },
   {
    "text": "International",
    "type": "word",
-   "start": 61.994,
-   "end": 62.783
+   "start": 65.9,
+   "end": 66.504
   },
   {
-   "text": "au",
+   "text": "vous",
    "type": "word",
-   "start": 62.853,
-   "end": 63.039
+   "start": 66.55,
+   "end": 66.666
   },
   {
-   "text": "+225 07 07 63 03 35,",
+   "text": "accompagne.",
    "type": "word",
-   "start": 63.085,
-   "end": 69.169
+   "start": 66.713,
+   "end": 67.305
   },
   {
-   "text": "par",
+   "text": "Contactez-nous",
    "type": "word",
-   "start": 69.552,
-   "end": 69.761
+   "start": 67.746,
+   "end": 68.466
   },
   {
-   "text": "appel",
+   "text": "dès",
    "type": "word",
-   "start": 69.807,
-   "end": 70.225
+   "start": 68.501,
+   "end": 68.582
   },
   {
-   "text": "ou",
+   "text": "maintenant",
    "type": "word",
-   "start": 70.399,
-   "end": 70.539
-  },
-  {
-   "text": "WhatsApp.",
-   "type": "word",
-   "start": 70.585,
-   "end": 71.154
-  },
-  {
-   "text": "Tu",
-   "type": "word",
-   "start": 72.358,
-   "end": 72.485
-  },
-  {
-   "text": "veux",
-   "type": "word",
-   "start": 72.532,
-   "end": 72.625
-  },
-  {
-   "text": "en",
-   "type": "word",
-   "start": 72.683,
-   "end": 72.729
-  },
-  {
-   "text": "savoir",
-   "type": "word",
-   "start": 72.776,
-   "end": 73.019
-  },
-  {
-   "text": "plus",
-   "type": "word",
-   "start": 73.054,
-   "end": 73.321
-  },
-  {
-   "text": "?",
-   "type": "word",
-   "start": 73.472,
-   "end": 73.507
-  },
-  {
-   "text": "Abonne-toi",
-   "type": "word",
-   "start": 74.018,
-   "end": 74.563
+   "start": 68.617,
+   "end": 69.0
   },
   {
    "text": "pour",
    "type": "word",
-   "start": 74.61,
-   "end": 74.714
+   "start": 69.035,
+   "end": 69.151
   },
   {
-   "text": "ne",
+   "text": "demander",
    "type": "word",
-   "start": 74.761,
-   "end": 74.83
+   "start": 69.197,
+   "end": 69.569
   },
   {
-   "text": "pas",
+   "text": "un",
    "type": "word",
-   "start": 74.889,
-   "end": 75.016
+   "start": 69.592,
+   "end": 69.638
   },
   {
-   "text": "rater",
+   "text": "devis",
    "type": "word",
-   "start": 75.051,
-   "end": 75.283
+   "start": 69.685,
+   "end": 70.022
   },
   {
-   "text": "le",
+   "text": ":",
    "type": "word",
-   "start": 75.318,
-   "end": 75.376
+   "start": 70.138,
+   "end": 70.196
   },
   {
-   "text": "prochain",
+   "text": "au",
    "type": "word",
-   "start": 75.423,
-   "end": 75.69
+   "start": 70.474,
+   "end": 70.683
   },
   {
-   "text": "numéro.",
+   "text": "+225 07 07 63 03 35,",
    "type": "word",
-   "start": 75.713,
-   "end": 76.189
+   "start": 70.741,
+   "end": 77.092
   },
   {
-   "text": "Tu",
+   "text": "par",
    "type": "word",
-   "start": 76.572,
-   "end": 76.7
+   "start": 77.417,
+   "end": 77.614
   },
   {
-   "text": "comprendras",
+   "text": "appel",
    "type": "word",
-   "start": 76.758,
-   "end": 77.211
+   "start": 77.649,
+   "end": 77.939
   },
   {
-   "text": "les",
+   "text": "ou",
    "type": "word",
-   "start": 77.234,
-   "end": 77.338
+   "start": 77.986,
+   "end": 78.032
   },
   {
-   "text": "avantages",
+   "text": "WhatsApp,",
    "type": "word",
-   "start": 77.396,
-   "end": 77.872
+   "start": 78.09,
+   "end": 78.589
   },
   {
-   "text": "du",
+   "text": "ou",
    "type": "word",
-   "start": 77.896,
-   "end": 77.977
+   "start": 78.613,
+   "end": 78.705
   },
   {
-   "text": "B.",
+   "text": "par",
    "type": "word",
-   "start": 78.046,
-   "end": 78.276
+   "start": 78.764,
+   "end": 78.903
   },
   {
-   "text": "T.",
+   "text": "e-mail",
    "type": "word",
-   "start": 78.276,
-   "end": 78.505
+   "start": 78.949,
+   "end": 79.263
   },
   {
-   "text": "C.",
+   "text": "à",
    "type": "word",
-   "start": 78.505,
-   "end": 78.734
+   "start": 79.379,
+   "end": 79.414
   },
   {
-   "text": "S.,",
+   "text": "contact@ohelintermondial.com.",
    "type": "word",
-   "start": 78.734,
-   "end": 78.964
+   "start": 79.507,
+   "end": 82.154
+  },
+  {
+   "text": "Vous",
+   "type": "word",
+   "start": 82.982,
+   "end": 83.156
+  },
+  {
+   "text": "voulez",
+   "type": "word",
+   "start": 83.18,
+   "end": 83.377
+  },
+  {
+   "text": "en",
+   "type": "word",
+   "start": 83.4,
+   "end": 83.447
+  },
+  {
+   "text": "savoir",
+   "type": "word",
+   "start": 83.505,
+   "end": 83.76
+  },
+  {
+   "text": "plus",
+   "type": "word",
+   "start": 83.807,
+   "end": 84.062
+  },
+  {
+   "text": "?",
+   "type": "word",
+   "start": 84.236,
+   "end": 84.271
+  },
+  {
+   "text": "Abonnez-vous",
+   "type": "word",
+   "start": 84.654,
+   "end": 85.327
   },
   {
    "text": "et",
    "type": "word",
-   "start": 79.138,
-   "end": 79.265
+   "start": 85.409,
+   "end": 85.571
   },
   {
-   "text": "pourquoi",
+   "text": "activez",
    "type": "word",
-   "start": 79.312,
-   "end": 79.579
+   "start": 85.618,
+   "end": 85.978
   },
   {
-   "text": "choisir",
+   "text": "la",
    "type": "word",
-   "start": 79.602,
-   "end": 79.985
+   "start": 86.012,
+   "end": 86.071
+  },
+  {
+   "text": "cloche",
+   "type": "word",
+   "start": 86.117,
+   "end": 86.372
+  },
+  {
+   "text": "de",
+   "type": "word",
+   "start": 86.396,
+   "end": 86.465
+  },
+  {
+   "text": "notification",
+   "type": "word",
+   "start": 86.547,
+   "end": 87.406
+  },
+  {
+   "text": "pour",
+   "type": "word",
+   "start": 87.684,
+   "end": 87.858
+  },
+  {
+   "text": "ne",
+   "type": "word",
+   "start": 87.917,
+   "end": 87.998
+  },
+  {
+   "text": "pas",
+   "type": "word",
+   "start": 88.067,
+   "end": 88.23
+  },
+  {
+   "text": "rater",
+   "type": "word",
+   "start": 88.253,
+   "end": 88.497
   },
   {
    "text": "le",
    "type": "word",
-   "start": 80.032,
-   "end": 80.101
+   "start": 88.52,
+   "end": 88.578
+  },
+  {
+   "text": "prochain",
+   "type": "word",
+   "start": 88.624,
+   "end": 88.903
+  },
+  {
+   "text": "numéro",
+   "type": "word",
+   "start": 88.926,
+   "end": 89.263
+  },
+  {
+   "text": ":",
+   "type": "word",
+   "start": 89.437,
+   "end": 89.483
+  },
+  {
+   "text": "vous",
+   "type": "word",
+   "start": 89.994,
+   "end": 90.168
+  },
+  {
+   "text": "découvrirez",
+   "type": "word",
+   "start": 90.203,
+   "end": 90.911
+  },
+  {
+   "text": "les",
+   "type": "word",
+   "start": 90.958,
+   "end": 91.086
+  },
+  {
+   "text": "avantages",
+   "type": "word",
+   "start": 91.155,
+   "end": 91.747
+  },
+  {
+   "text": "du",
+   "type": "word",
+   "start": 91.771,
+   "end": 91.898
   },
   {
    "text": "B.",
    "type": "word",
-   "start": 80.159,
-   "end": 80.426
+   "start": 91.98,
+   "end": 92.261
   },
   {
    "text": "T.",
    "type": "word",
-   "start": 80.426,
-   "end": 80.694
+   "start": 92.261,
+   "end": 92.543
   },
   {
    "text": "C.",
    "type": "word",
-   "start": 80.694,
-   "end": 80.961
+   "start": 92.543,
+   "end": 92.825
   },
   {
-   "text": "S.",
+   "text": "S.,",
    "type": "word",
-   "start": 80.961,
-   "end": 81.228
+   "start": 92.825,
+   "end": 93.106
+  },
+  {
+   "text": "et",
+   "type": "word",
+   "start": 93.257,
+   "end": 93.384
+  },
+  {
+   "text": "pourquoi",
+   "type": "word",
+   "start": 93.431,
+   "end": 93.756
+  },
+  {
+   "text": "le",
+   "type": "word",
+   "start": 93.779,
+   "end": 93.837
+  },
+  {
+   "text": "choisir.",
+   "type": "word",
+   "start": 93.872,
+   "end": 94.696
   }
  ]
 }

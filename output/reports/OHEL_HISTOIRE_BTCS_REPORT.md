@@ -1,7 +1,7 @@
 # OHEL INTERNATIONAL — « L'histoire du BTCS » · Rapport de production
 
 **Version :** 01 (version de contrôle validée → version définitive)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 101,6 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 115,2 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
 **Son :** −14 LUFS intégrés, crête vraie −1,5 dBTP (norme réseaux sociaux)
 
 ## 1. Livrables
@@ -10,7 +10,7 @@
 |---|---|
 | `output/video/OHEL_HISTOIRE_BTCS_01.mp4` | Film avec voix (Brian) et sous-titres incrustés — version web (CRF 21, 41 Mo env.) ; le master pleine qualité `_MASTER.mp4` reste hors dépôt (>100 Mo) |
 | `output/video/OHEL_HISTOIRE_BTCS_VISUEL_02.mp4` | Version visuelle sans voix ni sous-titres (musique + effets) |
-| `output/cover/OHEL_HISTOIRE_BTCS_COVER.png` | Couverture 1080 × 1920 |
+| `output/cover/OHEL_HISTOIRE_BTCS_COVER.jpg` | Vignette 1080 × 1920 (image fournie par le client), aussi intégrée dans les MP4 |
 | `output/OHEL_HISTOIRE_BTCS_VOICEOVER.txt` | Texte de la voix-off avec repères temporels |
 | `output/subtitles/OHEL_HISTOIRE_BTCS_SUBTITLES.srt` | Sous-titres synchronisés mot à mot (32 répliques) |
 | `output/reports/OHEL_HISTOIRE_BTCS_REPORT.md` | Ce rapport |
@@ -164,3 +164,12 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 ## 17. Son de la machine atténué
 
 - Le son réel de la presse (vidéo insérée) est abaissé d'environ 12 dB et filtré (aigus du moteur adoucis au-dessus de 4,5 kHz) ; la musique ne baisse plus que légèrement sur ce passage. Réglage : `videoInsert.soundLevel` dans `src/timeline.json` (0,2 actuellement).
+
+
+## 18. Nouvelle fin : projets, devis, e-mail, cloche — vignette
+
+- **Contact (vouvoiement)** : « Écoles, hôtels, logements, bureaux, commerces : quel que soit votre projet, OHEL International vous accompagne. Contactez-nous dès maintenant pour demander un devis : au +225 07 07 63 03 35, par appel ou WhatsApp, ou par e-mail à contact@ohelintermondial.com. » À l'écran : les cinq types de projets apparaissent un à un, bandeau « DEMANDEZ VOTRE DEVIS », puis téléphone, WhatsApp, e-mail et site, chacun mis en valeur pendant qu'il est prononcé.
+- **Carte de fin** : « Vous voulez en savoir plus ? Abonnez-vous et activez la cloche de notification pour ne pas rater le prochain numéro : vous découvrirez les avantages du BTCS, et pourquoi le choisir. » Bouton « S'ABONNER » → « ABONNÉ ✓ » sur « activez », bouton cloche qui s'allume et sonne sur « cloche ».
+- Une seule prise pour ces deux répliques (534 crédits). Total ElevenLabs du projet : 3 332 crédits, sans dépassement.
+- **Vignette** : l'image fournie par le client (`assets/reference/629046_vignette_client.jpg`) devient la couverture officielle (`output/cover/OHEL_HISTOIRE_BTCS_COVER.jpg`, 1080 × 1920) et est intégrée comme image de couverture dans les MP4. L'ancienne couverture générée est conservée (`..._COVER_ancienne_version.png`). Remarque : l'image contient un bloc et des scènes d'aspect généré par IA ; à utiliser en connaissance de cause.
+- Durée : 115.2 s.
