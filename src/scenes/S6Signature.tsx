@@ -33,8 +33,8 @@ export const S6Signature: React.FC = () => {
 			{/* arrière-plan : chantier réel, flouté et assombri */}
 			<AbsoluteFill style={{opacity: dark}}>
 				<Img
-					src={staticFile('img/ohel_atelier_fond.jpg')}
-					style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.16, 1.24, ramp(t, 70, 93.6, (x) => x))})`, filter: `blur(${lerp(0, 10, dark)}px) saturate(0.85)`}}
+					src={staticFile('img/reference_batiment.jpg')}
+					style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(1.12, 1.2, ramp(t, 70, 93.6, (x) => x))})`, transformOrigin: '50% 48%', filter: `blur(${lerp(0, 10, dark)}px) saturate(0.85)`}}
 				/>
 				<AbsoluteFill style={{background: `linear-gradient(180deg, rgba(20,10,5,0.82), rgba(36,19,10,0.78) 50%, rgba(20,10,5,0.9))`}} />
 			</AbsoluteFill>

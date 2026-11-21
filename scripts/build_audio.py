@@ -299,7 +299,7 @@ for i in range(11):                                 # assises de blocs qui se po
 for i in range(14):                                 # retournement des briques
     add(sfx, low_drum(420 + 15 * i, 260, 0.12), 59.85 + i * 0.12, 0.05)
 add(sfx, sparkle(1.6, 2200), 60.2, 0.07)
-add(sfx, whoosh(1.4), 69.95, 0.18)
+add(sfx, whoosh(1.4), 69.95, 0.14)
 add(sfx, sparkle(2.0, 2000), 74.4, 0.12)           # particules qui révèlent le logo
 # carte de fin (abonnement)
 add(sfx, whoosh(1.3), vw("Tu") - 0.85, 0.14)

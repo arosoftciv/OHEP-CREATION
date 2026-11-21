@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Img, staticFile} from 'remotion';
-import {H, KineticTitle, MatterWipe, SourceTag, W, useT} from '../components/core';
+import {H, KineticTitle, SourceTag, W, useT} from '../components/core';
 import {C, F} from '../theme';
 import {inOutSine, lerp, outCubic, ramp, rnd} from '../animations/easing';
 import {Easing} from 'remotion';
@@ -24,16 +24,13 @@ export const S5Architecture: React.FC = () => {
 	if (t < 56.9 || t > 71.6) return null;
 	return (
 		<AbsoluteFill style={{overflow: 'hidden'}}>
-			<Chantier t={t} />
 			<Reference t={t} />
 			<Wall t={t} />
 			<ReferenceShade t={t} />
-			<MatterWipe at={62.25} dur={1.1} seed={12} />
 
 			<KineticTitle text={'LA TERRE\nSE RÉINVENTE.'} start={58.6} end={62.5} y={250} size={92} accent={['RÉINVENTE.']} />
 			<BrandTitle t={t} />
-			<SourceTag text="Image de référence · architecture contemporaine" start={61.3} end={62.6} y={1318} />
-			<SourceTag text="Visuel d'illustration · fabrication des BTCS" start={63.0} end={70.1} y={1318} />
+			<SourceTag text="Image de référence · architecture contemporaine" start={61.3} end={70.1} y={1318} />
 		</AbsoluteFill>
 	);
 };
@@ -119,18 +116,19 @@ const Wall: React.FC<{t: number}> = ({t}) => {
 
 /** Bâtiment contemporain (627167) : sous le mur, révélé par le retournement des briques, puis plein cadre. */
 const Reference: React.FC<{t: number}> = ({t}) => {
-	if (t < FLIP_A - 0.1 || t > 63.3) return null;
-	const k = ramp(t, FLIP_A + FLIP_SPAN + FLIP_DUR, 63.0, inOutSine);
+	if (t < FLIP_A - 0.1 || t > 71.8) return null;
+	// la villa reste à l'écran jusqu'à la signature (lent mouvement de caméra)
+	const k = ramp(t, FLIP_A + FLIP_SPAN + FLIP_DUR, 71.6, inOutSine);
 	return (
 		<AbsoluteFill>
-			<Img src={staticFile(HOUSE)} style={{width: W, height: H, transform: `scale(${lerp(1.0, 1.07, k)})`}} />
+			<Img src={staticFile(HOUSE)} style={{width: W, height: H, transform: `scale(${lerp(1.0, 1.12, k)})`, transformOrigin: '50% 48%'}} />
 		</AbsoluteFill>
 	);
 };
 
 /** Voile de lisibilité au-dessus du bâtiment (après le retournement). */
 const ReferenceShade: React.FC<{t: number}> = ({t}) => {
-	if (t < FLIP_A || t > 63.3) return null;
+	if (t < FLIP_A || t > 71.8) return null;
 	return (
 		<AbsoluteFill
 			style={{
@@ -141,27 +139,6 @@ const ReferenceShade: React.FC<{t: number}> = ({t}) => {
 	);
 };
 
-/** Atelier OHEL (visuel de l'affiche 626923, choisi par le client) : cadre plein largeur sur fond flouté
- * de la même image. Reste visible pendant le début de la scène 6. */
-const IMG_H = Math.round((694 * 1080) / 941);
-const Chantier: React.FC<{t: number}> = ({t}) => {
-	if (t < 62.6) return null;
-	const k = ramp(t, 62.6, 71.6, (x) => x);
-	const top = 600;
-	return (
-		<AbsoluteFill>
-			<Img src={staticFile('img/ohel_atelier_fond.jpg')} style={{width: '100%', height: '100%', transform: `scale(${lerp(1.05, 1.12, k)})`}} />
-			<AbsoluteFill style={{background: 'rgba(20,10,5,0.45)'}} />
-			<div style={{position: 'absolute', left: 0, top, width: W, height: IMG_H, overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,0.55)'}}>
-				<Img
-					src={staticFile('img/ohel_atelier.jpg')}
-					style={{width: '100%', height: '100%', transform: `scale(${lerp(1.02, 1.14, k)}) translateX(${lerp(10, -25, k)}px)`, transformOrigin: '40% 50%', filter: 'saturate(1.04)'}}
-				/>
-			</div>
-			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,10,5,0.55) 0%, rgba(20,10,5,0) 30%)'}} />
-		</AbsoluteFill>
-	);
-};
 
 const BrandTitle: React.FC<{t: number}> = ({t}) => {
 	const a = 63.45;

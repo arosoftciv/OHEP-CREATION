@@ -127,3 +127,9 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 - Scène 7 (`src/scenes/S7Teaser.tsx`) : le logo remonte en tête, titre « TU VEUX EN SAVOIR PLUS ? », bouton « S'ABONNER » qui passe à « ABONNÉ ✓ » (cloche, onde) sur « numéro », carte « PROCHAIN NUMÉRO » (1. Les avantages du BTCS · 2. Pourquoi choisir le BTCS) synchronisée sur « avantages » / « pourquoi », rappel des coordonnées en bas.
 - Remarque de ton : le film vouvoie (« Vous avez un projet ? Contactez-nous. ») puis tutoie dans la carte de fin, comme demandé ; à harmoniser si besoin.
 - Durée totale : 89.5 s. Total ElevenLabs consommé sur le projet : 2 219 crédits, sans dépassement.
+
+
+## 12. Villa mise en valeur
+
+- Suppression de l'étape « atelier » après « En Côte d'Ivoire… » (deux transitions rapprochées) : la villa (627167) reste à l'écran de sa révélation par les briques jusqu'à la signature (≈ 60–67,5 s), avec un lent mouvement de caméra ; une seule transition (assombrissement) mène à la signature, dont le fond devient la villa floutée.
+- Le visuel « atelier » (affiche 626923) n'est plus utilisé dans le film (il reste sur la couverture).
