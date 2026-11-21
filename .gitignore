@@ -9,3 +9,4 @@ assets/reference/627386_termite_shutterstock_NON_UTILISE.jpg
 public/audio/bed_raw.wav
 output/video/OHEL_HISTOIRE_BTCS_VISUEL_01.mp4
 output/video/*_MASTER.mp4
+__pycache__/
