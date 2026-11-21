@@ -11,8 +11,8 @@ const HOUSE_TOP = 290;
 const WallBreach: React.FC = () => {
   const f = useCurrentFrame();
   const z = interpolate(f, [0, 14], [1, 1.35], clamp);
-  const split = lerp(f, 8, 24);
-  const line = lerp(f, 0, 9);
+  const split = lerp(f, 4, 20);
+  const line = lerp(f, 0, 6);
   if (f > 26) return null;
   const half = (top: boolean) => (
     <div
@@ -70,7 +70,7 @@ export const S2Causes: React.FC = () => {
   const hl =
     f >= w.circule ? 'air' : f >= w.fenetres ? 'window' : f >= w.murs ? 'walls' : f >= w.toiture ? 'roof' : null;
   const state = {
-    draw: lerp(f, 6, 34),
+    draw: lerp(f, 0, 18),
     sun: ramp(f, w.soleil - 12, w.soleil + 14),
     roofHeat: ramp(f, w.toiture - 4, w.toiture + 18),
     wallHeat: ramp(f, w.murs - 4, w.murs + 18),
@@ -121,7 +121,7 @@ export const S2Causes: React.FC = () => {
             [C.sun, 'Rayons solaires'],
             ['#9FB3BF', 'Air peu renouvelé'],
           ].map(([c, l]) => (
-            <div key={l} style={{display: 'flex', alignItems: 'center', gap: 10, fontFamily: FONT, fontWeight: 700, fontSize: 24, color: C.white}}>
+            <div key={l} style={{display: 'flex', alignItems: 'center', gap: 10, fontFamily: FONT, fontWeight: 700, fontSize: 28, color: C.white}}>
               <span style={{width: 34, height: 8, borderRadius: 4, background: c}} />
               {l}
             </div>

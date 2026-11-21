@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {LivingRoom} from './components/LivingRoom';
+import {PhotoActor} from './components/PhotoActor';
 import {C, FONT} from './theme';
 import {LogoCard, Vignette} from './components/ui';
 
@@ -12,7 +13,8 @@ export const Cover02: React.FC = () => {
   return (
     <AbsoluteFill style={{background: '#1A0D07', overflow: 'hidden'}}>
       <AbsoluteFill style={{transform: `translate(${540 - cx * s}px, ${1060 - cy * s}px) scale(${s})`, transformOrigin: '0 0'}}>
-        <LivingRoom pose={{enter: 1, wipe: 1, lookUp: 0, frown: 1, sweat: 1}} heat={1} fanSpeed={0} />
+        <LivingRoom pose={{enter: 1, wipe: 1, lookUp: 0, frown: 1, sweat: 1}} heat={1} fanSpeed={0} showMan={false} />
+        <PhotoActor still />
       </AbsoluteFill>
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(255,110,30,0.35), rgba(160,30,0,0.4))', mixBlendMode: 'multiply'}} />
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,8,4,0.85) 0%, rgba(20,8,4,0.25) 34%, rgba(20,8,4,0) 55%, rgba(20,8,4,0.75) 100%)'}} />

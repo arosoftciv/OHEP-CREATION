@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, interpolateColors, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Img, interpolate, interpolateColors, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {HouseSection, ramp} from '../components/HouseSection';
 import {C, FONT, SAFE} from '../theme';
 import {clamp, Grain, lerp, RevealLine, Tag, Vignette} from '../components/ui';
@@ -77,6 +77,32 @@ export const S4Conception: React.FC = () => {
         </div>
       </AbsoluteFill>
 
+      {/* loupe : murs en BTCS (texture photographique réelle) */}
+      <AbsoluteFill style={{opacity: lerp(f, w.mat, w.mat + 12) * (1 - finalP)}}>
+        <svg width={1080} height={1920} style={{position: 'absolute'}}>
+          <line x1={240} y1={HOUSE_TOP + 690} x2={340} y2={HOUSE_TOP + 690} stroke={C.white} strokeWidth={4} />
+          <circle cx={220} cy={HOUSE_TOP + 690} r={10} fill={C.white} />
+        </svg>
+        <div
+          style={{
+            position: 'absolute',
+            left: 340,
+            top: HOUSE_TOP + 570,
+            width: 240,
+            height: 240,
+            borderRadius: 120,
+            overflow: 'hidden',
+            border: `6px solid ${C.white}`,
+            boxShadow: '0 16px 40px rgba(0,0,0,0.45)',
+            transform: `scale(${spring({frame: f - w.mat, fps: 30, config: {damping: 14, stiffness: 140}})})`,
+          }}
+        >
+          <Img src={staticFile('img/btcs_pile.jpg')} style={{width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.9) translate(4%, 8%)'}} />
+        </div>
+        <div style={{position: 'absolute', left: 340, width: 252, top: HOUSE_TOP + 822, textAlign: 'center', fontFamily: FONT, fontWeight: 800, fontSize: 28, color: C.white, textShadow: '0 3px 10px rgba(0,0,0,0.8)'}}>
+          MURS EN BTCS
+        </div>
+      </AbsoluteFill>
       <div style={{position: 'absolute', top: 300, right: SAFE.right - 70, opacity: 1 - finalP}}>
         <Check label="TOITURE" at={w.toit} color={C.green} />
         <Check label="OMBRE" at={w.ombre} color={C.green} />
@@ -84,14 +110,14 @@ export const S4Conception: React.FC = () => {
         <Check label="MATÉRIAUX" at={w.mat} color={C.green} />
       </div>
       {/* légendes des améliorations, sous la coupe */}
-      <div style={{position: 'absolute', top: HOUSE_TOP + 880, left: 0, right: 0, display: 'flex', justifyContent: 'center', gap: 20, opacity: lerp(f, w.toit, w.toit + 14) * (1 - finalP)}}>
+      <div style={{position: 'absolute', top: HOUSE_TOP + 880, left: 0, right: 0, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', rowGap: 8, gap: 20, padding: '0 40px', opacity: lerp(f, w.toit, w.toit + 14) * (1 - finalP)}}>
         {[
           ['#F6D96B', 'Protection de toiture', w.toit],
           ['#5B5F66', 'Débords, brise-soleil', w.ombre],
           [C.air, 'Air traversant', w.vent],
           [C.ochre, 'Murs BTCS', w.mat],
         ].map(([c, l, at]) => (
-          <div key={l as string} style={{display: 'flex', alignItems: 'center', gap: 8, fontFamily: FONT, fontWeight: 700, fontSize: 21, color: C.white, opacity: lerp(f, at as number, (at as number) + 12)}}>
+          <div key={l as string} style={{display: 'flex', alignItems: 'center', gap: 8, fontFamily: FONT, fontWeight: 700, fontSize: 25, color: C.white, opacity: lerp(f, at as number, (at as number) + 12)}}>
             <span style={{width: 24, height: 10, borderRadius: 4, background: c as string}} />
             {l}
           </div>

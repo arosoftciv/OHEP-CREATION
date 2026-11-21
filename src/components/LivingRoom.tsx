@@ -113,7 +113,8 @@ export const LivingRoom: React.FC<{
   pose: ManPose;
   heat: number; // intensité de la lumière / chaleur
   fanSpeed?: number;
-}> = ({pose, heat, fanSpeed = 1}) => {
+  showMan?: boolean;
+}> = ({pose, heat, fanSpeed = 1, showMan = true}) => {
   const frame = useCurrentFrame();
   const fanA = (frame * 23 * fanSpeed) % 360;
   const flick = 0.92 + 0.08 * Math.sin(frame / 5);
@@ -223,9 +224,11 @@ export const LivingRoom: React.FC<{
       {/* tache de soleil sur le sol */}
       <polygon points="430,1560 900,1600 1080,1920 520,1920" fill="#FFE08A" opacity={0.35 + 0.25 * heat} />
       {/* personnage */}
-      <g transform="translate(660 1000)">
-        <Man p={pose} />
-      </g>
+      {showMan ? (
+        <g transform="translate(660 1000)">
+          <Man p={pose} />
+        </g>
+      ) : null}
       {/* éblouissement de la fenêtre */}
       <circle cx={250} cy={700} r={520} fill="url(#lr-bloom)" opacity={interpolate(heat, [0, 1], [0.45, 0.9], clamp)} />
     </svg>

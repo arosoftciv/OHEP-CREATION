@@ -126,7 +126,7 @@ const InertiaDiagram: React.FC<{start: number; end: number; dim: number}> = ({st
             </g>
           ))}
           {/* front de chaleur stockée */}
-          <rect x={WX} y={WY} width={WW} height={WH} fill="url(#ine-front)" opacity={0.25 + 0.75 * stored} />
+          <rect x={WX} y={WY} width={WW} height={WH} fill="url(#ine-front)" opacity={0.15 + 0.6 * stored} />
         </g>
         <rect x={40} y={WY} width={1000} height={WH} rx={26} fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth={3} />
         {/* flux : jour → absorbe ; nuit → restitue des deux côtés */}
@@ -158,7 +158,7 @@ const InertiaDiagram: React.FC<{start: number; end: number; dim: number}> = ({st
         <g opacity={lerp(f, start, start + 15)}>
           <line x1={CX} y1={CY + CA + 30} x2={CX + CW} y2={CY + CA + 30} stroke="rgba(255,255,255,0.5)" strokeWidth={3} />
           {['JOUR', 'NUIT', 'JOUR'].map((t, i) => (
-            <text key={i} x={CX + (i / 2) * CW} y={CY + CA + 66} fontFamily={FONT} fontWeight={700} fontSize={24} fill="rgba(255,255,255,0.8)" textAnchor={i === 0 ? 'start' : i === 2 ? 'end' : 'middle'}>
+            <text key={i} x={CX + (i / 2) * CW} y={CY + CA + 66} fontFamily={FONT} fontWeight={700} fontSize={28} fill="rgba(255,255,255,0.85)" textAnchor={i === 0 ? 'start' : i === 2 ? 'end' : 'middle'}>
               {t}
             </text>
           ))}
@@ -171,8 +171,8 @@ const InertiaDiagram: React.FC<{start: number; end: number; dim: number}> = ({st
           </g>
           <circle cx={CX + CW * drawn} cy={CY - CA * Math.cos(phase)} r={11} fill="#FF7A3A" />
           <circle cx={CX + CW * drawn} cy={CY - CA * 0.45 * Math.cos(phase - lag)} r={11} fill="#9BE07A" />
-          <text x={CX} y={CY - CA - 48} fontFamily={FONT} fontWeight={800} fontSize={24} fill="#FF9A55">— extérieur</text>
-          <text x={CX + 230} y={CY - CA - 48} fontFamily={FONT} fontWeight={800} fontSize={24} fill="#9BE07A">— intérieur, mur à forte inertie</text>
+          <text x={CX} y={CY - CA - 48} fontFamily={FONT} fontWeight={800} fontSize={30} fill="#FF9A55">— extérieur</text>
+          <text x={CX + 250} y={CY - CA - 48} fontFamily={FONT} fontWeight={800} fontSize={30} fill="#9BE07A">— intérieur (mur à inertie)</text>
         </g>
       </svg>
       <div

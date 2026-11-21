@@ -1,18 +1,20 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig, spring} from 'remotion';
+import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig, spring} from 'remotion';
 import {LivingRoom} from '../components/LivingRoom';
+import {PhotoActor} from '../components/PhotoActor';
 import {C, FONT, SAFE} from '../theme';
 import {clamp, Grain, lerp, SlamText, Tag, Vignette} from '../components/ui';
 import {relWord, sec} from '../timeline';
 
 /** Caméra : [image, échelle, centre x, centre y] */
 const CAM: [number, number, number, number][] = [
-  [0, 2.05, 640, 930],
-  [sec(2.7), 1.95, 650, 900],
+  [0, 1.75, 655, 1010],
+  [sec(2.7), 1.9, 655, 975],
   [sec(4.0), 1.75, 700, 330],
   [sec(5.4), 1.4, 300, 760],
   [sec(6.6), 1.12, 520, 930],
-  [sec(8.0), 1.06, 520, 940],
+  [sec(7.35), 1.1, 520, 900],
+  [sec(8.0), 3.8, 545, 470],
 ];
 
 const camAt = (f: number) => {
@@ -44,6 +46,9 @@ export const S1Four: React.FC = () => {
   };
   const heat = lerp(frame, sec(4.6), sec(6.4));
   const hazeShift = frame * 3;
+  // profondeur de champ : décor flou quand la caméra est sur le personnage
+  const dof = interpolate(frame, [0, sec(3.0), sec(3.6), sec(6.0), sec(6.6)], [5, 5, 0, 0, 2.5], clamp);
+  const camT = (sx: number, sy: number) => `translate(${540 - cam.x * cam.s + sx}px, ${960 - cam.y * cam.s + sy}px) scale(${cam.s})`;
   const flash = interpolate(frame, [fFour, fFour + 2, fFour + 10], [0, 0.55, 0], clamp);
   const sceneOut = lerp(frame, sec(7.55), sec(8.0));
 
@@ -58,51 +63,35 @@ export const S1Four: React.FC = () => {
           <feDisplacementMap in="SourceGraphic" in2="no" scale={6 + 10 * heat} xChannelSelector="R" yChannelSelector="G" />
         </filter>
       </svg>
-      <AbsoluteFill
-        style={{
-          transform: `translate(${540 - cam.x * cam.s + shx}px, ${960 - cam.y * cam.s + shy}px) scale(${cam.s})`,
-          transformOrigin: '0 0',
-          filter: 'url(#s1-haze)',
-        }}
-      >
-        <LivingRoom pose={pose} heat={heat} />
+      <AbsoluteFill style={{transform: camT(shx, shy), transformOrigin: '0 0', filter: `url(#s1-haze) blur(${dof / cam.s}px)`}}>
+        <LivingRoom pose={pose} heat={heat} showMan={false} />
+      </AbsoluteFill>
+      {/* personnage photographique (630226) */}
+      <AbsoluteFill style={{transform: camT(shx * 1.15, shy * 1.15), transformOrigin: '0 0'}}>
+        <PhotoActor rim={0.7 + 0.3 * heat} />
       </AbsoluteFill>
       {/* étalonnage chaud qui monte */}
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(255,110,30,0.30), rgba(160,30,0,0.35))', mixBlendMode: 'multiply', opacity: 0.4 + 0.6 * heat}} />
       <AbsoluteFill style={{background: '#FFB04A', mixBlendMode: 'screen', opacity: flash}} />
       <Vignette strength={0.6} />
 
-      {/* repère temps/lieu */}
+      {/* écran météo (630240, illustration fournie) : contexte « 14 h à Abidjan » */}
       <div
         style={{
           position: 'absolute',
-          top: SAFE.top - 10,
-          left: SAFE.left,
-          opacity: lerp(frame, 8, 20) * (1 - lerp(frame, sec(4.4), sec(4.8))),
-          transform: `translateY(${(1 - lerp(frame, 8, 20)) * -20}px)`,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 18,
-          fontFamily: FONT,
-          fontWeight: 800,
-          fontSize: 44,
-          color: C.white,
-          background: 'rgba(0,0,0,0.45)',
-          padding: '14px 28px',
-          borderRadius: 18,
-          letterSpacing: 2,
+          left: 130,
+          width: 820,
+          top: 905,
+          opacity: lerp(frame, 6, 16) * (1 - lerp(frame, sec(2.3), sec(2.7))),
+          transform: `perspective(1400px) translateY(${(1 - lerp(frame, 6, 22, 0, 1, (t) => 1 - Math.pow(1 - t, 3))) * 220 - lerp(frame, sec(2.3), sec(2.7)) * 120}px) rotateX(${(1 - lerp(frame, 6, 22)) * 18}deg) scale(${1 + 0.02 * Math.sin(frame / 20)})`,
+          filter: 'drop-shadow(0 26px 40px rgba(0,0,0,0.55))',
         }}
       >
-        <svg width={46} height={46} viewBox="-24 -24 48 48">
-          <circle r={10} fill={C.sun} />
-          {Array.from({length: 8}).map((_, i) => {
-            const a = (i / 8) * Math.PI * 2;
-            return <line key={i} x1={Math.cos(a) * 15} y1={Math.sin(a) * 15} x2={Math.cos(a) * 21} y2={Math.sin(a) * 21} stroke={C.sun} strokeWidth={4} strokeLinecap="round" />;
-          })}
-        </svg>
-        14 H 00 · ABIDJAN
+        <Img src={staticFile('img/meteo_abidjan_carte.png')} style={{width: '100%', display: 'block'}} />
+        {/* reflet qui balaie la carte */}
+        <div style={{position: 'absolute', inset: 0, borderRadius: 32, background: `linear-gradient(110deg, rgba(255,255,255,0) ${interpolate(frame, [14, 50], [-20, 120], clamp) - 10}%, rgba(255,255,255,0.22) ${interpolate(frame, [14, 50], [-20, 120], clamp)}%, rgba(255,255,255,0) ${interpolate(frame, [14, 50], [-20, 120], clamp) + 10}%)`}} />
       </div>
-      <Tag label="Illustration" delay={10} top={SAFE.top - 84} />
+      <Tag label="Mise en scène · illustration" delay={10} top={SAFE.top - 84} />
 
       {/* voile sombre sous le titre */}
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,8,4,0.85) 0%, rgba(20,8,4,0.55) 38%, rgba(20,8,4,0) 60%)', opacity: lerp(frame, fFour - 34, fFour - 20) * (1 - sceneOut)}} />

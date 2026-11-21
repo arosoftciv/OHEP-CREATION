@@ -39,7 +39,7 @@ Le dépôt principal était vide ; les ressources ont été récupérées sur le
 
 | Scène | Temps | Contenu |
 |---|---|---|
-| 1 · Votre maison est un four ? | 0–8 s | Salon d'Abidjan à 14 h (horloge sur 2 h), illustration vectorielle animée : l'homme entre, s'essuie le front, regarde le ventilateur avec agacement ; caméra visage → ventilateur → fenêtre surexposée ; distorsion d'air chaud (feTurbulence/feDisplacementMap) ; « VOTRE MAISON EST UN **FOUR ?** » qui claque sur « four » (secousse, flash) ; « MAIS POURQUOI ? » |
+| 1 · Votre maison est un four ? | 0–8 s | Salon d'Abidjan à 14 h (horloge sur 2 h) en illustration animée, avec le **personnage photographique fourni (630226)** intégré par compositing (profondeur de champ, lumière de contour chaude côté fenêtre, ombre portée, respiration) ; caméra visage → ventilateur → fenêtre surexposée → plan large → poussée dans le mur ; distorsion d'air chaud (feTurbulence/feDisplacementMap) ; « VOTRE MAISON EST UN **FOUR ?** » qui claque sur « four » (secousse, flash) ; « MAIS POURQUOI ? » |
 | 2 · D'où vient cette chaleur ? | 8–22,3 s | Le mur du salon se fend (« VUE EN COUPE ») → maison en coupe ; sur les mots : SOLEIL, TOITURE (flèches rouges, toiture qui rougit), MURS, FENÊTRES (faisceau et tache au sol), VENTILATION (petites flèches hésitantes), chaleur qui s'accumule ; « LE CONFORT NE DÉPEND PAS D'UN SEUL ÉLÉMENT. » ; zoom final dans le mur |
 | 3 · Le matériau : BTCS | 22,3–37,2 s | Le mur devient un appareillage de vraies faces de BTCS, qui éclate en 3D ; le **bloc réel** apparaît (rotation 2,5D, reflet), « B-T-C-S » sur les 4 syllabes, « BLOC DE TERRE COMPRIMÉE STABILISÉE », repères « Rainure longitudinale » / « Encoche d'emboîtement » placés sur la photo ; **L'INERTIE THERMIQUE** : cycle jour → nuit → jour (le mur absorbe et stocke / restitue des deux côtés) + courbes de principe extérieur/intérieur (atténuation, décalage) ; carton « PAS UNE CLIMATISATION NATURELLE » avec la nuance sur le refroidissement nocturne |
 | 4 · Le confort se conçoit | 37,2–50,8 s | Même maison en coupe, améliorée sur les mots : protection de toiture + ventilation des combles, débords et brise-soleil + ombre portée, ventilation traversante, murs BTCS ; étalonnage rouge/orange → ciel bleu, sol naturel ; liste cochée ; « LE CONFORT SE CONÇOIT. » |
@@ -133,3 +133,39 @@ Zones de sécurité : textes entre y ≈ 230 et 1 490 px, marges latérales ≥ 
   - Le bouton reprend le logo YouTube : adapté à YouTube Shorts, moins cohérent sur TikTok/Instagram/Facebook.
   - Le logo OHEL de la vignette fait partie de l'image fournie (non retouché par nos soins).
 - La couverture issue de l'animation reste disponible : `output/OHEL_BTCS_COVER_02_version_animation.png`.
+
+### 12. Personnage photographique (630226)
+
+- Photo détourée fournie par le client (`assets/source/630226_homme_chaleur.png`, 941 × 1672, fond transparent) ; 18 pixels parasites isolés retirés du détourage, **aucune retouche de la personne** (`public/img/homme_chaleur.png`).
+- Remplace le personnage vectoriel de la scène 1 et de la couverture alternative. Mention à l'écran : « Mise en scène ».
+- Limite : une photo fixe ne permet pas d'animer le geste d'essuyer le front ni le regard vers le ventilateur ; ces gestes du storyboard sont remplacés par la sueur visible sur la photo, la respiration et le mouvement de caméra vers le ventilateur puis la fenêtre. Une courte vidéo du même acteur (5–8 s : entrée, essuie le front, regarde le ventilateur) permettrait de les restituer.
+- ⚠️ **Droit à l'image** : personne réelle identifiable. Confirmer la licence (banque d'images) ou l'autorisation écrite du modèle pour un usage publicitaire sur les réseaux sociaux.
+
+### 12 bis. Écran météo (630240)
+
+- Illustration fournie par le client, recadrée sur la carte du haut (Abidjan · 14 h 00 · 33 °C · ressenti 37 °C · prévisions horaires) : recadrage seul, aucune valeur modifiée (`public/img/meteo_abidjan_carte.png`). Affichée 0,2–2,7 s, sur « Il est quatorze heures, à Abidjan », à la place de l'ancien repère « 14 H 00 · ABIDJAN » ; mention « Mise en scène · illustration ».
+- Le bas de l'écran (précipitations, vent, **humidité 97 %**) n'est pas montré : 97 % d'humidité est incohérent avec 33 °C et un ressenti de 37 °C (le ressenti serait nettement supérieur) et serait illisible sur mobile.
+- Ces températures décrivent la **météo extérieure** (mise en scène), pas une performance de bâtiment : la règle « aucune température fictive de bâtiment / aucun gain mesuré » reste respectée dans les scènes 2 à 4. À éviter toutefois de les présenter comme un relevé réel daté.
+
+### 13. Auto-évaluation
+
+| Critère | Note /10 | Commentaire |
+|---|---|---|
+| Accroche (0–3 s) | 7,5 | Visage en sueur dès le début, repère « 14 H 00 · ABIDJAN », impact sur « FOUR ». Mais la vignette client retarde la première parole à 1,5 s, et le personnage reste immobile (photo fixe) |
+| Valeur pédagogique | 8,5 | Causes clairement séparées et synchronisées sur la voix ; inertie expliquée par un cycle jour/nuit et des courbes de principe ; nuance « pas une climatisation naturelle » |
+| Exactitude / prudence | 9 | Aucune valeur inventée, mentions « schéma de principe » ; seule réserve : la vignette client (bloc non conforme, maison d'aspect IA) |
+| Motion design | 7 | Coupe animée, éclatement du mur en vrais blocs, masques, écrans partagés : riche et rythmé. Mais 2D/2,5D plutôt que la « maquette 3D » demandée ; le décor illustré et la photo restent deux styles distincts |
+| Authenticité OHEL | 7 | Images réelles uniquement, mais une seule vidéo source, en 576 × 1024 (image un peu douce en scène 5) |
+| Logo / identité | 9 | Logo officiel intact, palette OHEL partout |
+| Abonnement / contact | 9 | Clic, cloche, numéro synchronisé chiffre par chiffre, coordonnées 9 s à l'écran ; composant réutilisable testé seul (variantes YouTube / TikTok / fond image) |
+| Son | 7 | Voix calée mot à mot, mix −14 LUFS ; musique générée par code, correcte mais moins riche qu'une composition professionnelle. **Non écoutée par un humain** : la prononciation de « OHEL » (« Oël ») et de « BTCS » doit être vérifiée à l'oreille |
+| Lisibilité mobile | 8 | Titres 58–250 px, sous-titres 46 px ; quelques mentions à 24–28 px restent petites |
+
+**Corrections apportées lors de l'auto-évaluation :** traversée du mur (coupe franche vers un écran beige vide → poussée de caméra continue dans le mur du salon puis ouverture de la coupe) ; murs BTCS de la scène 4 quasi invisibles → loupe « MURS EN BTCS » avec la texture photographique réelle ; légendes et courbes agrandies (24 → 28–30 px) ; texture des blocs moins masquée dans le schéma d'inertie ; personnage photographique intégré (§12).
+
+**Pistes d'amélioration (non réalisées) :**
+1. Vidéo courte de l'acteur pour animer l'essuyage du front et le regard (le plus fort gain pour l'accroche).
+2. Version de la vignette sans logo YouTube pour TikTok/Reels, et vignette réduite à 0,6 s pour faire parler la voix plus tôt.
+3. Musique sous licence ou générée par ElevenLabs Music (crédits, à valider).
+4. Plans OHEL supplémentaires en haute définition (chantier, pose de BTCS, finitions) pour enrichir la scène 5.
+5. Maison en coupe en vraie 3D (Three.js) si l'on veut un rendu « maquette ».
