@@ -4,6 +4,7 @@ import {C, F} from '../theme';
 import {clamp01, outCubic, ramp, rnd, win} from '../animations/easing';
 import {Easing} from 'remotion';
 import logoModes from '../logoModes.json';
+import timelineCfg from '../timeline.json';
 import {toDesign} from '../warp';
 
 /** Temps global en secondes. */
@@ -267,7 +268,9 @@ export const LogoMark: React.FC<{hideFrom: number}> = ({hideFrom}) => {
 	if (o <= 0) return null;
 	// part de blanc (0..1) avec fondu de 0,3 s aux changements
 	let white = 0;
-	for (const [a, b] of logoModes as [number, number][]) {
+	const alwaysWhite = (timelineCfg as {logoMarkMode?: string}).logoMarkMode === 'white';
+	if (alwaysWhite) white = 1;
+	else for (const [a, b] of logoModes as [number, number][]) {
 		white = Math.max(white, Math.min(ramp(t, a - 0.15, a + 0.15), 1 - ramp(t, b - 0.15, b + 0.15)));
 	}
 	const width = 230;

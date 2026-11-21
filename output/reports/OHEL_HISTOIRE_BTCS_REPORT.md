@@ -154,3 +154,8 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 - **Vidéo insérée** (`assets/chantier/VID-20261121-WA0012_presse_btcs.mp4`, 11,4 s, 352 × 624, fournie par le client) : presse à BTCS motorisée en fonctionnement. Extrait de 4 s placé à l'étape 3 « Compression mécanique », entre « …puis comprimée. » et « Après la cure… » (≈ 46–50 s). Respiration créée par la déformation du temps (la narration n'est pas coupée), cadre vertical net sur fond flou de la même vidéo (masque la basse résolution), mention « Vidéo réelle · presse à BTCS », son réel de la machine mixé avec la musique baissée, sous-titres masqués pendant l'insertion. Aucun crédit ElevenLabs utilisé.
 - **Logo miniature dégagé** : tous les titres du haut de l'écran sont placés à 30 px minimum sous le logo (zone x 806–1036, y 118–233) ; vérifié sur 16 moments du film.
 - Durée : 101,6 s.
+
+
+## 16. Logo miniature tout blanc
+
+- À la demande du client, la miniature du logo (haut à droite) est en blanc pendant tout le film (`logoMarkMode: "white"` dans `src/timeline.json` ; `"auto"` rétablit la bascule selon le contraste). Le grand logo de la signature reste en couleurs d'origine sur fond blanc.
