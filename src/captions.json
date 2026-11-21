@@ -1,0 +1,1267 @@
+[
+ {
+  "start": 0.6,
+  "end": 1.4,
+  "clip": "intro",
+  "words": [
+   {
+    "text": "Vous",
+    "start": 0.6,
+    "end": 0.76
+   },
+   {
+    "text": "voulez",
+    "start": 0.787,
+    "end": 1.0
+   },
+   {
+    "text": "construire",
+    "start": 1.08,
+    "end": 1.4
+   }
+  ]
+ },
+ {
+  "start": 1.48,
+  "end": 1.96,
+  "clip": "intro",
+  "words": [
+   {
+    "text": "votre",
+    "start": 1.48,
+    "end": 1.64
+   },
+   {
+    "text": "maison ?",
+    "start": 1.68,
+    "end": 1.96
+   }
+  ]
+ },
+ {
+  "start": 2.467,
+  "end": 3.8,
+  "clip": "intro",
+  "words": [
+   {
+    "text": "Vous",
+    "start": 2.467,
+    "end": 2.52
+   },
+   {
+    "text": "connaissez",
+    "start": 2.6,
+    "end": 2.84
+   },
+   {
+    "text": "les",
+    "start": 2.92,
+    "end": 3.0
+   },
+   {
+    "text": "parpaings.",
+    "start": 3.08,
+    "end": 3.8
+   }
+  ]
+ },
+ {
+  "start": 3.92,
+  "end": 6.6,
+  "clip": "intro",
+  "words": [
+   {
+    "text": "Mais",
+    "start": 3.92,
+    "end": 4.04
+   },
+   {
+    "text": "connaissez-vous",
+    "start": 4.28,
+    "end": 4.92
+   },
+   {
+    "text": "les",
+    "start": 5.04,
+    "end": 5.16
+   },
+   {
+    "text": "BTCS ?",
+    "start": 5.24,
+    "end": 6.6
+   }
+  ]
+ },
+ {
+  "start": 9.887,
+  "end": 11.54,
+  "clip": "thermique",
+  "words": [
+   {
+    "text": "Premier",
+    "start": 9.887,
+    "end": 10.1
+   },
+   {
+    "text": "avantage",
+    "start": 10.14,
+    "end": 10.5
+   },
+   {
+    "text": "potentiel",
+    "start": 10.58,
+    "end": 11.14
+   },
+   {
+    "text": ":",
+    "start": 11.46,
+    "end": 11.54
+   }
+  ]
+ },
+ {
+  "start": 11.62,
+  "end": 13.14,
+  "clip": "thermique",
+  "words": [
+   {
+    "text": "leur",
+    "start": 11.62,
+    "end": 11.7
+   },
+   {
+    "text": "comportement",
+    "start": 11.78,
+    "end": 12.26
+   },
+   {
+    "text": "thermique.",
+    "start": 12.34,
+    "end": 13.14
+   }
+  ]
+ },
+ {
+  "start": 13.22,
+  "end": 14.42,
+  "clip": "thermique",
+  "words": [
+   {
+    "text": "Grâce",
+    "start": 13.22,
+    "end": 13.38
+   },
+   {
+    "text": "à",
+    "start": 13.46,
+    "end": 13.513
+   },
+   {
+    "text": "son",
+    "start": 13.567,
+    "end": 13.62
+   },
+   {
+    "text": "inertie,",
+    "start": 13.7,
+    "end": 14.42
+   }
+  ]
+ },
+ {
+  "start": 14.5,
+  "end": 16.26,
+  "clip": "thermique",
+  "words": [
+   {
+    "text": "le",
+    "start": 14.5,
+    "end": 14.58
+   },
+   {
+    "text": "BTCS",
+    "start": 14.66,
+    "end": 15.38
+   },
+   {
+    "text": "peut",
+    "start": 15.46,
+    "end": 15.54
+   },
+   {
+    "text": "ralentir",
+    "start": 15.62,
+    "end": 16.1
+   },
+   {
+    "text": "les",
+    "start": 16.18,
+    "end": 16.26
+   }
+  ]
+ },
+ {
+  "start": 16.34,
+  "end": 17.86,
+  "clip": "thermique",
+  "words": [
+   {
+    "text": "variations",
+    "start": 16.34,
+    "end": 16.74
+   },
+   {
+    "text": "de",
+    "start": 16.78,
+    "end": 16.82
+   },
+   {
+    "text": "température.",
+    "start": 16.9,
+    "end": 17.86
+   }
+  ]
+ },
+ {
+  "start": 17.94,
+  "end": 19.14,
+  "clip": "thermique",
+  "words": [
+   {
+    "text": "Un",
+    "start": 17.94,
+    "end": 18.02
+   },
+   {
+    "text": "atout",
+    "start": 18.1,
+    "end": 18.26
+   },
+   {
+    "text": "à",
+    "start": 18.34,
+    "end": 18.42
+   },
+   {
+    "text": "considérer",
+    "start": 18.54,
+    "end": 18.98
+   },
+   {
+    "text": "dans",
+    "start": 19.033,
+    "end": 19.14
+   }
+  ]
+ },
+ {
+  "start": 19.18,
+  "end": 20.66,
+  "clip": "thermique",
+  "words": [
+   {
+    "text": "une",
+    "start": 19.18,
+    "end": 19.22
+   },
+   {
+    "text": "maison",
+    "start": 19.3,
+    "end": 19.54
+   },
+   {
+    "text": "bien",
+    "start": 19.62,
+    "end": 19.78
+   },
+   {
+    "text": "conçue.",
+    "start": 19.86,
+    "end": 20.66
+   }
+  ]
+ },
+ {
+  "start": 24.75,
+  "end": 26.07,
+  "clip": "esthetique",
+  "words": [
+   {
+    "text": "Deuxième",
+    "start": 24.75,
+    "end": 25.03
+   },
+   {
+    "text": "avantage",
+    "start": 25.11,
+    "end": 25.67
+   },
+   {
+    "text": ":",
+    "start": 25.99,
+    "end": 26.07
+   }
+  ]
+ },
+ {
+  "start": 26.15,
+  "end": 27.19,
+  "clip": "esthetique",
+  "words": [
+   {
+    "text": "son",
+    "start": 26.15,
+    "end": 26.23
+   },
+   {
+    "text": "esthétique.",
+    "start": 26.31,
+    "end": 27.19
+   }
+  ]
+ },
+ {
+  "start": 27.23,
+  "end": 28.79,
+  "clip": "esthetique",
+  "words": [
+   {
+    "text": "Avec",
+    "start": 27.23,
+    "end": 27.43
+   },
+   {
+    "text": "sa",
+    "start": 27.51,
+    "end": 27.59
+   },
+   {
+    "text": "texture",
+    "start": 27.79,
+    "end": 27.99
+   },
+   {
+    "text": "naturelle,",
+    "start": 28.19,
+    "end": 28.79
+   }
+  ]
+ },
+ {
+  "start": 28.83,
+  "end": 30.47,
+  "clip": "esthetique",
+  "words": [
+   {
+    "text": "le",
+    "start": 28.83,
+    "end": 28.87
+   },
+   {
+    "text": "BTCS",
+    "start": 28.95,
+    "end": 29.75
+   },
+   {
+    "text": "peut",
+    "start": 29.79,
+    "end": 29.883
+   },
+   {
+    "text": "devenir",
+    "start": 29.937,
+    "end": 30.23
+   },
+   {
+    "text": "un",
+    "start": 30.35,
+    "end": 30.47
+   }
+  ]
+ },
+ {
+  "start": 30.51,
+  "end": 32.55,
+  "clip": "esthetique",
+  "words": [
+   {
+    "text": "véritable",
+    "start": 30.51,
+    "end": 31.03
+   },
+   {
+    "text": "élément",
+    "start": 31.11,
+    "end": 31.43
+   },
+   {
+    "text": "architectural,",
+    "start": 31.55,
+    "end": 32.55
+   }
+  ]
+ },
+ {
+  "start": 32.67,
+  "end": 33.67,
+  "clip": "esthetique",
+  "words": [
+   {
+    "text": "parfois",
+    "start": 32.67,
+    "end": 32.87
+   },
+   {
+    "text": "laissé",
+    "start": 32.95,
+    "end": 33.19
+   },
+   {
+    "text": "apparent",
+    "start": 33.27,
+    "end": 33.67
+   }
+  ]
+ },
+ {
+  "start": 33.75,
+  "end": 35.19,
+  "clip": "esthetique",
+  "words": [
+   {
+    "text": "pour",
+    "start": 33.75,
+    "end": 33.83
+   },
+   {
+    "text": "valoriser",
+    "start": 33.99,
+    "end": 34.31
+   },
+   {
+    "text": "le",
+    "start": 34.35,
+    "end": 34.39
+   },
+   {
+    "text": "bâtiment.",
+    "start": 34.47,
+    "end": 35.19
+   }
+  ]
+ },
+ {
+  "start": 38.77,
+  "end": 40.023,
+  "clip": "terre",
+  "words": [
+   {
+    "text": "Troisième",
+    "start": 38.77,
+    "end": 39.09
+   },
+   {
+    "text": "avantage",
+    "start": 39.17,
+    "end": 39.73
+   },
+   {
+    "text": ":",
+    "start": 39.97,
+    "end": 40.023
+   }
+  ]
+ },
+ {
+  "start": 40.077,
+  "end": 41.81,
+  "clip": "terre",
+  "words": [
+   {
+    "text": "la",
+    "start": 40.077,
+    "end": 40.13
+   },
+   {
+    "text": "valorisation",
+    "start": 40.21,
+    "end": 40.85
+   },
+   {
+    "text": "de",
+    "start": 40.89,
+    "end": 40.93
+   },
+   {
+    "text": "la",
+    "start": 41.01,
+    "end": 41.09
+   },
+   {
+    "text": "terre.",
+    "start": 41.17,
+    "end": 41.81
+   }
+  ]
+ },
+ {
+  "start": 41.89,
+  "end": 44.45,
+  "clip": "terre",
+  "words": [
+   {
+    "text": "Le",
+    "start": 41.89,
+    "end": 41.97
+   },
+   {
+    "text": "BTCS",
+    "start": 42.05,
+    "end": 42.77
+   },
+   {
+    "text": "utilise",
+    "start": 42.85,
+    "end": 43.25
+   },
+   {
+    "text": "une",
+    "start": 43.33,
+    "end": 43.41
+   },
+   {
+    "text": "terre",
+    "start": 43.45,
+    "end": 43.65
+   },
+   {
+    "text": "adaptée,",
+    "start": 43.85,
+    "end": 44.45
+   }
+  ]
+ },
+ {
+  "start": 44.57,
+  "end": 47.09,
+  "clip": "terre",
+  "words": [
+   {
+    "text": "préparée,",
+    "start": 44.57,
+    "end": 45.25
+   },
+   {
+    "text": "stabilisée",
+    "start": 45.33,
+    "end": 45.89
+   },
+   {
+    "text": "puis",
+    "start": 46.05,
+    "end": 46.21
+   },
+   {
+    "text": "comprimée.",
+    "start": 46.33,
+    "end": 47.09
+   }
+  ]
+ },
+ {
+  "start": 47.17,
+  "end": 48.77,
+  "clip": "terre",
+  "words": [
+   {
+    "text": "Selon",
+    "start": 47.17,
+    "end": 47.33
+   },
+   {
+    "text": "les",
+    "start": 47.41,
+    "end": 47.49
+   },
+   {
+    "text": "conditions",
+    "start": 47.69,
+    "end": 47.89
+   },
+   {
+    "text": "de",
+    "start": 47.93,
+    "end": 47.97
+   },
+   {
+    "text": "production,",
+    "start": 48.05,
+    "end": 48.77
+   }
+  ]
+ },
+ {
+  "start": 48.85,
+  "end": 50.29,
+  "clip": "terre",
+  "words": [
+   {
+    "text": "il",
+    "start": 48.85,
+    "end": 48.93
+   },
+   {
+    "text": "peut",
+    "start": 48.97,
+    "end": 49.09
+   },
+   {
+    "text": "favoriser",
+    "start": 49.25,
+    "end": 49.57
+   },
+   {
+    "text": "l'utilisation",
+    "start": 49.65,
+    "end": 50.29
+   }
+  ]
+ },
+ {
+  "start": 50.33,
+  "end": 51.65,
+  "clip": "terre",
+  "words": [
+   {
+    "text": "de",
+    "start": 50.33,
+    "end": 50.37
+   },
+   {
+    "text": "ressources",
+    "start": 50.45,
+    "end": 50.77
+   },
+   {
+    "text": "locales.",
+    "start": 50.85,
+    "end": 51.65
+   }
+  ]
+ },
+ {
+  "start": 54.69,
+  "end": 55.29,
+  "clip": "cout",
+  "words": [
+   {
+    "text": "Et",
+    "start": 54.69,
+    "end": 54.73
+   },
+   {
+    "text": "le",
+    "start": 54.81,
+    "end": 54.89
+   },
+   {
+    "text": "coût ?",
+    "start": 54.97,
+    "end": 55.29
+   }
+  ]
+ },
+ {
+  "start": 55.583,
+  "end": 56.33,
+  "clip": "cout",
+  "words": [
+   {
+    "text": "Il",
+    "start": 55.583,
+    "end": 55.61
+   },
+   {
+    "text": "faut",
+    "start": 55.69,
+    "end": 55.85
+   },
+   {
+    "text": "comparer",
+    "start": 55.93,
+    "end": 56.25
+   },
+   {
+    "text": "le",
+    "start": 56.29,
+    "end": 56.33
+   }
+  ]
+ },
+ {
+  "start": 56.41,
+  "end": 57.53,
+  "clip": "cout",
+  "words": [
+   {
+    "text": "prix",
+    "start": 56.41,
+    "end": 56.57
+   },
+   {
+    "text": "du",
+    "start": 56.65,
+    "end": 56.69
+   },
+   {
+    "text": "mur",
+    "start": 56.73,
+    "end": 56.89
+   },
+   {
+    "text": "fini,",
+    "start": 56.97,
+    "end": 57.53
+   }
+  ]
+ },
+ {
+  "start": 57.61,
+  "end": 59.13,
+  "clip": "cout",
+  "words": [
+   {
+    "text": "pas",
+    "start": 57.61,
+    "end": 57.69
+   },
+   {
+    "text": "seulement",
+    "start": 57.73,
+    "end": 58.01
+   },
+   {
+    "text": "celui",
+    "start": 58.09,
+    "end": 58.25
+   },
+   {
+    "text": "d'un",
+    "start": 58.33,
+    "end": 58.41
+   },
+   {
+    "text": "bloc.",
+    "start": 58.49,
+    "end": 59.13
+   }
+  ]
+ },
+ {
+  "start": 59.17,
+  "end": 60.09,
+  "clip": "cout",
+  "words": [
+   {
+    "text": "Chaque",
+    "start": 59.17,
+    "end": 59.37
+   },
+   {
+    "text": "projet",
+    "start": 59.45,
+    "end": 59.77
+   },
+   {
+    "text": "mérite",
+    "start": 59.85,
+    "end": 60.09
+   }
+  ]
+ },
+ {
+  "start": 60.17,
+  "end": 61.45,
+  "clip": "cout",
+  "words": [
+   {
+    "text": "une",
+    "start": 60.17,
+    "end": 60.25
+   },
+   {
+    "text": "étude",
+    "start": 60.41,
+    "end": 60.57
+   },
+   {
+    "text": "adaptée.",
+    "start": 60.65,
+    "end": 61.45
+   }
+  ]
+ },
+ {
+  "start": 65.94,
+  "end": 66.94,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "En",
+    "start": 65.94,
+    "end": 65.98
+   },
+   {
+    "text": "Côte",
+    "start": 66.06,
+    "end": 66.22
+   },
+   {
+    "text": "d'Ivoire,",
+    "start": 66.3,
+    "end": 66.94
+   }
+  ]
+ },
+ {
+  "start": 67.02,
+  "end": 68.14,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "OHEL",
+    "start": 67.02,
+    "end": 67.26
+   },
+   {
+    "text": "INTERNATIONAL",
+    "start": 67.62,
+    "end": 67.98
+   },
+   {
+    "text": "est",
+    "start": 68.06,
+    "end": 68.14
+   }
+  ]
+ },
+ {
+  "start": 68.22,
+  "end": 69.34,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "votre",
+    "start": 68.22,
+    "end": 68.38
+   },
+   {
+    "text": "spécialiste",
+    "start": 68.46,
+    "end": 69.1
+   },
+   {
+    "text": "de",
+    "start": 69.14,
+    "end": 69.18
+   },
+   {
+    "text": "la",
+    "start": 69.26,
+    "end": 69.34
+   }
+  ]
+ },
+ {
+  "start": 69.42,
+  "end": 70.54,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "construction",
+    "start": 69.42,
+    "end": 69.9
+   },
+   {
+    "text": "en",
+    "start": 70.06,
+    "end": 70.14
+   },
+   {
+    "text": "Blocs",
+    "start": 70.22,
+    "end": 70.38
+   },
+   {
+    "text": "de",
+    "start": 70.46,
+    "end": 70.54
+   }
+  ]
+ },
+ {
+  "start": 70.62,
+  "end": 72.14,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "Terre",
+    "start": 70.62,
+    "end": 70.78
+   },
+   {
+    "text": "Comprimée",
+    "start": 70.86,
+    "end": 71.18
+   },
+   {
+    "text": "Stabilisée.",
+    "start": 71.26,
+    "end": 72.14
+   }
+  ]
+ },
+ {
+  "start": 72.18,
+  "end": 73.5,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "Découvrez",
+    "start": 72.18,
+    "end": 72.62
+   },
+   {
+    "text": "notre",
+    "start": 72.7,
+    "end": 72.86
+   },
+   {
+    "text": "savoir-faire",
+    "start": 72.94,
+    "end": 73.5
+   }
+  ]
+ },
+ {
+  "start": 73.58,
+  "end": 74.78,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "et",
+    "start": 73.58,
+    "end": 73.66
+   },
+   {
+    "text": "nos",
+    "start": 73.7,
+    "end": 73.74
+   },
+   {
+    "text": "réalisations.",
+    "start": 73.82,
+    "end": 74.78
+   }
+  ]
+ },
+ {
+  "start": 78.62,
+  "end": 79.3,
+  "clip": "projet",
+  "words": [
+   {
+    "text": "Vous",
+    "start": 78.62,
+    "end": 78.66
+   },
+   {
+    "text": "avez",
+    "start": 78.74,
+    "end": 78.9
+   },
+   {
+    "text": "un",
+    "start": 78.94,
+    "end": 78.98
+   },
+   {
+    "text": "projet",
+    "start": 79.06,
+    "end": 79.3
+   }
+  ]
+ },
+ {
+  "start": 79.34,
+  "end": 79.94,
+  "clip": "projet",
+  "words": [
+   {
+    "text": "de",
+    "start": 79.34,
+    "end": 79.38
+   },
+   {
+    "text": "construction ?",
+    "start": 79.66,
+    "end": 79.94
+   }
+  ]
+ },
+ {
+  "start": 80.697,
+  "end": 82.03,
+  "clip": "contact",
+  "words": [
+   {
+    "text": "Contactez",
+    "start": 80.697,
+    "end": 80.99
+   },
+   {
+    "text": "OHEL",
+    "start": 81.07,
+    "end": 81.31
+   },
+   {
+    "text": "INTERNATIONAL",
+    "start": 81.67,
+    "end": 82.03
+   }
+  ]
+ },
+ {
+  "start": 82.11,
+  "end": 83.63,
+  "clip": "contact",
+  "words": [
+   {
+    "text": "pour",
+    "start": 82.11,
+    "end": 82.19
+   },
+   {
+    "text": "une",
+    "start": 82.27,
+    "end": 82.35
+   },
+   {
+    "text": "étude",
+    "start": 82.51,
+    "end": 82.67
+   },
+   {
+    "text": "personnalisée",
+    "start": 82.79,
+    "end": 83.63
+   }
+  ]
+ },
+ {
+  "start": 83.67,
+  "end": 87.79,
+  "clip": "contact",
+  "words": [
+   {
+    "text": "au",
+    "start": 83.67,
+    "end": 83.71
+   },
+   {
+    "text": "zéro",
+    "start": 83.87,
+    "end": 84.03
+   },
+   {
+    "text": "sept,",
+    "start": 84.19,
+    "end": 84.67
+   },
+   {
+    "text": "zéro",
+    "start": 84.723,
+    "end": 84.83
+   },
+   {
+    "text": "sept,",
+    "start": 84.99,
+    "end": 85.39
+   },
+   {
+    "text": "soixante-trois,",
+    "start": 85.47,
+    "end": 86.27
+   },
+   {
+    "text": "zéro",
+    "start": 86.35,
+    "end": 86.43
+   },
+   {
+    "text": "trois,",
+    "start": 86.59,
+    "end": 86.883
+   },
+   {
+    "text": "trente-cinq.",
+    "start": 86.99,
+    "end": 87.79
+   }
+  ]
+ },
+ {
+  "start": 90.32,
+  "end": 91.4,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "Pour",
+    "start": 90.32,
+    "end": 90.4
+   },
+   {
+    "text": "découvrir",
+    "start": 90.44,
+    "end": 90.88
+   },
+   {
+    "text": "nos",
+    "start": 90.96,
+    "end": 91.04
+   },
+   {
+    "text": "prochaines",
+    "start": 91.12,
+    "end": 91.4
+   }
+  ]
+ },
+ {
+  "start": 91.44,
+  "end": 93.04,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "vidéos",
+    "start": 91.44,
+    "end": 91.76
+   },
+   {
+    "text": "sur",
+    "start": 91.84,
+    "end": 91.92
+   },
+   {
+    "text": "le",
+    "start": 91.96,
+    "end": 92.0
+   },
+   {
+    "text": "BTCS,",
+    "start": 92.08,
+    "end": 93.04
+   }
+  ]
+ },
+ {
+  "start": 93.12,
+  "end": 94.48,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "abonnez-vous",
+    "start": 93.12,
+    "end": 93.68
+   },
+   {
+    "text": "et",
+    "start": 93.76,
+    "end": 93.92
+   },
+   {
+    "text": "activez",
+    "start": 94.12,
+    "end": 94.36
+   },
+   {
+    "text": "la",
+    "start": 94.4,
+    "end": 94.48
+   }
+  ]
+ },
+ {
+  "start": 94.56,
+  "end": 95.52,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "cloche",
+    "start": 94.56,
+    "end": 94.72
+   },
+   {
+    "text": "de",
+    "start": 94.76,
+    "end": 94.8
+   },
+   {
+    "text": "notification !",
+    "start": 94.88,
+    "end": 95.52
+   }
+  ]
+ },
+ {
+  "start": 96.527,
+  "end": 98.02,
+  "clip": "signature",
+  "words": [
+   {
+    "text": "OHEL",
+    "start": 96.527,
+    "end": 96.74
+   },
+   {
+    "text": "INTERNATIONAL.",
+    "start": 96.9,
+    "end": 98.02
+   }
+  ]
+ },
+ {
+  "start": 98.1,
+  "end": 99.46,
+  "clip": "signature",
+  "words": [
+   {
+    "text": "Construisons",
+    "start": 98.1,
+    "end": 98.66
+   },
+   {
+    "text": "autrement.",
+    "start": 98.74,
+    "end": 99.46
+   }
+  ]
+ },
+ {
+  "start": 99.54,
+  "end": 101.14,
+  "clip": "signature",
+  "words": [
+   {
+    "text": "Construisons",
+    "start": 99.54,
+    "end": 100.02
+   },
+   {
+    "text": "durablement.",
+    "start": 100.26,
+    "end": 101.14
+   }
+  ]
+ }
+]
