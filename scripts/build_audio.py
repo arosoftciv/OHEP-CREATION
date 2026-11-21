@@ -358,11 +358,11 @@ if VI:
     seg = va[int(VI["srcOffset"] * SR): int((VI["srcOffset"] + n1 - n0) * SR)].copy()
     fl_ = int(0.3 * SR)
     seg[:fl_] *= np.linspace(0, 1, fl_); seg[-fl_:] *= np.linspace(1, 0, fl_)
-    addn(amb, hp(seg, 60), n0, 1.0)
+    addn(amb, lp(hp(seg, 80), 4500), n0, 1.0)  # aigus du moteur adoucis
     win_ = np.zeros(N); i0, i1 = int(n0 * SR), int(n1 * SR)
     win_[i0:i1] = 1
     win_ = np.convolve(win_, np.ones(int(0.3 * SR)) / int(0.3 * SR), "same")
-    music *= (1 - 0.65 * win_)  # la musique s'efface sous le son réel
+    music *= (1 - 0.3 * win_)  # la musique baisse légèrement sous le son réel
 music *= 0.55 / max(1e-9, np.max(np.abs(music)))
 sfx *= 0.5 / max(1e-9, np.max(np.abs(sfx)))
 fade = np.ones(N); fl = int(2.5 * SR); fade[-fl:] = np.linspace(1, 0, fl) ** 1.5
@@ -393,7 +393,7 @@ mL, mR = stage(mL, mR, 0.55); sL, sR = stage(sL, sR, 0.5); vL, vR = stage(vL, vR
 
 def sat(x): return np.tanh(x * 1.1) / np.tanh(1.1)
 duckS = (1 - 0.35 * g)
-ambK = 0.55 / max(1e-9, np.max(np.abs(amb))) if np.any(amb) else 0
+ambK = (0.55 / max(1e-9, np.max(np.abs(amb)))) * (VI.get("soundLevel", 1.0) if VI else 1.0) if np.any(amb) else 0
 mixL = sat(vL + mL * duck * fade * 0.62 + sL * duckS * 0.55 + amb * ambK * 0.75)
 mixR = sat(vR + mR * duck * fade * 0.62 + sR * duckS * 0.55 + amb * ambK * 0.75)
 

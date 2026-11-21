@@ -123,7 +123,8 @@
     "designStart": 45.62,
     "designEnd": 45.86,
     "srcOffset": 1.0,
-    "label": "Vidéo réelle · presse à BTCS"
+    "label": "Vidéo réelle · presse à BTCS",
+    "soundLevel": 0.2
   },
   "logoMarkMode": "white"
 }

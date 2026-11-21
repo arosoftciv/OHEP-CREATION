@@ -159,3 +159,8 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 ## 16. Logo miniature tout blanc
 
 - À la demande du client, la miniature du logo (haut à droite) est en blanc pendant tout le film (`logoMarkMode: "white"` dans `src/timeline.json` ; `"auto"` rétablit la bascule selon le contraste). Le grand logo de la signature reste en couleurs d'origine sur fond blanc.
+
+
+## 17. Son de la machine atténué
+
+- Le son réel de la presse (vidéo insérée) est abaissé d'environ 12 dB et filtré (aigus du moteur adoucis au-dessus de 4,5 kHz) ; la musique ne baisse plus que légèrement sur ce passage. Réglage : `videoInsert.soundLevel` dans `src/timeline.json` (0,2 actuellement).
