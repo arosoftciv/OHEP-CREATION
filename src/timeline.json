@@ -1,0 +1,919 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "total": 2445,
+ "scenes": {
+  "s1_four": {
+   "from": 0,
+   "duration": 240
+  },
+  "s2_causes": {
+   "from": 240,
+   "duration": 429
+  },
+  "s3_btcs": {
+   "from": 669,
+   "duration": 447
+  },
+  "s4_conception": {
+   "from": 1116,
+   "duration": 408
+  },
+  "s5_ohel": {
+   "from": 1524,
+   "duration": 366
+  },
+  "s6_outro": {
+   "from": 1890,
+   "duration": 555
+  }
+ },
+ "clips": [
+  {
+   "id": "hook",
+   "start": 0.5,
+   "end": 6.9
+  },
+  {
+   "id": "question",
+   "start": 8.3,
+   "end": 10.15
+  },
+  {
+   "id": "causes",
+   "start": 10.7,
+   "end": 18.2
+  },
+  {
+   "id": "materiau",
+   "start": 22.8,
+   "end": 24.95
+  },
+  {
+   "id": "inertie",
+   "start": 26.4,
+   "end": 31.87
+  },
+  {
+   "id": "nuance",
+   "start": 33.6,
+   "end": 36.13
+  },
+  {
+   "id": "conception",
+   "start": 38.0,
+   "end": 46.43
+  },
+  {
+   "id": "ohel",
+   "start": 52.0,
+   "end": 58.92
+  },
+  {
+   "id": "abonnement",
+   "start": 63.6,
+   "end": 67.87
+  },
+  {
+   "id": "projet",
+   "start": 70.5,
+   "end": 71.65
+  },
+  {
+   "id": "contact",
+   "start": 72.0,
+   "end": 78.08
+  }
+ ],
+ "words": [
+  {
+   "text": "Il",
+   "clip": "hook",
+   "start": 0.5,
+   "end": 0.66
+  },
+  {
+   "text": "est",
+   "clip": "hook",
+   "start": 0.74,
+   "end": 0.82
+  },
+  {
+   "text": "quatorze",
+   "clip": "hook",
+   "start": 0.86,
+   "end": 1.22
+  },
+  {
+   "text": "heures,",
+   "clip": "hook",
+   "start": 1.3,
+   "end": 1.7
+  },
+  {
+   "text": "à",
+   "clip": "hook",
+   "start": 1.74,
+   "end": 1.78
+  },
+  {
+   "text": "Abidjan.",
+   "clip": "hook",
+   "start": 1.86,
+   "end": 2.42
+  },
+  {
+   "text": "Vous",
+   "clip": "hook",
+   "start": 2.74,
+   "end": 2.9
+  },
+  {
+   "text": "entrez",
+   "clip": "hook",
+   "start": 2.98,
+   "end": 3.22
+  },
+  {
+   "text": "chez",
+   "clip": "hook",
+   "start": 3.3,
+   "end": 3.38
+  },
+  {
+   "text": "vous…",
+   "clip": "hook",
+   "start": 3.46,
+   "end": 4.18
+  },
+  {
+   "text": "et",
+   "clip": "hook",
+   "start": 4.22,
+   "end": 4.26
+  },
+  {
+   "text": "vous",
+   "clip": "hook",
+   "start": 4.34,
+   "end": 4.5
+  },
+  {
+   "text": "avez",
+   "clip": "hook",
+   "start": 4.62,
+   "end": 4.74
+  },
+  {
+   "text": "l'impression",
+   "clip": "hook",
+   "start": 4.793,
+   "end": 5.22
+  },
+  {
+   "text": "d'entrer",
+   "clip": "hook",
+   "start": 5.3,
+   "end": 5.62
+  },
+  {
+   "text": "dans",
+   "clip": "hook",
+   "start": 5.673,
+   "end": 5.78
+  },
+  {
+   "text": "un",
+   "clip": "hook",
+   "start": 5.86,
+   "end": 5.94
+  },
+  {
+   "text": "four !",
+   "clip": "hook",
+   "start": 6.18,
+   "end": 6.58
+  },
+  {
+   "text": "Mais",
+   "clip": "question",
+   "start": 8.62,
+   "end": 8.7
+  },
+  {
+   "text": "d'où",
+   "clip": "question",
+   "start": 8.74,
+   "end": 8.9
+  },
+  {
+   "text": "vient",
+   "clip": "question",
+   "start": 8.94,
+   "end": 9.1
+  },
+  {
+   "text": "cette",
+   "clip": "question",
+   "start": 9.14,
+   "end": 9.34
+  },
+  {
+   "text": "chaleur ?",
+   "clip": "question",
+   "start": 9.38,
+   "end": 9.82
+  },
+  {
+   "text": "Le",
+   "clip": "causes",
+   "start": 11.037,
+   "end": 11.09
+  },
+  {
+   "text": "soleil",
+   "clip": "causes",
+   "start": 11.17,
+   "end": 11.49
+  },
+  {
+   "text": "chauffe",
+   "clip": "causes",
+   "start": 11.57,
+   "end": 11.85
+  },
+  {
+   "text": "la",
+   "clip": "causes",
+   "start": 11.89,
+   "end": 11.93
+  },
+  {
+   "text": "toiture,",
+   "clip": "causes",
+   "start": 11.97,
+   "end": 12.69
+  },
+  {
+   "text": "les",
+   "clip": "causes",
+   "start": 12.77,
+   "end": 12.85
+  },
+  {
+   "text": "murs",
+   "clip": "causes",
+   "start": 12.93,
+   "end": 13.33
+  },
+  {
+   "text": "et",
+   "clip": "causes",
+   "start": 13.41,
+   "end": 13.49
+  },
+  {
+   "text": "les",
+   "clip": "causes",
+   "start": 13.53,
+   "end": 13.57
+  },
+  {
+   "text": "fenêtres.",
+   "clip": "causes",
+   "start": 13.65,
+   "end": 14.53
+  },
+  {
+   "text": "Quand",
+   "clip": "causes",
+   "start": 14.57,
+   "end": 14.69
+  },
+  {
+   "text": "l'air",
+   "clip": "causes",
+   "start": 14.73,
+   "end": 14.93
+  },
+  {
+   "text": "circule",
+   "clip": "causes",
+   "start": 15.05,
+   "end": 15.33
+  },
+  {
+   "text": "mal,",
+   "clip": "causes",
+   "start": 15.45,
+   "end": 15.89
+  },
+  {
+   "text": "la",
+   "clip": "causes",
+   "start": 15.97,
+   "end": 16.05
+  },
+  {
+   "text": "chaleur",
+   "clip": "causes",
+   "start": 16.13,
+   "end": 16.37
+  },
+  {
+   "text": "peut",
+   "clip": "causes",
+   "start": 16.53,
+   "end": 16.69
+  },
+  {
+   "text": "s'accumuler",
+   "clip": "causes",
+   "start": 16.73,
+   "end": 17.25
+  },
+  {
+   "text": "à",
+   "clip": "causes",
+   "start": 17.29,
+   "end": 17.33
+  },
+  {
+   "text": "l'intérieur.",
+   "clip": "causes",
+   "start": 17.41,
+   "end": 18.45
+  },
+  {
+   "text": "Le",
+   "clip": "materiau",
+   "start": 23.13,
+   "end": 23.21
+  },
+  {
+   "text": "choix",
+   "clip": "materiau",
+   "start": 23.29,
+   "end": 23.45
+  },
+  {
+   "text": "du",
+   "clip": "materiau",
+   "start": 23.49,
+   "end": 23.53
+  },
+  {
+   "text": "matériau",
+   "clip": "materiau",
+   "start": 23.61,
+   "end": 24.09
+  },
+  {
+   "text": "compte",
+   "clip": "materiau",
+   "start": 24.17,
+   "end": 24.41
+  },
+  {
+   "text": "aussi.",
+   "clip": "materiau",
+   "start": 24.49,
+   "end": 25.13
+  },
+  {
+   "text": "Le",
+   "clip": "inertie",
+   "start": 26.66,
+   "end": 26.74
+  },
+  {
+   "text": "bé-té-cé-esse",
+   "clip": "inertie",
+   "start": 26.82,
+   "end": 27.62
+  },
+  {
+   "text": "possède",
+   "clip": "inertie",
+   "start": 27.7,
+   "end": 28.02
+  },
+  {
+   "text": "une",
+   "clip": "inertie",
+   "start": 28.1,
+   "end": 28.18
+  },
+  {
+   "text": "inertie",
+   "clip": "inertie",
+   "start": 28.22,
+   "end": 28.58
+  },
+  {
+   "text": "thermique,",
+   "clip": "inertie",
+   "start": 28.66,
+   "end": 29.38
+  },
+  {
+   "text": "qui",
+   "clip": "inertie",
+   "start": 29.42,
+   "end": 29.46
+  },
+  {
+   "text": "peut",
+   "clip": "inertie",
+   "start": 29.54,
+   "end": 29.7
+  },
+  {
+   "text": "ralentir",
+   "clip": "inertie",
+   "start": 29.78,
+   "end": 30.18
+  },
+  {
+   "text": "les",
+   "clip": "inertie",
+   "start": 30.26,
+   "end": 30.34
+  },
+  {
+   "text": "variations",
+   "clip": "inertie",
+   "start": 30.42,
+   "end": 30.82
+  },
+  {
+   "text": "de",
+   "clip": "inertie",
+   "start": 30.86,
+   "end": 30.9
+  },
+  {
+   "text": "température.",
+   "clip": "inertie",
+   "start": 30.98,
+   "end": 32.1
+  },
+  {
+   "text": "Mais",
+   "clip": "nuance",
+   "start": 33.91,
+   "end": 33.99
+  },
+  {
+   "text": "ce",
+   "clip": "nuance",
+   "start": 34.03,
+   "end": 34.07
+  },
+  {
+   "text": "n'est",
+   "clip": "nuance",
+   "start": 34.11,
+   "end": 34.23
+  },
+  {
+   "text": "pas",
+   "clip": "nuance",
+   "start": 34.31,
+   "end": 34.39
+  },
+  {
+   "text": "une",
+   "clip": "nuance",
+   "start": 34.47,
+   "end": 34.55
+  },
+  {
+   "text": "climatisation",
+   "clip": "nuance",
+   "start": 34.59,
+   "end": 35.19
+  },
+  {
+   "text": "naturelle !",
+   "clip": "nuance",
+   "start": 35.27,
+   "end": 35.83
+  },
+  {
+   "text": "Pour",
+   "clip": "conception",
+   "start": 38.287,
+   "end": 38.34
+  },
+  {
+   "text": "une",
+   "clip": "conception",
+   "start": 38.38,
+   "end": 38.42
+  },
+  {
+   "text": "maison",
+   "clip": "conception",
+   "start": 38.5,
+   "end": 38.74
+  },
+  {
+   "text": "confortable,",
+   "clip": "conception",
+   "start": 38.82,
+   "end": 39.62
+  },
+  {
+   "text": "il",
+   "clip": "conception",
+   "start": 39.66,
+   "end": 39.7
+  },
+  {
+   "text": "faut",
+   "clip": "conception",
+   "start": 39.78,
+   "end": 39.94
+  },
+  {
+   "text": "penser",
+   "clip": "conception",
+   "start": 40.073,
+   "end": 40.34
+  },
+  {
+   "text": "à",
+   "clip": "conception",
+   "start": 40.38,
+   "end": 40.42
+  },
+  {
+   "text": "la",
+   "clip": "conception",
+   "start": 40.46,
+   "end": 40.5
+  },
+  {
+   "text": "toiture,",
+   "clip": "conception",
+   "start": 40.58,
+   "end": 41.38
+  },
+  {
+   "text": "à",
+   "clip": "conception",
+   "start": 41.42,
+   "end": 41.46
+  },
+  {
+   "text": "l'ombre,",
+   "clip": "conception",
+   "start": 41.54,
+   "end": 42.1
+  },
+  {
+   "text": "à",
+   "clip": "conception",
+   "start": 42.18,
+   "end": 42.22
+  },
+  {
+   "text": "la",
+   "clip": "conception",
+   "start": 42.26,
+   "end": 42.34
+  },
+  {
+   "text": "ventilation",
+   "clip": "conception",
+   "start": 42.46,
+   "end": 43.06
+  },
+  {
+   "text": "et",
+   "clip": "conception",
+   "start": 43.22,
+   "end": 43.3
+  },
+  {
+   "text": "aux",
+   "clip": "conception",
+   "start": 43.38,
+   "end": 43.42
+  },
+  {
+   "text": "matériaux.",
+   "clip": "conception",
+   "start": 43.46,
+   "end": 44.34
+  },
+  {
+   "text": "C'est",
+   "clip": "conception",
+   "start": 44.393,
+   "end": 44.5
+  },
+  {
+   "text": "l'ensemble",
+   "clip": "conception",
+   "start": 44.54,
+   "end": 45.14
+  },
+  {
+   "text": "qui",
+   "clip": "conception",
+   "start": 45.22,
+   "end": 45.3
+  },
+  {
+   "text": "fait",
+   "clip": "conception",
+   "start": 45.38,
+   "end": 45.46
+  },
+  {
+   "text": "la",
+   "clip": "conception",
+   "start": 45.5,
+   "end": 45.54
+  },
+  {
+   "text": "différence.",
+   "clip": "conception",
+   "start": 45.62,
+   "end": 46.42
+  },
+  {
+   "text": "Avec",
+   "clip": "ohel",
+   "start": 52.23,
+   "end": 52.47
+  },
+  {
+   "text": "Oël",
+   "clip": "ohel",
+   "start": 52.55,
+   "end": 52.79
+  },
+  {
+   "text": "International,",
+   "clip": "ohel",
+   "start": 53.15,
+   "end": 53.83
+  },
+  {
+   "text": "découvrez",
+   "clip": "ohel",
+   "start": 53.91,
+   "end": 54.39
+  },
+  {
+   "text": "une",
+   "clip": "ohel",
+   "start": 54.51,
+   "end": 54.63
+  },
+  {
+   "text": "autre",
+   "clip": "ohel",
+   "start": 54.71,
+   "end": 54.87
+  },
+  {
+   "text": "approche",
+   "clip": "ohel",
+   "start": 54.99,
+   "end": 55.27
+  },
+  {
+   "text": "de",
+   "clip": "ohel",
+   "start": 55.31,
+   "end": 55.35
+  },
+  {
+   "text": "la",
+   "clip": "ohel",
+   "start": 55.39,
+   "end": 55.43
+  },
+  {
+   "text": "construction",
+   "clip": "ohel",
+   "start": 55.51,
+   "end": 55.99
+  },
+  {
+   "text": "en",
+   "clip": "ohel",
+   "start": 56.07,
+   "end": 56.23
+  },
+  {
+   "text": "bé-té-cé-esse,",
+   "clip": "ohel",
+   "start": 56.27,
+   "end": 57.27
+  },
+  {
+   "text": "adaptée",
+   "clip": "ohel",
+   "start": 57.47,
+   "end": 57.83
+  },
+  {
+   "text": "à",
+   "clip": "ohel",
+   "start": 57.87,
+   "end": 57.91
+  },
+  {
+   "text": "votre",
+   "clip": "ohel",
+   "start": 57.99,
+   "end": 58.31
+  },
+  {
+   "text": "projet.",
+   "clip": "ohel",
+   "start": 58.39,
+   "end": 59.11
+  },
+  {
+   "text": "Abonnez-vous,",
+   "clip": "abonnement",
+   "start": 63.87,
+   "end": 64.51
+  },
+  {
+   "text": "et",
+   "clip": "abonnement",
+   "start": 64.59,
+   "end": 64.67
+  },
+  {
+   "text": "activez",
+   "clip": "abonnement",
+   "start": 64.83,
+   "end": 65.07
+  },
+  {
+   "text": "la",
+   "clip": "abonnement",
+   "start": 65.11,
+   "end": 65.15
+  },
+  {
+   "text": "cloche,",
+   "clip": "abonnement",
+   "start": 65.23,
+   "end": 65.55
+  },
+  {
+   "text": "pour",
+   "clip": "abonnement",
+   "start": 65.59,
+   "end": 65.63
+  },
+  {
+   "text": "ne",
+   "clip": "abonnement",
+   "start": 65.71,
+   "end": 65.79
+  },
+  {
+   "text": "manquer",
+   "clip": "abonnement",
+   "start": 65.83,
+   "end": 66.27
+  },
+  {
+   "text": "aucune",
+   "clip": "abonnement",
+   "start": 66.39,
+   "end": 66.67
+  },
+  {
+   "text": "de",
+   "clip": "abonnement",
+   "start": 66.71,
+   "end": 66.75
+  },
+  {
+   "text": "nos",
+   "clip": "abonnement",
+   "start": 66.83,
+   "end": 66.91
+  },
+  {
+   "text": "prochaines",
+   "clip": "abonnement",
+   "start": 66.99,
+   "end": 67.31
+  },
+  {
+   "text": "vidéos !",
+   "clip": "abonnement",
+   "start": 67.39,
+   "end": 67.63
+  },
+  {
+   "text": "Vous",
+   "clip": "projet",
+   "start": 70.767,
+   "end": 70.82
+  },
+  {
+   "text": "avez",
+   "clip": "projet",
+   "start": 70.9,
+   "end": 70.98
+  },
+  {
+   "text": "un",
+   "clip": "projet",
+   "start": 71.02,
+   "end": 71.06
+  },
+  {
+   "text": "projet ?",
+   "clip": "projet",
+   "start": 71.14,
+   "end": 71.38
+  },
+  {
+   "text": "Contactez",
+   "clip": "contact",
+   "start": 72.397,
+   "end": 72.69
+  },
+  {
+   "text": "Oël",
+   "clip": "contact",
+   "start": 72.77,
+   "end": 72.93
+  },
+  {
+   "text": "International",
+   "clip": "contact",
+   "start": 73.01,
+   "end": 73.73
+  },
+  {
+   "text": "au",
+   "clip": "contact",
+   "start": 73.81,
+   "end": 73.89
+  },
+  {
+   "text": "zéro",
+   "clip": "contact",
+   "start": 74.05,
+   "end": 74.21
+  },
+  {
+   "text": "sept,",
+   "clip": "contact",
+   "start": 74.29,
+   "end": 74.69
+  },
+  {
+   "text": "zéro",
+   "clip": "contact",
+   "start": 74.73,
+   "end": 74.85
+  },
+  {
+   "text": "sept,",
+   "clip": "contact",
+   "start": 75.01,
+   "end": 75.49
+  },
+  {
+   "text": "soixante-trois,",
+   "clip": "contact",
+   "start": 75.57,
+   "end": 76.37
+  },
+  {
+   "text": "zéro",
+   "clip": "contact",
+   "start": 76.423,
+   "end": 76.53
+  },
+  {
+   "text": "trois,",
+   "clip": "contact",
+   "start": 76.69,
+   "end": 76.93
+  },
+  {
+   "text": "trente-cinq.",
+   "clip": "contact",
+   "start": 77.01,
+   "end": 77.89
+  }
+ ]
+}

@@ -1,0 +1,916 @@
+[
+ {
+  "start": 0.5,
+  "end": 1.7,
+  "clip": "hook",
+  "words": [
+   {
+    "text": "Il",
+    "start": 0.5,
+    "end": 0.66
+   },
+   {
+    "text": "est",
+    "start": 0.74,
+    "end": 0.82
+   },
+   {
+    "text": "quatorze",
+    "start": 0.86,
+    "end": 1.22
+   },
+   {
+    "text": "heures,",
+    "start": 1.3,
+    "end": 1.7
+   }
+  ]
+ },
+ {
+  "start": 1.74,
+  "end": 2.42,
+  "clip": "hook",
+  "words": [
+   {
+    "text": "à",
+    "start": 1.74,
+    "end": 1.78
+   },
+   {
+    "text": "Abidjan.",
+    "start": 1.86,
+    "end": 2.42
+   }
+  ]
+ },
+ {
+  "start": 2.74,
+  "end": 4.18,
+  "clip": "hook",
+  "words": [
+   {
+    "text": "Vous",
+    "start": 2.74,
+    "end": 2.9
+   },
+   {
+    "text": "entrez",
+    "start": 2.98,
+    "end": 3.22
+   },
+   {
+    "text": "chez",
+    "start": 3.3,
+    "end": 3.38
+   },
+   {
+    "text": "vous…",
+    "start": 3.46,
+    "end": 4.18
+   }
+  ]
+ },
+ {
+  "start": 4.22,
+  "end": 5.22,
+  "clip": "hook",
+  "words": [
+   {
+    "text": "et",
+    "start": 4.22,
+    "end": 4.26
+   },
+   {
+    "text": "vous",
+    "start": 4.34,
+    "end": 4.5
+   },
+   {
+    "text": "avez",
+    "start": 4.62,
+    "end": 4.74
+   },
+   {
+    "text": "l'impression",
+    "start": 4.793,
+    "end": 5.22
+   }
+  ]
+ },
+ {
+  "start": 5.3,
+  "end": 6.58,
+  "clip": "hook",
+  "words": [
+   {
+    "text": "d'entrer",
+    "start": 5.3,
+    "end": 5.62
+   },
+   {
+    "text": "dans",
+    "start": 5.673,
+    "end": 5.78
+   },
+   {
+    "text": "un",
+    "start": 5.86,
+    "end": 5.94
+   },
+   {
+    "text": "four !",
+    "start": 6.18,
+    "end": 6.58
+   }
+  ]
+ },
+ {
+  "start": 8.62,
+  "end": 9.82,
+  "clip": "question",
+  "words": [
+   {
+    "text": "Mais",
+    "start": 8.62,
+    "end": 8.7
+   },
+   {
+    "text": "d'où",
+    "start": 8.74,
+    "end": 8.9
+   },
+   {
+    "text": "vient",
+    "start": 8.94,
+    "end": 9.1
+   },
+   {
+    "text": "cette",
+    "start": 9.14,
+    "end": 9.34
+   },
+   {
+    "text": "chaleur ?",
+    "start": 9.38,
+    "end": 9.82
+   }
+  ]
+ },
+ {
+  "start": 11.037,
+  "end": 12.69,
+  "clip": "causes",
+  "words": [
+   {
+    "text": "Le",
+    "start": 11.037,
+    "end": 11.09
+   },
+   {
+    "text": "soleil",
+    "start": 11.17,
+    "end": 11.49
+   },
+   {
+    "text": "chauffe",
+    "start": 11.57,
+    "end": 11.85
+   },
+   {
+    "text": "la",
+    "start": 11.89,
+    "end": 11.93
+   },
+   {
+    "text": "toiture,",
+    "start": 11.97,
+    "end": 12.69
+   }
+  ]
+ },
+ {
+  "start": 12.77,
+  "end": 14.53,
+  "clip": "causes",
+  "words": [
+   {
+    "text": "les",
+    "start": 12.77,
+    "end": 12.85
+   },
+   {
+    "text": "murs",
+    "start": 12.93,
+    "end": 13.33
+   },
+   {
+    "text": "et",
+    "start": 13.41,
+    "end": 13.49
+   },
+   {
+    "text": "les",
+    "start": 13.53,
+    "end": 13.57
+   },
+   {
+    "text": "fenêtres.",
+    "start": 13.65,
+    "end": 14.53
+   }
+  ]
+ },
+ {
+  "start": 14.57,
+  "end": 15.89,
+  "clip": "causes",
+  "words": [
+   {
+    "text": "Quand",
+    "start": 14.57,
+    "end": 14.69
+   },
+   {
+    "text": "l'air",
+    "start": 14.73,
+    "end": 14.93
+   },
+   {
+    "text": "circule",
+    "start": 15.05,
+    "end": 15.33
+   },
+   {
+    "text": "mal,",
+    "start": 15.45,
+    "end": 15.89
+   }
+  ]
+ },
+ {
+  "start": 15.97,
+  "end": 18.45,
+  "clip": "causes",
+  "words": [
+   {
+    "text": "la",
+    "start": 15.97,
+    "end": 16.05
+   },
+   {
+    "text": "chaleur",
+    "start": 16.13,
+    "end": 16.37
+   },
+   {
+    "text": "peut",
+    "start": 16.53,
+    "end": 16.69
+   },
+   {
+    "text": "s'accumuler",
+    "start": 16.73,
+    "end": 17.25
+   },
+   {
+    "text": "à",
+    "start": 17.29,
+    "end": 17.33
+   },
+   {
+    "text": "l'intérieur.",
+    "start": 17.41,
+    "end": 18.45
+   }
+  ]
+ },
+ {
+  "start": 23.13,
+  "end": 25.13,
+  "clip": "materiau",
+  "words": [
+   {
+    "text": "Le",
+    "start": 23.13,
+    "end": 23.21
+   },
+   {
+    "text": "choix",
+    "start": 23.29,
+    "end": 23.45
+   },
+   {
+    "text": "du",
+    "start": 23.49,
+    "end": 23.53
+   },
+   {
+    "text": "matériau",
+    "start": 23.61,
+    "end": 24.09
+   },
+   {
+    "text": "compte",
+    "start": 24.17,
+    "end": 24.41
+   },
+   {
+    "text": "aussi.",
+    "start": 24.49,
+    "end": 25.13
+   }
+  ]
+ },
+ {
+  "start": 26.66,
+  "end": 28.58,
+  "clip": "inertie",
+  "words": [
+   {
+    "text": "Le",
+    "start": 26.66,
+    "end": 26.74
+   },
+   {
+    "text": "BTCS",
+    "start": 26.82,
+    "end": 27.62
+   },
+   {
+    "text": "possède",
+    "start": 27.7,
+    "end": 28.02
+   },
+   {
+    "text": "une",
+    "start": 28.1,
+    "end": 28.18
+   },
+   {
+    "text": "inertie",
+    "start": 28.22,
+    "end": 28.58
+   }
+  ]
+ },
+ {
+  "start": 28.66,
+  "end": 30.18,
+  "clip": "inertie",
+  "words": [
+   {
+    "text": "thermique,",
+    "start": 28.66,
+    "end": 29.38
+   },
+   {
+    "text": "qui",
+    "start": 29.42,
+    "end": 29.46
+   },
+   {
+    "text": "peut",
+    "start": 29.54,
+    "end": 29.7
+   },
+   {
+    "text": "ralentir",
+    "start": 29.78,
+    "end": 30.18
+   }
+  ]
+ },
+ {
+  "start": 30.26,
+  "end": 32.1,
+  "clip": "inertie",
+  "words": [
+   {
+    "text": "les",
+    "start": 30.26,
+    "end": 30.34
+   },
+   {
+    "text": "variations",
+    "start": 30.42,
+    "end": 30.82
+   },
+   {
+    "text": "de",
+    "start": 30.86,
+    "end": 30.9
+   },
+   {
+    "text": "température.",
+    "start": 30.98,
+    "end": 32.1
+   }
+  ]
+ },
+ {
+  "start": 33.91,
+  "end": 34.55,
+  "clip": "nuance",
+  "words": [
+   {
+    "text": "Mais",
+    "start": 33.91,
+    "end": 33.99
+   },
+   {
+    "text": "ce",
+    "start": 34.03,
+    "end": 34.07
+   },
+   {
+    "text": "n'est",
+    "start": 34.11,
+    "end": 34.23
+   },
+   {
+    "text": "pas",
+    "start": 34.31,
+    "end": 34.39
+   },
+   {
+    "text": "une",
+    "start": 34.47,
+    "end": 34.55
+   }
+  ]
+ },
+ {
+  "start": 34.59,
+  "end": 35.83,
+  "clip": "nuance",
+  "words": [
+   {
+    "text": "climatisation",
+    "start": 34.59,
+    "end": 35.19
+   },
+   {
+    "text": "naturelle !",
+    "start": 35.27,
+    "end": 35.83
+   }
+  ]
+ },
+ {
+  "start": 38.287,
+  "end": 39.62,
+  "clip": "conception",
+  "words": [
+   {
+    "text": "Pour",
+    "start": 38.287,
+    "end": 38.34
+   },
+   {
+    "text": "une",
+    "start": 38.38,
+    "end": 38.42
+   },
+   {
+    "text": "maison",
+    "start": 38.5,
+    "end": 38.74
+   },
+   {
+    "text": "confortable,",
+    "start": 38.82,
+    "end": 39.62
+   }
+  ]
+ },
+ {
+  "start": 39.66,
+  "end": 41.38,
+  "clip": "conception",
+  "words": [
+   {
+    "text": "il",
+    "start": 39.66,
+    "end": 39.7
+   },
+   {
+    "text": "faut",
+    "start": 39.78,
+    "end": 39.94
+   },
+   {
+    "text": "penser",
+    "start": 40.073,
+    "end": 40.34
+   },
+   {
+    "text": "à",
+    "start": 40.38,
+    "end": 40.42
+   },
+   {
+    "text": "la",
+    "start": 40.46,
+    "end": 40.5
+   },
+   {
+    "text": "toiture,",
+    "start": 40.58,
+    "end": 41.38
+   }
+  ]
+ },
+ {
+  "start": 41.42,
+  "end": 43.3,
+  "clip": "conception",
+  "words": [
+   {
+    "text": "à",
+    "start": 41.42,
+    "end": 41.46
+   },
+   {
+    "text": "l'ombre,",
+    "start": 41.54,
+    "end": 42.1
+   },
+   {
+    "text": "à",
+    "start": 42.18,
+    "end": 42.22
+   },
+   {
+    "text": "la",
+    "start": 42.26,
+    "end": 42.34
+   },
+   {
+    "text": "ventilation",
+    "start": 42.46,
+    "end": 43.06
+   },
+   {
+    "text": "et",
+    "start": 43.22,
+    "end": 43.3
+   }
+  ]
+ },
+ {
+  "start": 43.38,
+  "end": 44.34,
+  "clip": "conception",
+  "words": [
+   {
+    "text": "aux",
+    "start": 43.38,
+    "end": 43.42
+   },
+   {
+    "text": "matériaux.",
+    "start": 43.46,
+    "end": 44.34
+   }
+  ]
+ },
+ {
+  "start": 44.393,
+  "end": 46.42,
+  "clip": "conception",
+  "words": [
+   {
+    "text": "C'est",
+    "start": 44.393,
+    "end": 44.5
+   },
+   {
+    "text": "l'ensemble",
+    "start": 44.54,
+    "end": 45.14
+   },
+   {
+    "text": "qui",
+    "start": 45.22,
+    "end": 45.3
+   },
+   {
+    "text": "fait",
+    "start": 45.38,
+    "end": 45.46
+   },
+   {
+    "text": "la",
+    "start": 45.5,
+    "end": 45.54
+   },
+   {
+    "text": "différence.",
+    "start": 45.62,
+    "end": 46.42
+   }
+  ]
+ },
+ {
+  "start": 52.23,
+  "end": 53.83,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "Avec",
+    "start": 52.23,
+    "end": 52.47
+   },
+   {
+    "text": "OHEL",
+    "start": 52.55,
+    "end": 52.79
+   },
+   {
+    "text": "INTERNATIONAL,",
+    "start": 53.15,
+    "end": 53.83
+   }
+  ]
+ },
+ {
+  "start": 53.91,
+  "end": 55.27,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "découvrez",
+    "start": 53.91,
+    "end": 54.39
+   },
+   {
+    "text": "une",
+    "start": 54.51,
+    "end": 54.63
+   },
+   {
+    "text": "autre",
+    "start": 54.71,
+    "end": 54.87
+   },
+   {
+    "text": "approche",
+    "start": 54.99,
+    "end": 55.27
+   }
+  ]
+ },
+ {
+  "start": 55.31,
+  "end": 57.27,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "de",
+    "start": 55.31,
+    "end": 55.35
+   },
+   {
+    "text": "la",
+    "start": 55.39,
+    "end": 55.43
+   },
+   {
+    "text": "construction",
+    "start": 55.51,
+    "end": 55.99
+   },
+   {
+    "text": "en",
+    "start": 56.07,
+    "end": 56.23
+   },
+   {
+    "text": "BTCS,",
+    "start": 56.27,
+    "end": 57.27
+   }
+  ]
+ },
+ {
+  "start": 57.47,
+  "end": 59.11,
+  "clip": "ohel",
+  "words": [
+   {
+    "text": "adaptée",
+    "start": 57.47,
+    "end": 57.83
+   },
+   {
+    "text": "à",
+    "start": 57.87,
+    "end": 57.91
+   },
+   {
+    "text": "votre",
+    "start": 57.99,
+    "end": 58.31
+   },
+   {
+    "text": "projet.",
+    "start": 58.39,
+    "end": 59.11
+   }
+  ]
+ },
+ {
+  "start": 63.87,
+  "end": 64.51,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "Abonnez-vous,",
+    "start": 63.87,
+    "end": 64.51
+   }
+  ]
+ },
+ {
+  "start": 64.59,
+  "end": 65.55,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "et",
+    "start": 64.59,
+    "end": 64.67
+   },
+   {
+    "text": "activez",
+    "start": 64.83,
+    "end": 65.07
+   },
+   {
+    "text": "la",
+    "start": 65.11,
+    "end": 65.15
+   },
+   {
+    "text": "cloche,",
+    "start": 65.23,
+    "end": 65.55
+   }
+  ]
+ },
+ {
+  "start": 65.59,
+  "end": 66.91,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "pour",
+    "start": 65.59,
+    "end": 65.63
+   },
+   {
+    "text": "ne",
+    "start": 65.71,
+    "end": 65.79
+   },
+   {
+    "text": "manquer",
+    "start": 65.83,
+    "end": 66.27
+   },
+   {
+    "text": "aucune",
+    "start": 66.39,
+    "end": 66.67
+   },
+   {
+    "text": "de",
+    "start": 66.71,
+    "end": 66.75
+   },
+   {
+    "text": "nos",
+    "start": 66.83,
+    "end": 66.91
+   }
+  ]
+ },
+ {
+  "start": 66.99,
+  "end": 67.63,
+  "clip": "abonnement",
+  "words": [
+   {
+    "text": "prochaines",
+    "start": 66.99,
+    "end": 67.31
+   },
+   {
+    "text": "vidéos !",
+    "start": 67.39,
+    "end": 67.63
+   }
+  ]
+ },
+ {
+  "start": 70.767,
+  "end": 71.38,
+  "clip": "projet",
+  "words": [
+   {
+    "text": "Vous",
+    "start": 70.767,
+    "end": 70.82
+   },
+   {
+    "text": "avez",
+    "start": 70.9,
+    "end": 70.98
+   },
+   {
+    "text": "un",
+    "start": 71.02,
+    "end": 71.06
+   },
+   {
+    "text": "projet ?",
+    "start": 71.14,
+    "end": 71.38
+   }
+  ]
+ },
+ {
+  "start": 72.397,
+  "end": 73.73,
+  "clip": "contact",
+  "words": [
+   {
+    "text": "Contactez",
+    "start": 72.397,
+    "end": 72.69
+   },
+   {
+    "text": "OHEL",
+    "start": 72.77,
+    "end": 72.93
+   },
+   {
+    "text": "INTERNATIONAL",
+    "start": 73.01,
+    "end": 73.73
+   }
+  ]
+ },
+ {
+  "start": 73.81,
+  "end": 77.89,
+  "clip": "contact",
+  "words": [
+   {
+    "text": "au",
+    "start": 73.81,
+    "end": 73.89
+   },
+   {
+    "text": "zéro",
+    "start": 74.05,
+    "end": 74.21
+   },
+   {
+    "text": "sept,",
+    "start": 74.29,
+    "end": 74.69
+   },
+   {
+    "text": "zéro",
+    "start": 74.73,
+    "end": 74.85
+   },
+   {
+    "text": "sept,",
+    "start": 75.01,
+    "end": 75.49
+   },
+   {
+    "text": "soixante-trois,",
+    "start": 75.57,
+    "end": 76.37
+   },
+   {
+    "text": "zéro",
+    "start": 76.423,
+    "end": 76.53
+   },
+   {
+    "text": "trois,",
+    "start": 76.69,
+    "end": 76.93
+   },
+   {
+    "text": "trente-cinq.",
+    "start": 77.01,
+    "end": 77.89
+   }
+  ]
+ }
+]
