@@ -1,6 +1,6 @@
 OHEL INTERNATIONAL — L'HISTOIRE DU BTCS
 Voix-off (ElevenLabs, voix « Brian – Deep, Resonant and Comforting », modèle eleven_multilingual_v2)
-Prononciations imposées : OHEL = « o-el » (écrit « Oël » pour la synthèse) ; BTCS = « bé-té-cé-esse ».
+Prononciations imposées : OHEL = « o-el » (écrit « Oël » pour la synthèse) ; BTCS = « bé-té-cé-esse » ; savoir-faire = « savoir fer ».
 Les passages concernés ont été réenregistrés et insérés dans la prise d'origine (scripts/splice_voice.py).
 Durée de la voix : 81 s, sans accélération — vidéo de 97.7 s.
 

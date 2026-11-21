@@ -1,6 +1,7 @@
 """Assemble la voix-off finale (Brian) à partir de la prise d'origine et des corrections :
   - « Oël » (prononciation o-el) : voiceover_patch_oel
   - « bé-té-cé-esse », nouvelle réplique de contact, carte de fin : voiceover_patch_btcs_contact
+  - « savoir-faire » prononcé « savoir fer » (deux phrases) : voiceover_patch_savoirfaire
 Les horodatages mot à mot sont recalculés par décalage (pas de nouvelle transcription).
 « bé-té-cé-esse » est découpé en 4 jetons B. T. C. S. (animation lettre par lettre) ;
 le numéro dicté devient un seul jeton « +225 07 07 63 03 35 ».
@@ -20,15 +21,18 @@ SRC = {
     "raw": (raw, words("assets/audio/archive_brian/voiceover_brian_original_words.json")),
     "oel": (load("assets/audio/voiceover_patch_oel.mp3"), words("assets/audio/voiceover_patch_oel_words.json")),
     "fix": (load("assets/audio/voiceover_patch_btcs_contact.mp3"), words("assets/audio/voiceover_patch_btcs_contact_words.json")),
+    "sf": (load("assets/audio/voiceover_patch_savoirfaire.mp3"), words("assets/audio/voiceover_patch_savoirfaire_words.json")),
 }
 ref = rms(raw[int(30.2 * SR):int(44.4 * SR)])
-GAIN = {"raw": 1.0, "oel": ref / rms(SRC["oel"][0][:int(4.45 * SR)]), "fix": ref / rms(SRC["fix"][0])}
+GAIN = {"raw": 1.0, "oel": ref / rms(SRC["oel"][0][:int(4.45 * SR)]), "fix": ref / rms(SRC["fix"][0]), "sf": ref / rms(SRC["sf"][0])}
 
 pieces = [
-    ("raw", 0.0, 37.20),       # … puis comprimée.
+    ("raw", 0.0, 15.20),       # … avec la terre.
+    ("sf", 0.0, 3.30),         # En Afrique, ce savoir fer a traversé les générations.
+    ("raw", 18.70, 37.20),     # Mais l'histoire … puis comprimée.
     ("fix", 0.0, 7.15),        # Après la cure … le bé-té-cé-esse.
     ("raw", 44.60, 49.10),     # Et ces blocs … contemporains.
-    ("oel", 0.0, 4.56),        # En Côte d'Ivoire, Oël International … construction.
+    ("sf", 3.42, 8.36),        # En Côte d'Ivoire, Oël International met ce savoir fer … construction.
     ("raw", 54.30, 58.30),     # De la terre à l'architecture : une histoire qui continue.
     ("oel", 4.62, 6.034),      # Oël International.
     ("silence", 0, 0.45),
@@ -54,6 +58,9 @@ def fix_tokens(ws):
             out.append({**w, "text": "+225 07 07 63 03 35,", "end": ws[j]["end"]})
             i = j + 1; continue
         if t == "Oël": w = {**w, "text": "OHEL"}
+        if t == "savoir" and i + 1 < len(ws) and ws[i + 1]["text"].startswith("fer"):
+            out.append({**w, "text": "savoir-faire" + ws[i + 1]["text"][3:], "end": ws[i + 1]["end"]})
+            i += 2; continue
         out.append(w); i += 1
     return out
 

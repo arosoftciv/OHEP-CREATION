@@ -1,7 +1,7 @@
 # OHEL INTERNATIONAL — « L'histoire du BTCS » · Rapport de production
 
 **Version :** 01 (version de contrôle validée → version définitive)
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 97,7 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · 98,1 s · MP4 H.264 (CRF 18, yuv420p) + AAC 192 kb/s
 **Son :** −14 LUFS intégrés, crête vraie −1,5 dBTP (norme réseaux sociaux)
 
 ## 1. Livrables
@@ -141,3 +141,9 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 - **Contact :** « Contactez-nous » est remplacé par « Contactez OHEL International au +225 07 07 63 03 35, par appel ou WhatsApp. » — numéro dicté chiffre par chiffre ; à l'écran, la ligne du numéro puis celle de WhatsApp s'éclairent pendant qu'ils sont prononcés ; bandeau « VOUS AVEZ UN PROJET ? CONTACTEZ OHEL ».
 - Une seule prise pour ces trois passages (440 crédits). Total ElevenLabs du projet : 2 659 crédits, sans dépassement.
 - Durée : 97.7 s (la réplique de contact est plus longue ; les coordonnées restent à l'écran pendant toute la dictée).
+
+
+## 14. Prononciation de « savoir-faire »
+
+- La voix prononçait « faire » à l'anglaise (« fair »). Les deux phrases concernées (« En Afrique, ce savoir-faire a traversé les générations » et « En Côte d'Ivoire, OHEL International met ce savoir-faire au service de la construction ») ont été réenregistrées avec la graphie phonétique « savoir fer » (139 crédits) puis insérées ; les sous-titres affichent « savoir-faire ».
+- Total ElevenLabs du projet : 2 798 crédits, sans dépassement. Durée : 98,1 s.

@@ -11,37 +11,37 @@
     {
       "id": "B",
       "rawStart": 7.571,
-      "rawEnd": 18.644,
+      "rawEnd": 18.461,
       "at": 12.0
     },
     {
       "id": "C",
-      "rawStart": 18.855,
-      "rawEnd": 30.034,
+      "rawStart": 18.655,
+      "rawEnd": 29.834,
       "at": 24.5
     },
     {
       "id": "D",
-      "rawStart": 30.187,
-      "rawEnd": 44.328,
+      "rawStart": 29.987,
+      "rawEnd": 44.128,
       "at": 38.95
     },
     {
       "id": "E",
-      "rawStart": 44.763,
-      "rawEnd": 53.447,
+      "rawStart": 44.563,
+      "rawEnd": 53.739,
       "at": 57.95
     },
     {
       "id": "F",
-      "rawStart": 53.573,
-      "rawEnd": 71.125,
+      "rawStart": 53.752,
+      "rawEnd": 71.304,
       "at": 71.0
     },
     {
       "id": "G",
-      "rawStart": 72.099,
-      "rawEnd": 81.199,
+      "rawStart": 72.278,
+      "rawEnd": 81.378,
       "at": 89.5
     }
   ],
@@ -97,7 +97,7 @@
       0.35
     ],
     [
-      66.8,
+      67.3,
       69.9,
       0.45
     ],
