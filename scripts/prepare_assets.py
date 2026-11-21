@@ -112,3 +112,10 @@ lt = Image.fromarray(out, "RGBA")
 lt = lt.crop(lt.getbbox())
 lt.save(P + "logo_ohel_transparent.png")
 print("logo transparent", lt.size)
+
+# 10) Logo tout blanc (même silhouette, pour les fonds où la version couleur manque de contraste)
+lw = Image.open(P + "logo_ohel_transparent.png")
+wa = np.array(lw)
+wa[..., :3] = 255
+Image.fromarray(wa, "RGBA").save(P + "logo_ohel_blanc.png")
+print("logo blanc ok")

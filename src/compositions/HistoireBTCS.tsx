@@ -15,7 +15,7 @@ import {vw} from '../voice';
 export type AudioMode = 'full' | 'music' | 'none';
 
 /** audio : 'full' = voix + musique, 'music' = musique + effets sans voix, 'none' = muet. */
-export const HistoireBTCS: React.FC<{subtitles?: boolean; audio?: AudioMode}> = ({subtitles = true, audio = 'full'}) => {
+export const HistoireBTCS: React.FC<{subtitles?: boolean; audio?: AudioMode; logoMark?: boolean}> = ({subtitles = true, audio = 'full', logoMark = true}) => {
 	return (
 		<AbsoluteFill style={{background: C.night}}>
 			<S1Nature />
@@ -25,7 +25,7 @@ export const HistoireBTCS: React.FC<{subtitles?: boolean; audio?: AudioMode}> = 
 			<S5Architecture />
 			<S6Signature />
 			<FilmFinish />
-			<LogoMark hideFrom={74.8} />
+			{logoMark && <LogoMark hideFrom={74.8} />}
 			{subtitles && <Subtitles hideFrom={vw('Vous') - 0.05} />}
 			{audio === 'full' && <Audio src={staticFile('audio/mix.wav')} />}
 			{audio === 'music' && <Audio src={staticFile('audio/music_sfx.wav')} />}

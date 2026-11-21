@@ -3,6 +3,7 @@ import {AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig} from 're
 import {C, F} from '../theme';
 import {clamp01, outCubic, ramp, rnd, win} from '../animations/easing';
 import {Easing} from 'remotion';
+import logoModes from '../logoModes.json';
 
 /** Temps global en secondes. */
 export const useT = () => {
@@ -256,24 +257,31 @@ export const MatterWipe: React.FC<{at: number; dur?: number; color?: string; see
 export const fadeIO = (t: number, a: number, b: number, fi = 0.5, fo = 0.5) => win(t, a, b, fi, fo);
 export {clamp01, outCubic};
 
-/** Logo miniature en haut à droite (version sans fond blanc), masqué pendant la signature finale. */
+/** Logo miniature en haut à droite (sans fond blanc). Bascule en version blanche sur les fonds où la
+ * version couleur manque de contraste (plages calculées par scripts/logo_contrast.py → src/logoModes.json).
+ * Masqué pendant la signature finale. */
 export const LogoMark: React.FC<{hideFrom: number}> = ({hideFrom}) => {
 	const t = useT();
 	const o = Math.min(ramp(t, 0.6, 1.4), 1 - ramp(t, hideFrom - 0.5, hideFrom));
 	if (o <= 0) return null;
+	// part de blanc (0..1) avec fondu de 0,3 s aux changements
+	let white = 0;
+	for (const [a, b] of logoModes as [number, number][]) {
+		white = Math.max(white, Math.min(ramp(t, a - 0.15, a + 0.15), 1 - ramp(t, b - 0.15, b + 0.15)));
+	}
 	const width = 230;
+	const style: React.CSSProperties = {position: 'absolute', top: 118, right: 44, width, height: width * (563 / 1128)};
 	return (
-		<Img
-			src={staticFile('img/logo_ohel_transparent.png')}
-			style={{
-				position: 'absolute',
-				top: 118,
-				right: 44,
-				width,
-				height: width * (563 / 1128),
-				opacity: o,
-				filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.55)) drop-shadow(0 3px 8px rgba(0,0,0,0.55))',
-			}}
-		/>
+		<>
+			{white < 1 && (
+				<Img
+					src={staticFile('img/logo_ohel_transparent.png')}
+					style={{...style, opacity: o * (1 - white), filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.55)) drop-shadow(0 3px 8px rgba(0,0,0,0.55))'}}
+				/>
+			)}
+			{white > 0 && (
+				<Img src={staticFile('img/logo_ohel_blanc.png')} style={{...style, opacity: o * white, filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.6))'}} />
+			)}
+		</>
 	);
 };
