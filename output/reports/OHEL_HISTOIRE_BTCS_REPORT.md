@@ -53,7 +53,7 @@ Le dépôt était vide et **aucun des fichiers nommés dans le brief n'a été f
 - **Musique :** composée **par code** pour ce projet (`scripts/build_audio.py`) — aucun échantillon ni piste tierce, donc aucun droit à acquérir. Évolution en 4 actes : kalimba pentatonique, vent, tambour grave (origines) → pulsation basse/kick et impacts mécaniques à l'arrivée de la presse (transformation) → nappes et progression ré m–si♭–fa–do (architecture) → résolution en ré majeur avec accent sur le logo (OHEL).
 - **Ducking automatique :** la musique baisse d'environ 8 dB pendant la narration (enveloppe de la voix, attaque 60 ms / relâche 450 ms).
 - **Sous-titres :** générés depuis la transcription, incrustés (mot courant mis en valeur) et fournis en SRT.
-- Limite honnête : la musique synthétisée est sobre et fonctionnelle ; pour un rendu orchestral plus riche, une piste ElevenLabs Music ou une musique sous licence pourrait la remplacer (coût à valider).
+- Spatialisation : réverbération stéréo à convolution (réponses impulsionnelles décorrélées G/D) + léger effet Haas sur la musique ; voix centrée (corrélation G/D du mix 0,91, de la musique 0,67 : large mais compatible mono). Limite honnête : la musique reste synthétisée par code ; une piste ElevenLabs Music ou une musique sous licence serait plus riche (coût en crédits à valider).
 
 ## 5. Structure et motion design (85 s)
 
@@ -98,3 +98,16 @@ Zones de sécurité : textes entre y ≈ 210 et 1 560 px, marges latérales ≥ 
 - Vérifier l'orthographe du domaine **ohelintermondial.com** (repris tel que fourni, alors que la marque est « OHEL INTERNATIONAL »).
 - Les ouvriers du brief (« hommes ivoiriens adultes avec EPI ») sont représentés par un pictogramme stylisé (aucune image de personne générée). Des photos réelles de l'atelier de production OHEL renforceraient fortement la scène 4.
 - La photo de la mosquée est en basse résolution (496 × 619) : agrandie ×3 avec accentuation ; une version haute définition améliorerait la scène 2.
+
+
+## 9. Corrections après auto-évaluation
+
+| Faiblesse relevée | Correction appliquée | Reste à faire (client) |
+|---|---|---|
+| Logo final flou en grand | Affiché à 560 px au lieu de 700 px (source 398 px) | Fournir `556713.png` |
+| Images d'aspect IA présentées comme OHEL | Atelier : mention « Visuel d'illustration · fabrication des BTCS » ; maison : « Image de référence » | Remplacer par de vraies photos OHEL |
+| Musique plate | Réverbération stéréo, élargissement, voix centrée | Option : musique ElevenLabs/licence (crédits) |
+| Presse illustrée basique | Ombre portée, boulons, reflets métalliques | — |
+| Aucune réalisation réelle OHEL | Non corrigeable sans fichiers | Photos de bâtiments achevés et d'intérieurs |
+| Accent possible de Brian | Non vérifiable sans écoute | Écoute ; sinon voix française native |
+| Droits des médias | Non vérifiables | Confirmer mosquée, termitières, maison, affiches |

@@ -214,6 +214,8 @@ const PressRig: React.FC<{t: number}> = ({t}) => {
 					<path d="M-470,40 Q-390,-90 -300,-30 Q-250,-80 -200,40 Z" fill="url(#soil)" filter="url(#soilTex)" />
 					{/* sol */}
 					<rect x={-520} y={40} width={1040} height={8} fill={C.sand} opacity={0.4} />
+					{/* ombre portée au sol */}
+					<ellipse cx={20} cy={46} rx={300} ry={22} fill="rgba(0,0,0,0.45)" />
 					{/* socle */}
 					<rect x={-200} y={-10} width={400} height={50} rx={6} fill="url(#steelV)" stroke="#232A2F" strokeWidth={3} />
 					<rect x={-170} y={-60} width={30} height={60} fill="url(#steel)" />
@@ -238,6 +240,18 @@ const PressRig: React.FC<{t: number}> = ({t}) => {
 							<circle cx={0} cy={-7} r={9} fill="#2B3236" />
 						</g>
 					</g>
+					{/* boulons et reflets */}
+					{[-180, -120, 120, 180].map((bx) => (
+						<circle key={bx} cx={bx} cy={15} r={7} fill="#C9D1D6" stroke="#232A2F" strokeWidth={2} />
+					))}
+					{[-MW / 2 - 8, MW / 2 + 8].map((bx) => (
+						<g key={bx}>
+							<circle cx={bx} cy={-60 - MH + 10} r={6} fill="#C9D1D6" stroke="#232A2F" strokeWidth={2} />
+							<circle cx={bx} cy={-70} r={6} fill="#C9D1D6" stroke="#232A2F" strokeWidth={2} />
+						</g>
+					))}
+					<rect x={-MW / 2 - 14} y={-60 - MH - 6} width={MW + 28} height={5} fill="rgba(255,255,255,0.35)" rx={2} />
+					<rect x={-196} y={-6} width={392} height={4} fill="rgba(255,255,255,0.35)" rx={2} />
 					{/* montants */}
 					<rect x={MW / 2 + 22} y={-420} width={26} height={360} fill="url(#steel)" stroke="#232A2F" strokeWidth={2} />
 					{/* levier */}

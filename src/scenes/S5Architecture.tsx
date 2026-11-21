@@ -33,7 +33,7 @@ export const S5Architecture: React.FC = () => {
 			<KineticTitle text={'LA TERRE\nSE RÉINVENTE.'} start={58.6} end={62.5} y={250} size={92} accent={['RÉINVENTE.']} />
 			<BrandTitle t={t} />
 			<SourceTag text="Image de référence · architecture contemporaine" start={61.3} end={62.6} y={1318} />
-			<SourceTag text="Fabrication des BTCS · OHEL INTERNATIONAL" start={63.0} end={70.1} y={1318} />
+			<SourceTag text="Visuel d'illustration · fabrication des BTCS" start={63.0} end={70.1} y={1318} />
 		</AbsoluteFill>
 	);
 };

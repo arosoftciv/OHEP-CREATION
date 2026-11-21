@@ -11,9 +11,9 @@ import {vw} from '../voice';
  * un masque circulaire révèle le logo : le fichier du logo est affiché tel quel, jamais redessiné.
  * Accent musical sur « OHEL International » (75,3 s). */
 
-const LOGO_W = 700;
+const LOGO_W = 560; // affiché plus petit : la source provisoire (398 px) reste nette
 const LOGO_H = (LOGO_W * 0.88) * (200 / 398) + LOGO_W * 0.12;
-const LOGO_TOP = 540;
+const LOGO_TOP = 560;
 
 export const S6Signature: React.FC = () => {
 	const t = useT();

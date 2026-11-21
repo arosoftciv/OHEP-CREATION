@@ -324,23 +324,46 @@ music = lp(music, 14000)
 music *= 0.55 / max(1e-9, np.max(np.abs(music)))
 sfx *= 0.5 / max(1e-9, np.max(np.abs(sfx)))
 fade = np.ones(N); fl = int(2.5 * SR); fade[-fl:] = np.linspace(1, 0, fl) ** 1.5
-music_d = music * duck * fade
-sfx_d = sfx * (1 - 0.35 * g)
+# ---------------------------------------------------------------- spatialisation stéréo
+# réverbération à convolution (réponses impulsionnelles synthétiques décorrélées gauche/droite)
+from scipy.signal import fftconvolve
+def ir(seed, dur=2.4):
+    r = np.random.default_rng(seed)
+    t = np.arange(int(dur * SR)) / SR
+    x = r.standard_normal(len(t)) * np.exp(-t / 0.55)
+    x = lp(x, 7000) * np.minimum(1, t / 0.012)  # pré-délai doux
+    return x / np.sqrt(np.sum(x ** 2))
+IR_L, IR_R = ir(11), ir(12)
+def stereo_verb(x, wet):
+    return x + wet * fftconvolve(x, IR_L)[:N], x + wet * fftconvolve(x, IR_R)[:N]
+# léger élargissement : la musique est un peu décalée entre les canaux (effet Haas 9 ms) avant réverbération
+haas = int(0.009 * SR)
+music_wide = np.concatenate([np.zeros(haas), music[:-haas]])
+mL, mR = stereo_verb(0.75 * music + 0.25 * music_wide, 0.55)
+mR = 0.75 * mR + 0.25 * np.concatenate([music_wide[haas:], np.zeros(haas)])
+sL, sR = stereo_verb(sfx, 0.35)
+vL, vR = stereo_verb(voice, 0.06)  # voix : très légère ambiance, centrée
 
-mix = voice * 1.0 + music_d * 0.62 + sfx_d * 0.55
-mix = np.tanh(mix * 1.1) / np.tanh(1.1)
+def stage(a, b, k):  # normalise la paire stéréo
+    m = max(np.max(np.abs(a)), np.max(np.abs(b)), 1e-9)
+    return a * k / m, b * k / m
+mL, mR = stage(mL, mR, 0.55); sL, sR = stage(sL, sR, 0.5); vL, vR = stage(vL, vR, 0.7)
+
+def sat(x): return np.tanh(x * 1.1) / np.tanh(1.1)
+duckS = (1 - 0.35 * g)
+mixL = sat(vL + mL * duck * fade * 0.62 + sL * duckS * 0.55)
+mixR = sat(vR + mR * duck * fade * 0.62 + sR * duckS * 0.55)
 
 
-def w(name, x):
-    x = np.clip(x, -1, 1)
-    wavfile.write(f"public/audio/{name}.wav", SR, (np.stack([x, x], 1) * 32767).astype(np.int16))
+def w(name, x, y=None):
+    x = np.clip(x, -1, 1); y = x if y is None else np.clip(y, -1, 1)
+    wavfile.write(f"public/audio/{name}.wav", SR, (np.stack([x, y], 1) * 32767).astype(np.int16))
 
 
-w("voice", voice); w("music", music * fade); w("sfx", sfx)
-w("mix_raw", mix)
+w("voice", voice); w("music", mL * fade, mR * fade); w("sfx", sL, sR)
+w("mix_raw", mixL, mixR)
 # version visuelle sans voix : musique + effets, sans ducking
-bed = np.tanh((music * fade * 0.62 + sfx * 0.55) * 1.1) / np.tanh(1.1)
-w("bed_raw", bed)
+w("bed_raw", sat(mL * fade * 0.62 + sL * 0.55), sat(mR * fade * 0.62 + sR * 0.55))
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "public/audio/bed_raw.wav",
                 "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", str(SR), "public/audio/music_sfx.wav"], check=True)
 # normalisation de loudness pour les réseaux sociaux (-14 LUFS, crête -1.5 dBTP)
