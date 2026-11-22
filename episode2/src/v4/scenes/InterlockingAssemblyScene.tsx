@@ -15,9 +15,9 @@ import {RisingWall} from '../../v3/RisingWall';
 export const InterlockingAssemblyScene: React.FC = () => {
   const f = useCurrentFrame();
   const fSys = relWord('s04_pose', 'autobloquants');
-  const fSec = relWord('s04_pose', 'sec');
-  const fMortier = relWord('s04_pose', 'mortier');
-  const fMoins = relWord('s04_pose', 'moins');
+  const fSec = relWord('s04_pose', 'ciment'); // « Pas besoin de ciment pour la pose »
+  const fMortier = fSec + 18;
+  const fMoins = relWord('s04_pose', "s'emboîtent"); // « … comme des Légo »
   const B = fSys + 60; // bascule vers le schéma
   const toB = lerp(f, B - 8, B + 10);
   const zoom = interpolate(f, [0, B], [1.0, 1.18], clamp);
@@ -59,7 +59,7 @@ export const InterlockingAssemblyScene: React.FC = () => {
             </div>
             <div style={{marginTop: 14}}>
               <Banner at={fSec} bg={C.earth} size={36}>
-                BTCS : POSE À SEC SELON LE PROCÉDÉ
+                BTCS : PAS DE CIMENT POUR LA POSE
               </Banner>
             </div>
           </div>
@@ -78,12 +78,12 @@ export const InterlockingAssemblyScene: React.FC = () => {
           </div>
           {/* message clé */}
           <div style={{position: 'absolute', top: 1240, left: 0, right: 0, display: 'flex', justifyContent: 'center'}}>
-            <Banner at={fMoins} bg={C.green} size={50}>
-              MOINS DE MORTIER DE POSE
+            <Banner at={fMoins} bg={C.green} size={36} style={{whiteSpace: 'nowrap'}}>
+              LES BLOCS S'EMBOÎTENT COMME DES LEGO
             </Banner>
           </div>
           <Note at={B + 20} top={338}>
-            Schéma de principe · pose à sec ≠ absence de joints ni de tout mortier ou coulis dans l'ouvrage (notice OHEL)
+            Schéma de principe · blocs posés à sec, sans ciment · fondations, chaînages et éléments en béton selon le projet
           </Note>
         </AbsoluteFill>
       ) : null}

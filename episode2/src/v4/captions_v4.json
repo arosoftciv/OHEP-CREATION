@@ -513,368 +513,405 @@
   ]
  },
  {
-  "start": 40.24,
-  "end": 40.8,
+  "start": 40.04,
+  "end": 40.6,
   "clip": "pose",
   "words": [
    {
     "text": "Mais",
-    "start": 40.24,
-    "end": 40.32
+    "start": 40.04,
+    "end": 40.12
    },
    {
     "text": "ce",
-    "start": 40.36,
-    "end": 40.4
+    "start": 40.16,
+    "end": 40.2
    },
    {
     "text": "n'est",
-    "start": 40.453,
-    "end": 40.56
+    "start": 40.253,
+    "end": 40.36
    },
    {
     "text": "pas",
-    "start": 40.6,
-    "end": 40.64
+    "start": 40.4,
+    "end": 40.44
    },
    {
     "text": "tout !",
-    "start": 40.72,
-    "end": 40.8
+    "start": 40.52,
+    "end": 40.6
    }
   ]
  },
  {
-  "start": 41.387,
-  "end": 42.8,
+  "start": 41.187,
+  "end": 42.6,
   "clip": "pose",
   "words": [
    {
     "text": "Les",
-    "start": 41.387,
-    "end": 41.44
+    "start": 41.187,
+    "end": 41.24
    },
    {
     "text": "blocs",
-    "start": 41.52,
-    "end": 41.68
+    "start": 41.32,
+    "end": 41.48
    },
    {
     "text": "autobloquants",
-    "start": 41.76,
-    "end": 42.24
+    "start": 41.56,
+    "end": 42.04
    },
    {
     "text": "d'OHEL",
-    "start": 42.293,
-    "end": 42.64
+    "start": 42.093,
+    "end": 42.44
    },
    {
     "text": "sont",
-    "start": 42.693,
-    "end": 42.8
+    "start": 42.493,
+    "end": 42.6
    }
   ]
  },
  {
-  "start": 42.88,
-  "end": 45.04,
+  "start": 42.68,
+  "end": 44.84,
   "clip": "pose",
   "words": [
    {
     "text": "conçus",
-    "start": 42.88,
-    "end": 43.2
+    "start": 42.68,
+    "end": 43.0
    },
    {
     "text": "pour",
-    "start": 43.28,
-    "end": 43.36
+    "start": 43.08,
+    "end": 43.16
    },
    {
     "text": "faciliter",
-    "start": 43.48,
-    "end": 43.92
+    "start": 43.28,
+    "end": 43.72
    },
    {
     "text": "la",
-    "start": 44.0,
-    "end": 44.08
+    "start": 43.8,
+    "end": 43.88
    },
    {
     "text": "pose",
-    "start": 44.16,
-    "end": 44.24
+    "start": 43.96,
+    "end": 44.04
    },
    {
     "text": "à",
-    "start": 44.28,
-    "end": 44.32
+    "start": 44.08,
+    "end": 44.12
    },
    {
     "text": "sec.",
-    "start": 44.4,
-    "end": 45.04
+    "start": 44.2,
+    "end": 44.84
    }
   ]
  },
  {
-  "start": 45.08,
-  "end": 45.68,
+  "start": 44.64,
+  "end": 46.24,
   "clip": "pose",
   "words": [
    {
-    "text": "Moins",
-    "start": 45.08,
-    "end": 45.2
+    "text": "Pas",
+    "start": 44.64,
+    "end": 44.8
+   },
+   {
+    "text": "besoin",
+    "start": 44.88,
+    "end": 45.04
    },
    {
     "text": "de",
-    "start": 45.28,
-    "end": 45.32
+    "start": 45.12,
+    "end": 45.2
    },
    {
-    "text": "mortier",
-    "start": 45.36,
+    "text": "ciment",
+    "start": 45.28,
+    "end": 45.6
+   },
+   {
+    "text": "pour",
+    "start": 45.64,
     "end": 45.68
+   },
+   {
+    "text": "la",
+    "start": 45.76,
+    "end": 45.84
+   },
+   {
+    "text": "pose :",
+    "start": 45.92,
+    "end": 46.24
    }
   ]
  },
  {
-  "start": 45.76,
-  "end": 46.88,
+  "start": 46.667,
+  "end": 47.52,
   "clip": "pose",
   "words": [
    {
-    "text": "courant",
-    "start": 45.76,
-    "end": 45.92
-   },
-   {
-    "text": "entre",
-    "start": 46.04,
-    "end": 46.16
-   },
-   {
     "text": "les",
-    "start": 46.2,
-    "end": 46.24
+    "start": 46.667,
+    "end": 46.72
    },
    {
-    "text": "blocs,",
-    "start": 46.32,
-    "end": 46.88
+    "text": "blocs",
+    "start": 46.76,
+    "end": 46.96
+   },
+   {
+    "text": "s'emboîtent",
+    "start": 47.0,
+    "end": 47.52
    }
   ]
  },
  {
-  "start": 50.42,
-  "end": 51.02,
+  "start": 47.56,
+  "end": 48.56,
+  "clip": "pose",
+  "words": [
+   {
+    "text": "comme",
+    "start": 47.56,
+    "end": 47.76
+   },
+   {
+    "text": "des",
+    "start": 47.8,
+    "end": 47.84
+   },
+   {
+    "text": "Lego.",
+    "start": 47.88,
+    "end": 48.56
+   }
+  ]
+ },
+ {
+  "start": 50.11,
+  "end": 50.79,
   "clip": "rapidite",
   "words": [
    {
-    "text": "et",
-    "start": 50.42,
-    "end": 50.46
-   },
-   {
-    "text": "un",
-    "start": 50.5,
-    "end": 50.54
+    "text": "Le",
+    "start": 50.11,
+    "end": 50.15
    },
    {
     "text": "montage",
-    "start": 50.62,
-    "end": 51.02
+    "start": 50.23,
+    "end": 50.55
+   },
+   {
+    "text": "est",
+    "start": 50.67,
+    "end": 50.79
    }
   ]
  },
  {
-  "start": 51.1,
-  "end": 52.62,
+  "start": 50.87,
+  "end": 52.1,
   "clip": "rapidite",
   "words": [
    {
     "text": "potentiellement",
-    "start": 51.1,
-    "end": 51.66
+    "start": 50.87,
+    "end": 51.43
    },
    {
     "text": "plus",
-    "start": 51.7,
-    "end": 51.74
+    "start": 51.51,
+    "end": 51.59
    },
    {
     "text": "rapide.",
-    "start": 51.86,
-    "end": 52.62
+    "start": 51.71,
+    "end": 52.1
    }
   ]
  },
  {
-  "start": 56.26,
-  "end": 57.54,
+  "start": 55.56,
+  "end": 56.84,
   "clip": "structure",
   "words": [
    {
     "text": "Pour",
-    "start": 56.26,
-    "end": 56.34
+    "start": 55.56,
+    "end": 55.64
    },
    {
     "text": "certaines",
-    "start": 56.42,
-    "end": 56.66
+    "start": 55.72,
+    "end": 55.96
    },
    {
     "text": "maisons",
-    "start": 56.7,
-    "end": 56.98
+    "start": 56.0,
+    "end": 56.28
    },
    {
     "text": "basses,",
-    "start": 57.087,
-    "end": 57.54
+    "start": 56.387,
+    "end": 56.84
    }
   ]
  },
  {
-  "start": 57.62,
-  "end": 59.14,
+  "start": 56.92,
+  "end": 58.44,
   "clip": "structure",
   "words": [
    {
     "text": "les",
-    "start": 57.62,
-    "end": 57.7
+    "start": 56.92,
+    "end": 57.0
    },
    {
     "text": "BTCS",
-    "start": 57.78,
-    "end": 58.34
+    "start": 57.08,
+    "end": 57.64
    },
    {
     "text": "peuvent",
-    "start": 58.42,
-    "end": 58.58
+    "start": 57.72,
+    "end": 57.88
    },
    {
     "text": "participer",
-    "start": 58.7,
-    "end": 59.14
+    "start": 58.0,
+    "end": 58.44
    }
   ]
  },
  {
-  "start": 59.18,
-  "end": 60.66,
+  "start": 58.48,
+  "end": 59.96,
   "clip": "structure",
   "words": [
    {
     "text": "à",
-    "start": 59.18,
-    "end": 59.22
+    "start": 58.48,
+    "end": 58.52
    },
    {
     "text": "la",
-    "start": 59.26,
-    "end": 59.3
+    "start": 58.56,
+    "end": 58.6
    },
    {
     "text": "structure",
-    "start": 59.38,
-    "end": 59.78
+    "start": 58.68,
+    "end": 59.08
    },
    {
     "text": "porteuse.",
-    "start": 59.94,
-    "end": 60.66
+    "start": 59.24,
+    "end": 59.96
    }
   ]
  },
  {
-  "start": 60.7,
-  "end": 62.1,
+  "start": 60.0,
+  "end": 61.4,
   "clip": "structure",
   "words": [
    {
     "text": "Pour",
-    "start": 60.7,
-    "end": 60.74
+    "start": 60.0,
+    "end": 60.04
    },
    {
     "text": "les",
-    "start": 60.82,
-    "end": 60.9
+    "start": 60.12,
+    "end": 60.2
    },
    {
     "text": "bâtiments",
-    "start": 60.953,
-    "end": 61.22
+    "start": 60.253,
+    "end": 60.52
    },
    {
     "text": "à",
-    "start": 61.3,
-    "end": 61.38
+    "start": 60.6,
+    "end": 60.68
    },
    {
     "text": "étages,",
-    "start": 61.5,
-    "end": 62.1
+    "start": 60.8,
+    "end": 61.4
    }
   ]
  },
  {
-  "start": 62.18,
-  "end": 63.22,
+  "start": 61.48,
+  "end": 62.52,
   "clip": "structure",
   "words": [
    {
     "text": "ils",
-    "start": 62.18,
-    "end": 62.26
+    "start": 61.48,
+    "end": 61.56
    },
    {
     "text": "peuvent",
-    "start": 62.3,
-    "end": 62.5
+    "start": 61.6,
+    "end": 61.8
    },
    {
     "text": "aussi",
-    "start": 62.58,
-    "end": 62.7
+    "start": 61.88,
+    "end": 62.0
    },
    {
     "text": "servir",
-    "start": 62.74,
-    "end": 63.14
+    "start": 62.04,
+    "end": 62.44
    },
    {
     "text": "au",
-    "start": 63.18,
-    "end": 63.22
+    "start": 62.48,
+    "end": 62.52
    }
   ]
  },
  {
-  "start": 63.3,
-  "end": 64.9,
+  "start": 62.6,
+  "end": 64.2,
   "clip": "structure",
   "words": [
    {
     "text": "remplissage",
-    "start": 63.3,
-    "end": 63.78
+    "start": 62.6,
+    "end": 63.08
    },
    {
     "text": "d'une",
-    "start": 63.82,
-    "end": 63.94
+    "start": 63.12,
+    "end": 63.24
    },
    {
     "text": "ossature.",
-    "start": 64.02,
-    "end": 64.9
+    "start": 63.32,
+    "end": 64.2
    }
   ]
  },

@@ -10,7 +10,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 TL = json.loads((ROOT / 'src/v4/timeline_v4.json').read_text())
 
 FIX = {
-    'bé-té-cé-esse': 'BTCS', 'bé-té-cé-esse,': 'BTCS,', 'Oël': 'OHEL', "d'Oël": "d'OHEL",
+    'Légo': 'Lego', 'bé-té-cé-esse': 'BTCS', 'bé-té-cé-esse,': 'BTCS,', 'Oël': 'OHEL', "d'Oël": "d'OHEL",
     'International': 'INTERNATIONAL', 'International,': 'INTERNATIONAL,', 'International.': 'INTERNATIONAL.',
 }
 NUM = {'zéro': '0', 'sept,': '7', 'sept': '7', 'soixante-trois,': '63', 'trois,': '3', 'trente-cinq.': '35.'}

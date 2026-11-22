@@ -12,7 +12,7 @@ import {ConstructionSavingsScene} from './scenes/ConstructionSavingsScene';
 import {OhelSpecialistScene} from './scenes/OhelSpecialistScene';
 import {OhelBrandOutroV4} from './OhelBrandOutroV4';
 import {CaptionsV4} from './CaptionsV4';
-import {LogoMini} from '../v3/common';
+import {LogoWatermark} from '../components/ui';
 
 const S = TL.scenes;
 
@@ -38,7 +38,7 @@ export const OhelVideo02V4: React.FC<{subtitles?: boolean; audio?: boolean}> = (
     slogan2: rel(wordTime('construisons', 1, o0)),
   };
   const digits = [wordTime('zéro', 0, o0), wordTime('zéro', 1, o0), wordTime('soixante', 0, o0), wordTime('zéro', 2, o0), wordTime('trente', 0, o0)].map(rel);
-  // miniature du logo officiel couleur : masquée pendant la révélation du logo (scène 9) et le générique
+  // miniature blanche du logo officiel : masquée pendant la révélation du logo (scène 9) et le générique
   const fHide = Math.round((wordTime('réalisations', 0, S.s09_ohel.from / TL.fps) + 34 / 30) * TL.fps) + S.s09_ohel.from - S.s09_ohel.from;
   const wm = interpolate(frame, [6, 18, fHide - 8, fHide], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const seq = (id: keyof typeof S, el: React.ReactNode) => (
@@ -61,7 +61,8 @@ export const OhelVideo02V4: React.FC<{subtitles?: boolean; audio?: boolean}> = (
       {seq('s10_outro', <OhelBrandOutroV4 cues={cues} phoneDigitCues={digits} />)}
       {wm > 0 ? (
         <AbsoluteFill style={{opacity: wm}}>
-          <LogoMini />
+          {/* miniature : logo officiel en version blanche (silhouette exacte du fichier 556713), demandée par le client pour la visibilité */}
+          <LogoWatermark width={200} top={112} right={50} />
         </AbsoluteFill>
       ) : null}
       {subtitles ? <CaptionsV4 /> : null}

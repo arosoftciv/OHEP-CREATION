@@ -239,7 +239,7 @@ for r in range(3):
 T5 = SCt['s05_rapidite'][0]
 for r in range(5):
     add(knock(0.45), T5 + (8 + 9 * r) / 30, pan=-0.1)
-for word, sc in [('autobloquants', 's04_pose'), ('sec', 's04_pose'), ('moins', 's04_pose'), ('montage', 's05_rapidite'), ('rapide', 's05_rapidite')]:
+for word, sc in [('autobloquants', 's04_pose'), ('sec', 's04_pose'), ('ciment', 's04_pose'), ('montage', 's05_rapidite'), ('rapide', 's05_rapidite')]:
     add(tone(81, 0.4, 'bell') * 0.05, Ws(word, sc), pan=0.4)
 add(whoosh(0.7) * 0.4, T5 - 0.4)
 add(whoosh(0.9) * 0.45, b - 0.45)

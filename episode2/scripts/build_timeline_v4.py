@@ -9,32 +9,34 @@ import json, subprocess, pathlib
 import numpy as np
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-RAW = ROOT / 'assets/audio/voiceover_v4_raw.mp3'
-WORDS = ROOT / 'assets/audio/voiceover_v4_words.json'
+RAW = ROOT / 'assets/audio/voiceover_v4_patched.wav'
+WORDS = ROOT / 'assets/audio/voiceover_v4_patched_words.json'
 FPS, SR = 30, 48000
 
 # (id, début brut, fin brute, position dans le film) — coupes au milieu des silences (silencedetect -38 dB)
 CLIPS = [
+    # voix V4 + correctif « Pas besoin de ciment pour la pose : … comme des Légo. Le montage est potentiellement plus rapide. »
+    # (prise ElevenLabs séparée raccordée à 35,16 s à la place de « Moins de mortier courant… plus rapide », assets/audio/voiceover_v4_patched.wav)
     ('intro',       0.00,  6.10,   0.50),
     ('thermique',   6.10, 19.65,   8.40),
     ('solidite',   19.65, 30.32,  25.60),
-    ('pose',       30.32, 37.12,  40.00),
-    ('rapidite',   37.12, 39.26,  50.30),
-    ('structure',  39.26, 47.96,  56.00),
-    ('finitions',  47.96, 56.23,  67.50),
-    ('economies',  56.23, 63.90,  78.30),
-    ('ohel',       63.90, 72.87,  88.50),
-    ('contact',    72.87, 79.88, 101.00),
-    ('abonnement', 79.88, 84.84, 108.60),
-    ('signature',  84.84, 89.63, 114.10),
+    ('pose',       30.32, 38.91,  39.80),
+    ('rapidite',   38.91, 41.16,  49.90),
+    ('structure',  41.16, 49.86,  55.30),
+    ('finitions',  49.86, 58.13,  67.50),
+    ('economies',  58.13, 65.80,  78.30),
+    ('ohel',       65.80, 74.77,  88.50),
+    ('contact',    74.77, 81.78, 101.00),
+    ('abonnement', 81.78, 86.74, 108.60),
+    ('signature',  86.74, 91.53, 114.10),
 ]
 SCENES = [
     ('s01_intro',        0.0,   8.0),
     ('s02_thermique',    8.0,  25.0),   # ThermalComfortScene
     ('s03_solidite',    25.0,  39.5),   # MechanicalStrengthScene
-    ('s04_pose',        39.5,  49.6),   # InterlockingAssemblyScene
-    ('s05_rapidite',    49.6,  55.5),   # ConstructionSpeedScene
-    ('s06_structure',   55.5,  67.0),   # LoadBearingVsInfillScene
+    ('s04_pose',        39.5,  49.4),   # InterlockingAssemblyScene
+    ('s05_rapidite',    49.4,  54.8),   # ConstructionSpeedScene
+    ('s06_structure',   54.8,  67.0),   # LoadBearingVsInfillScene
     ('s07_finitions',   67.0,  77.8),   # NaturalFinishesScene
     ('s08_economies',   77.8,  88.0),   # ConstructionSavingsScene
     ('s09_ohel',        88.0, 100.5),   # OHEL + révélation du logo

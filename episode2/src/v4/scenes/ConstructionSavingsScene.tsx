@@ -12,7 +12,7 @@ import {CONFIG} from '../config';
  * CONFIG.showVerified20PercentClaim = true (comparatif réel documenté).
  */
 const ROWS: [string, string][] = [
-  ['MORTIER DE POSE', 'Pose à sec selon le procédé'],
+  ['CIMENT DE POSE', 'Blocs posés à sec, sans ciment'],
   ["TEMPS DE MAIN-D'ŒUVRE", 'Montage simplifié'],
   ['OPTIMISATION STRUCTURELLE', 'Murs porteurs si le dimensionnement le permet'],
   ['CRÉPISSAGE ET FINITIONS', 'Murs apparents dans certaines conditions'],

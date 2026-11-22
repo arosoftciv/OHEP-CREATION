@@ -16,13 +16,13 @@ Durée réelle de la narration : 89,6 s (aucune accélération). Repères = déb
 [00:26.6] Autre avantage : la solidité. Lorsqu'ils sont correctement fabriqués et mis en œuvre, les BTCS peuvent constituer des murs résistants, y compris porteurs lorsque le dimensionnement le permet.
 
 ## Scène 4 — Pose autobloquante (InterlockingAssemblyScene)
-[00:41.0] Mais ce n'est pas tout ! Les blocs autobloquants d'OHEL sont conçus pour faciliter la pose à sec. Moins de mortier courant entre les blocs,
+[00:40.8] Mais ce n'est pas tout ! Les blocs autobloquants d'OHEL sont conçus pour faciliter la pose à sec. Pas besoin de ciment pour la pose : les blocs s'emboîtent comme des Lego.
 
 ## Scène 5 — Rapidité de construction (ConstructionSpeedScene)
-[00:51.3] et un montage potentiellement plus rapide.
+[00:50.9] Le montage est potentiellement plus rapide.
 
 ## Scène 6 — Murs porteurs et remplissage (LoadBearingVsInfillScene)
-[00:57.0] Pour certaines maisons basses, les BTCS peuvent participer à la structure porteuse. Pour les bâtiments à étages, ils peuvent aussi servir au remplissage d'une ossature.
+[00:56.3] Pour certaines maisons basses, les BTCS peuvent participer à la structure porteuse. Pour les bâtiments à étages, ils peuvent aussi servir au remplissage d'une ossature.
 
 ## Scène 7 — Esthétique et finitions (NaturalFinishesScene)
 [01:08.5] Et les finitions ? La texture naturelle du BTCS permet, dans certaines conditions, de conserver des murs apparents sans crépissage systématique.
