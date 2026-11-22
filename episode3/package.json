@@ -1,0 +1,26 @@
+{
+  "name": "ohel-video-03-pluie",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts OhelVideo03RainResistance out/raw.mp4",
+    "cover": "remotion still src/index.ts OhelVideo03Cover output/OHEL_VIDEO_03_COVER.png",
+    "export": "bash scripts/export_final.sh"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^5.3.0",
+    "@remotion/cli": "^4.0.545",
+    "@remotion/fonts": "^4.0.545",
+    "@remotion/media": "^4.0.545",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.545",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.545",
+    "@remotion/renderer": "^4.0.545"
+  }
+}
