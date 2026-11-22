@@ -48,7 +48,17 @@ Le contenu de toutes les autres séquences est inchangé ; seul leur minutage es
 Côté identité, rien ne change : logo officiel 556713 (miniature blanche, grands logos en couleur), aucun cadre blanc, photos authentiques des blocs non modifiées.
 
 ## 3. Contrôle qualité
-RESULTATS_CONTROLE
+| Point | Résultat |
+|---|---|
+| Message dominant | « DEHORS, LA CHALEUR. » et « DEDANS, LE CONFORT NATUREL. » sont visibles dans le plan extérieur (00:12), dans le salon pendant environ 3 s (00:14 – 00:17) et en conclusion en écran partagé (00:30 – 00:35). |
+| Sous-titre | « LE BTCS AU SERVICE DU CONFORT THERMIQUE » dans le salon et en conclusion. |
+| Aucune promesse non démontrée | Aucune des formulations interdites. Aucune température intérieure ni aucun gain chiffré. Mentions « Illustration · ambiance, aucune mesure de température », « Schéma de principe · sans valeurs mesurées · inertie ≠ isolation », « selon conception, toiture, ventilation et climat ». |
+| Synchronisation | Plans calés sur les mots réels de la nouvelle narration (Scribe) : la caméra entre au mot « Mais », l'inertie arrive au mot « Grâce », la conception adaptée au mot « Avec », le message final au second « Dehors ». Contrôle image par image : `controle_v5/scene_thermique_1s.jpg`. |
+| Transitions sonores | Nappe chaude dehors, souffle au passage de la porte, accords doux à l'intérieur, groove pédagogique, deux accents sur le message final. Ducking sous la voix. Raccord voix sans coupure. |
+| Autres séquences | Contenu identique à la V4, décalé de +9,6 s (vérifié sur `controle_v5/planche_toutes_les_3s.jpg`). |
+| Logo | Fichier officiel 556713 uniquement (miniature blanche, grands logos en couleur). Aucun cadre blanc. |
+| Conclusion | OHEL INTERNATIONAL, spécialiste de la construction en BTCS en Côte d'Ivoire ; contact +225 07 07 63 03 35 et ohelintermondial.com ; « ABONNEZ-VOUS », « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! ». |
+| MP4 final | 132,1 s, 1080 × 1920 (9:16), 30 i/s, H.264 High, AAC 48 kHz, couverture intégrée, 53,8 Mo. Décodage complet sans erreur. Sonie −14,2 LUFS, crête −1,2 dBFS. |
 
 ## 4. Fichiers produits
 
