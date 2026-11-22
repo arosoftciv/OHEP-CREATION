@@ -47,7 +47,19 @@ La V3 est une nouvelle composition, `OhelVideo02V3`, dont le code est isolé dan
 | Numéro WhatsApp | Validé | +225 07 07 63 03 35 (dicté et affiché) ; site ohelintermondial.com. |
 
 ## 3. Vérifications effectuées
-RESULTATS_CONTROLE
+| Point | Résultat |
+|---|---|
+| Emboîtement | Aucun mécanisme inventé : photo réelle avec annotations, et schéma de face qui renvoie à la notice OHEL. En attente : vidéo de montage ou schéma technique OHEL. |
+| Terminologie | Vocabulaire employé : BTCS, parpaing, pose à sec selon le système, mortier de pose, chaînages, linteaux, fondations, ossature béton armé, remplissage. Rien ne dit qu'il n'y a « aucun joint ». |
+| Indications structurelles | Mention « Selon étude et dimensionnement structurels. » Aucune cote, aucun entraxe. |
+| Chiffres inventés | Aucun : ni 21 m², ni 20 %, ni montant (scènes 3 et 6). |
+| Logo | Fichier officiel en couleur partout. Pas de miniature monochrome. **Pas de carré ni de cadre blanc** dans le générique (fond clair, logo posé dessus). |
+| Synchronisation | Les animations sont calées sur les horodatages réels des mots (transcription Scribe). Les répliques sont placées sans accélération. Le son est décalé d'exactement 1,0 s pour la vignette d'ouverture. |
+| Sous-titres | Incrustés (57 groupes, mot en cours surligné), masqués pendant le contact et la signature, où le texte est déjà à l'écran. Le SRT est décalé de 1 s. |
+| WhatsApp | « +225 07 07 63 03 35 » affiché pendant la dictée (chiffres surlignés en synchronisation), puis rappelé dans le bandeau. |
+| Abonnement et cloche | Bouton « ABONNEZ-VOUS ! » avec clic, cloche qui sonne au mot « cloche », « POUR NE RIEN MANQUER ! » : tout est visible (voir la planche à 01:24 et 01:27). |
+| Lecture du MP4 | Décodage complet sans erreur (ffmpeg). 96,5 s, 1080 × 1920, 30 i/s, H.264 High, AAC 48 kHz stéréo, couverture intégrée (attached_pic), 37,7 Mo. Sonie −14,2 LUFS, crête −1,2 dBFS. |
+| Planche | `output/controle_v3/planche_toutes_les_3s.jpg`. Le passage sombre vers 00:21 correspond au fondu d'entrée de la scène 3 (10 images). |
 
 ## 4. Fichiers produits
 
