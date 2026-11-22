@@ -1,0 +1,1188 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "total": 3075,
+ "scenes": {
+  "s1_choix": {
+   "from": 0,
+   "duration": 270
+  },
+  "s2_thermique": {
+   "from": 270,
+   "duration": 450
+  },
+  "s3_esthetique": {
+   "from": 720,
+   "duration": 420
+  },
+  "s4_terre": {
+   "from": 1140,
+   "duration": 480
+  },
+  "s5_cout": {
+   "from": 1620,
+   "duration": 330
+  },
+  "s6_ohel": {
+   "from": 1950,
+   "duration": 390
+  },
+  "s7_outro": {
+   "from": 2340,
+   "duration": 735
+  }
+ },
+ "clips": [
+  {
+   "id": "intro",
+   "start": 0.6,
+   "end": 6.9
+  },
+  {
+   "id": "thermique",
+   "start": 9.6,
+   "end": 20.55
+  },
+  {
+   "id": "esthetique",
+   "start": 24.6,
+   "end": 35.1
+  },
+  {
+   "id": "terre",
+   "start": 38.6,
+   "end": 51.6
+  },
+  {
+   "id": "cout",
+   "start": 54.6,
+   "end": 61.35
+  },
+  {
+   "id": "ohel",
+   "start": 65.8,
+   "end": 74.7
+  },
+  {
+   "id": "projet",
+   "start": 78.5,
+   "end": 80.15
+  },
+  {
+   "id": "contact",
+   "start": 80.4,
+   "end": 87.75
+  },
+  {
+   "id": "abonnement",
+   "start": 90.2,
+   "end": 95.8
+  },
+  {
+   "id": "signature",
+   "start": 96.3,
+   "end": 101.11
+  }
+ ],
+ "words": [
+  {
+   "text": "Vous",
+   "clip": "intro",
+   "start": 0.6,
+   "end": 0.76
+  },
+  {
+   "text": "voulez",
+   "clip": "intro",
+   "start": 0.787,
+   "end": 1.0
+  },
+  {
+   "text": "construire",
+   "clip": "intro",
+   "start": 1.08,
+   "end": 1.4
+  },
+  {
+   "text": "votre",
+   "clip": "intro",
+   "start": 1.48,
+   "end": 1.64
+  },
+  {
+   "text": "maison ?",
+   "clip": "intro",
+   "start": 1.68,
+   "end": 1.96
+  },
+  {
+   "text": "Vous",
+   "clip": "intro",
+   "start": 2.467,
+   "end": 2.52
+  },
+  {
+   "text": "connaissez",
+   "clip": "intro",
+   "start": 2.6,
+   "end": 2.84
+  },
+  {
+   "text": "les",
+   "clip": "intro",
+   "start": 2.92,
+   "end": 3.0
+  },
+  {
+   "text": "parpaings.",
+   "clip": "intro",
+   "start": 3.08,
+   "end": 3.8
+  },
+  {
+   "text": "Mais",
+   "clip": "intro",
+   "start": 3.92,
+   "end": 4.04
+  },
+  {
+   "text": "connaissez-vous",
+   "clip": "intro",
+   "start": 4.28,
+   "end": 4.92
+  },
+  {
+   "text": "les",
+   "clip": "intro",
+   "start": 5.04,
+   "end": 5.16
+  },
+  {
+   "text": "bé-té-cé-esse ?",
+   "clip": "intro",
+   "start": 5.24,
+   "end": 6.6
+  },
+  {
+   "text": "Premier",
+   "clip": "thermique",
+   "start": 9.887,
+   "end": 10.1
+  },
+  {
+   "text": "avantage",
+   "clip": "thermique",
+   "start": 10.14,
+   "end": 10.5
+  },
+  {
+   "text": "potentiel",
+   "clip": "thermique",
+   "start": 10.58,
+   "end": 11.14
+  },
+  {
+   "text": ":",
+   "clip": "thermique",
+   "start": 11.46,
+   "end": 11.54
+  },
+  {
+   "text": "leur",
+   "clip": "thermique",
+   "start": 11.62,
+   "end": 11.7
+  },
+  {
+   "text": "comportement",
+   "clip": "thermique",
+   "start": 11.78,
+   "end": 12.26
+  },
+  {
+   "text": "thermique.",
+   "clip": "thermique",
+   "start": 12.34,
+   "end": 13.14
+  },
+  {
+   "text": "Grâce",
+   "clip": "thermique",
+   "start": 13.22,
+   "end": 13.38
+  },
+  {
+   "text": "à",
+   "clip": "thermique",
+   "start": 13.46,
+   "end": 13.513
+  },
+  {
+   "text": "son",
+   "clip": "thermique",
+   "start": 13.567,
+   "end": 13.62
+  },
+  {
+   "text": "inertie,",
+   "clip": "thermique",
+   "start": 13.7,
+   "end": 14.42
+  },
+  {
+   "text": "le",
+   "clip": "thermique",
+   "start": 14.5,
+   "end": 14.58
+  },
+  {
+   "text": "bé-té-cé-esse",
+   "clip": "thermique",
+   "start": 14.66,
+   "end": 15.38
+  },
+  {
+   "text": "peut",
+   "clip": "thermique",
+   "start": 15.46,
+   "end": 15.54
+  },
+  {
+   "text": "ralentir",
+   "clip": "thermique",
+   "start": 15.62,
+   "end": 16.1
+  },
+  {
+   "text": "les",
+   "clip": "thermique",
+   "start": 16.18,
+   "end": 16.26
+  },
+  {
+   "text": "variations",
+   "clip": "thermique",
+   "start": 16.34,
+   "end": 16.74
+  },
+  {
+   "text": "de",
+   "clip": "thermique",
+   "start": 16.78,
+   "end": 16.82
+  },
+  {
+   "text": "température.",
+   "clip": "thermique",
+   "start": 16.9,
+   "end": 17.86
+  },
+  {
+   "text": "Un",
+   "clip": "thermique",
+   "start": 17.94,
+   "end": 18.02
+  },
+  {
+   "text": "atout",
+   "clip": "thermique",
+   "start": 18.1,
+   "end": 18.26
+  },
+  {
+   "text": "à",
+   "clip": "thermique",
+   "start": 18.34,
+   "end": 18.42
+  },
+  {
+   "text": "considérer",
+   "clip": "thermique",
+   "start": 18.54,
+   "end": 18.98
+  },
+  {
+   "text": "dans",
+   "clip": "thermique",
+   "start": 19.033,
+   "end": 19.14
+  },
+  {
+   "text": "une",
+   "clip": "thermique",
+   "start": 19.18,
+   "end": 19.22
+  },
+  {
+   "text": "maison",
+   "clip": "thermique",
+   "start": 19.3,
+   "end": 19.54
+  },
+  {
+   "text": "bien",
+   "clip": "thermique",
+   "start": 19.62,
+   "end": 19.78
+  },
+  {
+   "text": "conçue.",
+   "clip": "thermique",
+   "start": 19.86,
+   "end": 20.66
+  },
+  {
+   "text": "Deuxième",
+   "clip": "esthetique",
+   "start": 24.75,
+   "end": 25.03
+  },
+  {
+   "text": "avantage",
+   "clip": "esthetique",
+   "start": 25.11,
+   "end": 25.67
+  },
+  {
+   "text": ":",
+   "clip": "esthetique",
+   "start": 25.99,
+   "end": 26.07
+  },
+  {
+   "text": "son",
+   "clip": "esthetique",
+   "start": 26.15,
+   "end": 26.23
+  },
+  {
+   "text": "esthétique.",
+   "clip": "esthetique",
+   "start": 26.31,
+   "end": 27.19
+  },
+  {
+   "text": "Avec",
+   "clip": "esthetique",
+   "start": 27.23,
+   "end": 27.43
+  },
+  {
+   "text": "sa",
+   "clip": "esthetique",
+   "start": 27.51,
+   "end": 27.59
+  },
+  {
+   "text": "texture",
+   "clip": "esthetique",
+   "start": 27.79,
+   "end": 27.99
+  },
+  {
+   "text": "naturelle,",
+   "clip": "esthetique",
+   "start": 28.19,
+   "end": 28.79
+  },
+  {
+   "text": "le",
+   "clip": "esthetique",
+   "start": 28.83,
+   "end": 28.87
+  },
+  {
+   "text": "bé-té-cé-esse",
+   "clip": "esthetique",
+   "start": 28.95,
+   "end": 29.75
+  },
+  {
+   "text": "peut",
+   "clip": "esthetique",
+   "start": 29.79,
+   "end": 29.883
+  },
+  {
+   "text": "devenir",
+   "clip": "esthetique",
+   "start": 29.937,
+   "end": 30.23
+  },
+  {
+   "text": "un",
+   "clip": "esthetique",
+   "start": 30.35,
+   "end": 30.47
+  },
+  {
+   "text": "véritable",
+   "clip": "esthetique",
+   "start": 30.51,
+   "end": 31.03
+  },
+  {
+   "text": "élément",
+   "clip": "esthetique",
+   "start": 31.11,
+   "end": 31.43
+  },
+  {
+   "text": "architectural,",
+   "clip": "esthetique",
+   "start": 31.55,
+   "end": 32.55
+  },
+  {
+   "text": "parfois",
+   "clip": "esthetique",
+   "start": 32.67,
+   "end": 32.87
+  },
+  {
+   "text": "laissé",
+   "clip": "esthetique",
+   "start": 32.95,
+   "end": 33.19
+  },
+  {
+   "text": "apparent",
+   "clip": "esthetique",
+   "start": 33.27,
+   "end": 33.67
+  },
+  {
+   "text": "pour",
+   "clip": "esthetique",
+   "start": 33.75,
+   "end": 33.83
+  },
+  {
+   "text": "valoriser",
+   "clip": "esthetique",
+   "start": 33.99,
+   "end": 34.31
+  },
+  {
+   "text": "le",
+   "clip": "esthetique",
+   "start": 34.35,
+   "end": 34.39
+  },
+  {
+   "text": "bâtiment.",
+   "clip": "esthetique",
+   "start": 34.47,
+   "end": 35.19
+  },
+  {
+   "text": "Troisième",
+   "clip": "terre",
+   "start": 38.77,
+   "end": 39.09
+  },
+  {
+   "text": "avantage",
+   "clip": "terre",
+   "start": 39.17,
+   "end": 39.73
+  },
+  {
+   "text": ":",
+   "clip": "terre",
+   "start": 39.97,
+   "end": 40.023
+  },
+  {
+   "text": "la",
+   "clip": "terre",
+   "start": 40.077,
+   "end": 40.13
+  },
+  {
+   "text": "valorisation",
+   "clip": "terre",
+   "start": 40.21,
+   "end": 40.85
+  },
+  {
+   "text": "de",
+   "clip": "terre",
+   "start": 40.89,
+   "end": 40.93
+  },
+  {
+   "text": "la",
+   "clip": "terre",
+   "start": 41.01,
+   "end": 41.09
+  },
+  {
+   "text": "terre.",
+   "clip": "terre",
+   "start": 41.17,
+   "end": 41.81
+  },
+  {
+   "text": "Le",
+   "clip": "terre",
+   "start": 41.89,
+   "end": 41.97
+  },
+  {
+   "text": "bé-té-cé-esse",
+   "clip": "terre",
+   "start": 42.05,
+   "end": 42.77
+  },
+  {
+   "text": "utilise",
+   "clip": "terre",
+   "start": 42.85,
+   "end": 43.25
+  },
+  {
+   "text": "une",
+   "clip": "terre",
+   "start": 43.33,
+   "end": 43.41
+  },
+  {
+   "text": "terre",
+   "clip": "terre",
+   "start": 43.45,
+   "end": 43.65
+  },
+  {
+   "text": "adaptée,",
+   "clip": "terre",
+   "start": 43.85,
+   "end": 44.45
+  },
+  {
+   "text": "préparée,",
+   "clip": "terre",
+   "start": 44.57,
+   "end": 45.25
+  },
+  {
+   "text": "stabilisée",
+   "clip": "terre",
+   "start": 45.33,
+   "end": 45.89
+  },
+  {
+   "text": "puis",
+   "clip": "terre",
+   "start": 46.05,
+   "end": 46.21
+  },
+  {
+   "text": "comprimée.",
+   "clip": "terre",
+   "start": 46.33,
+   "end": 47.09
+  },
+  {
+   "text": "Selon",
+   "clip": "terre",
+   "start": 47.17,
+   "end": 47.33
+  },
+  {
+   "text": "les",
+   "clip": "terre",
+   "start": 47.41,
+   "end": 47.49
+  },
+  {
+   "text": "conditions",
+   "clip": "terre",
+   "start": 47.69,
+   "end": 47.89
+  },
+  {
+   "text": "de",
+   "clip": "terre",
+   "start": 47.93,
+   "end": 47.97
+  },
+  {
+   "text": "production,",
+   "clip": "terre",
+   "start": 48.05,
+   "end": 48.77
+  },
+  {
+   "text": "il",
+   "clip": "terre",
+   "start": 48.85,
+   "end": 48.93
+  },
+  {
+   "text": "peut",
+   "clip": "terre",
+   "start": 48.97,
+   "end": 49.09
+  },
+  {
+   "text": "favoriser",
+   "clip": "terre",
+   "start": 49.25,
+   "end": 49.57
+  },
+  {
+   "text": "l'utilisation",
+   "clip": "terre",
+   "start": 49.65,
+   "end": 50.29
+  },
+  {
+   "text": "de",
+   "clip": "terre",
+   "start": 50.33,
+   "end": 50.37
+  },
+  {
+   "text": "ressources",
+   "clip": "terre",
+   "start": 50.45,
+   "end": 50.77
+  },
+  {
+   "text": "locales.",
+   "clip": "terre",
+   "start": 50.85,
+   "end": 51.65
+  },
+  {
+   "text": "Et",
+   "clip": "cout",
+   "start": 54.69,
+   "end": 54.73
+  },
+  {
+   "text": "le",
+   "clip": "cout",
+   "start": 54.81,
+   "end": 54.89
+  },
+  {
+   "text": "coût ?",
+   "clip": "cout",
+   "start": 54.97,
+   "end": 55.29
+  },
+  {
+   "text": "Il",
+   "clip": "cout",
+   "start": 55.583,
+   "end": 55.61
+  },
+  {
+   "text": "faut",
+   "clip": "cout",
+   "start": 55.69,
+   "end": 55.85
+  },
+  {
+   "text": "comparer",
+   "clip": "cout",
+   "start": 55.93,
+   "end": 56.25
+  },
+  {
+   "text": "le",
+   "clip": "cout",
+   "start": 56.29,
+   "end": 56.33
+  },
+  {
+   "text": "prix",
+   "clip": "cout",
+   "start": 56.41,
+   "end": 56.57
+  },
+  {
+   "text": "du",
+   "clip": "cout",
+   "start": 56.65,
+   "end": 56.69
+  },
+  {
+   "text": "mur",
+   "clip": "cout",
+   "start": 56.73,
+   "end": 56.89
+  },
+  {
+   "text": "fini,",
+   "clip": "cout",
+   "start": 56.97,
+   "end": 57.53
+  },
+  {
+   "text": "pas",
+   "clip": "cout",
+   "start": 57.61,
+   "end": 57.69
+  },
+  {
+   "text": "seulement",
+   "clip": "cout",
+   "start": 57.73,
+   "end": 58.01
+  },
+  {
+   "text": "celui",
+   "clip": "cout",
+   "start": 58.09,
+   "end": 58.25
+  },
+  {
+   "text": "d'un",
+   "clip": "cout",
+   "start": 58.33,
+   "end": 58.41
+  },
+  {
+   "text": "bloc.",
+   "clip": "cout",
+   "start": 58.49,
+   "end": 59.13
+  },
+  {
+   "text": "Chaque",
+   "clip": "cout",
+   "start": 59.17,
+   "end": 59.37
+  },
+  {
+   "text": "projet",
+   "clip": "cout",
+   "start": 59.45,
+   "end": 59.77
+  },
+  {
+   "text": "mérite",
+   "clip": "cout",
+   "start": 59.85,
+   "end": 60.09
+  },
+  {
+   "text": "une",
+   "clip": "cout",
+   "start": 60.17,
+   "end": 60.25
+  },
+  {
+   "text": "étude",
+   "clip": "cout",
+   "start": 60.41,
+   "end": 60.57
+  },
+  {
+   "text": "adaptée.",
+   "clip": "cout",
+   "start": 60.65,
+   "end": 61.45
+  },
+  {
+   "text": "En",
+   "clip": "ohel",
+   "start": 65.94,
+   "end": 65.98
+  },
+  {
+   "text": "Côte",
+   "clip": "ohel",
+   "start": 66.06,
+   "end": 66.22
+  },
+  {
+   "text": "d'Ivoire,",
+   "clip": "ohel",
+   "start": 66.3,
+   "end": 66.94
+  },
+  {
+   "text": "Oël",
+   "clip": "ohel",
+   "start": 67.02,
+   "end": 67.26
+  },
+  {
+   "text": "International",
+   "clip": "ohel",
+   "start": 67.62,
+   "end": 67.98
+  },
+  {
+   "text": "est",
+   "clip": "ohel",
+   "start": 68.06,
+   "end": 68.14
+  },
+  {
+   "text": "votre",
+   "clip": "ohel",
+   "start": 68.22,
+   "end": 68.38
+  },
+  {
+   "text": "spécialiste",
+   "clip": "ohel",
+   "start": 68.46,
+   "end": 69.1
+  },
+  {
+   "text": "de",
+   "clip": "ohel",
+   "start": 69.14,
+   "end": 69.18
+  },
+  {
+   "text": "la",
+   "clip": "ohel",
+   "start": 69.26,
+   "end": 69.34
+  },
+  {
+   "text": "construction",
+   "clip": "ohel",
+   "start": 69.42,
+   "end": 69.9
+  },
+  {
+   "text": "en",
+   "clip": "ohel",
+   "start": 70.06,
+   "end": 70.14
+  },
+  {
+   "text": "Blocs",
+   "clip": "ohel",
+   "start": 70.22,
+   "end": 70.38
+  },
+  {
+   "text": "de",
+   "clip": "ohel",
+   "start": 70.46,
+   "end": 70.54
+  },
+  {
+   "text": "Terre",
+   "clip": "ohel",
+   "start": 70.62,
+   "end": 70.78
+  },
+  {
+   "text": "Comprimée",
+   "clip": "ohel",
+   "start": 70.86,
+   "end": 71.18
+  },
+  {
+   "text": "Stabilisée.",
+   "clip": "ohel",
+   "start": 71.26,
+   "end": 72.14
+  },
+  {
+   "text": "Découvrez",
+   "clip": "ohel",
+   "start": 72.18,
+   "end": 72.62
+  },
+  {
+   "text": "notre",
+   "clip": "ohel",
+   "start": 72.7,
+   "end": 72.86
+  },
+  {
+   "text": "savoir-faire",
+   "clip": "ohel",
+   "start": 72.94,
+   "end": 73.5
+  },
+  {
+   "text": "et",
+   "clip": "ohel",
+   "start": 73.58,
+   "end": 73.66
+  },
+  {
+   "text": "nos",
+   "clip": "ohel",
+   "start": 73.7,
+   "end": 73.74
+  },
+  {
+   "text": "réalisations.",
+   "clip": "ohel",
+   "start": 73.82,
+   "end": 74.78
+  },
+  {
+   "text": "Vous",
+   "clip": "projet",
+   "start": 78.62,
+   "end": 78.66
+  },
+  {
+   "text": "avez",
+   "clip": "projet",
+   "start": 78.74,
+   "end": 78.9
+  },
+  {
+   "text": "un",
+   "clip": "projet",
+   "start": 78.94,
+   "end": 78.98
+  },
+  {
+   "text": "projet",
+   "clip": "projet",
+   "start": 79.06,
+   "end": 79.3
+  },
+  {
+   "text": "de",
+   "clip": "projet",
+   "start": 79.34,
+   "end": 79.38
+  },
+  {
+   "text": "construction ?",
+   "clip": "projet",
+   "start": 79.66,
+   "end": 79.94
+  },
+  {
+   "text": "Contactez",
+   "clip": "contact",
+   "start": 80.697,
+   "end": 80.99
+  },
+  {
+   "text": "Oël",
+   "clip": "contact",
+   "start": 81.07,
+   "end": 81.31
+  },
+  {
+   "text": "International",
+   "clip": "contact",
+   "start": 81.67,
+   "end": 82.03
+  },
+  {
+   "text": "pour",
+   "clip": "contact",
+   "start": 82.11,
+   "end": 82.19
+  },
+  {
+   "text": "une",
+   "clip": "contact",
+   "start": 82.27,
+   "end": 82.35
+  },
+  {
+   "text": "étude",
+   "clip": "contact",
+   "start": 82.51,
+   "end": 82.67
+  },
+  {
+   "text": "personnalisée",
+   "clip": "contact",
+   "start": 82.79,
+   "end": 83.63
+  },
+  {
+   "text": "au",
+   "clip": "contact",
+   "start": 83.67,
+   "end": 83.71
+  },
+  {
+   "text": "zéro",
+   "clip": "contact",
+   "start": 83.87,
+   "end": 84.03
+  },
+  {
+   "text": "sept,",
+   "clip": "contact",
+   "start": 84.19,
+   "end": 84.67
+  },
+  {
+   "text": "zéro",
+   "clip": "contact",
+   "start": 84.723,
+   "end": 84.83
+  },
+  {
+   "text": "sept,",
+   "clip": "contact",
+   "start": 84.99,
+   "end": 85.39
+  },
+  {
+   "text": "soixante-trois,",
+   "clip": "contact",
+   "start": 85.47,
+   "end": 86.27
+  },
+  {
+   "text": "zéro",
+   "clip": "contact",
+   "start": 86.35,
+   "end": 86.43
+  },
+  {
+   "text": "trois,",
+   "clip": "contact",
+   "start": 86.59,
+   "end": 86.883
+  },
+  {
+   "text": "trente-cinq.",
+   "clip": "contact",
+   "start": 86.99,
+   "end": 87.79
+  },
+  {
+   "text": "Pour",
+   "clip": "abonnement",
+   "start": 90.32,
+   "end": 90.4
+  },
+  {
+   "text": "découvrir",
+   "clip": "abonnement",
+   "start": 90.44,
+   "end": 90.88
+  },
+  {
+   "text": "nos",
+   "clip": "abonnement",
+   "start": 90.96,
+   "end": 91.04
+  },
+  {
+   "text": "prochaines",
+   "clip": "abonnement",
+   "start": 91.12,
+   "end": 91.4
+  },
+  {
+   "text": "vidéos",
+   "clip": "abonnement",
+   "start": 91.44,
+   "end": 91.76
+  },
+  {
+   "text": "sur",
+   "clip": "abonnement",
+   "start": 91.84,
+   "end": 91.92
+  },
+  {
+   "text": "le",
+   "clip": "abonnement",
+   "start": 91.96,
+   "end": 92.0
+  },
+  {
+   "text": "bé-té-cé-esse,",
+   "clip": "abonnement",
+   "start": 92.08,
+   "end": 93.04
+  },
+  {
+   "text": "abonnez-vous",
+   "clip": "abonnement",
+   "start": 93.12,
+   "end": 93.68
+  },
+  {
+   "text": "et",
+   "clip": "abonnement",
+   "start": 93.76,
+   "end": 93.92
+  },
+  {
+   "text": "activez",
+   "clip": "abonnement",
+   "start": 94.12,
+   "end": 94.36
+  },
+  {
+   "text": "la",
+   "clip": "abonnement",
+   "start": 94.4,
+   "end": 94.48
+  },
+  {
+   "text": "cloche",
+   "clip": "abonnement",
+   "start": 94.56,
+   "end": 94.72
+  },
+  {
+   "text": "de",
+   "clip": "abonnement",
+   "start": 94.76,
+   "end": 94.8
+  },
+  {
+   "text": "notification !",
+   "clip": "abonnement",
+   "start": 94.88,
+   "end": 95.52
+  },
+  {
+   "text": "Oël",
+   "clip": "signature",
+   "start": 96.527,
+   "end": 96.74
+  },
+  {
+   "text": "International.",
+   "clip": "signature",
+   "start": 96.9,
+   "end": 98.02
+  },
+  {
+   "text": "Construisons",
+   "clip": "signature",
+   "start": 98.1,
+   "end": 98.66
+  },
+  {
+   "text": "autrement.",
+   "clip": "signature",
+   "start": 98.74,
+   "end": 99.46
+  },
+  {
+   "text": "Construisons",
+   "clip": "signature",
+   "start": 99.54,
+   "end": 100.02
+  },
+  {
+   "text": "durablement.",
+   "clip": "signature",
+   "start": 100.26,
+   "end": 101.14
+  }
+ ]
+}

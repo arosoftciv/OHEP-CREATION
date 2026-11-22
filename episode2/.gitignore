@@ -1,0 +1,8 @@
+node_modules/
+out/
+.remotion/
+*.log
+assets/audio/mix_raw.wav
+public/audio/music_sfx.wav
+assets/audio/mix_raw_v3.wav
+public/audio/music_sfx_v3.wav

@@ -1,0 +1,97 @@
+import React from 'react';
+import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {C, FONT, SAFE} from '../../theme';
+import {relWord} from '../timeline_v3';
+import {BlueprintGrid, Callout, clamp, Grain, lerp, RevealLine, Tag, Vignette} from '../../components/ui';
+import {Banner, Kicker, Note} from '../common';
+import {RisingWall} from '../RisingWall';
+
+/**
+ * V3 · Scène 2 — InterlockingAssembly : le système autobloquant.
+ * A. Gros plan sur la PHOTO RÉELLE des blocs OHEL (627007) : rainures et encoches réelles désignées.
+ * B. Schéma de principe en élévation : mur BTCS monté à sec selon le système / mur de parpaings posé au mortier.
+ *    Le mécanisme exact d'emboîtement n'est PAS modélisé (non documenté) : renvoi à la notice technique OHEL.
+ */
+export const InterlockingAssembly: React.FC = () => {
+  const f = useCurrentFrame();
+  const fSys = relWord('s2_pose', 'système');
+  const fSec = relWord('s2_pose', 'sec');
+  const fMortier = relWord('s2_pose', 'mortier');
+  const fMoins = relWord('s2_pose', 'moins');
+  const B = fSys + 92; // bascule vers le schéma
+  const toB = lerp(f, B - 8, B + 10);
+  const zoom = interpolate(f, [0, B], [1.0, 1.18], clamp);
+
+  return (
+    <AbsoluteFill style={{background: '#141516', overflow: 'hidden'}}>
+      {/* ===== A : photo réelle ===== */}
+      {f < B + 12 ? (
+        <AbsoluteFill style={{opacity: 1 - toB}}>
+          <AbsoluteFill style={{transform: `scale(${zoom})`, transformOrigin: '73% 41%'}}>
+            <Img src={staticFile('img/btcs_pile.jpg')} style={{position: 'absolute', left: -200, top: 330, width: 1400, height: 1050, filter: 'saturate(1.05) contrast(1.04)'}} />
+            <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(20,21,22,1) 0%, rgba(20,21,22,0.9) 14%, rgba(20,21,22,0) 26%, rgba(20,21,22,0) 66%, rgba(20,21,22,0.9) 84%)'}} />
+            <Callout x={690} y={689} tx={110} ty={560} label="Emboîtement" at={fSys} color={C.sun} size={30} />
+            <Callout x={887} y={890} tx={940} ty={1040} label="Encoche" at={fSys + 10} color={C.sun} size={30} align="right" />
+          </AbsoluteFill>
+          <Tag label="Blocs BTCS OHEL · photo réelle" delay={8} top={SAFE.top + 110} />
+          <div style={{position: 'absolute', top: 1150, left: SAFE.left, right: SAFE.left}}>
+            <RevealLine at={fSys} style={{fontWeight: 900, fontSize: 70, color: C.white, lineHeight: 1}}>
+              SYSTÈME
+            </RevealLine>
+            <RevealLine at={fSys + 5} style={{fontWeight: 900, fontSize: 70, color: C.earthLight, lineHeight: 1.05}}>
+              AUTOBLOQUANT
+            </RevealLine>
+          </div>
+        </AbsoluteFill>
+      ) : null}
+
+      {/* ===== B : schéma de principe ===== */}
+      {f >= B - 8 ? (
+        <AbsoluteFill style={{opacity: toB}}>
+          <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 40%, #2c2f33 0%, #17181A 70%)'}} />
+          <BlueprintGrid opacity={0.06} />
+          {/* BTCS */}
+          <div style={{position: 'absolute', left: SAFE.left, top: 400, width: 940}}>
+            <div style={{height: 340, position: 'relative', borderBottom: '6px solid #5c5f63'}}>
+              <div style={{position: 'absolute', bottom: 0}}>
+                <RisingWall kind="btcs" width={940} rows={4} bw={235} bh={85} start={B + 2} rowDur={16} />
+              </div>
+            </div>
+            <div style={{marginTop: 14}}>
+              <Banner at={fSec} bg={C.earth} size={36}>
+                BTCS : POSE À SEC SELON LE SYSTÈME
+              </Banner>
+            </div>
+          </div>
+          {/* parpaing */}
+          <div style={{position: 'absolute', left: SAFE.left, top: 860, width: 940}}>
+            <div style={{height: 300, position: 'relative', borderBottom: '6px solid #5c5f63'}}>
+              <div style={{position: 'absolute', bottom: 0}}>
+                <RisingWall kind="parpaing" width={940} rows={3} bw={235} bh={100} start={B + 14} rowDur={28} />
+              </div>
+            </div>
+            <div style={{marginTop: 14}}>
+              <Banner at={fMortier} bg="#6b6e72" size={36}>
+                PARPAING : POSE AU MORTIER
+              </Banner>
+            </div>
+          </div>
+          {/* message clé */}
+          <div style={{position: 'absolute', top: 1240, left: 0, right: 0, display: 'flex', justifyContent: 'center'}}>
+            <Banner at={fMoins} bg={C.green} size={50}>
+              MOINS DE MORTIER DE POSE
+            </Banner>
+          </div>
+          <Note at={B + 20} top={338}>
+            Schéma de principe · emboîtement et zones de mortier selon la notice technique OHEL
+          </Note>
+        </AbsoluteFill>
+      ) : null}
+
+      <Kicker at={8} num="1" label="LA POSE" />
+      <Vignette strength={0.45} />
+      <Grain opacity={0.05} />
+      <AbsoluteFill style={{background: '#000', opacity: lerp(f, 0, 10, 1, 0)}} />
+    </AbsoluteFill>
+  );
+};
