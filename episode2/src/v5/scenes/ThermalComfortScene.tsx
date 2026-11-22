@@ -9,9 +9,9 @@ import {InertiaDiagram} from './ThermalLegacy';
 
 /**
  * V5 · Scène 2 — ThermalComfortScene : « DEHORS, LA CHALEUR. DEDANS, LE CONFORT NATUREL. »
- *  A  chaleur extérieure (photo 631827) : météo illustrative, rayons, ondulations de chaleur, travelling vers la porte.
+ *  A  chaleur extérieure (photo 631830) : météo illustrative, rayons, ondulations de chaleur, travelling vers la porte.
  *  B  la caméra franchit la porte (photo 631790 : il entre puis se détend) → salon aux murs BTCS (photo 631791).
- *  Photos fournies par OHEL (631827, 631790, 631791) — remplacent les illustrations dessinées.
+ *  Photos fournies par OHEL (631830, 631790, 631791) — remplacent les illustrations dessinées.
  *  D  explication : inertie thermique du mur BTCS (schéma V2/V4 conservé) puis coupe : toiture protégée, ouvertures ombragées,
  *     ventilation adaptée → « INERTIE THERMIQUE + CONCEPTION ADAPTÉE ».
  *  C  message principal en grand (écran partagé extérieur / intérieur).
@@ -25,7 +25,7 @@ const BRICK = (id: string, base: string, joint: string, w = 64, h = 30) => (
   </pattern>
 );
 
-/** Plan A : photo fournie par OHEL (631827) — maison sous grand soleil, personnage qui s'abrite du soleil.
+/** Plan A : photo fournie par OHEL (631830) — maison sous grand soleil, personnage qui s'abrite du soleil.
  *  Animation : étalonnage chaud, reflets/rayons qui tournent autour du soleil, ondulations de chaleur (filtre SVG). */
 const Exterior: React.FC<{f: number; heat: number}> = ({f, heat}) => (
   <AbsoluteFill>
@@ -38,7 +38,7 @@ const Exterior: React.FC<{f: number; heat: number}> = ({f, heat}) => (
         </filter>
       </defs>
     </svg>
-    <Img src={staticFile('img/v5_exterieur_631827.jpg')} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: `saturate(${1 + 0.15 * heat}) url(#heatwave)`}} />
+    <Img src={staticFile('img/v5_exterieur_631830.jpg')} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: `saturate(${1 + 0.15 * heat}) url(#heatwave)`}} />
     {/* chaleur : voile orangé plus dense vers le bas */}
     <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(255,150,40,0.10) 0%, rgba(255,120,30,0.22) 70%, rgba(255,110,20,0.28) 100%)', mixBlendMode: 'multiply', opacity: heat}} />
     {/* rayons autour du soleil de la photo */}

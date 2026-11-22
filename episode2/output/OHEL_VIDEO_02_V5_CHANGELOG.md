@@ -33,13 +33,13 @@ Ce message apparaît **trois fois** : en annonce dans le plan extérieur, en gra
 **Formulations interdites :** aucune n'est utilisée. Pas de « fraîcheur garantie », « toujours frais », « quelle que soit la température extérieure », « sans climatisation » ni « température constante garantie ». Aucune température intérieure, aucun gain chiffré.
 
 ### Mise à jour : les dessins sont remplacés par les photos du client
-- **Plan A (dehors)** : photo 631827, l'homme face à la maison sous le soleil. Animations ajoutées : léger travelling vers la porte, ondulations de chaleur, voile chaud, ondes qui montent du sol, météo illustrative.
+- **Plan A (dehors)** : photo 631830, l'homme face à la maison (même tenue que dans le salon) sous le soleil. Animations ajoutées : léger travelling vers la porte, ondulations de chaleur, voile chaud, ondes qui montent du sol, météo illustrative.
 - **Passage de la porte** : la caméra plonge dans la porte, puis panoramique haut → bas sur la photo 631790 (il entre, puis se détend).
 - **Plan B (dedans)** : photo 631791, salon aux murs en BTCS apparents, homme détendu. « DEDANS, LE CONFORT NATUREL. » n'apparaît que sur cette photo.
-- **Message final** : écran partagé 631827 en haut, 631791 en bas.
+- **Message final** : écran partagé 631830 en haut, 631791 en bas.
 - Les illustrations dessinées (maison, salon, personnage) ne sont plus utilisées. Le personnage dessiné reste dans le code (`src/v5/Resident.tsx`) mais n'apparaît plus à l'écran.
 - La mention « Illustration · ambiance, aucune mesure de température » est conservée.
-- Sources : `assets/source/631827_exterieur_chaleur.png`, `631790_transition.png`, `631791_interieur_confort.png`.
+- Sources : `assets/source/631830_exterieur_chaleur.png`, `631790_transition.png`, `631791_interieur_confort.png`.
 
 ## 2. Ce qui est conservé tel quel
 
