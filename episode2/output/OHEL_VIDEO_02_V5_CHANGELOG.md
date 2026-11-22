@@ -67,7 +67,7 @@ Côté identité, rien ne change : logo officiel 556713 (miniature blanche, gran
 | Autres séquences | Contenu identique à la V4, décalé de +9,6 s (vérifié sur `controle_v5/planche_toutes_les_3s.jpg`). |
 | Logo | Fichier officiel 556713 uniquement (miniature blanche, grands logos en couleur). Aucun cadre blanc. |
 | Conclusion | OHEL INTERNATIONAL, spécialiste de la construction en BTCS en Côte d'Ivoire ; contact +225 07 07 63 03 35 et ohelintermondial.com ; « ABONNEZ-VOUS », « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! ». |
-| MP4 final | 132,1 s, 1080 × 1920 (9:16), 30 i/s, H.264 High, AAC 48 kHz, couverture intégrée, 53,8 Mo. Décodage complet sans erreur. Sonie −14,2 LUFS, crête −1,2 dBFS. |
+| MP4 final | 132,1 s, 1080 × 1920 (9:16), 30 i/s, H.264 High, AAC 48 kHz, couverture intégrée, 60,3 Mo. Décodage complet sans erreur. Sonie −14,2 LUFS, crête −1,2 dBFS. |
 
 ## 4. Fichiers produits
 
