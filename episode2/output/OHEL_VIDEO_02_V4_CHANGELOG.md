@@ -46,7 +46,24 @@ Elle est construite comme une nouvelle composition, `OhelVideo02V4`, dans le dos
 | Numéro WhatsApp | Validé | +225 07 07 63 03 35 ; site ohelintermondial.com. |
 
 ## 3. Contrôle qualité
-RESULTATS_CONTROLE
+| # | Point | Résultat |
+|---|---|---|
+| 1 | Confort thermique expliqué | Soleil, apports, coupe, inertie (stockage et restitution différée), puis toiture, ombrage et ventilation (planche 00:09 – 00:24). |
+| 2–3 | Pas de fraîcheur chiffrée | Aucune température intérieure ni aucune baisse. « Météo illustrative », « animation illustrative, aucune mesure », « ≠ isolation parfaite, ≠ climatisation ». |
+| 4 | Solidité défendable | « Selon le dimensionnement », « Valeurs de résistance : selon essais et fiches techniques fournis par OHEL ». |
+| 5 | Aucun argument anti-balle | Aucun mot, aucune arme, aucun projectile. |
+| 6 | Pas de faux essai | Presse étiquetée « Illustration · essai de compression générique · aucune valeur ». Pas de rupture, pas de résultat. |
+| 7–8 | Emboîtement et géométrie | Photo réelle 627007 en plein écran 9:16, faces réelles du bloc 627115. Aucun mécanisme modélisé (vidéo de montage OHEL demandée). |
+| 9 | Possibilités structurelles | « SELON L'ÉTUDE STRUCTURELLE », chaînages, linteaux et fondations conservés, aucun espacement de poteaux. |
+| 10 | Économies | Aucun montant ni pourcentage (`showVerified20PercentClaim = false`). « DES ÉCONOMIES POSSIBLES SELON LE PROJET », « DEMANDEZ UNE ÉTUDE COMPARATIVE ». |
+| 11 | Réalisations authentiques | Médias réels OHEL uniquement : 626894, 627007, 627115, vidéos de réalisation et de presse. |
+| 12–14 | Logo | Fichier officiel 556713 partout, aucun logo généré. Miniature blanche (demande du client). Révélation et générique en couleur sur dégradé clair. **Aucun cadre blanc.** |
+| 15 | WhatsApp | +225 07 07 63 03 35 (affiché, dicté, chiffres synchronisés, rappelé dans le bandeau). |
+| 16 | Synchronisation | Animations calées sur les horodatages réels des mots (Scribe). Correctif voix raccordé dans une pause naturelle. Son décalé d'exactement 1,0 s pour la couverture d'ouverture. |
+| 17 | Sous-titres | 61 groupes incrustés, mot en cours surligné, masqués pendant le contact et la signature (texte déjà à l'écran). SRT synchronisé. |
+| 18 | Musique | Une phase par séquence, ducking de −9,5 dB sous la voix. Sonie −14,3 LUFS, crête −1,2 dBFS. |
+| 19 | Abonnement et cloche | « ABONNEZ-VOUS » (clic), cloche qui sonne au mot « cloche », « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! » (planche 01:51). |
+| 20 | MP4 vérifié (ffprobe et décodage complet) | 122,5 s, 1080 × 1920 (9:16), 30 i/s, H.264 High, AAC 48 kHz stéréo, couverture intégrée (attached_pic), 47,1 Mo. Décodage sans erreur. |
 
 ## 4. Fichiers produits
 
