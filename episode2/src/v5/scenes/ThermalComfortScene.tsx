@@ -203,7 +203,7 @@ export const ThermalComfortScene: React.FC = () => {
   const {fps, durationInFrames: D} = useVideoConfig();
   const fChal = relWord('s02_thermique', 'chaleur');
   const fMais = relWord('s02_thermique', 'mais');
-  const fBien = relWord('s02_thermique', 'bien-être');
+  const fBien = relWord('s02_thermique', 'maison') + 8; // révélation tôt dans le plan intérieur (≈ 3 s à l'écran)
   const fGrace = relWord('s02_thermique', 'grâce');
   const fRal = relWord('s02_thermique', 'ralentir');
   const fAvec = relWord('s02_thermique', 'avec');
@@ -295,7 +295,7 @@ export const ThermalComfortScene: React.FC = () => {
                     DEDANS, LE CONFORT NATUREL.
                   </Big>
                 </div>
-                <div style={{marginTop: 22, display: 'flex', justifyContent: 'center', opacity: lerp(f, fBien + 10, fBien + 22)}}>
+                <div style={{marginTop: 22, display: 'flex', justifyContent: 'center', opacity: lerp(f, fBien + 24, fBien + 36)}}>
                   <div style={{background: C.earth, color: C.white, fontFamily: FONT, fontWeight: 800, fontSize: 30, padding: '10px 22px', borderRadius: 12, letterSpacing: 1}}>LE BTCS AU SERVICE DU CONFORT THERMIQUE</div>
                 </div>
               </>
