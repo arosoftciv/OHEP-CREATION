@@ -3,12 +3,13 @@ Répertoire de l'entreprise OHEL INTERNATIONAL
 
 ## Série BTCS — Épisode 2 (V2) : « BTCS ou parpaing classique : pourquoi choisir le BTCS ? »
 
-Vidéo verticale 1080 × 1920, 30 i/s, 102,5 s, réalisée en motion design avec Remotion (React/TypeScript), voix ElevenLabs, musique originale synthétisée par code.
+Vidéo verticale 1080 × 1920, 30 i/s, 103,5 s (vignette client 1 s + film 102,5 s), réalisée en motion design avec Remotion (React/TypeScript), voix ElevenLabs, musique originale synthétisée par code.
 
 | Livrable | Fichier |
 |---|---|
 | Vidéo finale | `output/OHEL_VIDEO_02_BTCS_VS_PARPAING_V2.mp4` |
-| Vignette verticale | `output/OHEL_VIDEO_02_COVER_V2.png` |
+| Vignette verticale (vignette client 630621, aussi en ouverture du MP4) | `output/OHEL_VIDEO_02_COVER_V2.png` |
+| Vignette alternative (animation) | `output/OHEL_VIDEO_02_COVER_V2_version_animation.png` |
 | Texte de la voix-off | `output/OHEL_VIDEO_02_VOICEOVER_V2.txt` |
 | Sous-titres français | `output/OHEL_VIDEO_02_SUBTITLES_V2.srt` |
 | Rapport de production | `output/OHEL_VIDEO_02_RAPPORT_V2.md` |
@@ -22,8 +23,8 @@ python3 scripts/build_timeline.py    # découpe/placement de la voix (aucune acc
 python3 scripts/build_subtitles.py   # sous-titres incrustés, SRT, texte voix-off
 python3 scripts/build_audio.py       # musique originale + effets + son réel de la presse + mixage −14 LUFS
 npx remotion render src/index.ts OhelVideo02V2 out/raw.mp4
-npx remotion still src/index.ts Cover02V2 output/OHEL_VIDEO_02_COVER_V2.png
-bash scripts/export_final.sh         # encodage H.264/AAC + couverture intégrée + contrôles ffprobe
+npx remotion still src/index.ts Cover02V2 output/OHEL_VIDEO_02_COVER_V2_version_animation.png
+bash scripts/export_final.sh         # vignette client en ouverture + encodage H.264/AAC + couverture intégrée + contrôles
 node scripts/stills.mjs out/stills 5 20 40   # captures de contrôle (temps en s)
 ```
 

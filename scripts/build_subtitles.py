@@ -15,7 +15,7 @@ FIX = {
 }
 NUM = {'zéro': '0', 'sept,': '7', 'sept': '7', 'soixante-trois,': '63', 'trois,': '3', 'trente-cinq.': '35.'}
 SCRIPT = (ROOT / 'assets/audio/voiceover_v2_script.txt').read_text().strip()
-INTRO = 0.0  # aucune image ajoutée avant le film : le SRT est en temps vidéo
+INTRO = 1.0  # vignette client en ouverture du MP4 final (scripts/export_final.sh) : SRT et repères décalés d'autant
 SCENE_OF = {
     'intro': 'Scène 1 — Deux matériaux, un choix', 'thermique': 'Scène 2 — Avantage 1 : le comportement thermique',
     'esthetique': 'Scène 3 — Avantage 2 : l’esthétique', 'terre': 'Scène 4 — Avantage 3 : valoriser la terre',
@@ -95,7 +95,7 @@ def main():
     lines = ['OHEL INTERNATIONAL — Série BTCS · Épisode 2 (V2)', 'BTCS OU PARPAING CLASSIQUE : POURQUOI CHOISIR LE BTCS ?', '',
              'Voix : ElevenLabs « Tony – Warm, Dynamic Podcast Narrator » (français natif, léger accent africain), modèle eleven_v4, une seule prise.',
              'Graphies phonétiques données à la voix : « Oël » pour OHEL, « bé-té-cé-esse » pour BTCS, numéro dicté en toutes lettres.',
-             'Durée réelle de la narration : 75,8 s (aucune accélération). Repères = début de chaque réplique dans le MP4 final (mm:ss.s).', '']
+             'Durée réelle de la narration : 75,8 s (aucune accélération). Repères = début de chaque réplique dans le MP4 final (mm:ss.s), vignette d’ouverture de 1 s comprise.', '']
     for c in TL['clips']:
         ws = [w for w in TL['words'] if w['clip'] == c['id']]
         title = SCENE_OF.get(c['id'])

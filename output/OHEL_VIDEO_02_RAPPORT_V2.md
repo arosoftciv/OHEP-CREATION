@@ -1,15 +1,16 @@
 # OHEL INTERNATIONAL — Série BTCS · Épisode 2 (V2)
 ## « BTCS ou parpaing classique : pourquoi choisir le BTCS ? » — Rapport de production
 
-**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · **102,5 s** · MP4 H.264 High + AAC 192 kb/s
+**Format :** vertical 9:16 · 1080 × 1920 · 30 i/s · **103,5 s** (vignette client 1 s + film 102,5 s) · MP4 H.264 High + AAC 192 kb/s
 **Structure :** DEUX MATÉRIAUX → THERMIQUE → ESTHÉTIQUE → TERRE → COÛT → OHEL (réalisations) → CONTACT → ABONNEMENT → SIGNATURE
 
 ### 1. Livrables (`output/`)
 
 | Fichier | Contenu |
 |---|---|
-| `OHEL_VIDEO_02_BTCS_VS_PARPAING_V2.mp4` | Film final : voix-off, musique originale, sous-titres incrustés, couverture intégrée |
-| `OHEL_VIDEO_02_COVER_V2.png` | Vignette verticale 1080 × 1920 (parpaing / BTCS réel / réalisation OHEL réelle / logo officiel) |
+| `OHEL_VIDEO_02_BTCS_VS_PARPAING_V2.mp4` | Film final : s'ouvre sur la vignette client, voix-off, musique originale, sous-titres incrustés, couverture intégrée |
+| `OHEL_VIDEO_02_COVER_V2.png` | **Couverture officielle** : vignette fournie par le client (630621), mise au format 1080 × 1920 (voir §3 ter) |
+| `OHEL_VIDEO_02_COVER_V2_version_animation.png` | Vignette réalisée à partir de l'animation (parpaing / BTCS réel / réalisation OHEL réelle / logo officiel), conservée en alternative |
 | `OHEL_VIDEO_02_VOICEOVER_V2.txt` | Narration avec repères temporels + texte officiel |
 | `OHEL_VIDEO_02_SUBTITLES_V2.srt` | 50 sous-titres français synchronisés mot à mot |
 | `OHEL_VIDEO_02_RAPPORT_V2.md` | Ce rapport |
@@ -48,7 +49,7 @@ Le dépôt principal ne contenait qu'un README. Les ressources ont été récup�
 | 7 · Contact | 78–90 s | Composant `OhelBrandOutro` sur la façade réelle : « VOUS AVEZ UN PROJET DE CONSTRUCTION ? » · « FAITES APPEL À UN SPÉCIALISTE DU BTCS. » · « CONTACTEZ OHEL INTERNATIONAL » · **+225 07 07 63 03 35** (chaque groupe s'allume quand il est prononcé) · wa.me/2250707630335 · ohelintermondial.com |
 | 8 · Abonnement et signature | 90–102,5 s | Logo officiel en haut, bouton « ABONNEZ-VOUS ! » qui entre dans le cadre, main-curseur qui clique sur « abonnez-vous » (le bouton ne passe jamais à « abonné »), cloche qui vibre avec ondes et son discret sur « cloche », « ACTIVEZ LA CLOCHE · POUR NE RIEN MANQUER ! » ; puis logo au centre, « SPÉCIALISTE DE LA CONSTRUCTION EN BTCS », « CONSTRUISONS AUTREMENT. CONSTRUISONS DURABLEMENT. » |
 
-Les réalisations OHEL (scène 6) passent **avant** l'appel à l'action. Le numéro reste à l'écran de 82,4 s à la fin (≈ 20 s), en grand puis en bandeau.
+Les réalisations OHEL (scène 6) passent **avant** l'appel à l'action. Le numéro reste à l'écran de 82,4 s (temps du film) à la fin (≈ 20 s), en grand puis en bandeau.
 Zones de sécurité : textes entre y ≈ 230 et 1 320 px, marges ≥ 60 px ; bande des sous-titres réservée (y 1 340–1 490).
 
 ### 3 bis. Logo blanc miniature (demande client)
@@ -58,6 +59,18 @@ Zones de sécurité : textes entre y ≈ 230 et 1 320 px, marges ≥ 60 px ; ban
 - Ombre portée légère pour la lisibilité sur les fonds clairs (scène 4, ciel de la scène 2).
 - Masqué en fondu juste avant la révélation du grand logo officiel en couleur (74,7 s) et pendant le générique, pour ne jamais afficher deux logos en même temps.
 - Le logo en couleur d'origine reste utilisé pour la révélation, le générique et la vignette.
+
+### 3 ter. Vignette client intégrée (630621)
+
+- La vignette fournie (`assets/source/630621_vignette_client.png`, 941 × 1672) est mise au format 1080 × 1920 (Lanczos ; écart de ratio 0,05 %, invisible) et devient la **couverture officielle** `OHEL_VIDEO_02_COVER_V2.png`.
+- Elle **ouvre la vidéo** : 1 s avec léger zoom avant, puis fondu enchaîné de 0,5 s vers la scène 1. C'est la première image du fichier, que TikTok, Reels et Shorts proposent par défaut comme couverture. Elle est aussi intégrée comme image de couverture du MP4.
+- Le son est décalé d'exactement **1,000 s** (mesuré par corrélation avec le rendu sans vignette) : la synchronisation voix ↔ image est intacte. Le SRT et les repères de la voix-off sont décalés d'autant. Réglages : `INTRO` et `XF` dans `scripts/export_final.sh` (et `INTRO` dans `scripts/build_subtitles.py`).
+- **Points de vigilance (décision du client, à assumer en connaissance de cause)** :
+  - La vignette a l'aspect d'une image **générée par IA** : la villa et le parpaing ne sont pas des photographies OHEL.
+  - La villa n'est pas une réalisation OHEL identifiée : ne pas la présenter comme telle dans la légende de publication.
+  - L'encadré « VÉRITABLE BTCS OHEL » montre des blocs proches de la photo réelle 627007, mais visiblement retravaillés (arêtes et surface lissées). Si possible, y placer la photo 627007 d'origine pour que la mention « véritable » soit exacte.
+  - Le logo OHEL de la vignette fait partie de l'image fournie (non retouché par nos soins) ; il semble conforme au logo officiel mais n'a pas été posé comme calque à partir du fichier 556713.
+- La vignette réalisée à partir de l'animation reste disponible : `OHEL_VIDEO_02_COVER_V2_version_animation.png`.
 
 ### 4. Exactitude du contenu
 
@@ -120,10 +133,11 @@ Zones de sécurité : textes entre y ≈ 230 et 1 320 px, marges ≥ 60 px ; ban
 
 `ffprobe output/OHEL_VIDEO_02_BTCS_VS_PARPAING_V2.mp4` :
 
-- Vidéo : H.264 High, 1080 × 1920, 30 i/s, yuv420p BT.709 (plage TV), 102,51 s, faststart
+- Vidéo : H.264 High, 1080 × 1920, 30 i/s, yuv420p BT.709 (plage TV), 103,51 s (vignette 1 s + film), faststart
 - Audio : AAC LC, 48 kHz, stéréo, 192 kb/s
-- Couverture intégrée (flux MJPEG `attached_pic`) = vignette V2
-- Taille : 46,3 Mo (≈ 3,6 Mb/s)
+- Couverture intégrée (flux MJPEG `attached_pic`) = vignette client 630621
+- Décalage audio mesuré : 1,000 s (= durée de la vignette)
+- Taille : 47,4 Mo (≈ 3,7 Mb/s)
 - Sonie : −14,5 LUFS intégrés, crête −1,3 dBFS
 - Décodage complet sans aucune erreur (`ffmpeg -v error -f null`)
 - Compatibilité : durée < 3 min (TikTok, Reels, YouTube Shorts, Facebook Reels), 9:16, H.264/AAC.

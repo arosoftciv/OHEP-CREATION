@@ -5,7 +5,7 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts OhelVideo02V2 out/raw.mp4",
-    "cover": "remotion still src/index.ts Cover02V2 output/OHEL_VIDEO_02_COVER_V2.png",
+    "cover": "remotion still src/index.ts Cover02V2 output/OHEL_VIDEO_02_COVER_V2_version_animation.png",
     "export": "bash scripts/export_final.sh"
   },
   "dependencies": {
