@@ -10,6 +10,8 @@ import {TL as TL3} from './v3/timeline_v3';
 import {OhelVideo02V4} from './v4/OhelVideo02V4';
 import {TL as TL4} from './v4/timeline_v4';
 import {Cover02V4} from './v4/CoverV4';
+import {OhelVideo02V5} from './v5/OhelVideo02V5';
+import {TL as TL5} from './v5/timeline_v5';
 
 const h = delayRender('fonts');
 fontsReady.then(() => continueRender(h));
@@ -21,6 +23,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="OhelVideo02V3" component={OhelVideo02V3} durationInFrames={TL3.total} fps={TL3.fps} width={1080} height={1920} defaultProps={{subtitles: true, audio: true}} />
     <Composition id="OhelVideo02V4" component={OhelVideo02V4} durationInFrames={TL4.total} fps={TL4.fps} width={1080} height={1920} defaultProps={{subtitles: true, audio: true}} />
     <Still id="Cover02V4" component={Cover02V4} width={1080} height={1920} />
+    <Composition id="OhelVideo02V5" component={OhelVideo02V5} durationInFrames={TL5.total} fps={TL5.fps} width={1080} height={1920} defaultProps={{subtitles: true, audio: true}} />
     {/* Générique de marque réutilisable, prévisualisable seul (paramétrage par défaut) */}
     <Composition
       id="OhelBrandOutro"
