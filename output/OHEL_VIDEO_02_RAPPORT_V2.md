@@ -51,6 +51,14 @@ Le dépôt principal ne contenait qu'un README. Les ressources ont été récup�
 Les réalisations OHEL (scène 6) passent **avant** l'appel à l'action. Le numéro reste à l'écran de 82,4 s à la fin (≈ 20 s), en grand puis en bandeau.
 Zones de sécurité : textes entre y ≈ 230 et 1 320 px, marges ≥ 60 px ; bande des sous-titres réservée (y 1 340–1 490).
 
+### 3 bis. Logo blanc miniature (demande client)
+
+- Logo OHEL **en blanc, en miniature, en haut à droite** (190 × 95 px, à 120 px du haut et 46 px du bord droit) pendant tout le film, apparition en fondu à 0,2–0,6 s.
+- Fichier `public/img/logo_ohel_blanc.png` dérivé **directement** de 556713.png : même canal alpha (silhouette, lettres, proportions et ratio 1774:887 identiques), seuls les pixels colorés passent en blanc. Aucun pixel blanc n'existait dans l'original, donc aucun détail ne se confond (les joints des briques restent transparents). Aucun redessin.
+- Ombre portée légère pour la lisibilité sur les fonds clairs (scène 4, ciel de la scène 2).
+- Masqué en fondu juste avant la révélation du grand logo officiel en couleur (74,7 s) et pendant le générique, pour ne jamais afficher deux logos en même temps.
+- Le logo en couleur d'origine reste utilisé pour la révélation, le générique et la vignette.
+
 ### 4. Exactitude du contenu
 
 - Aucune température de bâtiment, aucun pourcentage, aucune économie, aucun prix, aucune dimension ni formulation n'est affiché. La seule valeur (33 °C) est la **météo extérieure**, marquée « météo illustrative ».
@@ -91,7 +99,7 @@ Zones de sécurité : textes entre y ≈ 230 et 1 320 px, marges ≥ 60 px ; ban
 | 4 | Aucune économie chiffrée | ✅ « à chiffrer », « = ? » |
 | 5 | Aucune performance thermique garantie | ✅ schéma de principe, nuances explicites |
 | 6 | Réalisations OHEL authentiques | ✅ vidéo réelle uniquement (provenance à confirmer, §2) |
-| 7 | Logo strictement conforme | ✅ fichier identique à l'original, ratio préservé, aucun filtre ; vérifié visuellement sur les captures |
+| 7 | Logo strictement conforme | ✅ fichier identique à l'original, ratio préservé, aucun filtre ; vérifié visuellement sur les captures. Version blanche miniature à la demande du client : silhouette exacte de l'original (§3 bis) |
 | 8 | Aucun faux logo | ✅ aucune image générée ; seul le fichier officiel apparaît |
 | 9 | OHEL présenté comme spécialiste du BTCS | ✅ voix + scène 6 + générique |
 | 10 | Réalisations avant l'appel à l'action | ✅ 65–78 s, contact à 78 s |

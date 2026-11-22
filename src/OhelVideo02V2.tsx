@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, staticFile} from 'remotion';
+import {AbsoluteFill, Audio, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {TL, wordTime} from './timeline';
 import {S1Choix} from './scenes/S1Choix';
 import {S2Thermique} from './scenes/S2Thermique';
@@ -9,6 +9,7 @@ import {S5Cout} from './scenes/S5Cout';
 import {S6Ohel} from './scenes/S6Ohel';
 import {OhelBrandOutro} from './components/OhelBrandOutro';
 import {Captions} from './components/Captions';
+import {LogoWatermark} from './components/ui';
 
 const S = TL.scenes;
 
@@ -31,6 +32,10 @@ export const OhelVideo02V2: React.FC<{subtitles?: boolean; audio?: boolean}> = (
     signature: rel(TL.clips.find((c) => c.id === 'signature')!.start - 0.1),
     slogan: rel(wordTime('construisons', 0, 90)),
   };
+  const frame = useCurrentFrame();
+  // logo blanc miniature : tout le film, masqué quand le grand logo officiel en couleur est à l'écran (révélation S6 + générique)
+  const fLogo = Math.round((wordTime('réalisations') + 26 / 30) * TL.fps);
+  const wm = interpolate(frame, [6, 18, fLogo - 12, fLogo - 2], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill style={{background: '#000'}}>
       {audio ? <Audio src={staticFile('audio/mix.wav')} /> : null}
@@ -61,6 +66,7 @@ export const OhelVideo02V2: React.FC<{subtitles?: boolean; audio?: boolean}> = (
           phoneDigitCues={digits}
         />
       </Sequence>
+      {wm > 0 ? <AbsoluteFill style={{opacity: wm}}><LogoWatermark /></AbsoluteFill> : null}
       {subtitles ? <Captions /> : null}
     </AbsoluteFill>
   );

@@ -271,3 +271,19 @@ export const BlueprintGrid: React.FC<{opacity?: number; color?: string; drift?: 
     </AbsoluteFill>
   );
 };
+
+/** Logo officiel en version blanche monochrome (silhouette exacte du fichier 556713.png : alpha d'origine, pixels passés en blanc). */
+export const LogoWatermark: React.FC<{width?: number; top?: number; right?: number; opacity?: number}> = ({width = 190, top = 120, right = 46, opacity = 0.92}) => (
+  <Img
+    src={staticFile('img/logo_ohel_blanc.png')}
+    style={{
+      position: 'absolute',
+      top,
+      right,
+      width,
+      height: (width * 887) / 1774,
+      opacity,
+      filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.55)) drop-shadow(0 0 10px rgba(0,0,0,0.35))',
+    }}
+  />
+);
