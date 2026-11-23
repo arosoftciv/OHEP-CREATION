@@ -29,6 +29,7 @@ export const CONFIG = {
     whatsappUrl: 'https://wa.me/2250707630335',
     whatsappDisplay: 'wa.me/2250707630335',
     site: 'ohelintermondial.com',
+    email: 'contact@ohelintermondial.com',
   },
   platform: 'universal' as Platform,
   media: {

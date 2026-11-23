@@ -54,3 +54,11 @@ export const UserPlus: React.FC<{size: number}> = ({size}) => (
     <path d="M 40 14 L 40 28 M 33 21 L 47 21" stroke="#FFF" strokeWidth={4} strokeLinecap="round" />
   </svg>
 );
+
+export const MailIcon: React.FC<{size: number}> = ({size}) => (
+  <svg width={size} height={size} viewBox="0 0 48 48">
+    <circle cx={24} cy={24} r={24} fill={C.redDark} />
+    <rect x={11} y={15} width={26} height={18} rx={3} fill="none" stroke="#FFF" strokeWidth={3} />
+    <path d="M 12 17 L 24 26 L 36 17" fill="none" stroke="#FFF" strokeWidth={3} strokeLinejoin="round" />
+  </svg>
+);

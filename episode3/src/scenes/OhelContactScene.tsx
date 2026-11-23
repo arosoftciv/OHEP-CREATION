@@ -3,7 +3,7 @@ import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoCon
 import {C, FONT} from '../theme';
 import {CONFIG} from '../config';
 import {Banner, clamp, Grain, lerp, OfficialLogo, RevealLine, Tag} from '../components/ui';
-import {ChatIcon, GlobeIcon, PhoneIcon} from '../components/icons';
+import {ChatIcon, GlobeIcon, MailIcon, PhoneIcon} from '../components/icons';
 
 /**
  * SCÈNE 7 — Contactez OHEL
@@ -42,7 +42,7 @@ export const OhelContactScene: React.FC<{t0: number; digitCues: number[]}> = ({t
       >
         <Img src={staticFile(CONFIG.media.authentic.client.contactHouse)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </div>
-      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(251,245,238,0.97) 0%, rgba(251,245,238,0.94) 48%, rgba(244,233,223,0.7) 58%, rgba(244,233,223,0) 66%)'}} />
+      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(251,245,238,0.97) 0%, rgba(251,245,238,0.94) 48%, rgba(244,233,223,0.8) 60%, rgba(244,233,223,0) 68%)'}} />
       <Grain opacity={0.04} />
 
       <div style={{position: 'absolute', top: 236, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: lerp(f, 0, 14)}}>
@@ -76,13 +76,17 @@ export const OhelContactScene: React.FC<{t0: number; digitCues: number[]}> = ({t
           ))}
         </div>
       </div>
-      <div style={{position: 'absolute', top: 1000, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(95.7), F(95.7) + 10)}}>
+      <div style={{position: 'absolute', top: 984, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(95.7), F(95.7) + 10)}}>
         <ChatIcon size={54} />
         <span style={{fontFamily: FONT, fontWeight: 800, fontSize: 36, color: '#1E7F36'}}>APPEL OU WHATSAPP · {CONFIG.contact.whatsappDisplay}</span>
       </div>
-      <div style={{position: 'absolute', top: 1088, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(96.6), F(96.6) + 10)}}>
+      <div style={{position: 'absolute', top: 1054, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(96.6), F(96.6) + 10)}}>
         <GlobeIcon size={54} />
-        <span style={{fontFamily: FONT, fontWeight: 800, fontSize: 42, color: C.anthracite, textShadow: '0 0 12px rgba(251,245,238,0.9)'}}>{CONFIG.contact.site}</span>
+        <span style={{fontFamily: FONT, fontWeight: 800, fontSize: 40, color: C.anthracite, textShadow: '0 0 12px rgba(251,245,238,0.9)'}}>{CONFIG.contact.site}</span>
+      </div>
+      <div style={{position: 'absolute', top: 1124, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(97.2), F(97.2) + 10)}}>
+        <MailIcon size={52} />
+        <span style={{fontFamily: FONT, fontWeight: 800, fontSize: 40, color: C.anthracite, textShadow: '0 0 12px rgba(251,245,238,0.95), 0 0 4px rgba(251,245,238,0.95)'}}>{CONFIG.contact.email}</span>
       </div>
       <Tag label="Image fournie par OHEL" at={10} top={1258} dot={C.green} />
     </AbsoluteFill>

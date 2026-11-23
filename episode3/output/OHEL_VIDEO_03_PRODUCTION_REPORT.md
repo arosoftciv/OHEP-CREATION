@@ -21,7 +21,7 @@ Le projet Remotion complet (code, configuration, médias, audio, scripts) est da
 | Durée | **115,0 s** (01:55) |
 | Image | 1080 × 1920, 9:16, **30 i/s**, H.264 **High** niveau 4.1, yuv420p, BT.709, GOP 2 s |
 | Audio | **AAC LC**, 48 kHz, stéréo, 192 kb/s |
-| Débit moyen / taille | 4,20 Mb/s · 60,4 Mo (plafond 7 Mb/s) |
+| Débit moyen / taille | 4,19 Mb/s · 60,3 Mo (plafond 7 Mb/s) |
 | Sonie | **−14,2 LUFS** intégrés, crête −1,2 dBFS, LRA 10,3 LU |
 | Conteneur | MP4, `faststart` (lecture immédiate en ligne), couverture intégrée (`attached_pic`) |
 | Décodage complet | Sans erreur (`ffmpeg -f null`) |
@@ -95,8 +95,8 @@ Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 8 168 c
 | 4 | `HouseProtectionCutaway` | 00:41–01:03 | La caméra s'élève au-dessus de la maison sous la pluie (632952), puis passe en coupe architecturale. La toiture devient semi-transparente. Zooms successifs : **A.** soubassement (fondation, rupture de capillarité qui arrête les remontées animées, pied de mur protégé du rejaillissement) ; **B.** toiture (débords, pente et étanchéité, zones abritées) ; **C.** évacuation (gouttière, descente, rejet loin des fondations, abords en pente, flux d'eau animés) ; **D.** murs (protection selon l'exposition ; murs apparents si la conception et les blocs le permettent ; sinon enduit ou traitement adapté, entretien). |
 | 5 | `AfterRainArchitecture` | 01:03–01:15 | La pluie faiblit, l'orage se dissipe jusqu'à la photo d'origine ensoleillée (632952), le pavé reste un temps mouillé, travelling latéral. Repères : débords de toiture, murs en BTCS apparents, soubassement, abords pavés. « UNE CONSTRUCTION DURABLE SE CONÇOIT. », puis « FABRICATION + CONCEPTION + MISE EN ŒUVRE » calé mot à mot sur la voix. |
 | 6 | `OhelRealProjects` | 01:15–01:31 | Médias réels uniquement : véritable bloc OHEL, pose des blocs sur chantier (« DES BLOCS ADAPTÉS, BIEN MIS EN ŒUVRE »), villas réalisées (« DES BÂTIMENTS DURABLES »), construction réelle en vidéo, puis galerie de 6 réalisations et intérieurs. Volets, zooms, cartes en rotation 2,5D, fondus. Logo officiel, « OHEL INTERNATIONAL / SPÉCIALISTE DE LA CONSTRUCTION EN BTCS / EN CÔTE D'IVOIRE ». |
-| 7 | `OhelContactScene` | 01:31–01:41 | Image client 632952 en fond (maison BTCS : débords, soubassement, abords pavés), logo officiel. « VOUS AVEZ UN PROJET DE CONSTRUCTION ? », « FAITES APPEL À UN SPÉCIALISTE DU BTCS », « CONTACTEZ OHEL INTERNATIONAL », **+225 07 07 63 03 35** (groupes de chiffres surlignés au moment où la voix les prononce), appel ou WhatsApp (wa.me/2250707630335), ohelintermondial.com. Numéro à l'écran pendant 6 s ici, puis en bandeau permanent jusqu'à la fin (≈ 20 s au total). |
-| 8 | `OhelBrandEndCard` (réutilisable) | 01:41–01:55 | « ABONNEZ-VOUS ! » (bouton, main, clic illustratif), cloche animée avec son discret, « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! ». Signature : logo, « OHEL INTERNATIONAL », « SPÉCIALISTE DE LA CONSTRUCTION EN BTCS », « CONSTRUISONS AUTREMENT. / CONSTRUISONS DURABLEMENT. », « ABONNEZ-VOUS ET ACTIVEZ LA CLOCHE », bandeau « CONTACTEZ-NOUS AU 07 07 63 03 35 ». |
+| 7 | `OhelContactScene` | 01:31–01:41 | Image client 632952 en fond (maison BTCS : débords, soubassement, abords pavés), logo officiel. « VOUS AVEZ UN PROJET DE CONSTRUCTION ? », « FAITES APPEL À UN SPÉCIALISTE DU BTCS », « CONTACTEZ OHEL INTERNATIONAL », **+225 07 07 63 03 35** (groupes de chiffres surlignés au moment où la voix les prononce), appel ou WhatsApp (wa.me/2250707630335), ohelintermondial.com, **contact@ohelintermondial.com**. Numéro à l'écran pendant 6 s ici, puis en bandeau permanent jusqu'à la fin (≈ 20 s au total). |
+| 8 | `OhelBrandEndCard` (réutilisable) | 01:41–01:55 | « ABONNEZ-VOUS ! » (bouton, main, clic illustratif), cloche animée avec son discret, « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! ». Signature : logo, « OHEL INTERNATIONAL », « SPÉCIALISTE DE LA CONSTRUCTION EN BTCS », « CONSTRUISONS AUTREMENT. / CONSTRUISONS DURABLEMENT. », « ABONNEZ-VOUS ET ACTIVEZ LA CLOCHE », contact@ohelintermondial.com · ohelintermondial.com, bandeau « CONTACTEZ-NOUS AU 07 07 63 03 35 ». |
 
 **Durée :** 115,0 s (cible 100–115 s). La narration mesurée (78,4 s) a été répartie de façon à laisser respirer les plans, sans accélération.
 
@@ -143,7 +143,7 @@ Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 8 168 c
 | 13 | Réalisations OHEL authentiques | ✅ Scène 6 : médias réels uniquement (dont les photos client), étiquetés ; fond du contact : image client 632952 (origine à confirmer, étiquetée « Image fournie par OHEL ») |
 | 14 | Logo officiel jamais généré | ✅ Fichier 556713 copié à l'identique (`cmp`), aucun logo dans les prompts IA, aucun logo sur bâtiment ni vêtement |
 | 15 | Aucun carré blanc autour du logo | ✅ Logo posé directement sur le ciel, sur des fonds crème pleine largeur ou sur des voiles en dégradé pleine largeur, ni carré ni cadre |
-| 16 | Numéro WhatsApp exact | ✅ +225 07 07 63 03 35 · wa.me/2250707630335 · ohelintermondial.com (centralisés dans `src/config.ts`) |
+| 16 | Numéro WhatsApp exact | ✅ +225 07 07 63 03 35 · wa.me/2250707630335 · ohelintermondial.com · contact@ohelintermondial.com (centralisés dans `src/config.ts`) |
 | 17 | Voix-off synchronisée | ✅ Textes et animations calés sur les phrases mesurées ; chiffres du numéro surlignés au moment où ils sont prononcés |
 | 18 | Sous-titres lisibles | ✅ 44 px gras sur bande translucide, ≤ 2 lignes, au-dessus de la zone d'interface des plateformes, sans recouvrir les informations principales |
 | 19 | Musique sous la voix | ✅ Ducking −10 dB ; voix 17 à 33 dB au-dessus de la musique sur chaque phrase |
@@ -176,6 +176,7 @@ Captures de contrôle (extraites du MP4 final) dans `output/controle/` :
 - front d'humidité rendu plus contrasté ;
 - sous-titres redécoupés à la ponctuation ;
 - intégration des photos fournies par le client à la place d'images créées : 632882 à 632896 dans les scènes 2 et 6, 632952 dans les scènes de pluie, la couverture et le contact ;
+- **adresse e-mail contact@ohelintermondial.com** ajoutée à l'écran de contact et au générique final (demande client) ;
 - **logo OHEL blanc en haut à droite** pendant le film (demande client), masqué pendant le générique d'ouverture, sur le plan « véritable bloc » (fond crème) et dès la révélation du logo couleur ;
 - **fond uniforme** du studio « terre brute ≠ bloc BTCS » (demande client) : halo et bande de sol supprimés, terre détourée localement par sa couleur (`scripts/cutout_raw_earth.py`) et posée sur un noir uni.
 

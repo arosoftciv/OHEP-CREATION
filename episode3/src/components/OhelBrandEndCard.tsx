@@ -121,6 +121,9 @@ export const OhelBrandEndCard: React.FC<{cues: EndCardCues; platform?: Platform}
               {pl.subscribe.replace(' !', '').replace('!', '')} ET {pl.bell ? 'ACTIVEZ LA CLOCHE' : 'ACTIVEZ LES NOTIFICATIONS'}
               {pl.bell ? <BellIcon size={34} color={C.sun} /> : null}
             </div>
+            <div style={{marginTop: 18, opacity: lerp(f, F(c.slogan2) + 26, F(c.slogan2) + 38), fontFamily: FONT, fontWeight: 700, fontSize: 30, color: C.earthDark}}>
+              {CONFIG.contact.email} · {CONFIG.contact.site}
+            </div>
           </div>
         </AbsoluteFill>
       ) : null}
