@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C} from '../theme';
-import {CONFIG} from '../config';
+import {CONFIG, warp, cue} from '../config';
 import {easeOut, Grain, lerp, OfficialLogo, RevealLine, Tag, Vignette} from '../components/ui';
 import {BlurBg, PhotoCard} from '../components/PhotoCard';
 
@@ -19,8 +19,11 @@ const GALLERY = [M.modern, M.toumodi, M.bungalows, M.house, M.bedroom, M.dining]
 export const OhelRealProjects: React.FC<{t0: number}> = ({t0}) => {
   const f = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
-  const F = (absS: number) => Math.round((absS - t0) * fps);
-  const cuts = [0, F(76.6), F(78.6), F(80.4), F(82.2), durationInFrames];
+  /** F : temps d'origine (s) → image locale (via warp) · Fw : temps réel du film (s) → image locale */
+  const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
+  const Fw = (w: number) => Math.round((w - t0) * fps);
+  // plans calés sur les phrases ajoutées : n8 (pose des blocs), n9 (bâtiments durables)
+  const cuts = [0, Fw(cue('n8').start - 0.1), Fw(cue('n9').start - 0.1), Fw(cue('n9').end + 0.15), F(82.2), durationInFrames];
   const shot = cuts.findIndex((c, i) => f >= c && f < cuts[i + 1]);
   const wipe = (i: number) => lerp(f, cuts[i], cuts[i] + 14, 0, 1, easeOut);
   const vis = (i: number) => f >= cuts[i] - 1 && f < cuts[i + 1] + 16;
@@ -96,7 +99,7 @@ export const OhelRealProjects: React.FC<{t0: number}> = ({t0}) => {
       {vis(3) ? (
         <AbsoluteFill style={{clipPath: clip(3)}}>
           <Sequence from={cuts[3]} layout="none">
-            <OffthreadVideo src={staticFile(CONFIG.media.authentic.facade)} muted style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(f, cuts[3], cuts[4], 1.04, 1.12)})`}} />
+            <OffthreadVideo src={staticFile(CONFIG.media.authentic.facadeSlow)} muted style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(f, cuts[3], cuts[4], 1.04, 1.12)})`}} />
           </Sequence>
         </AbsoluteFill>
       ) : null}

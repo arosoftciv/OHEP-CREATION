@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame} from 'remotion';
-import {CONFIG, scene} from './config';
+import {CONFIG, cue, scene, warp} from './config';
 import {lerp, LogoMiniWhite} from './components/ui';
 import {Captions} from './components/Captions';
 import {OhelBrandEndCard} from './components/OhelBrandEndCard';
@@ -36,7 +36,7 @@ const LogoMini: React.FC = () => {
   const f = useCurrentFrame();
   const s = (x: number) => Math.round(x * 30);
   const on = (a: number, b: number) => lerp(f, s(a), s(a) + 10) * lerp(f, s(b) - 10, s(b), 1, 0);
-  return <LogoMiniWhite visible={Math.max(on(3.1, 74.7), on(76.7, 82.4))} />;
+  return <LogoMiniWhite visible={Math.max(on(warp(3.1), warp(74.7)), on(cue('n8').start, warp(82.4)))} />;
 };
 
 /** Composition principale — OHEL INTERNATIONAL · Vidéo 3 · « Une maison en BTCS résiste-t-elle vraiment à la pluie ? » */
@@ -52,7 +52,7 @@ export const OhelVideo03RainResistance: React.FC<{subtitles: boolean; audio: boo
     <S id="OhelSubscribeAndContact" last>
       {(t0) => (
         <OhelBrandEndCard
-          cues={{subscribe: 101.4 - t0, click: 104.45 - t0, bell: 105.6 - t0, noMiss: 106.2 - t0, signature: 107.75 - t0, slogan1: 109.4 - t0, slogan2: 110.85 - t0}}
+          cues={{subscribe: warp(101.4) - t0, click: cue('n14').start + 2.67 - t0, bell: cue('n14').start + 3.95 - t0, noMiss: cue('n14').start + 5.02 - t0, signature: warp(107.75) - t0, slogan1: warp(109.4) - t0, slogan2: warp(110.85) - t0}}
         />
       )}
     </S>

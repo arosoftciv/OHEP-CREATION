@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, interpolate, random, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, FONT} from '../theme';
-import {CONFIG} from '../config';
+import {CONFIG, warp, cue} from '../config';
 import {easeOut, Grain, lerp, RevealLine, SlamText, Tag, Vignette} from '../components/ui';
 import {Rain, WallImpacts} from '../fx/Rain';
 
@@ -53,13 +53,15 @@ const Wall: React.FC<{wet: number}> = ({wet}) => {
 export const RainExposureScene: React.FC<{t0: number}> = ({t0}) => {
   const f = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
-  const F = (absS: number) => Math.round((absS - t0) * fps);
+  /** F : temps d'origine (s) → image locale (via warp) · Fw : temps réel du film (s) → image locale */
+  const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
+  const Fw = (w: number) => Math.round((w - t0) * fps);
   const B0 = F(34.4);
   return (
     <AbsoluteFill style={{background: '#101317', overflow: 'hidden'}}>
       {f < B0 + 14 ? (
         <AbsoluteFill style={{opacity: lerp(f, B0, B0 + 14, 1, 0)}}>
-          <WallCloseUp f={f} end={B0} F={F} />
+          <WallCloseUp f={f} end={B0} F={F} slamAt={Fw(cue('n5').start)} />
         </AbsoluteFill>
       ) : null}
       {f >= B0 ? (
@@ -72,7 +74,7 @@ export const RainExposureScene: React.FC<{t0: number}> = ({t0}) => {
   );
 };
 
-const WallCloseUp: React.FC<{f: number; end: number; F: (s: number) => number}> = ({f, end, F}) => {
+const WallCloseUp: React.FC<{f: number; end: number; F: (s: number) => number; slamAt: number}> = ({f, end, slamAt}) => {
   const t = lerp(f, 0, end + 14, 0, 1, (x) => x);
   const wet = lerp(f, 0, end, 0.15, 0.75);
   return (
@@ -115,7 +117,7 @@ const WallCloseUp: React.FC<{f: number; end: number; F: (s: number) => number}> 
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 62%, rgba(0,0,0,0.6) 100%)'}} />
       <Vignette strength={0.5} />
       <div style={{position: 'absolute', top: 270, left: 40, right: 40}}>
-        <SlamText at={F(29.6)} size={96}>
+        <SlamText at={slamAt} size={96}>
           RÉSISTANCE
           <br />
           <span style={{color: C.water}}>À L'EAU</span>

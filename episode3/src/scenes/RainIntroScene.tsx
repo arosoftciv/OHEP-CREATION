@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C} from '../theme';
-import {CONFIG} from '../config';
+import {CONFIG, warp, cue} from '../config';
 import {Grain, lerp, OfficialLogo, RevealLine, SlamText, Tag, Vignette} from '../components/ui';
 import {StormHouse} from '../components/StormHouse';
 import {GroundSplashes, lightning, Rain} from '../fx/Rain';
@@ -15,7 +15,9 @@ import {GroundSplashes, lightning, Rain} from '../fx/Rain';
 export const RainIntroScene: React.FC<{t0: number}> = ({t0}) => {
   const f = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
-  const F = (absS: number) => Math.round((absS - t0) * fps);
+  /** F : temps d'origine (s) → image locale (via warp) · Fw : temps réel du film (s) → image locale */
+  const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
+  const Fw = (w: number) => Math.round((w - t0) * fps);
   const end = durationInFrames;
 
   const cam = lerp(f, 0, end, 0, 1, (t) => t);

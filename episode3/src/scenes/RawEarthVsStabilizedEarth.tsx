@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, FONT} from '../theme';
-import {CONFIG} from '../config';
+import {CONFIG, warp, cue} from '../config';
 import {easeOut, Grain, KenBurns, lerp, RevealLine, SlamText, Tag, Vignette} from '../components/ui';
 import {BlurBg, PhotoCard} from '../components/PhotoCard';
 
@@ -24,10 +24,13 @@ const STEPS = [
 export const RawEarthVsStabilizedEarth: React.FC<{t0: number}> = ({t0}) => {
   const f = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
-  const F = (absS: number) => Math.round((absS - t0) * fps);
+  /** F : temps d'origine (s) → image locale (via warp) · Fw : temps réel du film (s) → image locale */
+  const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
+  const Fw = (w: number) => Math.round((w - t0) * fps);
   const B0 = F(18.2);
   // bornes des étapes (absolues)
-  const stepT = [18.2, 19.6, 20.8, 22.0, 25.0, 28.6].map(F);
+  // étapes calées sur la voix : sélection, préparation (script), mélange (phrase ajoutée n2), compression puis cure (n3)
+  const stepT = [F(18.2), F(19.6), F(20.8), Fw(cue('n3').start + 0.2), Fw(cue('n3').start + 1.25), durationInFrames + 30];
   const step = stepT.findIndex((t, i) => f >= t && f < stepT[i + 1]);
 
   return (
@@ -123,7 +126,7 @@ export const RawEarthVsStabilizedEarth: React.FC<{t0: number}> = ({t0}) => {
 
           {/* UN MATÉRIAU ÉLABORÉ */}
           <div style={{position: 'absolute', top: 870, left: 40, right: 40}}>
-            <SlamText at={stepT[4] + 14} size={92}>
+            <SlamText at={Fw(cue('n4').start)} size={92}>
               UN MATÉRIAU
               <br />
               <span style={{color: C.green}}>ÉLABORÉ</span>

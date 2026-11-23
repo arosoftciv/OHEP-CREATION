@@ -51,6 +51,25 @@ OHEL INTERNATIONAL.
 Construisons autrement. Construisons durablement.
 
 ---
+AJOUTS DEMANDÉS PAR LE CLIENT (textes affichés à l'écran désormais lus par la voix ; même voix « Tony », une prise)
+
+Une maison en BTCS résiste-t-elle vraiment à la pluie ?
+Un mélange avec un stabilisant approprié.
+Puis la compression, la cure et les contrôles.
+Un matériau élaboré.
+Résistance à l'eau.
+Stabilisation et qualité de fabrication : formulation, stabilisation, contrôles qualité.
+Une construction durable se conçoit.
+Des blocs adaptés, bien mis en œuvre.
+Des bâtiments durables.
+Faites appel à un spécialiste du BTCS.
+Joignable par appel ou par WhatsApp.
+Notre site : ohelintermondial.com
+Notre e-mail : contact@ohelintermondial.com
+Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification pour ne rien manquer !
+  (remplace la phrase d'abonnement du script officiel : même texte + « pour ne rien manquer »)
+
+---
 Notes de synthèse vocale (ElevenLabs) :
 - Voix : « Tony – Warm, Dynamic Podcast Narrator » (voix des épisodes 1 et 2), modèle eleven_v4, une seule prise.
 - Graphies phonétiques transmises au moteur uniquement : « Oël International », « bé-té-cé-esse ». Le texte affiché reste celui ci-dessus.
@@ -59,29 +78,42 @@ Notes de synthèse vocale (ElevenLabs) :
 ---
 Minutage réel dans la vidéo finale (voix découpée aux silences mesurés, aucune accélération) :
 
-[00:03–00:05] Une maison construite avec de la terre...
-[00:05–00:06] Et quand il pleut ?
-[00:07–00:09] Les murs ne risquent-ils pas de se dégrader ?
-[00:09–00:12] C'est une question que beaucoup de personnes se posent.
-[00:13–00:14] Mais attention !
-[00:14–00:17] Le BTCS, ce n'est pas simplement de la terre brute.
-[00:18–00:23] C'est une terre sélectionnée, préparée, stabilisée et comprimée pour fabriquer des blocs de construction.
-[00:29–00:33] Cette stabilisation peut améliorer leur résistance à l'eau et à l'érosion.
-[00:39–00:40] Mais un bon matériau ne suffit pas !
-[00:41–00:44] Pour protéger une maison contre la pluie, il faut aussi une conception adaptée.
-[00:45–00:48] Un soubassement bien conçu pour limiter les remontées d'humidité.
-[00:50–00:51] Une toiture qui protège les murs.
-[00:54–00:55] Une bonne évacuation des eaux de pluie.
-[00:58–01:00] Et des façades protégées selon leur exposition.
-[01:03–01:07] Voilà pourquoi la durabilité d'une maison ne dépend pas uniquement du matériau utilisé.
-[01:08–01:12] Elle dépend aussi de la qualité de fabrication, de la conception et de la mise en œuvre.
-[01:15–01:18] Avec des blocs adaptés et une construction bien conçue,
-[01:18–01:21] le BTCS peut permettre de réaliser des bâtiments durables.
-[01:22–01:27] En Côte d'Ivoire, OHEL INTERNATIONAL est votre spécialiste de la construction en Blocs de Terre Comprimée Stabilisée.
-[01:28–01:30] Découvrez notre savoir-faire et nos réalisations.
-[01:32–01:33] Vous avez un projet de construction ?
-[01:33–01:38] Contactez OHEL INTERNATIONAL au 07 07 63 03 35.
-[01:41–01:46] Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification !
-[01:47–01:49] OHEL INTERNATIONAL.
-[01:49–01:50] Construisons autrement.
-[01:50–01:52] Construisons durablement.
+[00:00–00:04] Une maison en BTCS résiste-t-elle vraiment à la pluie ?
+[00:04–00:07] Une maison construite avec de la terre...
+[00:07–00:08] Et quand il pleut ?
+[00:08–00:10] Les murs ne risquent-ils pas de se dégrader ?
+[00:11–00:13] C'est une question que beaucoup de personnes se posent.
+[00:14–00:15] Mais attention !
+[00:15–00:18] Le BTCS, ce n'est pas simplement de la terre brute.
+[00:19–00:24] C'est une terre sélectionnée, préparée, stabilisée et comprimée pour fabriquer des blocs de construction.
+[00:25–00:27] Un mélange avec un stabilisant approprié.
+[00:27–00:29] Puis la compression, la cure et les contrôles.
+[00:29–00:31] Un matériau élaboré.
+[00:32–00:33] Résistance à l'eau.
+[00:33–00:37] Cette stabilisation peut améliorer leur résistance à l'eau et à l'érosion.
+[00:38–00:43] Stabilisation et qualité de fabrication : formulation, stabilisation, contrôles qualité.
+[00:43–00:45] Mais un bon matériau ne suffit pas !
+[00:46–00:49] Pour protéger une maison contre la pluie, il faut aussi une conception adaptée.
+[00:50–00:53] Un soubassement bien conçu pour limiter les remontées d'humidité.
+[00:54–00:56] Une toiture qui protège les murs.
+[00:58–01:00] Une bonne évacuation des eaux de pluie.
+[01:03–01:05] Et des façades protégées selon leur exposition.
+[01:07–01:09] Une construction durable se conçoit.
+[01:10–01:14] Voilà pourquoi la durabilité d'une maison ne dépend pas uniquement du matériau utilisé.
+[01:14–01:18] Elle dépend aussi de la qualité de fabrication, de la conception et de la mise en œuvre.
+[01:22–01:24] Des blocs adaptés, bien mis en œuvre.
+[01:24–01:26] Des bâtiments durables.
+[01:26–01:29] Avec des blocs adaptés et une construction bien conçue,
+[01:29–01:32] le BTCS peut permettre de réaliser des bâtiments durables.
+[01:33–01:38] En Côte d'Ivoire, OHEL INTERNATIONAL est votre spécialiste de la construction en Blocs de Terre Comprimée Stabilisée.
+[01:39–01:41] Découvrez notre savoir-faire et nos réalisations.
+[01:43–01:44] Vous avez un projet de construction ?
+[01:44–01:46] Faites appel à un spécialiste du BTCS.
+[01:47–01:52] Contactez OHEL INTERNATIONAL au 07 07 63 03 35.
+[01:52–01:54] Joignable par appel ou par WhatsApp.
+[01:54–01:57] Notre site : ohelintermondial.com
+[01:57–02:01] Notre e-mail : contact@ohelintermondial.com
+[02:02–02:08] Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification pour ne rien manquer !
+[02:09–02:10] OHEL INTERNATIONAL.
+[02:10–02:11] Construisons autrement.
+[02:11–02:13] Construisons durablement.

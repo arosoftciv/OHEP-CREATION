@@ -18,11 +18,11 @@ Le projet Remotion complet (code, configuration, médias, audio, scripts) est da
 
 | Propriété | Valeur |
 |---|---|
-| Durée | **115,0 s** (01:55) |
+| Durée | **136,1 s** (02:16) |
 | Image | 1080 × 1920, 9:16, **30 i/s**, H.264 **High** niveau 4.1, yuv420p, BT.709, GOP 2 s |
 | Audio | **AAC LC**, 48 kHz, stéréo, 192 kb/s |
-| Débit moyen / taille | 4,19 Mb/s · 60,3 Mo (plafond 7 Mb/s) |
-| Sonie | **−14,2 LUFS** intégrés, crête −1,2 dBFS, LRA 10,3 LU |
+| Débit moyen / taille | 3,97 Mb/s · 67,6 Mo (plafond 7 Mb/s) |
+| Sonie | **−14,0 LUFS** intégrés, crête −1,3 dBFS |
 | Conteneur | MP4, `faststart` (lecture immédiate en ligne), couverture intégrée (`attached_pic`) |
 | Décodage complet | Sans erreur (`ffmpeg -f null`) |
 
@@ -69,6 +69,19 @@ Les photos 6328xx ont une définition modeste (700 à 800 px de large). Elles so
 - **Prononciation :** graphies phonétiques envoyées au moteur uniquement (« Oël International », « bé-té-cé-esse », numéro en toutes lettres).
 - **Intentions :** balises `[intrigued]` (ouverture), `[confident]` (présentation), `[reassuring]` (protections), `[warmly]` (contact), `[upbeat]` (abonnement).
 - **Durée réelle mesurée :** 78,37 s.
+- **Ajouts demandés par le client** (textes affichés désormais lus par la voix) : même voix, une seule prise de 42,2 s, 781 crédits, 14 phrases découpées aux silences mesurés. Contenu :
+  - titre d'ouverture ;
+  - « mélange avec un stabilisant approprié », « compression, cure et contrôles » ;
+  - « un matériau élaboré », « résistance à l'eau » ;
+  - « stabilisation et qualité de fabrication : formulation, stabilisation, contrôles qualité » ;
+  - « une construction durable se conçoit » ;
+  - « des blocs adaptés, bien mis en œuvre », « des bâtiments durables » ;
+  - « faites appel à un spécialiste du BTCS » ;
+  - appel ou WhatsApp, site, e-mail ;
+  - phrase d'abonnement complétée par « pour ne rien manquer ».
+- **Insertion des ajouts :** les phrases sont insérées par « déformation temporelle ». À 9 points de la timeline, on ajoute juste le temps nécessaire (20,6 s au total), et animations comme sons suivent ce décalage (`warp` dans `src/timeline.json`). Aucune accélération.
+- **Sonie :** les ajouts sont alignés sur la voix principale.
+- **Vérification :** transcription Scribe de la voix principale (431 crédits) ; le script officiel est lu intégralement, sans omission.
 - **Montage :** la prise est découpée aux 25 silences mesurés (ffmpeg `silencedetect`, −35 dB, 0,2 s), puis chaque phrase est placée sur la timeline. **Aucune accélération, aucun étirement** : seules les pauses entre phrases sont allongées, pour laisser respirer les plans. Le film a été adapté à la narration, et non l'inverse.
 
 ## 6. Images générées (ElevenLabs · Seedream 5 Pro, 2K)
@@ -83,7 +96,7 @@ Les photos 6328xx ont une définition modeste (700 à 800 px de large). Elles so
 | Tamisage | — | Générée, puis **remplacée** par la photo réelle 632882 à la demande du client (fichier conservé, non utilisé) |
 
 Aucun logo n'a été demandé dans les prompts. Les images écartées sont conservées dans `assets/generated/rejected/` pour la traçabilité ; elles ne sont pas utilisées.
-Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 8 168 crédits** (forfait Creator, aucun dépassement). Aucune génération vidéo IA (bien plus coûteuse) n'a été lancée : la pluie, les mouvements de caméra et la parallaxe sont animés dans Remotion.
+Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 9 380 crédits** (voix 1 597 + ajouts 781 + images 6 571 + transcription de contrôle 431 ; forfait Creator, aucun dépassement). Aucune génération vidéo IA (bien plus coûteuse) n'a été lancée : la pluie, les mouvements de caméra et la parallaxe sont animés dans Remotion.
 
 ## 7. Storyboard réalisé (minutage final)
 
@@ -98,7 +111,7 @@ Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 8 168 c
 | 7 | `OhelContactScene` | 01:31–01:41 | Image client 632952 en fond (maison BTCS : débords, soubassement, abords pavés), logo officiel. « VOUS AVEZ UN PROJET DE CONSTRUCTION ? », « FAITES APPEL À UN SPÉCIALISTE DU BTCS », « CONTACTEZ OHEL INTERNATIONAL », **+225 07 07 63 03 35** (groupes de chiffres surlignés au moment où la voix les prononce), appel ou WhatsApp (wa.me/2250707630335), ohelintermondial.com, **contact@ohelintermondial.com**. Numéro à l'écran pendant 6 s ici, puis en bandeau permanent jusqu'à la fin (≈ 20 s au total). |
 | 8 | `OhelBrandEndCard` (réutilisable) | 01:41–01:55 | « ABONNEZ-VOUS ! » (bouton, main, clic illustratif), cloche animée avec son discret, « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! ». Signature : logo, « OHEL INTERNATIONAL », « SPÉCIALISTE DE LA CONSTRUCTION EN BTCS », « CONSTRUISONS AUTREMENT. / CONSTRUISONS DURABLEMENT. », « ABONNEZ-VOUS ET ACTIVEZ LA CLOCHE », contact@ohelintermondial.com · ohelintermondial.com, bandeau « CONTACTEZ-NOUS AU 07 07 63 03 35 ». |
 
-**Durée :** 115,0 s (cible 100–115 s). La narration mesurée (78,4 s) a été répartie de façon à laisser respirer les plans, sans accélération.
+**Durée :** 136,1 s. La narration officielle (78,4 s) et les 14 phrases ajoutées à la demande du client (42,2 s) sont réparties sans accélération. La durée dépasse la cible indicative de 100–115 s, ce que le brief autorise pour préserver une diction naturelle. Les minutages des lignes du tableau ci-dessus sont ceux de la version de 115 s : ajouter le décalage `warp`.
 
 ## 8. Bande-son
 
@@ -144,11 +157,11 @@ Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 8 168 c
 | 14 | Logo officiel jamais généré | ✅ Fichier 556713 copié à l'identique (`cmp`), aucun logo dans les prompts IA, aucun logo sur bâtiment ni vêtement |
 | 15 | Aucun carré blanc autour du logo | ✅ Logo posé directement sur le ciel, sur des fonds crème pleine largeur ou sur des voiles en dégradé pleine largeur, ni carré ni cadre |
 | 16 | Numéro WhatsApp exact | ✅ +225 07 07 63 03 35 · wa.me/2250707630335 · ohelintermondial.com · contact@ohelintermondial.com (centralisés dans `src/config.ts`) |
-| 17 | Voix-off synchronisée | ✅ Textes et animations calés sur les phrases mesurées ; chiffres du numéro surlignés au moment où ils sont prononcés |
+| 17 | Voix-off synchronisée | ✅ Textes et animations calés sur les phrases mesurées. Les titres, étapes et coordonnées affichés sont désormais lus par la voix et apparaissent au moment où ils sont prononcés. Chiffres du numéro surlignés au moment où ils sont dits. |
 | 18 | Sous-titres lisibles | ✅ 44 px gras sur bande translucide, ≤ 2 lignes, au-dessus de la zone d'interface des plateformes, sans recouvrir les informations principales |
 | 19 | Musique sous la voix | ✅ Ducking −10 dB ; voix 17 à 33 dB au-dessus de la musique sur chaque phrase |
 | 20 | Abonnement et cloche | ✅ Bouton « ABONNEZ-VOUS ! », clic, cloche animée et sonore, « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! » |
-| 21 | Durée cohérente avec la narration | ✅ 115,0 s pour 78,4 s de voix, sans accélération |
+| 21 | Durée cohérente avec la narration | ✅ 136,1 s pour 120,6 s de voix (script officiel et ajouts), sans accélération |
 | 22 | MP4 existant et fonctionnel | ✅ Vérifié par FFprobe et par un décodage complet |
 
 Captures de contrôle (extraites du MP4 final) dans `output/controle/` :
@@ -176,6 +189,7 @@ Captures de contrôle (extraites du MP4 final) dans `output/controle/` :
 - front d'humidité rendu plus contrasté ;
 - sous-titres redécoupés à la ponctuation ;
 - intégration des photos fournies par le client à la place d'images créées : 632882 à 632896 dans les scènes 2 et 6, 632952 dans les scènes de pluie, la couverture et le contact ;
+- **textes affichés lus par la voix** (demande client) : 14 phrases ajoutées, même voix, insérées sans accélération ;
 - **adresse e-mail contact@ohelintermondial.com** ajoutée à l'écran de contact et au générique final (demande client) ;
 - **logo OHEL blanc en haut à droite** pendant le film (demande client), masqué pendant le générique d'ouverture, sur le plan « véritable bloc » (fond crème) et dès la révélation du logo couleur ;
 - **fond uniforme** du studio « terre brute ≠ bloc BTCS » (demande client) : halo et bande de sol supprimés, terre détourée localement par sa couleur (`scripts/cutout_raw_earth.py`) et posée sur un noir uni.

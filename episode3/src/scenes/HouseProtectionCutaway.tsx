@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, random, staticFile, useCurrentFrame, useVideoConfig} from "remotion";
 import {C, FONT} from '../theme';
-import {CONFIG} from '../config';
+import {CONFIG, warp, cue} from '../config';
 import {Banner, easeOut, Grain, lerp, SlamText, Tag, Vignette} from '../components/ui';
 import {StormHouse} from '../components/StormHouse';
 import {Rain} from '../fx/Rain';
@@ -62,7 +62,9 @@ const SUB = [
 export const HouseProtectionCutaway: React.FC<{t0: number}> = ({t0}) => {
   const f = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
-  const F = (absS: number) => Math.round((absS - t0) * fps);
+  /** F : temps d'origine (s) → image locale (via warp) · Fw : temps réel du film (s) → image locale */
+  const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
+  const Fw = (w: number) => Math.round((w - t0) * fps);
   const subStart = [F(45.3), F(49.7), F(53.8), F(57.9), durationInFrames + 30];
   const cur = subStart.findIndex((s, i) => f >= s && f < subStart[i + 1]); // -1 = vue d'ensemble
   const sectionIn = lerp(f, F(42.0), F(42.9));

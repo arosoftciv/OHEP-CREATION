@@ -1,157 +1,227 @@
 1
-00:00:03,200 --> 00:00:05,650
+00:00:00,250 --> 00:00:04,500
+Une maison en BTCS résiste-t-elle
+vraiment à la pluie ?
+
+2
+00:00:04,650 --> 00:00:07,100
 Une maison construite
 avec de la terre...
 
-2
-00:00:05,900 --> 00:00:06,930
+3
+00:00:07,350 --> 00:00:08,380
 Et quand il pleut ?
 
-3
-00:00:07,400 --> 00:00:09,420
+4
+00:00:08,850 --> 00:00:10,870
 Les murs ne risquent-ils
 pas de se dégrader ?
 
-4
-00:00:09,800 --> 00:00:12,130
+5
+00:00:11,250 --> 00:00:13,580
 C'est une question que beaucoup
 de personnes se posent.
 
-5
-00:00:13,200 --> 00:00:14,160
+6
+00:00:14,650 --> 00:00:15,610
 Mais attention !
 
-6
-00:00:14,300 --> 00:00:17,210
+7
+00:00:15,750 --> 00:00:18,660
 Le BTCS, ce n'est pas
 simplement de la terre brute.
 
-7
-00:00:18,200 --> 00:00:20,168
+8
+00:00:19,650 --> 00:00:21,618
 C'est une terre
 sélectionnée, préparée,
 
-8
-00:00:20,169 --> 00:00:23,550
+9
+00:00:21,619 --> 00:00:25,000
 stabilisée et comprimée pour
 fabriquer des blocs de construction.
 
-9
-00:00:29,600 --> 00:00:31,437
+10
+00:00:25,050 --> 00:00:27,130
+Un mélange avec un
+stabilisant approprié.
+
+11
+00:00:27,230 --> 00:00:29,770
+Puis la compression, la
+cure et les contrôles.
+
+12
+00:00:29,870 --> 00:00:31,350
+Un matériau élaboré.
+
+13
+00:00:32,200 --> 00:00:33,320
+Résistance à l'eau.
+
+14
+00:00:33,570 --> 00:00:35,407
 Cette stabilisation
 peut améliorer leur
 
-10
-00:00:31,438 --> 00:00:33,140
+15
+00:00:35,408 --> 00:00:37,110
 résistance à l'eau et à l'érosion.
 
-11
-00:00:39,200 --> 00:00:41,060
+16
+00:00:38,470 --> 00:00:41,728
+Stabilisation et qualité de
+fabrication : formulation,
+
+17
+00:00:41,729 --> 00:00:43,820
+stabilisation, contrôles qualité.
+
+18
+00:00:43,970 --> 00:00:45,830
 Mais un bon matériau
 ne suffit pas !
 
-12
-00:00:41,300 --> 00:00:43,228
+19
+00:00:46,070 --> 00:00:47,998
 Pour protéger une
 maison contre la pluie,
 
-13
-00:00:43,229 --> 00:00:45,070
+20
+00:00:47,999 --> 00:00:49,840
 il faut aussi une
 conception adaptée.
 
-14
-00:00:45,600 --> 00:00:48,810
+21
+00:00:50,370 --> 00:00:53,580
 Un soubassement bien conçu pour
 limiter les remontées d'humidité.
 
-15
-00:00:50,100 --> 00:00:51,920
+22
+00:00:54,870 --> 00:00:56,690
 Une toiture qui protège les murs.
 
-16
-00:00:54,200 --> 00:00:56,020
+23
+00:00:58,970 --> 00:01:00,790
 Une bonne évacuation
 des eaux de pluie.
 
-17
-00:00:58,300 --> 00:01:00,700
+24
+00:01:03,070 --> 00:01:05,470
 Et des façades protégées
 selon leur exposition.
 
-18
-00:01:03,400 --> 00:01:05,573
+25
+00:01:07,770 --> 00:01:09,910
+Une construction
+durable se conçoit.
+
+26
+00:01:10,060 --> 00:01:12,233
 Voilà pourquoi la
 durabilité d'une maison ne
 
-19
-00:01:05,574 --> 00:01:07,750
+27
+00:01:12,234 --> 00:01:14,410
 dépend pas uniquement
 du matériau utilisé.
 
-20
-00:01:08,000 --> 00:01:10,252
+28
+00:01:14,660 --> 00:01:16,912
 Elle dépend aussi de la
 qualité de fabrication,
 
-21
-00:01:10,253 --> 00:01:12,270
+29
+00:01:16,913 --> 00:01:18,930
 de la conception et
 de la mise en œuvre.
 
-22
-00:01:15,400 --> 00:01:18,319
+30
+00:01:22,660 --> 00:01:24,870
+Des blocs adaptés,
+bien mis en œuvre.
+
+31
+00:01:24,970 --> 00:01:26,390
+Des bâtiments durables.
+
+32
+00:01:26,490 --> 00:01:29,409
 Avec des blocs adaptés et
 une construction bien conçue,
 
-23
-00:01:18,320 --> 00:01:21,790
+33
+00:01:29,410 --> 00:01:32,880
 le BTCS peut permettre de
 réaliser des bâtiments durables.
 
-24
-00:01:22,200 --> 00:01:25,144
+34
+00:01:33,290 --> 00:01:36,234
 En Côte d'Ivoire, OHEL INTERNATIONAL
 est votre spécialiste de
 
-25
-00:01:25,145 --> 00:01:27,900
+35
+00:01:36,235 --> 00:01:38,990
 la construction en Blocs de
 Terre Comprimée Stabilisée.
 
-26
-00:01:28,300 --> 00:01:30,880
+36
+00:01:39,390 --> 00:01:41,970
 Découvrez notre savoir-faire
 et nos réalisations.
 
-27
-00:01:32,000 --> 00:01:33,460
+37
+00:01:43,090 --> 00:01:44,550
 Vous avez un projet
 de construction ?
 
-28
-00:01:33,900 --> 00:01:39,010
+38
+00:01:44,700 --> 00:01:47,090
+Faites appel à un
+spécialiste du BTCS.
+
+39
+00:01:47,240 --> 00:01:52,350
 Contactez OHEL INTERNATIONAL
 au 07 07 63 03 35.
 
-29
-00:01:41,800 --> 00:01:44,337
+40
+00:01:52,450 --> 00:01:54,580
+Joignable par appel
+ou par WhatsApp.
+
+41
+00:01:54,680 --> 00:01:57,570
+Notre site : ohelintermondial.com
+
+42
+00:01:57,670 --> 00:02:01,750
+Notre e-mail :
+contact@ohelintermondial.com
+
+43
+00:02:02,600 --> 00:02:05,086
 Pour découvrir nos prochaines
 vidéos sur le BTCS,
 
-30
-00:01:44,338 --> 00:01:47,080
-abonnez-vous et activez la
-cloche de notification !
+44
+00:02:05,087 --> 00:02:06,913
+abonnez-vous et
+activez la cloche de
 
-31
-00:01:47,900 --> 00:01:49,200
+45
+00:02:06,914 --> 00:02:08,790
+notification pour
+ne rien manquer !
+
+46
+00:02:09,040 --> 00:02:10,340
 OHEL INTERNATIONAL.
 
-32
-00:01:49,400 --> 00:01:50,730
+47
+00:02:10,540 --> 00:02:11,870
 Construisons autrement.
 
-33
-00:01:50,850 --> 00:01:52,420
+48
+00:02:11,990 --> 00:02:13,560
 Construisons durablement.

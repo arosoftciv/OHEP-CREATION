@@ -1,5 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
+import {cue, warp} from '../config';
 import {C, FONT} from '../theme';
 import {easeOut, Grain, lerp, RevealLine, Tag, Vignette} from '../components/ui';
 import {GroundSplashes, Rain} from '../fx/Rain';
@@ -21,7 +22,9 @@ const MARKS = [
 export const AfterRainArchitecture: React.FC<{t0: number}> = ({t0}) => {
   const f = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
-  const F = (absS: number) => Math.round((absS - t0) * fps);
+  /** F : temps d'origine (s) → image locale (via warp) · Fw : temps réel du film (s) → image locale */
+  const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
+  const Fw = (w: number) => Math.round((w - t0) * fps);
   const rainK = interpolate(f, [0, F(65.0), F(67.4)], [0.85, 0.35, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const storm = lerp(f, F(63.0), F(67.6), 1, 0);
   const wet = lerp(f, F(64.0), F(72.0), 1, 0.4);
@@ -64,10 +67,10 @@ export const AfterRainArchitecture: React.FC<{t0: number}> = ({t0}) => {
       <Grain opacity={0.06} />
 
       <div style={{position: 'absolute', top: 1000, left: 50, right: 50, textAlign: 'center'}}>
-        <RevealLine at={F(63.5)} style={{fontWeight: 900, fontSize: 68, color: C.white, lineHeight: 1.05, textShadow: '0 4px 20px rgba(0,0,0,0.6)'}}>
+        <RevealLine at={Fw(cue('n7').start)} style={{fontWeight: 900, fontSize: 68, color: C.white, lineHeight: 1.05, textShadow: '0 4px 20px rgba(0,0,0,0.6)'}}>
           UNE CONSTRUCTION
         </RevealLine>
-        <RevealLine at={F(63.5) + 6} style={{fontWeight: 900, fontSize: 68, color: C.white, lineHeight: 1.05, textShadow: '0 4px 20px rgba(0,0,0,0.6)'}}>
+        <RevealLine at={Fw(cue('n7').start) + 6} style={{fontWeight: 900, fontSize: 68, color: C.white, lineHeight: 1.05, textShadow: '0 4px 20px rgba(0,0,0,0.6)'}}>
           DURABLE <span style={{color: C.green}}>SE CONÇOIT.</span>
         </RevealLine>
       </div>

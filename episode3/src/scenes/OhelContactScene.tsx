@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, FONT} from '../theme';
-import {CONFIG} from '../config';
+import {CONFIG, warp, cue} from '../config';
 import {Banner, clamp, Grain, lerp, OfficialLogo, RevealLine, Tag} from '../components/ui';
 import {ChatIcon, GlobeIcon, MailIcon, PhoneIcon} from '../components/icons';
 
@@ -13,7 +13,9 @@ import {ChatIcon, GlobeIcon, MailIcon, PhoneIcon} from '../components/icons';
 export const OhelContactScene: React.FC<{t0: number; digitCues: number[]}> = ({t0, digitCues}) => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const F = (absS: number) => Math.round((absS - t0) * fps);
+  /** F : temps d'origine (s) → image locale (via warp) · Fw : temps réel du film (s) → image locale */
+  const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
+  const Fw = (w: number) => Math.round((w - t0) * fps);
   const groups = CONFIG.contact.phoneDisplay.split(' ');
   const hot = (gi: number) => {
     if (gi === 0) return 0;
@@ -56,7 +58,7 @@ export const OhelContactScene: React.FC<{t0: number; digitCues: number[]}> = ({t
           DE CONSTRUCTION ?
         </RevealLine>
         <div style={{marginTop: 14}}>
-          <RevealLine at={F(92.9)} style={{fontWeight: 800, fontSize: 36, color: C.earth}}>
+          <RevealLine at={Fw(cue('n10').start)} style={{fontWeight: 800, fontSize: 36, color: C.earth}}>
             FAITES APPEL À UN SPÉCIALISTE DU BTCS
           </RevealLine>
         </div>
@@ -76,15 +78,15 @@ export const OhelContactScene: React.FC<{t0: number; digitCues: number[]}> = ({t
           ))}
         </div>
       </div>
-      <div style={{position: 'absolute', top: 984, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(95.7), F(95.7) + 10)}}>
+      <div style={{position: 'absolute', top: 984, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, Fw(cue('n11').start), Fw(cue('n11').start) + 10)}}>
         <ChatIcon size={54} />
         <span style={{fontFamily: FONT, fontWeight: 800, fontSize: 36, color: '#1E7F36'}}>APPEL OU WHATSAPP · {CONFIG.contact.whatsappDisplay}</span>
       </div>
-      <div style={{position: 'absolute', top: 1054, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(96.6), F(96.6) + 10)}}>
+      <div style={{position: 'absolute', top: 1054, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, Fw(cue('n12').start), Fw(cue('n12').start) + 10)}}>
         <GlobeIcon size={54} />
         <span style={{fontFamily: FONT, fontWeight: 800, fontSize: 40, color: C.anthracite, textShadow: '0 0 12px rgba(251,245,238,0.9)'}}>{CONFIG.contact.site}</span>
       </div>
-      <div style={{position: 'absolute', top: 1124, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, F(97.2), F(97.2) + 10)}}>
+      <div style={{position: 'absolute', top: 1124, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, opacity: lerp(f, Fw(cue('n13').start), Fw(cue('n13').start) + 10)}}>
         <MailIcon size={52} />
         <span style={{fontFamily: FONT, fontWeight: 800, fontSize: 40, color: C.anthracite, textShadow: '0 0 12px rgba(251,245,238,0.95), 0 0 4px rgba(251,245,238,0.95)'}}>{CONFIG.contact.email}</span>
       </div>

@@ -1,337 +1,573 @@
 {
  "fps": 30,
- "total": 115.0,
+ "total": 136.14,
+ "warp": [
+  [
+   2.0,
+   1.45
+  ],
+  [
+   23.5,
+   2.25
+  ],
+  [
+   28.25,
+   0.27
+  ],
+  [
+   36.0,
+   0.8
+  ],
+  [
+   62.9,
+   1.89
+  ],
+  [
+   75.3,
+   4.43
+  ],
+  [
+   93.5,
+   2.25
+  ],
+  [
+   99.0,
+   7.46
+  ],
+  [
+   107.0,
+   0.34
+  ]
+ ],
  "scenes": {
   "RainIntroScene": [
    0.0,
-   12.9
+   14.35
   ],
   "RawEarthVsStabilizedEarth": [
-   12.9,
-   28.2
+   14.35,
+   31.9
   ],
   "RainExposureScene": [
-   28.2,
-   40.9
+   31.9,
+   45.67
   ],
   "HouseProtectionCutaway": [
-   40.9,
-   62.6
+   45.67,
+   67.37
   ],
   "AfterRainArchitecture": [
-   62.6,
-   74.6
+   67.37,
+   81.26
   ],
   "OhelRealProjects": [
-   74.6,
-   91.2
+   81.26,
+   102.29
   ],
   "OhelContactScene": [
-   91.2,
-   101.2
+   102.29,
+   122.0
   ],
   "OhelSubscribeAndContact": [
-   101.2,
-   115.0
+   122.0,
+   136.14
   ]
+ },
+ "cues": {
+  "n1": {
+   "start": 0.25,
+   "end": 4.4
+  },
+  "n2": {
+   "start": 25.05,
+   "end": 27.03
+  },
+  "n3": {
+   "start": 27.23,
+   "end": 29.67
+  },
+  "n4": {
+   "start": 29.87,
+   "end": 31.25
+  },
+  "n5": {
+   "start": 32.2,
+   "end": 33.22
+  },
+  "n6": {
+   "start": 38.47,
+   "end": 43.72
+  },
+  "n7": {
+   "start": 67.77,
+   "end": 69.81
+  },
+  "n8": {
+   "start": 82.66,
+   "end": 84.77
+  },
+  "n9": {
+   "start": 84.97,
+   "end": 86.29
+  },
+  "n10": {
+   "start": 104.7,
+   "end": 106.99
+  },
+  "n11": {
+   "start": 112.45,
+   "end": 114.48
+  },
+  "n12": {
+   "start": 114.68,
+   "end": 117.47
+  },
+  "n13": {
+   "start": 117.67,
+   "end": 121.65
+  },
+  "n14": {
+   "start": 122.6,
+   "end": 128.69
+  }
  },
  "lines": [
   {
+   "text": "Une maison en BTCS résiste-t-elle vraiment à la pluie ?",
+   "start": 0.25,
+   "end": 4.4
+  },
+  {
    "text": "Une maison construite avec de la terre...",
-   "start": 3.2,
-   "end": 5.55
+   "start": 4.65,
+   "end": 7.0
   },
   {
    "text": "Et quand il pleut ?",
-   "start": 5.9,
-   "end": 6.83
+   "start": 7.35,
+   "end": 8.28
   },
   {
    "text": "Les murs ne risquent-ils pas de se dégrader ?",
-   "start": 7.4,
-   "end": 9.32
+   "start": 8.85,
+   "end": 10.77
   },
   {
    "text": "C'est une question que beaucoup de personnes se posent.",
-   "start": 9.8,
-   "end": 12.03
+   "start": 11.25,
+   "end": 13.48
   },
   {
    "text": "Mais attention !",
-   "start": 13.2,
-   "end": 14.06
+   "start": 14.65,
+   "end": 15.51
   },
   {
    "text": "Le BTCS, ce n'est pas simplement de la terre brute.",
-   "start": 14.3,
-   "end": 17.11
+   "start": 15.75,
+   "end": 18.56
   },
   {
    "text": "C'est une terre sélectionnée, préparée, stabilisée et comprimée pour fabriquer des blocs de construction.",
-   "start": 18.2,
-   "end": 23.45
+   "start": 19.65,
+   "end": 24.9
+  },
+  {
+   "text": "Un mélange avec un stabilisant approprié.",
+   "start": 25.05,
+   "end": 27.03
+  },
+  {
+   "text": "Puis la compression, la cure et les contrôles.",
+   "start": 27.23,
+   "end": 29.67
+  },
+  {
+   "text": "Un matériau élaboré.",
+   "start": 29.87,
+   "end": 31.25
+  },
+  {
+   "text": "Résistance à l'eau.",
+   "start": 32.2,
+   "end": 33.22
   },
   {
    "text": "Cette stabilisation peut améliorer leur résistance à l'eau et à l'érosion.",
-   "start": 29.6,
-   "end": 33.04
+   "start": 33.57,
+   "end": 37.01
+  },
+  {
+   "text": "Stabilisation et qualité de fabrication : formulation, stabilisation, contrôles qualité.",
+   "start": 38.47,
+   "end": 43.72
   },
   {
    "text": "Mais un bon matériau ne suffit pas !",
-   "start": 39.2,
-   "end": 40.96
+   "start": 43.97,
+   "end": 45.73
   },
   {
    "text": "Pour protéger une maison contre la pluie, il faut aussi une conception adaptée.",
-   "start": 41.3,
-   "end": 44.97
+   "start": 46.07,
+   "end": 49.74
   },
   {
    "text": "Un soubassement bien conçu pour limiter les remontées d'humidité.",
-   "start": 45.6,
-   "end": 48.71
+   "start": 50.37,
+   "end": 53.48
   },
   {
    "text": "Une toiture qui protège les murs.",
-   "start": 50.1,
-   "end": 51.82
+   "start": 54.87,
+   "end": 56.59
   },
   {
    "text": "Une bonne évacuation des eaux de pluie.",
-   "start": 54.2,
-   "end": 55.92
+   "start": 58.97,
+   "end": 60.69
   },
   {
    "text": "Et des façades protégées selon leur exposition.",
-   "start": 58.3,
-   "end": 60.6
+   "start": 63.07,
+   "end": 65.37
+  },
+  {
+   "text": "Une construction durable se conçoit.",
+   "start": 67.77,
+   "end": 69.81
   },
   {
    "text": "Voilà pourquoi la durabilité d'une maison ne dépend pas uniquement du matériau utilisé.",
-   "start": 63.4,
-   "end": 67.65
+   "start": 70.06,
+   "end": 74.31
   },
   {
    "text": "Elle dépend aussi de la qualité de fabrication, de la conception et de la mise en œuvre.",
-   "start": 68.0,
-   "end": 72.17
+   "start": 74.66,
+   "end": 78.83
+  },
+  {
+   "text": "Des blocs adaptés, bien mis en œuvre.",
+   "start": 82.66,
+   "end": 84.77
+  },
+  {
+   "text": "Des bâtiments durables.",
+   "start": 84.97,
+   "end": 86.29
   },
   {
    "text": "Avec des blocs adaptés et une construction bien conçue,",
-   "start": 75.4,
-   "end": 78.23
+   "start": 86.49,
+   "end": 89.32
   },
   {
    "text": "le BTCS peut permettre de réaliser des bâtiments durables.",
-   "start": 78.32,
-   "end": 81.69
+   "start": 89.41,
+   "end": 92.78
   },
   {
    "text": "En Côte d'Ivoire, OHEL INTERNATIONAL est votre spécialiste de la construction en Blocs de Terre Comprimée Stabilisée.",
-   "start": 82.2,
-   "end": 87.8
+   "start": 93.29,
+   "end": 98.89
   },
   {
    "text": "Découvrez notre savoir-faire et nos réalisations.",
-   "start": 88.3,
-   "end": 90.78
+   "start": 99.39,
+   "end": 101.87
   },
   {
    "text": "Vous avez un projet de construction ?",
-   "start": 92.0,
-   "end": 93.36
+   "start": 103.09,
+   "end": 104.45
+  },
+  {
+   "text": "Faites appel à un spécialiste du BTCS.",
+   "start": 104.7,
+   "end": 106.99
   },
   {
    "text": "Contactez OHEL INTERNATIONAL au 07 07 63 03 35.",
-   "start": 93.9,
-   "end": 98.91
+   "start": 107.24,
+   "end": 112.25
   },
   {
-   "text": "Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification !",
-   "start": 101.8,
-   "end": 106.98
+   "text": "Joignable par appel ou par WhatsApp.",
+   "start": 112.45,
+   "end": 114.48
+  },
+  {
+   "text": "Notre site : ohelintermondial.com",
+   "start": 114.68,
+   "end": 117.47
+  },
+  {
+   "text": "Notre e-mail : contact@ohelintermondial.com",
+   "start": 117.67,
+   "end": 121.65
+  },
+  {
+   "text": "Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification pour ne rien manquer !",
+   "start": 122.6,
+   "end": 128.69
   },
   {
    "text": "OHEL INTERNATIONAL.",
-   "start": 107.9,
-   "end": 109.1
+   "start": 129.04,
+   "end": 130.24
   },
   {
    "text": "Construisons autrement.",
-   "start": 109.4,
-   "end": 110.63
+   "start": 130.54,
+   "end": 131.77
   },
   {
    "text": "Construisons durablement.",
-   "start": 110.85,
-   "end": 112.32
+   "start": 131.99,
+   "end": 133.46
   }
  ],
  "captions": [
   {
+   "text": "Une maison en BTCS résiste-t-elle vraiment à la pluie ?",
+   "start": 0.25,
+   "end": 4.4
+  },
+  {
    "text": "Une maison construite avec de la terre...",
-   "start": 3.2,
-   "end": 5.55
+   "start": 4.65,
+   "end": 7.0
   },
   {
    "text": "Et quand il pleut ?",
-   "start": 5.9,
-   "end": 6.83
+   "start": 7.35,
+   "end": 8.28
   },
   {
    "text": "Les murs ne risquent-ils pas de se dégrader ?",
-   "start": 7.4,
-   "end": 9.32
+   "start": 8.85,
+   "end": 10.77
   },
   {
    "text": "C'est une question que beaucoup de personnes se posent.",
-   "start": 9.8,
-   "end": 12.03
+   "start": 11.25,
+   "end": 13.48
   },
   {
    "text": "Mais attention !",
-   "start": 13.2,
-   "end": 14.06
+   "start": 14.65,
+   "end": 15.51
   },
   {
    "text": "Le BTCS, ce n'est pas simplement de la terre brute.",
-   "start": 14.3,
-   "end": 17.11
+   "start": 15.75,
+   "end": 18.56
   },
   {
    "text": "C'est une terre sélectionnée, préparée,",
-   "start": 18.2,
-   "end": 20.169
+   "start": 19.65,
+   "end": 21.619
   },
   {
    "text": "stabilisée et comprimée pour fabriquer des blocs de construction.",
-   "start": 20.169,
-   "end": 23.45
+   "start": 21.619,
+   "end": 24.9
+  },
+  {
+   "text": "Un mélange avec un stabilisant approprié.",
+   "start": 25.05,
+   "end": 27.03
+  },
+  {
+   "text": "Puis la compression, la cure et les contrôles.",
+   "start": 27.23,
+   "end": 29.67
+  },
+  {
+   "text": "Un matériau élaboré.",
+   "start": 29.87,
+   "end": 31.25
+  },
+  {
+   "text": "Résistance à l'eau.",
+   "start": 32.2,
+   "end": 33.22
   },
   {
    "text": "Cette stabilisation peut améliorer leur",
-   "start": 29.6,
-   "end": 31.438
+   "start": 33.57,
+   "end": 35.408
   },
   {
    "text": "résistance à l'eau et à l'érosion.",
-   "start": 31.438,
-   "end": 33.04
+   "start": 35.408,
+   "end": 37.01
+  },
+  {
+   "text": "Stabilisation et qualité de fabrication : formulation,",
+   "start": 38.47,
+   "end": 41.729
+  },
+  {
+   "text": "stabilisation, contrôles qualité.",
+   "start": 41.729,
+   "end": 43.72
   },
   {
    "text": "Mais un bon matériau ne suffit pas !",
-   "start": 39.2,
-   "end": 40.96
+   "start": 43.97,
+   "end": 45.73
   },
   {
    "text": "Pour protéger une maison contre la pluie,",
-   "start": 41.3,
-   "end": 43.229
+   "start": 46.07,
+   "end": 47.999
   },
   {
    "text": "il faut aussi une conception adaptée.",
-   "start": 43.229,
-   "end": 44.97
+   "start": 47.999,
+   "end": 49.74
   },
   {
    "text": "Un soubassement bien conçu pour limiter les remontées d'humidité.",
-   "start": 45.6,
-   "end": 48.71
+   "start": 50.37,
+   "end": 53.48
   },
   {
    "text": "Une toiture qui protège les murs.",
-   "start": 50.1,
-   "end": 51.82
+   "start": 54.87,
+   "end": 56.59
   },
   {
    "text": "Une bonne évacuation des eaux de pluie.",
-   "start": 54.2,
-   "end": 55.92
+   "start": 58.97,
+   "end": 60.69
   },
   {
    "text": "Et des façades protégées selon leur exposition.",
-   "start": 58.3,
-   "end": 60.6
+   "start": 63.07,
+   "end": 65.37
+  },
+  {
+   "text": "Une construction durable se conçoit.",
+   "start": 67.77,
+   "end": 69.81
   },
   {
    "text": "Voilà pourquoi la durabilité d'une maison ne",
-   "start": 63.4,
-   "end": 65.574
+   "start": 70.06,
+   "end": 72.234
   },
   {
    "text": "dépend pas uniquement du matériau utilisé.",
-   "start": 65.574,
-   "end": 67.65
+   "start": 72.234,
+   "end": 74.31
   },
   {
    "text": "Elle dépend aussi de la qualité de fabrication,",
-   "start": 68.0,
-   "end": 70.253
+   "start": 74.66,
+   "end": 76.913
   },
   {
    "text": "de la conception et de la mise en œuvre.",
-   "start": 70.253,
-   "end": 72.17
+   "start": 76.913,
+   "end": 78.83
+  },
+  {
+   "text": "Des blocs adaptés, bien mis en œuvre.",
+   "start": 82.66,
+   "end": 84.77
+  },
+  {
+   "text": "Des bâtiments durables.",
+   "start": 84.97,
+   "end": 86.29
   },
   {
    "text": "Avec des blocs adaptés et une construction bien conçue,",
-   "start": 75.4,
-   "end": 78.23
+   "start": 86.49,
+   "end": 89.32
   },
   {
    "text": "le BTCS peut permettre de réaliser des bâtiments durables.",
-   "start": 78.32,
-   "end": 81.69
+   "start": 89.41,
+   "end": 92.78
   },
   {
    "text": "En Côte d'Ivoire, OHEL INTERNATIONAL est votre spécialiste de",
-   "start": 82.2,
-   "end": 85.145
+   "start": 93.29,
+   "end": 96.235
   },
   {
    "text": "la construction en Blocs de Terre Comprimée Stabilisée.",
-   "start": 85.145,
-   "end": 87.8
+   "start": 96.235,
+   "end": 98.89
   },
   {
    "text": "Découvrez notre savoir-faire et nos réalisations.",
-   "start": 88.3,
-   "end": 90.78
+   "start": 99.39,
+   "end": 101.87
   },
   {
    "text": "Vous avez un projet de construction ?",
-   "start": 92.0,
-   "end": 93.36
+   "start": 103.09,
+   "end": 104.45
+  },
+  {
+   "text": "Faites appel à un spécialiste du BTCS.",
+   "start": 104.7,
+   "end": 106.99
   },
   {
    "text": "Contactez OHEL INTERNATIONAL au 07 07 63 03 35.",
-   "start": 93.9,
-   "end": 98.91
+   "start": 107.24,
+   "end": 112.25
+  },
+  {
+   "text": "Joignable par appel ou par WhatsApp.",
+   "start": 112.45,
+   "end": 114.48
+  },
+  {
+   "text": "Notre site : ohelintermondial.com",
+   "start": 114.68,
+   "end": 117.47
+  },
+  {
+   "text": "Notre e-mail : contact@ohelintermondial.com",
+   "start": 117.67,
+   "end": 121.65
   },
   {
    "text": "Pour découvrir nos prochaines vidéos sur le BTCS,",
-   "start": 101.8,
-   "end": 104.338
+   "start": 122.6,
+   "end": 125.087
   },
   {
-   "text": "abonnez-vous et activez la cloche de notification !",
-   "start": 104.338,
-   "end": 106.98
+   "text": "abonnez-vous et activez la cloche de",
+   "start": 125.087,
+   "end": 126.914
+  },
+  {
+   "text": "notification pour ne rien manquer !",
+   "start": 126.914,
+   "end": 128.69
   },
   {
    "text": "OHEL INTERNATIONAL.",
-   "start": 107.9,
-   "end": 109.1
+   "start": 129.04,
+   "end": 130.24
   },
   {
    "text": "Construisons autrement.",
-   "start": 109.4,
-   "end": 110.63
+   "start": 130.54,
+   "end": 131.77
   },
   {
    "text": "Construisons durablement.",
-   "start": 110.85,
-   "end": 112.32
+   "start": 131.99,
+   "end": 133.46
   }
  ]
 }

@@ -100,30 +100,107 @@ def chunks(text, start, end, maxlen=66):
     return res
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# AJOUTS demandés par le client : textes affichés à l'écran désormais lus par la voix (même voix « Tony », une prise).
+# (clé, texte affiché, début brut, fin brute) — bornes = silences mesurés (−35 dB, 0,2 s)
+RAW_ADD = 'assets/audio/OHEL_VIDEO_03_VOICEOVER_ajouts_raw.mp3'
+ADD = {
+    'n1': ("Une maison en BTCS résiste-t-elle vraiment à la pluie ?", 0.00, 4.15),
+    'n2': ("Un mélange avec un stabilisant approprié.", 4.59, 6.57),
+    'n3': ("Puis la compression, la cure et les contrôles.", 6.85, 9.29),
+    'n4': ("Un matériau élaboré.", 9.51, 10.89),
+    'n5': ("Résistance à l'eau.", 11.06, 12.08),
+    'n6': ("Stabilisation et qualité de fabrication : formulation, stabilisation, contrôles qualité.", 12.30, 17.55),
+    'n7': ("Une construction durable se conçoit.", 17.88, 19.92),
+    'n8': ("Des blocs adaptés, bien mis en œuvre.", 20.17, 22.28),
+    'n9': ("Des bâtiments durables.", 22.44, 23.76),
+    'n10': ("Faites appel à un spécialiste du BTCS.", 24.14, 26.43),
+    'n11': ("Joignable par appel ou par WhatsApp.", 26.58, 28.61),
+    'n12': ("Notre site : ohelintermondial.com", 28.76, 31.55),
+    'n13': ("Notre e-mail : contact@ohelintermondial.com", 31.71, 35.69),
+    'n14': ("Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification pour ne rien manquer !", 35.94, 42.03),
+}
+# n14 remplace la phrase d'abonnement du script officiel (même texte + « pour ne rien manquer »)
+REPLACED = "Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification !"
+# Insertions : la timeline d'origine est « déformée » (aucune accélération) — à chaque point p (temps d'origine),
+# on ajoute juste le temps nécessaire aux phrases ajoutées. Champs :
+# (point d'insertion p, ancre d'origine, décalage depuis l'ancre, [clés], événement d'origine suivant q, marge avant q)
+SPECS = [
+    (2.0, 0.0, 0.25, ['n1'], 3.2, 0.2),        # ouverture : titre lu
+    (23.5, 23.45, 0.15, ['n2', 'n3', 'n4'], 28.2, 0.6),  # étapes de fabrication + « un matériau élaboré »
+    (28.25, 28.2, 0.3, ['n5'], 29.6, 0.3),     # « résistance à l'eau »
+    (36.0, 34.4, 0.1, ['n6'], 39.2, 0.2),      # stabilisation + qualité de fabrication
+    (62.9, 62.6, 0.4, ['n7'], 63.4, 0.2),      # « une construction durable se conçoit »
+    (75.3, 74.6, 1.4, ['n8', 'n9'], 75.4, 0.15),  # réalisations
+    (93.5, 93.36, 0.25, ['n10'], 93.9, 0.2),   # « faites appel à un spécialiste »
+    (99.0, 98.91, 0.2, ['n11', 'n12', 'n13'], 101.2, 0.3),  # coordonnées complètes (avant le générique)
+    (107.0, 101.8, 0.0, ['n14'], 107.9, 0.3),  # abonnement « … pour ne rien manquer »
+]
+GAP = 0.2  # pause entre deux phrases ajoutées consécutives
+
+
+def make_warp(inserts):
+    return lambda t: t + sum(i for p, i in inserts if t >= p)
+
+
 def main():
     v = load(RAW)
-    track = np.zeros(int(TOTAL * SR), dtype=np.float32)
+    va = load(RAW_ADD)
+    # sonie : les ajouts sont alignés sur la voix principale (RMS des parties parlées)
+    def rms(x):
+        x = x[np.abs(x) > 0.01]
+        return float(np.sqrt(np.mean(x ** 2)))
+    va = va * (rms(v) / rms(va))
+
+    # 1) calcul des insertions (séquentiel)
+    inserts, cues = [], {}
+    for p, anchor, lead, keys, q, margin in SPECS:
+        w = make_warp(inserts)
+        t = w(anchor) + lead
+        for k in keys:
+            _, a, b = ADD[k]
+            cues[k] = {'start': round(t, 3), 'end': round(t + (b - a), 3)}
+            t += (b - a) + GAP
+        end_new = t - GAP
+        need = max(0.0, end_new + margin - w(q))
+        inserts.append((p, round(need + 0.05, 2)))
+    warp = make_warp(inserts)
+    total = round(warp(TOTAL), 2)
+
+    # 2) pistes
+    track = np.zeros(int((total + 0.5) * SR), dtype=np.float32)
+    items = []
+    for text, a, b, at in SEGMENTS:
+        if text == REPLACED:
+            continue
+        items.append((warp(at), text, v, a, b))
+    for k, (text, a, b) in ADD.items():
+        items.append((cues[k]['start'], text, va, a, b))
+    items.sort(key=lambda x: x[0])
     lines, caps = [], []
     prev_end = -1
-    for text, a, b, at in SEGMENTS:
-        seg = v[int(a * SR):int(b * SR)].copy()
+    for at, text, src, a, b in items:
+        seg = src[int(a * SR):int(b * SR)].copy()
         f = int(0.012 * SR)
         seg[:f] *= np.linspace(0, 1, f)
         seg[-f:] *= np.linspace(1, 0, f)
+        assert at >= prev_end - 1e-6, f'chevauchement avant « {text} » ({at:.2f} < {prev_end:.2f})'
         i = int(at * SR)
-        assert at >= prev_end - 1e-6, f'chevauchement avant « {text} »'
         track[i:i + len(seg)] += seg
         end = at + (b - a)
         prev_end = end
         lines.append({'text': text, 'start': round(at, 3), 'end': round(end, 3)})
         caps += chunks(text, at, end)
-    # normalisation crête −1 dBFS (sonie finale réglée au mixage)
     track *= 10 ** (-1 / 20) / max(1e-6, np.abs(track).max())
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'f32le', '-ar', str(SR), '-ac', '1', '-i', '-',
                     '-c:a', 'pcm_s16le', 'public/audio/voice_track.wav'], input=track.tobytes(), check=True)
-    json.dump({'fps': FPS, 'total': TOTAL, 'scenes': SCENES, 'lines': lines, 'captions': caps},
+    scenes = {k: [round(warp(a), 3), round(warp(b), 3) if b < TOTAL else total] for k, (a, b) in SCENES.items()}
+    json.dump({'fps': FPS, 'total': total, 'warp': inserts, 'scenes': scenes, 'cues': cues, 'lines': lines, 'captions': caps},
               open('src/timeline.json', 'w'), ensure_ascii=False, indent=1)
-    print(f'voix placée : {len(lines)} phrases, dernière fin {prev_end:.2f} s, film {TOTAL} s, {len(caps)} cartons')
+    print(f'voix placée : {len(lines)} phrases, dernière fin {prev_end:.2f} s, film {total} s, {len(caps)} cartons')
+    print('insertions :', inserts)
+    for k, c in cues.items():
+        print(k, c)
 
 
 if __name__ == '__main__':

@@ -51,6 +51,25 @@ OHEL INTERNATIONAL.
 Construisons autrement. Construisons durablement.
 
 ---
+AJOUTS DEMANDÉS PAR LE CLIENT (textes affichés à l'écran désormais lus par la voix ; même voix « Tony », une prise)
+
+Une maison en BTCS résiste-t-elle vraiment à la pluie ?
+Un mélange avec un stabilisant approprié.
+Puis la compression, la cure et les contrôles.
+Un matériau élaboré.
+Résistance à l'eau.
+Stabilisation et qualité de fabrication : formulation, stabilisation, contrôles qualité.
+Une construction durable se conçoit.
+Des blocs adaptés, bien mis en œuvre.
+Des bâtiments durables.
+Faites appel à un spécialiste du BTCS.
+Joignable par appel ou par WhatsApp.
+Notre site : ohelintermondial.com
+Notre e-mail : contact@ohelintermondial.com
+Pour découvrir nos prochaines vidéos sur le BTCS, abonnez-vous et activez la cloche de notification pour ne rien manquer !
+  (remplace la phrase d'abonnement du script officiel : même texte + « pour ne rien manquer »)
+
+---
 Notes de synthèse vocale (ElevenLabs) :
 - Voix : « Tony – Warm, Dynamic Podcast Narrator » (voix des épisodes 1 et 2), modèle eleven_v4, une seule prise.
 - Graphies phonétiques transmises au moteur uniquement : « Oël International », « bé-té-cé-esse ». Le texte affiché reste celui ci-dessus.

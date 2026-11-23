@@ -23,11 +23,30 @@ DUR = TL['total']
 N = int(DUR * SR)
 rng = np.random.default_rng(11)
 L = np.zeros(N); R = np.zeros(N)
-SC = TL['scenes']
+# Déformation temporelle (phrases ajoutées à la demande du client) : les événements sont écrits en temps d'ORIGINE
+# et placés via warp() ; CUE donne les phrases ajoutées en temps réel du film.
+INS = TL.get('warp', [])
+CUE = TL.get('cues', {})
+
+
+def warp(t):
+    return t + sum(i for p, i in INS if t >= p)
+
+
+def unwarp(t):
+    for p, i in sorted(INS):
+        if t >= p + i:
+            t -= i
+        elif t >= p:
+            return p
+    return t
+
+
+SC = {k: [unwarp(a), unwarp(b)] for k, (a, b) in TL['scenes'].items()}
 
 
 def line(prefix):
-    return next(l['start'] for l in TL['lines'] if l['text'].startswith(prefix))
+    return unwarp(next(l['start'] for l in TL['lines'] if l['text'].startswith(prefix)))
 
 
 def hz(m):
@@ -47,6 +66,10 @@ def env(n, a=0.01, d=0.1, s=0.7, r=0.2):
 
 
 def add(sig, t0, gain=1.0, pan=0.0):
+    add_abs(sig, warp(t0), gain, pan)
+
+
+def add_abs(sig, t0, gain=1.0, pan=0.0):
     i = int(t0 * SR)
     if i >= N or i + len(sig) <= 0:
         return
@@ -148,9 +171,10 @@ def thunder(dur=5.0, g=1.0):
 
 def rain_layer(a, b, level_fn, close=False, seed=1):
     """Pluie stéréo : souffle large bande + crépitement de gouttes (densité ∝ intensité)."""
+    a, b = warp(a), warp(b)
     n = int((b - a) * SR)
     t = a + np.arange(n) / SR
-    lev = np.array([level_fn(x) for x in t[::480]])
+    lev = np.array([level_fn(unwarp(x)) for x in t[::480]])
     lev = np.repeat(lev, 480)[:n]
     r2 = np.random.default_rng(seed)
     out = []
@@ -170,13 +194,14 @@ def rain_layer(a, b, level_fn, close=False, seed=1):
 
 
 def wind(a, b, level_fn):
+    a, b = warp(a), warp(b)
     n = int((b - a) * SR); t = a + np.arange(n) / SR
-    lev = np.repeat(np.array([level_fn(x) for x in t[::480]]), 480)[:n]
+    lev = np.repeat(np.array([level_fn(unwarp(x)) for x in t[::480]]), 480)[:n]
     for ch, pan in [(0, -0.6), (1, 0.6)]:
         x = rng.standard_normal(n)
         lfo = 0.6 + 0.4 * np.sin(2 * np.pi * (0.13 + 0.05 * ch) * t + ch)
         sig = bp(x, 150, 900) * lfo * lev * 0.9
-        add(sig, a, 1.0, pan)
+        add_abs(sig, a, 1.0, pan)
 
 
 def ramp(points):
@@ -189,25 +214,26 @@ MAJ, MIN = [0, 4, 7], [0, 3, 7]
 
 
 def groove(a, b, prog, drums=1.0, arp=1.0, bass=1.0, pad=1.0, hats=True, beat=BEAT):
+    a, b = warp(a), warp(b)
     t = a; bar = 0
     while t < b - 0.2:
         root, ch = prog[bar % len(prog)]
-        add(tone(root - 12, beat * 4.1, 'pad') * 0.07 * pad, t)
+        add_abs(tone(root - 12, beat * 4.1, 'pad') * 0.07 * pad, t)
         for iv in ch:
-            add(tone(root + 12 + iv, beat * 4.1, 'pad') * 0.025 * pad, t, pan=(iv - 4) / 8)
+            add_abs(tone(root + 12 + iv, beat * 4.1, 'pad') * 0.025 * pad, t, pan=(iv - 4) / 8)
         for q in range(4):
             tb = t + q * beat
             if tb > b - 0.2:
                 break
             if drums:
-                add(kick(0.8) * 0.36 * drums, tb) if q in (0, 2) else add(clap() * 0.32 * drums, tb)
+                add_abs(kick(0.8) * 0.36 * drums, tb) if q in (0, 2) else add_abs(clap() * 0.32 * drums, tb)
                 if hats:
-                    add(hat(open_=(q == 3)) * 0.35 * drums, tb + beat / 2, pan=0.35)
+                    add_abs(hat(open_=(q == 3)) * 0.35 * drums, tb + beat / 2, pan=0.35)
             if bass:
-                add(lp(tone(root - 24, beat * 0.9, 'bass'), 900) * 0.16 * bass, tb)
+                add_abs(lp(tone(root - 24, beat * 0.9, 'bass'), 900) * 0.16 * bass, tb)
             if arp:
                 for j, iv in enumerate([0, 7, 12, ch[1] + 12]):
-                    add(tone(root + 12 + iv, 0.4, 'pluck') * 0.04 * arp, tb + j * beat / 4, pan=-0.4 + 0.25 * j)
+                    add_abs(tone(root + 12 + iv, 0.4, 'pluck') * 0.04 * arp, tb + j * beat / 4, pan=-0.4 + 0.25 * j)
         t += 4 * beat
         bar += 1
 
@@ -271,15 +297,17 @@ groove(s2a + 0.2, s2b, [(57, MIN), (53, MAJ), (48, MAJ), (55, MAJ)], drums=0.55,
 add(crunch(0.9, 0.9), 18.3, pan=-0.2)
 add(crunch(1.0, 1.0), 19.7, pan=0.2)
 add(crunch(1.0, 0.7), 20.9)
-for t in (18.2, 19.6, 20.8, 22.0, 25.0):
+for t in (18.2, 19.6, 20.8):
     add(whoosh(0.5, up=False) * 0.35, t - 0.2)
+for t in (CUE['n3']['start'] + 0.2, CUE['n3']['start'] + 1.25):
+    add_abs(whoosh(0.5, up=False) * 0.35, t - 0.2)
 press = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(ROOT / 'assets/audio/presse_son_reel.wav'), '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
 press = np.frombuffer(press, dtype=np.float32).astype(np.float64)
-seg = press[int(1.0 * SR):int(4.2 * SR)].copy()
+seg = press[int(1.0 * SR):int(3.4 * SR)].copy()
 seg = hp(seg, 80) / (np.max(np.abs(seg)) + 1e-9)
 seg *= env(len(seg), 0.08, 0.1, 1, 0.4)
-add(seg * 0.42, 22.0)
-add(boom(0.5) * 0.3, 25.0)
+add_abs(seg * 0.42, CUE['n3']['start'] + 0.2)
+add_abs(boom(0.5) * 0.3, CUE['n4']['start'])
 
 # =========================================================== 3 : SOUS LA PLUIE
 s3a, s3b = SC['RainExposureScene']
@@ -332,8 +360,8 @@ add(riser(1.6) * 0.6, 82.4 - 1.55)
 add(boom(1.0) * 0.55, 82.4)
 add(tone(84, 2.5, 'bell') * 0.06, 82.45)
 groove(82.4, s6b, [(53, MAJ), (55, MAJ), (57, MIN), (48, MAJ)], drums=0.85, arp=1.0, bass=1.0, pad=1.2)
-for t in (76.6, 78.6, 80.4):
-    add(whoosh(0.6) * 0.4, t - 0.3)
+for t in (CUE['n8']['start'] - 0.1, CUE['n9']['start'] - 0.1, CUE['n9']['end'] + 0.15):
+    add_abs(whoosh(0.6) * 0.4, t - 0.3)
 g_len = (s6b - 82.2) / 6
 for k in range(1, 6):  # galerie de réalisations : souffle léger à chaque photo
     add(whoosh(0.45) * 0.2, 82.2 + k * g_len - 0.2, pan=0.3 if k % 2 else -0.3)
@@ -360,8 +388,8 @@ def bell_sfx():
 
 
 ck, bl = click_sfx(), bell_sfx()
-add(ck * 0.5, 104.45)
-add(bl / np.max(np.abs(bl)) * 0.26, 105.6)
+add_abs(ck * 0.5, CUE['n14']['start'] + 2.67)
+add_abs(bl / np.max(np.abs(bl)) * 0.26, CUE['n14']['start'] + 3.95)
 # signature : accord final mémorable
 add(whoosh(0.8) * 0.35, 107.4)
 for iv in [0, 4, 7, 12, 16]:

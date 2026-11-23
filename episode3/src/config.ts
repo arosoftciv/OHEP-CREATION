@@ -90,6 +90,8 @@ export const PLATFORM_LABELS: Record<Platform, {subscribe: string; bell: boolean
 type TL = {
   fps: number;
   total: number;
+  warp: [number, number][];
+  cues: Record<string, {start: number; end: number}>;
   scenes: Record<string, [number, number]>;
   lines: {text: string; start: number; end: number}[];
   captions: {text: string; start: number; end: number}[];
@@ -102,6 +104,18 @@ export const scene = (id: string) => {
   const [a, b] = TIMELINE.scenes[id];
   return {from: Math.round(a * FPS), duration: Math.round((b - a) * FPS), start: a};
 };
+/**
+ * Déformation temporelle : la timeline d'origine reçoit des insertions (phrases ajoutées à la demande du client).
+ * warp(t) convertit un temps d'origine (s) en temps réel du film. Aucune accélération de la voix.
+ */
+export const warp = (t: number) => t + TIMELINE.warp.reduce((acc, [p, i]) => acc + (t >= p ? i : 0), 0);
+/** Début / fin (temps réel du film, s) d'une phrase ajoutée (n1 … n14). */
+export const cue = (k: string) => {
+  const c = TIMELINE.cues[k];
+  if (!c) throw new Error(`repère introuvable : ${k}`);
+  return c;
+};
+
 /** Début d'une phrase de narration (secondes absolues) repérée par son début de texte. */
 export const lineAt = (prefix: string) => {
   const l = TIMELINE.lines.find((x) => x.text.startsWith(prefix));
