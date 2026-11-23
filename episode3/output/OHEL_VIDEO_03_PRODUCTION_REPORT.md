@@ -21,7 +21,7 @@ Le projet Remotion complet (code, configuration, médias, audio, scripts) est da
 | Durée | **115,0 s** (01:55) |
 | Image | 1080 × 1920, 9:16, **30 i/s**, H.264 **High** niveau 4.1, yuv420p, BT.709, GOP 2 s |
 | Audio | **AAC LC**, 48 kHz, stéréo, 192 kb/s |
-| Débit moyen / taille | 4,19 Mb/s · 60,3 Mo (plafond 7 Mb/s) |
+| Débit moyen / taille | 4,20 Mb/s · 60,4 Mo (plafond 7 Mb/s) |
 | Sonie | **−14,2 LUFS** intégrés, crête −1,2 dBFS, LRA 10,3 LU |
 | Conteneur | MP4, `faststart` (lecture immédiate en ligne), couverture intégrée (`attached_pic`) |
 | Décodage complet | Sans erreur (`ffmpeg -f null`) |
@@ -33,6 +33,7 @@ Ces valeurs respectent les spécifications de TikTok, Instagram Reels, Facebook 
 
 | Ressource demandée | Statut | Utilisation |
 |---|---|---|
+| Logo blanc (version monochrome du logo officiel, même tracé, reprise de l'épisode 2) | **Présent** | Miniature permanente en haut à droite (demande client), masquée quand le grand logo couleur est affiché et sur les fonds crème |
 | Logo officiel `556713.png` | **Présent** (épisode 2), copié à l'identique, vérifié octet par octet (`cmp`) ; PNG RGBA transparent 1774 × 887 | Générique d'ouverture, scène 6, contact, générique final, couverture. Calque indépendant, sans aucun filtre de couleur, ni fond, ni cadre. |
 | `627007.jpg` (blocs empilés) | **Présent** | Étape « cure et contrôles », scène 6 (plan 2), source des faces de blocs du gros plan du mur et des coupes |
 | `626788.jpg`, `626913.jpg` (blocs) | **Absents** du dépôt, des branches précédentes et du Google Drive connecté | Remplacés par la photo réelle `627115` (bloc unitaire, détouré dans l'épisode 2), qui montre la même géométrie : rainure longitudinale sur le dessus, encoche en partie basse |
@@ -175,6 +176,7 @@ Captures de contrôle (extraites du MP4 final) dans `output/controle/` :
 - front d'humidité rendu plus contrasté ;
 - sous-titres redécoupés à la ponctuation ;
 - intégration des photos fournies par le client à la place d'images créées : 632882 à 632896 dans les scènes 2 et 6, 632952 dans les scènes de pluie, la couverture et le contact ;
+- **logo OHEL blanc en haut à droite** pendant le film (demande client), masqué pendant le générique d'ouverture, sur le plan « véritable bloc » (fond crème) et dès la révélation du logo couleur ;
 - **fond uniforme** du studio « terre brute ≠ bloc BTCS » (demande client) : halo et bande de sol supprimés, terre détourée localement par sa couleur (`scripts/cutout_raw_earth.py`) et posée sur un noir uni.
 
 

@@ -21,6 +21,8 @@ export const CONFIG = {
   },
   /** Fichier officiel 556713.png copié à l'identique (vérifié par cmp) — canal alpha d'origine, jamais modifié ni encadré. */
   logo: {src: 'authentic/logo_ohel.png', w: 1774, h: 887},
+  /** Version monochrome blanche du logo officiel (même tracé, mêmes proportions ; reprise de l'épisode 2) — miniature en haut à droite. */
+  logoWhite: {src: 'authentic/logo_ohel_blanc.png', w: 1774, h: 887},
   contact: {
     phoneDisplay: '+225 07 07 63 03 35',
     phoneShort: '07 07 63 03 35',

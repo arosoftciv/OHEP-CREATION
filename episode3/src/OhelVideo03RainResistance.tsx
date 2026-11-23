@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {CONFIG, scene} from './config';
-import {lerp} from './components/ui';
+import {lerp, LogoMiniWhite} from './components/ui';
 import {Captions} from './components/Captions';
 import {OhelBrandEndCard} from './components/OhelBrandEndCard';
 import {RainIntroScene} from './scenes/RainIntroScene';
@@ -28,6 +28,17 @@ const S: React.FC<{id: string; first?: boolean; last?: boolean; children: (t0: n
   );
 };
 
+/**
+ * Logo blanc en haut à droite pendant le film, masqué quand le grand logo couleur est affiché
+ * (générique d'ouverture, révélation OHEL, contact, générique final) et sur le fond crème du plan « véritable bloc ».
+ */
+const LogoMini: React.FC = () => {
+  const f = useCurrentFrame();
+  const s = (x: number) => Math.round(x * 30);
+  const on = (a: number, b: number) => lerp(f, s(a), s(a) + 10) * lerp(f, s(b) - 10, s(b), 1, 0);
+  return <LogoMiniWhite visible={Math.max(on(3.1, 74.7), on(76.7, 82.4))} />;
+};
+
 /** Composition principale — OHEL INTERNATIONAL · Vidéo 3 · « Une maison en BTCS résiste-t-elle vraiment à la pluie ? » */
 export const OhelVideo03RainResistance: React.FC<{subtitles: boolean; audio: boolean}> = ({subtitles, audio}) => (
   <AbsoluteFill style={{background: '#000'}}>
@@ -45,6 +56,7 @@ export const OhelVideo03RainResistance: React.FC<{subtitles: boolean; audio: boo
         />
       )}
     </S>
+    <LogoMini />
     {subtitles ? <Captions /> : null}
     {audio ? <Audio src={staticFile(CONFIG.audio.mix)} /> : null}
   </AbsoluteFill>

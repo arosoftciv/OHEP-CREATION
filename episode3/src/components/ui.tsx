@@ -206,3 +206,14 @@ export const KenBurns: React.FC<{
     </AbsoluteFill>
   );
 };
+
+/**
+ * Miniature permanente en haut à droite : logo OHEL blanc (version monochrome du logo officiel), sans fond ni cadre.
+ * Ombre portée douce pour la lisibilité sur les zones claires. `visible` 0 → 1 est piloté par la composition.
+ */
+export const LogoMiniWhite: React.FC<{visible: number}> = ({visible}) =>
+  visible <= 0.001 ? null : (
+    <div style={{position: 'absolute', top: 120, right: 44, opacity: visible, filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.55)) drop-shadow(0 0 12px rgba(0,0,0,0.25))', pointerEvents: 'none'}}>
+      <Img src={staticFile(CONFIG.logoWhite.src)} style={{width: 200, height: (200 * CONFIG.logoWhite.h) / CONFIG.logoWhite.w, display: 'block'}} />
+    </div>
+  );
