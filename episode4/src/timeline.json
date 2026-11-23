@@ -1,0 +1,2006 @@
+{
+ "fps": 30,
+ "total": 129.0,
+ "scenes": {
+  "Video04Intro": [
+   0.0,
+   10.5
+  ],
+  "MaterialPriceComparison": [
+   10.5,
+   20.0
+  ],
+  "InterlockingAssembly": [
+   20.0,
+   33.5
+  ],
+  "ConstructionSpeed": [
+   33.5,
+   44.0
+  ],
+  "NaturalFinishes": [
+   44.0,
+   57.6
+  ],
+  "StructuralComparison": [
+   57.6,
+   69.0
+  ],
+  "TotalCostComparison": [
+   69.0,
+   85.6
+  ],
+  "ModernBTCSVilla": [
+   85.6,
+   95.0
+  ],
+  "OhelBrandPresentation": [
+   95.0,
+   102.6
+  ],
+  "OhelContact": [
+   102.6,
+   116.5
+  ],
+  "OhelSubscribe": [
+   116.5,
+   129.0
+  ]
+ },
+ "lines": [
+  {
+   "id": "l01",
+   "text": "Vous voulez construire votre maison ?",
+   "start": 1.6,
+   "end": 3.147
+  },
+  {
+   "id": "l02",
+   "text": "BTCS ou parpaing : lequel coûte réellement moins cher ?",
+   "start": 3.7,
+   "end": 7.566
+  },
+  {
+   "id": "l03",
+   "text": "Attention !",
+   "start": 10.7,
+   "end": 11.344
+  },
+  {
+   "id": "l04",
+   "text": "Le bloc le moins cher à l'achat n'est pas forcément celui qui permet de construire au meilleur coût.",
+   "start": 11.6,
+   "end": 15.772
+  },
+  {
+   "id": "l05",
+   "text": "Il faut regarder l'ensemble des travaux.",
+   "start": 16.3,
+   "end": 18.04
+  },
+  {
+   "id": "l06",
+   "text": "Premier avantage : la pose.",
+   "start": 20.4,
+   "end": 22.242
+  },
+  {
+   "id": "l07",
+   "text": "Les BTCS autobloquants d'OHEL sont conçus pour s'assembler sans mortier courant entre les blocs, selon le procédé prévu.",
+   "start": 22.7,
+   "end": 28.657
+  },
+  {
+   "id": "l08",
+   "text": "Cela peut réduire les matériaux de pose nécessaires.",
+   "start": 29.4,
+   "end": 31.502
+  },
+  {
+   "id": "l09",
+   "text": "Deuxième avantage : le temps.",
+   "start": 33.8,
+   "end": 35.456
+  },
+  {
+   "id": "l10",
+   "text": "Grâce à l'assemblage autobloquant, le montage peut être simplifié et plus rapide, selon les conditions du chantier.",
+   "start": 36.0,
+   "end": 41.337
+  },
+  {
+   "id": "l11",
+   "text": "Troisième avantage : les finitions.",
+   "start": 44.4,
+   "end": 46.367
+  },
+  {
+   "id": "l12",
+   "text": "Avec son aspect naturel, le BTCS peut rester apparent lorsque la conception et la protection des murs le permettent.",
+   "start": 47.0,
+   "end": 52.698
+  },
+  {
+   "id": "l13",
+   "text": "Certains travaux de crépissage peuvent ainsi être évités.",
+   "start": 53.1,
+   "end": 55.542
+  },
+  {
+   "id": "l14",
+   "text": "Selon le projet, les BTCS peuvent également être utilisés en murs porteurs ou en remplissage.",
+   "start": 58.0,
+   "end": 62.804
+  },
+  {
+   "id": "l15",
+   "text": "Une étude structurelle permet d'identifier les solutions les plus adaptées.",
+   "start": 63.3,
+   "end": 66.546
+  },
+  {
+   "id": "l16",
+   "text": "Mais alors, combien peut-on réellement économiser ?",
+   "start": 69.4,
+   "end": 72.127
+  },
+  {
+   "id": "l17",
+   "text": "Pour le savoir, il faut comparer deux devis complets.",
+   "start": 72.6,
+   "end": 75.219
+  },
+  {
+   "id": "l18",
+   "text": "Matériaux, mortier, main-d'œuvre, structure, finitions et transport : tout compte !",
+   "start": 75.8,
+   "end": 80.758
+  },
+  {
+   "id": "l19",
+   "text": "Les économies réelles dépendent de chaque projet.",
+   "start": 81.4,
+   "end": 83.588
+  },
+  {
+   "id": "l20",
+   "text": "Le BTCS offre une autre façon d'envisager votre construction, avec une esthétique naturelle et des possibilités d'optimisation à étudier.",
+   "start": 86.0,
+   "end": 93.018
+  },
+  {
+   "id": "l21",
+   "text": "En Côte d'Ivoire, OHEL INTERNATIONAL est votre spécialiste de la construction en Blocs de Terre Comprimée Stabilisée.",
+   "start": 95.3,
+   "end": 100.709
+  },
+  {
+   "id": "l22",
+   "text": "Vous avez un terrain et un projet de construction ?",
+   "start": 103.0,
+   "end": 104.936
+  },
+  {
+   "id": "l23",
+   "text": "Envoyez votre plan à OHEL INTERNATIONAL sur WhatsApp pour étudier votre projet en BTCS.",
+   "start": 105.4,
+   "end": 110.178
+  },
+  {
+   "id": "l24",
+   "text": "Contactez-nous au 07 07 63 03 35.",
+   "start": 110.7,
+   "end": 114.743
+  },
+  {
+   "id": "l25",
+   "text": "Abonnez-vous et activez la cloche pour découvrir nos prochaines vidéos !",
+   "start": 117.0,
+   "end": 120.195
+  },
+  {
+   "id": "l26",
+   "text": "OHEL INTERNATIONAL.",
+   "start": 121.2,
+   "end": 122.534
+  },
+  {
+   "id": "l27",
+   "text": "Construisons autrement.",
+   "start": 122.9,
+   "end": 124.082
+  },
+  {
+   "id": "l28",
+   "text": "Construisons durablement.",
+   "start": 124.4,
+   "end": 125.793
+  }
+ ],
+ "words": [
+  {
+   "w": "vous",
+   "line": "l01",
+   "start": 1.78,
+   "end": 1.88
+  },
+  {
+   "w": "voulez",
+   "line": "l01",
+   "start": 1.92,
+   "end": 2.12
+  },
+  {
+   "w": "construire",
+   "line": "l01",
+   "start": 2.16,
+   "end": 2.52
+  },
+  {
+   "w": "votre",
+   "line": "l01",
+   "start": 2.56,
+   "end": 2.76
+  },
+  {
+   "w": "maison",
+   "line": "l01",
+   "start": 2.82,
+   "end": 3.04
+  },
+  {
+   "w": "btcs",
+   "line": "l02",
+   "start": 3.89,
+   "end": 4.71
+  },
+  {
+   "w": "ou",
+   "line": "l02",
+   "start": 4.87,
+   "end": 4.99
+  },
+  {
+   "w": "parpaing",
+   "line": "l02",
+   "start": 5.09,
+   "end": 5.49
+  },
+  {
+   "w": "lequel",
+   "line": "l02",
+   "start": 5.97,
+   "end": 6.27
+  },
+  {
+   "w": "coûte",
+   "line": "l02",
+   "start": 6.35,
+   "end": 6.53
+  },
+  {
+   "w": "réellement",
+   "line": "l02",
+   "start": 6.61,
+   "end": 6.99
+  },
+  {
+   "w": "moins",
+   "line": "l02",
+   "start": 7.05,
+   "end": 7.17
+  },
+  {
+   "w": "cher",
+   "line": "l02",
+   "start": 7.21,
+   "end": 7.51
+  },
+  {
+   "w": "attention",
+   "line": "l03",
+   "start": 10.784,
+   "end": 11.244
+  },
+  {
+   "w": "le",
+   "line": "l04",
+   "start": 11.677,
+   "end": 11.737
+  },
+  {
+   "w": "bloc",
+   "line": "l04",
+   "start": 11.817,
+   "end": 12.017
+  },
+  {
+   "w": "le",
+   "line": "l04",
+   "start": 12.057,
+   "end": 12.117
+  },
+  {
+   "w": "moins",
+   "line": "l04",
+   "start": 12.197,
+   "end": 12.337
+  },
+  {
+   "w": "cher",
+   "line": "l04",
+   "start": 12.377,
+   "end": 12.557
+  },
+  {
+   "w": "à",
+   "line": "l04",
+   "start": 12.597,
+   "end": 12.637
+  },
+  {
+   "w": "l'achat",
+   "line": "l04",
+   "start": 12.657,
+   "end": 12.997
+  },
+  {
+   "w": "n'est",
+   "line": "l04",
+   "start": 13.037,
+   "end": 13.217
+  },
+  {
+   "w": "pas",
+   "line": "l04",
+   "start": 13.257,
+   "end": 13.377
+  },
+  {
+   "w": "forcément",
+   "line": "l04",
+   "start": 13.437,
+   "end": 13.837
+  },
+  {
+   "w": "celui",
+   "line": "l04",
+   "start": 13.897,
+   "end": 14.117
+  },
+  {
+   "w": "qui",
+   "line": "l04",
+   "start": 14.157,
+   "end": 14.257
+  },
+  {
+   "w": "permet",
+   "line": "l04",
+   "start": 14.297,
+   "end": 14.517
+  },
+  {
+   "w": "de",
+   "line": "l04",
+   "start": 14.577,
+   "end": 14.657
+  },
+  {
+   "w": "construire",
+   "line": "l04",
+   "start": 14.697,
+   "end": 15.077
+  },
+  {
+   "w": "au",
+   "line": "l04",
+   "start": 15.097,
+   "end": 15.157
+  },
+  {
+   "w": "meilleur",
+   "line": "l04",
+   "start": 15.217,
+   "end": 15.477
+  },
+  {
+   "w": "coût",
+   "line": "l04",
+   "start": 15.577,
+   "end": 15.737
+  },
+  {
+   "w": "il",
+   "line": "l05",
+   "start": 16.357,
+   "end": 16.417
+  },
+  {
+   "w": "faut",
+   "line": "l05",
+   "start": 16.477,
+   "end": 16.557
+  },
+  {
+   "w": "regarder",
+   "line": "l05",
+   "start": 16.597,
+   "end": 16.937
+  },
+  {
+   "w": "l'ensemble",
+   "line": "l05",
+   "start": 17.017,
+   "end": 17.517
+  },
+  {
+   "w": "des",
+   "line": "l05",
+   "start": 17.557,
+   "end": 17.637
+  },
+  {
+   "w": "travaux",
+   "line": "l05",
+   "start": 17.677,
+   "end": 17.997
+  },
+  {
+   "w": "premier",
+   "line": "l06",
+   "start": 20.431,
+   "end": 20.691
+  },
+  {
+   "w": "avantage",
+   "line": "l06",
+   "start": 20.751,
+   "end": 21.311
+  },
+  {
+   "w": "la",
+   "line": "l06",
+   "start": 21.591,
+   "end": 21.651
+  },
+  {
+   "w": "pose",
+   "line": "l06",
+   "start": 21.771,
+   "end": 22.151
+  },
+  {
+   "w": "les",
+   "line": "l07",
+   "start": 22.765,
+   "end": 22.885
+  },
+  {
+   "w": "btcs",
+   "line": "l07",
+   "start": 22.945,
+   "end": 23.585
+  },
+  {
+   "w": "autobloquants",
+   "line": "l07",
+   "start": 23.625,
+   "end": 24.165
+  },
+  {
+   "w": "d'ol",
+   "line": "l07",
+   "start": 24.205,
+   "end": 24.545
+  },
+  {
+   "w": "sont",
+   "line": "l07",
+   "start": 24.645,
+   "end": 24.785
+  },
+  {
+   "w": "conçus",
+   "line": "l07",
+   "start": 24.825,
+   "end": 25.145
+  },
+  {
+   "w": "pour",
+   "line": "l07",
+   "start": 25.165,
+   "end": 25.285
+  },
+  {
+   "w": "s'assembler",
+   "line": "l07",
+   "start": 25.325,
+   "end": 25.765
+  },
+  {
+   "w": "sans",
+   "line": "l07",
+   "start": 25.925,
+   "end": 26.045
+  },
+  {
+   "w": "mortier",
+   "line": "l07",
+   "start": 26.085,
+   "end": 26.385
+  },
+  {
+   "w": "courant",
+   "line": "l07",
+   "start": 26.425,
+   "end": 26.705
+  },
+  {
+   "w": "entre",
+   "line": "l07",
+   "start": 26.745,
+   "end": 26.945
+  },
+  {
+   "w": "les",
+   "line": "l07",
+   "start": 26.965,
+   "end": 27.065
+  },
+  {
+   "w": "blocs",
+   "line": "l07",
+   "start": 27.105,
+   "end": 27.345
+  },
+  {
+   "w": "selon",
+   "line": "l07",
+   "start": 27.525,
+   "end": 27.725
+  },
+  {
+   "w": "le",
+   "line": "l07",
+   "start": 27.765,
+   "end": 27.805
+  },
+  {
+   "w": "procédé",
+   "line": "l07",
+   "start": 27.885,
+   "end": 28.245
+  },
+  {
+   "w": "prévu",
+   "line": "l07",
+   "start": 28.285,
+   "end": 28.585
+  },
+  {
+   "w": "cela",
+   "line": "l08",
+   "start": 29.479,
+   "end": 29.639
+  },
+  {
+   "w": "peut",
+   "line": "l08",
+   "start": 29.719,
+   "end": 29.799
+  },
+  {
+   "w": "réduire",
+   "line": "l08",
+   "start": 29.839,
+   "end": 30.119
+  },
+  {
+   "w": "les",
+   "line": "l08",
+   "start": 30.139,
+   "end": 30.219
+  },
+  {
+   "w": "matériaux",
+   "line": "l08",
+   "start": 30.259,
+   "end": 30.599
+  },
+  {
+   "w": "de",
+   "line": "l08",
+   "start": 30.639,
+   "end": 30.679
+  },
+  {
+   "w": "pose",
+   "line": "l08",
+   "start": 30.779,
+   "end": 30.919
+  },
+  {
+   "w": "nécessaires",
+   "line": "l08",
+   "start": 30.959,
+   "end": 31.499
+  },
+  {
+   "w": "deuxième",
+   "line": "l09",
+   "start": 33.851,
+   "end": 34.111
+  },
+  {
+   "w": "avantage",
+   "line": "l09",
+   "start": 34.171,
+   "end": 34.711
+  },
+  {
+   "w": "le",
+   "line": "l09",
+   "start": 34.991,
+   "end": 35.071
+  },
+  {
+   "w": "temps",
+   "line": "l09",
+   "start": 35.211,
+   "end": 35.411
+  },
+  {
+   "w": "grâce",
+   "line": "l10",
+   "start": 36.106,
+   "end": 36.326
+  },
+  {
+   "w": "à",
+   "line": "l10",
+   "start": 36.366,
+   "end": 36.386
+  },
+  {
+   "w": "l'assemblage",
+   "line": "l10",
+   "start": 36.426,
+   "end": 36.886
+  },
+  {
+   "w": "autobloquant",
+   "line": "l10",
+   "start": 36.966,
+   "end": 37.566
+  },
+  {
+   "w": "le",
+   "line": "l10",
+   "start": 37.746,
+   "end": 37.786
+  },
+  {
+   "w": "montage",
+   "line": "l10",
+   "start": 37.866,
+   "end": 38.186
+  },
+  {
+   "w": "peut",
+   "line": "l10",
+   "start": 38.246,
+   "end": 38.366
+  },
+  {
+   "w": "être",
+   "line": "l10",
+   "start": 38.406,
+   "end": 38.626
+  },
+  {
+   "w": "simplifié",
+   "line": "l10",
+   "start": 38.686,
+   "end": 39.186
+  },
+  {
+   "w": "et",
+   "line": "l10",
+   "start": 39.266,
+   "end": 39.366
+  },
+  {
+   "w": "plus",
+   "line": "l10",
+   "start": 39.406,
+   "end": 39.526
+  },
+  {
+   "w": "rapide",
+   "line": "l10",
+   "start": 39.566,
+   "end": 39.926
+  },
+  {
+   "w": "selon",
+   "line": "l10",
+   "start": 40.106,
+   "end": 40.286
+  },
+  {
+   "w": "les",
+   "line": "l10",
+   "start": 40.326,
+   "end": 40.406
+  },
+  {
+   "w": "conditions",
+   "line": "l10",
+   "start": 40.426,
+   "end": 40.786
+  },
+  {
+   "w": "du",
+   "line": "l10",
+   "start": 40.826,
+   "end": 40.886
+  },
+  {
+   "w": "chantier",
+   "line": "l10",
+   "start": 40.926,
+   "end": 41.266
+  },
+  {
+   "w": "troisième",
+   "line": "l11",
+   "start": 44.449,
+   "end": 44.769
+  },
+  {
+   "w": "avantage",
+   "line": "l11",
+   "start": 44.829,
+   "end": 45.349
+  },
+  {
+   "w": "les",
+   "line": "l11",
+   "start": 45.609,
+   "end": 45.729
+  },
+  {
+   "w": "finitions",
+   "line": "l11",
+   "start": 45.829,
+   "end": 46.329
+  },
+  {
+   "w": "avec",
+   "line": "l12",
+   "start": 47.084,
+   "end": 47.244
+  },
+  {
+   "w": "son",
+   "line": "l12",
+   "start": 47.284,
+   "end": 47.384
+  },
+  {
+   "w": "aspect",
+   "line": "l12",
+   "start": 47.444,
+   "end": 47.684
+  },
+  {
+   "w": "naturel",
+   "line": "l12",
+   "start": 47.724,
+   "end": 48.204
+  },
+  {
+   "w": "le",
+   "line": "l12",
+   "start": 48.404,
+   "end": 48.484
+  },
+  {
+   "w": "btcs",
+   "line": "l12",
+   "start": 48.544,
+   "end": 49.124
+  },
+  {
+   "w": "peut",
+   "line": "l12",
+   "start": 49.204,
+   "end": 49.284
+  },
+  {
+   "w": "rester",
+   "line": "l12",
+   "start": 49.324,
+   "end": 49.644
+  },
+  {
+   "w": "apparent",
+   "line": "l12",
+   "start": 49.724,
+   "end": 50.104
+  },
+  {
+   "w": "lorsque",
+   "line": "l12",
+   "start": 50.164,
+   "end": 50.404
+  },
+  {
+   "w": "la",
+   "line": "l12",
+   "start": 50.444,
+   "end": 50.504
+  },
+  {
+   "w": "conception",
+   "line": "l12",
+   "start": 50.564,
+   "end": 51.064
+  },
+  {
+   "w": "et",
+   "line": "l12",
+   "start": 51.084,
+   "end": 51.144
+  },
+  {
+   "w": "la",
+   "line": "l12",
+   "start": 51.184,
+   "end": 51.224
+  },
+  {
+   "w": "protection",
+   "line": "l12",
+   "start": 51.304,
+   "end": 51.724
+  },
+  {
+   "w": "des",
+   "line": "l12",
+   "start": 51.764,
+   "end": 51.844
+  },
+  {
+   "w": "murs",
+   "line": "l12",
+   "start": 51.904,
+   "end": 52.044
+  },
+  {
+   "w": "le",
+   "line": "l12",
+   "start": 52.084,
+   "end": 52.184
+  },
+  {
+   "w": "permettent",
+   "line": "l12",
+   "start": 52.204,
+   "end": 52.624
+  },
+  {
+   "w": "certains",
+   "line": "l13",
+   "start": 53.185,
+   "end": 53.445
+  },
+  {
+   "w": "travaux",
+   "line": "l13",
+   "start": 53.485,
+   "end": 53.725
+  },
+  {
+   "w": "de",
+   "line": "l13",
+   "start": 53.745,
+   "end": 53.825
+  },
+  {
+   "w": "crépissage",
+   "line": "l13",
+   "start": 53.865,
+   "end": 54.405
+  },
+  {
+   "w": "peuvent",
+   "line": "l13",
+   "start": 54.465,
+   "end": 54.645
+  },
+  {
+   "w": "ainsi",
+   "line": "l13",
+   "start": 54.685,
+   "end": 54.905
+  },
+  {
+   "w": "être",
+   "line": "l13",
+   "start": 54.965,
+   "end": 55.085
+  },
+  {
+   "w": "évités",
+   "line": "l13",
+   "start": 55.145,
+   "end": 55.485
+  },
+  {
+   "w": "selon",
+   "line": "l14",
+   "start": 58.123,
+   "end": 58.303
+  },
+  {
+   "w": "le",
+   "line": "l14",
+   "start": 58.343,
+   "end": 58.403
+  },
+  {
+   "w": "projet",
+   "line": "l14",
+   "start": 58.463,
+   "end": 58.823
+  },
+  {
+   "w": "les",
+   "line": "l14",
+   "start": 59.003,
+   "end": 59.103
+  },
+  {
+   "w": "btcs",
+   "line": "l14",
+   "start": 59.163,
+   "end": 59.723
+  },
+  {
+   "w": "peuvent",
+   "line": "l14",
+   "start": 59.803,
+   "end": 59.983
+  },
+  {
+   "w": "également",
+   "line": "l14",
+   "start": 60.043,
+   "end": 60.363
+  },
+  {
+   "w": "être",
+   "line": "l14",
+   "start": 60.423,
+   "end": 60.523
+  },
+  {
+   "w": "utilisés",
+   "line": "l14",
+   "start": 60.563,
+   "end": 61.003
+  },
+  {
+   "w": "en",
+   "line": "l14",
+   "start": 61.043,
+   "end": 61.123
+  },
+  {
+   "w": "mur",
+   "line": "l14",
+   "start": 61.183,
+   "end": 61.303
+  },
+  {
+   "w": "porteur",
+   "line": "l14",
+   "start": 61.403,
+   "end": 61.823
+  },
+  {
+   "w": "ou",
+   "line": "l14",
+   "start": 61.923,
+   "end": 62.003
+  },
+  {
+   "w": "en",
+   "line": "l14",
+   "start": 62.043,
+   "end": 62.103
+  },
+  {
+   "w": "remplissage",
+   "line": "l14",
+   "start": 62.143,
+   "end": 62.743
+  },
+  {
+   "w": "une",
+   "line": "l15",
+   "start": 63.358,
+   "end": 63.438
+  },
+  {
+   "w": "étude",
+   "line": "l15",
+   "start": 63.498,
+   "end": 63.718
+  },
+  {
+   "w": "structurelle",
+   "line": "l15",
+   "start": 63.778,
+   "end": 64.318
+  },
+  {
+   "w": "permet",
+   "line": "l15",
+   "start": 64.398,
+   "end": 64.618
+  },
+  {
+   "w": "d'identifier",
+   "line": "l15",
+   "start": 64.658,
+   "end": 65.178
+  },
+  {
+   "w": "les",
+   "line": "l15",
+   "start": 65.218,
+   "end": 65.298
+  },
+  {
+   "w": "solutions",
+   "line": "l15",
+   "start": 65.338,
+   "end": 65.718
+  },
+  {
+   "w": "les",
+   "line": "l15",
+   "start": 65.738,
+   "end": 65.878
+  },
+  {
+   "w": "plus",
+   "line": "l15",
+   "start": 65.918,
+   "end": 66.058
+  },
+  {
+   "w": "adaptées",
+   "line": "l15",
+   "start": 66.118,
+   "end": 66.498
+  },
+  {
+   "w": "mais",
+   "line": "l16",
+   "start": 69.459,
+   "end": 69.559
+  },
+  {
+   "w": "alors",
+   "line": "l16",
+   "start": 69.599,
+   "end": 69.859
+  },
+  {
+   "w": "combien",
+   "line": "l16",
+   "start": 70.199,
+   "end": 70.539
+  },
+  {
+   "w": "peut-on",
+   "line": "l16",
+   "start": 70.619,
+   "end": 70.879
+  },
+  {
+   "w": "réellement",
+   "line": "l16",
+   "start": 71.019,
+   "end": 71.399
+  },
+  {
+   "w": "économiser",
+   "line": "l16",
+   "start": 71.459,
+   "end": 72.019
+  },
+  {
+   "w": "pour",
+   "line": "l17",
+   "start": 72.633,
+   "end": 72.713
+  },
+  {
+   "w": "le",
+   "line": "l17",
+   "start": 72.753,
+   "end": 72.813
+  },
+  {
+   "w": "savoir",
+   "line": "l17",
+   "start": 72.873,
+   "end": 73.313
+  },
+  {
+   "w": "il",
+   "line": "l17",
+   "start": 73.473,
+   "end": 73.553
+  },
+  {
+   "w": "faut",
+   "line": "l17",
+   "start": 73.613,
+   "end": 73.713
+  },
+  {
+   "w": "comparer",
+   "line": "l17",
+   "start": 73.753,
+   "end": 74.153
+  },
+  {
+   "w": "deux",
+   "line": "l17",
+   "start": 74.313,
+   "end": 74.433
+  },
+  {
+   "w": "devis",
+   "line": "l17",
+   "start": 74.493,
+   "end": 74.753
+  },
+  {
+   "w": "complets",
+   "line": "l17",
+   "start": 74.813,
+   "end": 75.173
+  },
+  {
+   "w": "matériaux",
+   "line": "l18",
+   "start": 75.916,
+   "end": 76.476
+  },
+  {
+   "w": "mortier",
+   "line": "l18",
+   "start": 76.696,
+   "end": 77.176
+  },
+  {
+   "w": "main",
+   "line": "l18",
+   "start": 77.416,
+   "end": 77.536
+  },
+  {
+   "w": "d'œuvre",
+   "line": "l18",
+   "start": 77.596,
+   "end": 77.936
+  },
+  {
+   "w": "structure",
+   "line": "l18",
+   "start": 78.116,
+   "end": 78.636
+  },
+  {
+   "w": "finition",
+   "line": "l18",
+   "start": 78.796,
+   "end": 79.256
+  },
+  {
+   "w": "et",
+   "line": "l18",
+   "start": 79.376,
+   "end": 79.456
+  },
+  {
+   "w": "transport",
+   "line": "l18",
+   "start": 79.496,
+   "end": 79.996
+  },
+  {
+   "w": "tout",
+   "line": "l18",
+   "start": 80.216,
+   "end": 80.316
+  },
+  {
+   "w": "compte",
+   "line": "l18",
+   "start": 80.396,
+   "end": 80.676
+  },
+  {
+   "w": "les",
+   "line": "l19",
+   "start": 81.459,
+   "end": 81.559
+  },
+  {
+   "w": "économies",
+   "line": "l19",
+   "start": 81.619,
+   "end": 82.019
+  },
+  {
+   "w": "réelles",
+   "line": "l19",
+   "start": 82.059,
+   "end": 82.359
+  },
+  {
+   "w": "dépendent",
+   "line": "l19",
+   "start": 82.419,
+   "end": 82.759
+  },
+  {
+   "w": "de",
+   "line": "l19",
+   "start": 82.779,
+   "end": 82.899
+  },
+  {
+   "w": "chaque",
+   "line": "l19",
+   "start": 82.959,
+   "end": 83.159
+  },
+  {
+   "w": "projet",
+   "line": "l19",
+   "start": 83.178,
+   "end": 83.519
+  },
+  {
+   "w": "le",
+   "line": "l20",
+   "start": 86.076,
+   "end": 86.156
+  },
+  {
+   "w": "btcs",
+   "line": "l20",
+   "start": 86.197,
+   "end": 86.817
+  },
+  {
+   "w": "offre",
+   "line": "l20",
+   "start": 86.917,
+   "end": 87.097
+  },
+  {
+   "w": "une",
+   "line": "l20",
+   "start": 87.137,
+   "end": 87.237
+  },
+  {
+   "w": "autre",
+   "line": "l20",
+   "start": 87.277,
+   "end": 87.477
+  },
+  {
+   "w": "façon",
+   "line": "l20",
+   "start": 87.577,
+   "end": 87.837
+  },
+  {
+   "w": "d'envisager",
+   "line": "l20",
+   "start": 87.857,
+   "end": 88.337
+  },
+  {
+   "w": "votre",
+   "line": "l20",
+   "start": 88.377,
+   "end": 88.557
+  },
+  {
+   "w": "construction",
+   "line": "l20",
+   "start": 88.637,
+   "end": 89.157
+  },
+  {
+   "w": "avec",
+   "line": "l20",
+   "start": 89.417,
+   "end": 89.577
+  },
+  {
+   "w": "une",
+   "line": "l20",
+   "start": 89.617,
+   "end": 89.697
+  },
+  {
+   "w": "esthétique",
+   "line": "l20",
+   "start": 89.737,
+   "end": 90.137
+  },
+  {
+   "w": "naturelle",
+   "line": "l20",
+   "start": 90.217,
+   "end": 90.777
+  },
+  {
+   "w": "et",
+   "line": "l20",
+   "start": 90.817,
+   "end": 90.877
+  },
+  {
+   "w": "des",
+   "line": "l20",
+   "start": 90.897,
+   "end": 91.037
+  },
+  {
+   "w": "possibilités",
+   "line": "l20",
+   "start": 91.077,
+   "end": 91.697
+  },
+  {
+   "w": "d'optimisation",
+   "line": "l20",
+   "start": 91.737,
+   "end": 92.457
+  },
+  {
+   "w": "à",
+   "line": "l20",
+   "start": 92.497,
+   "end": 92.537
+  },
+  {
+   "w": "étudier",
+   "line": "l20",
+   "start": 92.577,
+   "end": 92.957
+  },
+  {
+   "w": "en",
+   "line": "l21",
+   "start": 95.367,
+   "end": 95.447
+  },
+  {
+   "w": "côte",
+   "line": "l21",
+   "start": 95.487,
+   "end": 95.607
+  },
+  {
+   "w": "d'ivoire",
+   "line": "l21",
+   "start": 95.627,
+   "end": 96.067
+  },
+  {
+   "w": "ol",
+   "line": "l21",
+   "start": 96.247,
+   "end": 96.427
+  },
+  {
+   "w": "international",
+   "line": "l21",
+   "start": 96.467,
+   "end": 97.107
+  },
+  {
+   "w": "est",
+   "line": "l21",
+   "start": 97.127,
+   "end": 97.187
+  },
+  {
+   "w": "votre",
+   "line": "l21",
+   "start": 97.227,
+   "end": 97.427
+  },
+  {
+   "w": "spécialiste",
+   "line": "l21",
+   "start": 97.587,
+   "end": 98.167
+  },
+  {
+   "w": "de",
+   "line": "l21",
+   "start": 98.207,
+   "end": 98.267
+  },
+  {
+   "w": "la",
+   "line": "l21",
+   "start": 98.307,
+   "end": 98.347
+  },
+  {
+   "w": "construction",
+   "line": "l21",
+   "start": 98.427,
+   "end": 98.927
+  },
+  {
+   "w": "en",
+   "line": "l21",
+   "start": 98.967,
+   "end": 99.027
+  },
+  {
+   "w": "blocs",
+   "line": "l21",
+   "start": 99.127,
+   "end": 99.307
+  },
+  {
+   "w": "de",
+   "line": "l21",
+   "start": 99.347,
+   "end": 99.407
+  },
+  {
+   "w": "terre",
+   "line": "l21",
+   "start": 99.467,
+   "end": 99.627
+  },
+  {
+   "w": "comprimés",
+   "line": "l21",
+   "start": 99.667,
+   "end": 100.027
+  },
+  {
+   "w": "stabilisés",
+   "line": "l21",
+   "start": 100.107,
+   "end": 100.647
+  },
+  {
+   "w": "vous",
+   "line": "l22",
+   "start": 103.053,
+   "end": 103.173
+  },
+  {
+   "w": "avez",
+   "line": "l22",
+   "start": 103.213,
+   "end": 103.373
+  },
+  {
+   "w": "un",
+   "line": "l22",
+   "start": 103.393,
+   "end": 103.453
+  },
+  {
+   "w": "terrain",
+   "line": "l22",
+   "start": 103.513,
+   "end": 103.773
+  },
+  {
+   "w": "et",
+   "line": "l22",
+   "start": 103.833,
+   "end": 103.893
+  },
+  {
+   "w": "un",
+   "line": "l22",
+   "start": 103.933,
+   "end": 104.013
+  },
+  {
+   "w": "projet",
+   "line": "l22",
+   "start": 104.053,
+   "end": 104.253
+  },
+  {
+   "w": "de",
+   "line": "l22",
+   "start": 104.293,
+   "end": 104.333
+  },
+  {
+   "w": "construction",
+   "line": "l22",
+   "start": 104.353,
+   "end": 104.833
+  },
+  {
+   "w": "envoyez",
+   "line": "l23",
+   "start": 105.465,
+   "end": 105.785
+  },
+  {
+   "w": "votre",
+   "line": "l23",
+   "start": 105.825,
+   "end": 106.045
+  },
+  {
+   "w": "plan",
+   "line": "l23",
+   "start": 106.125,
+   "end": 106.265
+  },
+  {
+   "w": "à",
+   "line": "l23",
+   "start": 106.325,
+   "end": 106.445
+  },
+  {
+   "w": "ol",
+   "line": "l23",
+   "start": 106.485,
+   "end": 106.665
+  },
+  {
+   "w": "international",
+   "line": "l23",
+   "start": 106.705,
+   "end": 107.365
+  },
+  {
+   "w": "sur",
+   "line": "l23",
+   "start": 107.445,
+   "end": 107.565
+  },
+  {
+   "w": "whatsapp",
+   "line": "l23",
+   "start": 107.605,
+   "end": 108.025
+  },
+  {
+   "w": "pour",
+   "line": "l23",
+   "start": 108.125,
+   "end": 108.245
+  },
+  {
+   "w": "étudier",
+   "line": "l23",
+   "start": 108.305,
+   "end": 108.605
+  },
+  {
+   "w": "votre",
+   "line": "l23",
+   "start": 108.645,
+   "end": 108.845
+  },
+  {
+   "w": "projet",
+   "line": "l23",
+   "start": 108.905,
+   "end": 109.205
+  },
+  {
+   "w": "en",
+   "line": "l23",
+   "start": 109.245,
+   "end": 109.325
+  },
+  {
+   "w": "btcs",
+   "line": "l23",
+   "start": 109.405,
+   "end": 110.065
+  },
+  {
+   "w": "contactez-nous",
+   "line": "l24",
+   "start": 110.742,
+   "end": 111.322
+  },
+  {
+   "w": "au",
+   "line": "l24",
+   "start": 111.362,
+   "end": 111.442
+  },
+  {
+   "w": "zéro",
+   "line": "l24",
+   "start": 111.542,
+   "end": 111.742
+  },
+  {
+   "w": "sept",
+   "line": "l24",
+   "start": 111.822,
+   "end": 112.042
+  },
+  {
+   "w": "zéro",
+   "line": "l24",
+   "start": 112.162,
+   "end": 112.362
+  },
+  {
+   "w": "sept",
+   "line": "l24",
+   "start": 112.462,
+   "end": 112.702
+  },
+  {
+   "w": "soixante-trois",
+   "line": "l24",
+   "start": 112.882,
+   "end": 113.482
+  },
+  {
+   "w": "zéro",
+   "line": "l24",
+   "start": 113.642,
+   "end": 113.842
+  },
+  {
+   "w": "trois",
+   "line": "l24",
+   "start": 113.922,
+   "end": 114.082
+  },
+  {
+   "w": "trente-cinq",
+   "line": "l24",
+   "start": 114.122,
+   "end": 114.662
+  },
+  {
+   "w": "abonnez-vous",
+   "line": "l25",
+   "start": 117.092,
+   "end": 117.632
+  },
+  {
+   "w": "et",
+   "line": "l25",
+   "start": 117.672,
+   "end": 117.772
+  },
+  {
+   "w": "activez",
+   "line": "l25",
+   "start": 117.852,
+   "end": 118.152
+  },
+  {
+   "w": "la",
+   "line": "l25",
+   "start": 118.192,
+   "end": 118.252
+  },
+  {
+   "w": "cloche",
+   "line": "l25",
+   "start": 118.312,
+   "end": 118.572
+  },
+  {
+   "w": "pour",
+   "line": "l25",
+   "start": 118.612,
+   "end": 118.712
+  },
+  {
+   "w": "découvrir",
+   "line": "l25",
+   "start": 118.792,
+   "end": 119.192
+  },
+  {
+   "w": "nos",
+   "line": "l25",
+   "start": 119.232,
+   "end": 119.372
+  },
+  {
+   "w": "prochaines",
+   "line": "l25",
+   "start": 119.412,
+   "end": 119.732
+  },
+  {
+   "w": "vidéos",
+   "line": "l25",
+   "start": 119.772,
+   "end": 120.112
+  },
+  {
+   "w": "ol",
+   "line": "l26",
+   "start": 121.277,
+   "end": 121.597
+  },
+  {
+   "w": "international",
+   "line": "l26",
+   "start": 121.657,
+   "end": 122.417
+  },
+  {
+   "w": "construisons",
+   "line": "l27",
+   "start": 122.947,
+   "end": 123.467
+  },
+  {
+   "w": "autrement",
+   "line": "l27",
+   "start": 123.507,
+   "end": 123.947
+  },
+  {
+   "w": "construisons",
+   "line": "l28",
+   "start": 124.454,
+   "end": 124.954
+  },
+  {
+   "w": "durablement",
+   "line": "l28",
+   "start": 125.074,
+   "end": 125.634
+  }
+ ],
+ "captions": [
+  {
+   "text": "Vous voulez construire votre maison ?",
+   "start": 1.6,
+   "end": 3.147
+  },
+  {
+   "text": "BTCS ou parpaing : lequel coûte réellement moins cher ?",
+   "start": 3.7,
+   "end": 7.566
+  },
+  {
+   "text": "Attention !",
+   "start": 10.7,
+   "end": 11.344
+  },
+  {
+   "text": "Le bloc le moins cher à l'achat n'est pas forcément",
+   "start": 11.6,
+   "end": 13.749
+  },
+  {
+   "text": "celui qui permet de construire au meilleur coût.",
+   "start": 13.749,
+   "end": 15.772
+  },
+  {
+   "text": "Il faut regarder l'ensemble des travaux.",
+   "start": 16.3,
+   "end": 18.04
+  },
+  {
+   "text": "Premier avantage : la pose.",
+   "start": 20.4,
+   "end": 22.242
+  },
+  {
+   "text": "Les BTCS autobloquants d'OHEL sont conçus pour s'assembler sans",
+   "start": 22.7,
+   "end": 25.854
+  },
+  {
+   "text": "mortier courant entre les blocs, selon le procédé prévu.",
+   "start": 25.854,
+   "end": 28.657
+  },
+  {
+   "text": "Cela peut réduire les matériaux de pose nécessaires.",
+   "start": 29.4,
+   "end": 31.502
+  },
+  {
+   "text": "Deuxième avantage : le temps.",
+   "start": 33.8,
+   "end": 35.456
+  },
+  {
+   "text": "Grâce à l'assemblage autobloquant,",
+   "start": 36.0,
+   "end": 37.606
+  },
+  {
+   "text": "le montage peut être simplifié et plus rapide,",
+   "start": 37.606,
+   "end": 39.778
+  },
+  {
+   "text": "selon les conditions du chantier.",
+   "start": 39.778,
+   "end": 41.337
+  },
+  {
+   "text": "Troisième avantage : les finitions.",
+   "start": 44.4,
+   "end": 46.367
+  },
+  {
+   "text": "Avec son aspect naturel,",
+   "start": 47.0,
+   "end": 48.2
+  },
+  {
+   "text": "le BTCS peut rester apparent lorsque la conception",
+   "start": 48.2,
+   "end": 50.699
+  },
+  {
+   "text": "et la protection des murs le permettent.",
+   "start": 50.699,
+   "end": 52.698
+  },
+  {
+   "text": "Certains travaux de crépissage peuvent ainsi être évités.",
+   "start": 53.1,
+   "end": 55.542
+  },
+  {
+   "text": "Selon le projet, les BTCS peuvent également être",
+   "start": 58.0,
+   "end": 60.506
+  },
+  {
+   "text": "utilisés en murs porteurs ou en remplissage.",
+   "start": 60.506,
+   "end": 62.804
+  },
+  {
+   "text": "Une étude structurelle permet d'identifier",
+   "start": 63.3,
+   "end": 65.142
+  },
+  {
+   "text": "les solutions les plus adaptées.",
+   "start": 65.142,
+   "end": 66.546
+  },
+  {
+   "text": "Mais alors, combien peut-on réellement économiser ?",
+   "start": 69.4,
+   "end": 72.127
+  },
+  {
+   "text": "Pour le savoir, il faut comparer deux devis complets.",
+   "start": 72.6,
+   "end": 75.219
+  },
+  {
+   "text": "Matériaux, mortier, main-d'œuvre, structure,",
+   "start": 75.8,
+   "end": 78.46
+  },
+  {
+   "text": "finitions et transport : tout compte !",
+   "start": 78.46,
+   "end": 80.758
+  },
+  {
+   "text": "Les économies réelles dépendent de chaque projet.",
+   "start": 81.4,
+   "end": 83.588
+  },
+  {
+   "text": "Le BTCS offre une autre façon d'envisager votre construction,",
+   "start": 86.0,
+   "end": 89.171
+  },
+  {
+   "text": "avec une esthétique naturelle et des",
+   "start": 89.171,
+   "end": 91.043
+  },
+  {
+   "text": "possibilités d'optimisation à étudier.",
+   "start": 91.043,
+   "end": 93.018
+  },
+  {
+   "text": "En Côte d'Ivoire, OHEL INTERNATIONAL est votre spécialiste de",
+   "start": 95.3,
+   "end": 98.144
+  },
+  {
+   "text": "la construction en Blocs de Terre Comprimée Stabilisée.",
+   "start": 98.144,
+   "end": 100.709
+  },
+  {
+   "text": "Vous avez un terrain et un projet de construction ?",
+   "start": 103.0,
+   "end": 104.936
+  },
+  {
+   "text": "Envoyez votre plan à OHEL INTERNATIONAL sur",
+   "start": 105.4,
+   "end": 107.789
+  },
+  {
+   "text": "WhatsApp pour étudier votre projet en BTCS.",
+   "start": 107.789,
+   "end": 110.178
+  },
+  {
+   "text": "Contactez-nous au 07 07 63 03 35.",
+   "start": 110.7,
+   "end": 114.743
+  },
+  {
+   "text": "Abonnez-vous et activez la cloche pour",
+   "start": 117.0,
+   "end": 118.71
+  },
+  {
+   "text": "découvrir nos prochaines vidéos !",
+   "start": 118.71,
+   "end": 120.195
+  },
+  {
+   "text": "OHEL INTERNATIONAL.",
+   "start": 121.2,
+   "end": 122.534
+  },
+  {
+   "text": "Construisons autrement.",
+   "start": 122.9,
+   "end": 124.082
+  },
+  {
+   "text": "Construisons durablement.",
+   "start": 124.4,
+   "end": 125.793
+  }
+ ]
+}
