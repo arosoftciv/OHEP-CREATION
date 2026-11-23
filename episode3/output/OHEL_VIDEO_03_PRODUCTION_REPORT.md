@@ -21,7 +21,7 @@ Le projet Remotion complet (code, configuration, médias, audio, scripts) est da
 | Durée | **136,1 s** (02:16) |
 | Image | 1080 × 1920, 9:16, **30 i/s**, H.264 **High** niveau 4.1, yuv420p, BT.709, GOP 2 s |
 | Audio | **AAC LC**, 48 kHz, stéréo, 192 kb/s |
-| Débit moyen / taille | 3,97 Mb/s · 67,6 Mo (plafond 7 Mb/s) |
+| Débit moyen / taille | 4,02 Mb/s · 68,5 Mo (plafond 7 Mb/s) |
 | Sonie | **−14,0 LUFS** intégrés, crête −1,3 dBFS |
 | Conteneur | MP4, `faststart` (lecture immédiate en ligne), couverture intégrée (`attached_pic`) |
 | Décodage complet | Sans erreur (`ffmpeg -f null`) |
@@ -189,6 +189,15 @@ Captures de contrôle (extraites du MP4 final) dans `output/controle/` :
 - front d'humidité rendu plus contrasté ;
 - sous-titres redécoupés à la ponctuation ;
 - intégration des photos fournies par le client à la place d'images créées : 632882 à 632896 dans les scènes 2 et 6, 632952 dans les scènes de pluie, la couverture et le contact ;
+- **séquence de fabrication resynchronisée mot à mot** (demande client), à partir des instants mesurés par la transcription :
+  - « sélectionnée » → carrière, recadrée sur la chargeuse (632884) ;
+  - « préparée » → tamisage (632882) ;
+  - « stabilisée » → mélange ;
+  - « comprimée pour fabriquer des blocs » → presse réelle ;
+  - « un mélange avec un stabilisant approprié » → mélange en plan rapproché ;
+  - « puis la compression » → presse ;
+  - « la cure et les contrôles » → blocs OHEL empilés.
+  Le rail des étapes et les sons (terre, presse réelle, transitions) suivent ce découpage ;
 - **textes affichés lus par la voix** (demande client) : 14 phrases ajoutées, même voix, insérées sans accélération ;
 - **adresse e-mail contact@ohelintermondial.com** ajoutée à l'écran de contact et au générique final (demande client) ;
 - **logo OHEL blanc en haut à droite** pendant le film (demande client), masqué pendant le générique d'ouverture, sur le plan « véritable bloc » (fond crème) et dès la révélation du logo couleur ;

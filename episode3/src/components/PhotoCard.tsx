@@ -23,7 +23,8 @@ export const PhotoCard: React.FC<{
   position?: string;
   tilt?: number;
   zoom?: [number, number];
-}> = ({src, from, to, top, height, width = 1000, position = '50% 50%', tilt = 6, zoom = [1.04, 1.14]}) => {
+  origin?: string;
+}> = ({src, from, to, top, height, width = 1000, position = '50% 50%', tilt = 6, zoom = [1.04, 1.14], origin = '50% 50%'}) => {
   const f = useCurrentFrame();
   const t = lerp(f, from, to, 0, 1, (x) => x);
   const inP = lerp(f, from, from + 14, 0, 1, easeOut);
@@ -42,7 +43,7 @@ export const PhotoCard: React.FC<{
       >
         <Img
           src={staticFile(src)}
-          style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: position, transform: `scale(${interpolate(t, [0, 1], zoom)})`}}
+          style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: position, transformOrigin: origin, transform: `scale(${interpolate(t, [0, 1], zoom)})`}}
         />
       </div>
     </div>

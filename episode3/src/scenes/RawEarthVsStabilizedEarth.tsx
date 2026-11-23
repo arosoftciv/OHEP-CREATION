@@ -28,10 +28,23 @@ export const RawEarthVsStabilizedEarth: React.FC<{t0: number}> = ({t0}) => {
   const F = (absS: number) => Math.round((warp(absS) - t0) * fps);
   const Fw = (w: number) => Math.round((w - t0) * fps);
   const B0 = F(18.2);
-  // bornes des étapes (absolues)
-  // étapes calées sur la voix : sélection, préparation (script), mélange (phrase ajoutée n2), compression puis cure (n3)
-  const stepT = [F(18.2), F(19.6), F(20.8), Fw(cue('n3').start + 0.2), Fw(cue('n3').start + 1.25), durationInFrames + 30];
-  const step = stepT.findIndex((t, i) => f >= t && f < stepT[i + 1]);
+  // Plans calés MOT À MOT sur la voix (transcription Scribe de la phrase « C'est une terre sélectionnée, préparée,
+  // stabilisée et comprimée pour fabriquer des blocs de construction », placée à warp(18.2) ; décalage brut → film).
+  const w7 = (raw: number) => warp(18.2) + (raw - 12.86);
+  const n3 = cue('n3');
+  const SHOTS: {t: number; step: number; media: 'quarry' | 'sieving' | 'mix' | 'mixClose' | 'press' | 'press2' | 'pile'}[] = [
+    {t: warp(18.2), step: 0, media: 'quarry'}, // « … sélectionnée » (w7(13.48))
+    {t: w7(14.2), step: 1, media: 'sieving'}, // « préparée »
+    {t: w7(14.92), step: 2, media: 'mix'}, // « stabilisée »
+    {t: w7(15.78), step: 3, media: 'press'}, // « comprimée pour fabriquer des blocs de construction »
+    {t: cue('n2').start - 0.1, step: 2, media: 'mixClose'}, // « Un mélange avec un stabilisant approprié »
+    {t: n3.start - 0.08, step: 3, media: 'press2'}, // « Puis la compression, »
+    {t: n3.start + 1.07, step: 4, media: 'pile'}, // « la cure et les contrôles » puis « Un matériau élaboré »
+  ];
+  const shotF = SHOTS.map((x) => Fw(x.t));
+  const cur = Math.max(0, shotF.findIndex((t, i) => f >= t && (i === SHOTS.length - 1 || f < shotF[i + 1])));
+  const step = SHOTS[cur].step;
+  const firstSeen = STEPS.map((_, i) => shotF[SHOTS.findIndex((x) => x.step === i)]);
 
   return (
     <AbsoluteFill style={{background: STUDIO_BG, overflow: 'hidden'}}>
@@ -45,33 +58,43 @@ export const RawEarthVsStabilizedEarth: React.FC<{t0: number}> = ({t0}) => {
       {/* ================= B : fabrication ================= */}
       {f >= B0 ? (
         <AbsoluteFill style={{opacity: lerp(f, B0, B0 + 12)}}>
-          <StepImage on={step === 0} f={f} from={stepT[0]} to={stepT[1]}>
-            <BlurBg src={CONFIG.media.authentic.client.quarry} />
-            <PhotoCard src={CONFIG.media.authentic.client.quarry} from={stepT[0]} to={stepT[1] + 12} top={740} height={480} position="82% 50%" />
-          </StepImage>
-          <StepImage on={step === 1} f={f} from={stepT[1]} to={stepT[2]}>
-            <BlurBg src={CONFIG.media.authentic.client.sieving} />
-            <PhotoCard src={CONFIG.media.authentic.client.sieving} from={stepT[1]} to={stepT[2] + 12} top={740} height={480} position="50% 40%" />
-          </StepImage>
-          <StepImage on={step === 2} f={f} from={stepT[2]} to={stepT[3]}>
-            <KenBurns src={CONFIG.media.generated.mix} from={stepT[2]} to={stepT[3] + 12} s0={1.25} s1={1.38} origin="62% 62%" />
-          </StepImage>
-          <StepImage on={step === 3} f={f} from={stepT[3]} to={stepT[4]}>
-            <Sequence from={stepT[3]} layout="none">
-              <OffthreadVideo src={staticFile(CONFIG.media.authentic.press)} muted startFrom={30} style={{width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.06)'}} />
-            </Sequence>
-          </StepImage>
-          <StepImage on={step >= 4} f={f} from={stepT[4]} to={durationInFrames}>
-            <KenBurns src={CONFIG.media.authentic.blockPile} from={stepT[4]} to={durationInFrames} s0={1.12} s1={1.3} origin="45% 45%" />
-          </StepImage>
+          {SHOTS.map((sh, i) => {
+            const from = shotF[i];
+            const to = i === SHOTS.length - 1 ? durationInFrames : shotF[i + 1];
+            return (
+              <StepImage key={i} on={cur === i} f={f} from={from} to={to}>
+                {sh.media === 'quarry' ? (
+                  <>
+                    <BlurBg src={CONFIG.media.authentic.client.quarry} />
+                    <PhotoCard src={CONFIG.media.authentic.client.quarry} from={from} to={to + 8} top={740} height={480} position="47% 50%" zoom={[1.75, 1.95]} origin="50% 8%" />
+                  </>
+                ) : sh.media === 'sieving' ? (
+                  <>
+                    <BlurBg src={CONFIG.media.authentic.client.sieving} />
+                    <PhotoCard src={CONFIG.media.authentic.client.sieving} from={from} to={to + 8} top={740} height={480} position="50% 40%" />
+                  </>
+                ) : sh.media === 'mix' ? (
+                  <KenBurns src={CONFIG.media.generated.mix} from={from} to={to + 8} s0={1.2} s1={1.3} origin="62% 62%" />
+                ) : sh.media === 'mixClose' ? (
+                  <KenBurns src={CONFIG.media.generated.mix} from={from} to={to + 8} s0={1.45} s1={1.7} origin="58% 70%" />
+                ) : sh.media === 'press' || sh.media === 'press2' ? (
+                  <Sequence from={from} layout="none">
+                    <OffthreadVideo src={staticFile(CONFIG.media.authentic.press)} muted startFrom={sh.media === 'press' ? 30 : 160} style={{width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.06)'}} />
+                  </Sequence>
+                ) : (
+                  <KenBurns src={CONFIG.media.authentic.blockPile} from={from} to={durationInFrames} s0={1.12} s1={1.3} origin="45% 45%" />
+                )}
+              </StepImage>
+            );
+          })}
           <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 34%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%)'}} />
 
           {/* rail des étapes */}
           <div style={{position: 'absolute', left: 60, top: 300, display: 'flex', flexDirection: 'column', gap: 16}}>
             {STEPS.map((s, i) => {
-              const appear = lerp(f, stepT[i] - 8, stepT[i] + 6, 0, 1, easeOut);
-              const active = step === i || (i === 4 && step >= 4);
-              const done = step > i;
+              const appear = lerp(f, firstSeen[i] - 8, firstSeen[i] + 6, 0, 1, easeOut);
+              const active = step === i;
+              const done = !active && f >= firstSeen[i] && i < Math.max(...SHOTS.slice(0, cur + 1).map((x) => x.step));
               return (
                 <div
                   key={s.n}
@@ -119,11 +142,18 @@ export const RawEarthVsStabilizedEarth: React.FC<{t0: number}> = ({t0}) => {
               );
             })}
           </div>
-          {step === 0 || step === 1 ? <Tag key="r" label="OHEL · photos réelles" at={B0 + 4} top={1240} dot={C.green} /> : null}
-          {step === 2 ? <Tag key="i" label="Illustration · geste générique" at={stepT[2]} top={1240} /> : null}
-          {step === 3 ? <Tag label="Images réelles · presse à blocs" at={stepT[3]} top={1240} dot={C.green} /> : null}
-          {step >= 4 ? <Tag label="Blocs BTCS OHEL · photo réelle" at={stepT[4]} top={1240} dot={C.green} /> : null}
-
+          {(() => {
+            const m = SHOTS[cur].media;
+            const [label, real] =
+              m === 'quarry' || m === 'sieving'
+                ? ['OHEL · photos réelles', true]
+                : m === 'mix' || m === 'mixClose'
+                  ? ['Illustration · geste générique', false]
+                  : m === 'pile'
+                    ? ['Blocs BTCS OHEL · photo réelle', true]
+                    : ['Images réelles · presse à blocs', true];
+            return <Tag key={label} label={label} at={shotF[cur] + 2} top={1240} dot={real ? C.green : undefined} />;
+          })()}
           {/* UN MATÉRIAU ÉLABORÉ */}
           <div style={{position: 'absolute', top: 870, left: 40, right: 40}}>
             <SlamText at={Fw(cue('n4').start)} size={92}>
@@ -141,9 +171,9 @@ export const RawEarthVsStabilizedEarth: React.FC<{t0: number}> = ({t0}) => {
 };
 
 const StepImage: React.FC<{on: boolean; f: number; from: number; to: number; children: React.ReactNode}> = ({on, f, from, to, children}) => {
-  if (f < from - 1 || f > to + 12) return null;
-  const o = lerp(f, from, from + 10);
-  return <AbsoluteFill style={{opacity: on ? o : lerp(f, to, to + 12, 1, 0)}}>{children}</AbsoluteFill>;
+  if (f < from - 1 || f > to + 7) return null;
+  const o = lerp(f, from, from + 6);
+  return <AbsoluteFill style={{opacity: on ? o : lerp(f, to, to + 7, 1, 0)}}>{children}</AbsoluteFill>;
 };
 
 const STUDIO_BG = '#0B0B0C';

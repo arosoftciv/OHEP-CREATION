@@ -294,19 +294,28 @@ s2a, s2b = SC['RawEarthVsStabilizedEarth']
 add(whoosh(0.8) * 0.6, s2a - 0.3)
 add(boom(0.6) * 0.45, line('Le BTCS'))
 groove(s2a + 0.2, s2b, [(57, MIN), (53, MAJ), (48, MAJ), (55, MAJ)], drums=0.55, arp=0.9, bass=0.8, pad=0.9)
-add(crunch(0.9, 0.9), 18.3, pan=-0.2)
-add(crunch(1.0, 1.0), 19.7, pan=0.2)
-add(crunch(1.0, 0.7), 20.9)
-for t in (18.2, 19.6, 20.8):
-    add(whoosh(0.5, up=False) * 0.35, t - 0.2)
-for t in (CUE['n3']['start'] + 0.2, CUE['n3']['start'] + 1.25):
-    add_abs(whoosh(0.5, up=False) * 0.35, t - 0.2)
+# plans de fabrication calés mot à mot (mêmes instants que la scène 2)
+W7 = lambda raw: warp(18.2) + (raw - 12.86)
+SH = {'quarry': warp(18.2), 'sieving': W7(14.2), 'mix': W7(14.92), 'press': W7(15.78),
+      'mixClose': CUE['n2']['start'] - 0.1, 'press2': CUE['n3']['start'] - 0.08, 'pile': CUE['n3']['start'] + 1.07}
+for t in SH.values():
+    add_abs(whoosh(0.45, up=False) * 0.3, t - 0.2)
+add_abs(crunch(0.9, 0.8), SH['quarry'] + 0.4, pan=-0.2)  # terre / carrière
+add_abs(crunch(0.7, 1.0), SH['sieving'] + 0.05, pan=0.2)  # tamisage
+add_abs(crunch(0.8, 0.7), SH['mix'] + 0.05)  # mélange
+add_abs(crunch(1.2, 0.6), SH['mixClose'] + 0.3, pan=0.15)
 press = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(ROOT / 'assets/audio/presse_son_reel.wav'), '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
 press = np.frombuffer(press, dtype=np.float32).astype(np.float64)
-seg = press[int(1.0 * SR):int(3.4 * SR)].copy()
-seg = hp(seg, 80) / (np.max(np.abs(seg)) + 1e-9)
-seg *= env(len(seg), 0.08, 0.1, 1, 0.4)
-add_abs(seg * 0.42, CUE['n3']['start'] + 0.2)
+
+
+def press_seg(a, b):
+    x = press[int(a * SR):int(b * SR)].copy()
+    x = hp(x, 80) / (np.max(np.abs(x)) + 1e-9)
+    return x * env(len(x), 0.06, 0.1, 1, 0.3)
+
+
+add_abs(press_seg(1.0, 1.0 + SH['mixClose'] - SH['press']) * 0.42, SH['press'])  # son réel de la presse
+add_abs(press_seg(5.3, 5.3 + SH['pile'] - SH['press2']) * 0.42, SH['press2'])
 add_abs(boom(0.5) * 0.3, CUE['n4']['start'])
 
 # =========================================================== 3 : SOUS LA PLUIE
