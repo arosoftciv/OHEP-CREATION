@@ -79,7 +79,7 @@ const WallCloseUp: React.FC<{f: number; end: number; F: (s: number) => number}> 
     <AbsoluteFill>
       {/* arrière-plan : jardin sous la pluie, très flou */}
       <AbsoluteFill style={{filter: 'blur(26px) brightness(0.55)', transform: 'scale(1.3)'}}>
-        <Img src={staticFile(CONFIG.media.generated.villaRain)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '80% 70%'}} />
+        <Img src={staticFile(CONFIG.media.authentic.client.contactHouse)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '80% 30%', filter: 'saturate(0.6) hue-rotate(-10deg)'}} />
       </AbsoluteFill>
       {/* mur en perspective rasante, travelling avant */}
       <AbsoluteFill style={{perspective: 1300, perspectiveOrigin: '70% 45%'}}>

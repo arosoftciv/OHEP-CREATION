@@ -65,6 +65,7 @@ export const CONFIG = {
       villaAfter: 'generated/villa_apres_pluie.jpg',
       wallRain: 'generated/mur_btcs_pluie.jpg',
       rawEarth: 'generated/terre_brute.jpg',
+      rawEarthCutout: 'generated/terre_brute_detouree.png', // détourage local (scripts/cutout_raw_earth.py)
       prep: 'generated/preparation.jpg', // remplacée par la photo réelle 632882 (conservée pour référence)
       mix: 'generated/melange.jpg',
     },

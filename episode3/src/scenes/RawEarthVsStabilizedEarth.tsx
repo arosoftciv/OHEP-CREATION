@@ -31,7 +31,7 @@ export const RawEarthVsStabilizedEarth: React.FC<{t0: number}> = ({t0}) => {
   const step = stepT.findIndex((t, i) => f >= t && f < stepT[i + 1]);
 
   return (
-    <AbsoluteFill style={{background: '#0B0B0C', overflow: 'hidden'}}>
+    <AbsoluteFill style={{background: STUDIO_BG, overflow: 'hidden'}}>
       {/* ================= A : studio ================= */}
       {f < B0 + 12 ? (
         <AbsoluteFill style={{opacity: lerp(f, B0, B0 + 12, 1, 0)}}>
@@ -143,32 +143,28 @@ const StepImage: React.FC<{on: boolean; f: number; from: number; to: number; chi
   return <AbsoluteFill style={{opacity: on ? o : lerp(f, to, to + 12, 1, 0)}}>{children}</AbsoluteFill>;
 };
 
+const STUDIO_BG = '#0B0B0C';
+
 const StudioCompare: React.FC<{f: number; end: number; F: (s: number) => number}> = ({f, end, F}) => {
   const orbit = lerp(f, 0, end, -1, 1, (t) => t);
   const neq = lerp(f, F(15.6), F(15.6) + 10, 0, 1, easeOut);
   return (
     <AbsoluteFill>
-      {/* lumière de studio */}
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse 80% 45% at 50% 58%, #2A2522 0%, #121111 55%, #070707 100%)'}} />
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse 30% 22% at 50% 52%, rgba(255,230,200,0.10), rgba(0,0,0,0) 70%)'}} />
-      {/* sol réfléchissant */}
-      <div style={{position: 'absolute', left: 0, right: 0, top: 1110, height: 300, background: 'linear-gradient(180deg, rgba(255,255,255,0.05), rgba(0,0,0,0))'}} />
+      {/* fond studio UNIFORME (demande client) : aucun halo, aucune bande de sol */}
+      <AbsoluteFill style={{background: STUDIO_BG}} />
 
-      {/* GAUCHE : terre brute (illustration) */}
+      {/* GAUCHE : terre brute (illustration détourée, posée sur le même fond uniforme) */}
       <div
         style={{
           position: 'absolute',
-          left: 20 + orbit * 26,
-          top: 640,
-          width: 520,
-          height: 520,
+          left: 10 + orbit * 26,
+          top: 760,
+          width: 540,
           transform: `scale(${1 + 0.04 * orbit})`,
-          WebkitMaskImage: 'radial-gradient(ellipse 48% 46% at 50% 54%, #000 55%, transparent 100%)',
-          maskImage: 'radial-gradient(ellipse 48% 46% at 50% 54%, #000 55%, transparent 100%)',
           opacity: lerp(f, 2, 18),
         }}
       >
-        <Img src={staticFile(CONFIG.media.generated.rawEarth)} style={{width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.35)'}} />
+        <Img src={staticFile(CONFIG.media.generated.rawEarthCutout)} style={{width: '100%', display: 'block'}} />
       </div>
       {/* DROITE : véritable bloc OHEL (détourage de la photo réelle 627115) */}
       <div

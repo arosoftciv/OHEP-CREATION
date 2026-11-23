@@ -21,7 +21,7 @@ Le projet Remotion complet (code, configuration, médias, audio, scripts) est da
 | Durée | **115,0 s** (01:55) |
 | Image | 1080 × 1920, 9:16, **30 i/s**, H.264 **High** niveau 4.1, yuv420p, BT.709, GOP 2 s |
 | Audio | **AAC LC**, 48 kHz, stéréo, 192 kb/s |
-| Débit moyen / taille | 4,66 Mb/s · 67,0 Mo (plafond 7 Mb/s) |
+| Débit moyen / taille | 4,19 Mb/s · 60,3 Mo (plafond 7 Mb/s) |
 | Sonie | **−14,2 LUFS** intégrés, crête −1,2 dBFS, LRA 10,3 LU |
 | Conteneur | MP4, `faststart` (lecture immédiate en ligne), couverture intégrée (`attached_pic`) |
 | Décodage complet | Sans erreur (`ffmpeg -f null`) |
@@ -39,7 +39,7 @@ Ces valeurs respectent les spécifications de TikTok, Instagram Reels, Facebook 
 | `626799.jpg`, `626800.jpg`, `626787.mp4` | **Absents** (mêmes recherches) | Remplacés par les médias réels OHEL disponibles : chantier `626894`, vidéo de réalisation `VID-20261120-WA0044` (extraits façade et façade lente), vidéo de presse `VID-20261121-WA0012` |
 
 | **Photos client 632882 → 632896** (13 photos fournies en cours de production pour enrichir la base) | **Ajoutées** dans `assets/authentic/client_632xxx/` (originaux WebP) et `public/authentic/client/` (recadrées sans leurs bandeaux décoratifs dorés ou bleus, agrandies ×2 avec un léger renforcement de netteté, sans autre retouche) | Remplacent des images générées : « sélection de la terre » (632884, équipe en carrière) et « préparation » (632882, tamisage). Enrichissent la scène 6 : pose des blocs (632883), villas (632893), puis une galerie de réalisations (632888, 632890 Toumodi, 632891, 632894) et d'intérieurs aux murs en BTCS apparents (632896, 632895). Les photos 632886, 632887 et 632889 sont prêtes dans `CONFIG.media.authentic.client` pour les prochains épisodes. |
-| **Image client 632952** (maison BTCS, débords, soubassement blanc, abords pavés ; 1121 × 1403) | **Ajoutée** | Fond de l'écran de contact (scène 7). **Origine à confirmer** (photo de réalisation ou rendu) : elle est donc étiquetée prudemment « Image fournie par OHEL ». |
+| **Image client 632952** (maison BTCS, débords, soubassement blanc, abords pavés ; 1121 × 1403) | **Ajoutée, à la demande du client, à la place de la villa générée** | Scènes de pluie 1, 4 et 5, fond flou de la scène 3, couverture, fond du contact (scène 7). La pluie, l'orage et le pavé mouillé sont **simulés dans Remotion**, sans génération (`src/components/StormHouse.tsx`). Mention à l'écran : « Image fournie par OHEL · pluie simulée (illustration) ». **Origine à confirmer** (photo de réalisation ou rendu). |
 
 Les photos 6328xx ont une définition modeste (700 à 800 px de large). Elles sont présentées en « carte » nette, en largeur quasi pleine, sur un fond flou de la même image, plutôt qu'agrandies en plein cadre vertical. Les images du client ne sont jamais utilisées sous une pluie simulée : cela pourrait faire croire à un essai réel.
 
@@ -49,7 +49,7 @@ Les photos 6328xx ont une définition modeste (700 à 800 px de large). Elles so
 
 | Plan | Nature | Mention à l'écran |
 |---|---|---|
-| Villa sous la pluie (scènes 1, 4, 5), couverture | Illustration générée par IA | « Illustration · ne représente pas une réalisation OHEL » / « Illustration architecturale » |
+| Maison sous la pluie (scènes 1, 4, 5), couverture | Image client 632952 + pluie et orage **simulés** (aucun essai réel) | « Image fournie par OHEL · pluie simulée (illustration) » |
 | Terre brute en studio, mélange (scène 2) | Illustration générée par IA, geste générique, aucun dosage | « non stabilisée · illustration » / « Illustration · geste générique » |
 | Sélection de la terre, préparation (scène 2) | **Photos réelles** OHEL 632884, 632882 | « OHEL · photos réelles » |
 | Bloc BTCS en studio (scène 2) | **Photo réelle** OHEL 627115 (détourage) | « photo réelle » |
@@ -74,11 +74,11 @@ Les photos 6328xx ont une définition modeste (700 à 800 px de large). Elles so
 
 | Image | Usage | Contrôle |
 |---|---|---|
-| Villa, ciel nuageux | Scène 1 (début) | Retenue |
-| Villa sous une pluie tropicale (édition de la précédente, même cadrage) | Scènes 1, 3 (fond), 4, 5, couverture | 1ʳᵉ prise **rejetée** : le cadrage avait changé et une cascade débordait de la toiture contre le mur, ce qui contredit le message. 2ᵉ prise retenue, puis **retouche locale** d'un filet d'eau tombant du bord de la gouttière (`scripts/retouch_rain_image.py` : pixels de l'image A au même endroit, couleurs harmonisées ; architecture inchangée) |
-| Villa après la pluie (même cadrage) | Scène 5 | Retenue |
+| Villa, ciel nuageux | — | Générée, puis **remplacée** par l'image client 632952 à la demande du client (fichier conservé, non utilisé) |
+| Villa sous une pluie tropicale (édition de la précédente) | — | 1ʳᵉ prise rejetée (cadrage changé, cascade contre le mur) ; 2ᵉ prise retouchée (`scripts/retouch_rain_image.py`), puis **remplacée** par l'image client 632952 (fichiers conservés, non utilisés) |
+| Villa après la pluie | — | Générée, puis **remplacée** par l'image client 632952 (fichier conservé, non utilisé) |
 | Mur de blocs sous la pluie (avec les photos réelles en référence) | — | **Rejetée** : trous ronds inventés, absents des blocs OHEL. Remplacée par un mur composé des faces photographiques réelles |
-| Terre brute en studio, mélange avec un liant | Scène 2 | Retenues (aucun emballage, aucune marque, aucun logo) |
+| Terre brute en studio, mélange avec un liant | Scène 2 | Retenues (aucun emballage, aucune marque, aucun logo). Terre détourée localement pour un fond uniforme. |
 | Tamisage | — | Générée, puis **remplacée** par la photo réelle 632882 à la demande du client (fichier conservé, non utilisé) |
 
 Aucun logo n'a été demandé dans les prompts. Les images écartées sont conservées dans `assets/generated/rejected/` pour la traçabilité ; elles ne sont pas utilisées.
@@ -88,11 +88,11 @@ Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 8 168 c
 
 | # | Scène (composant) | Temps | Contenu |
 |---|---|---|---|
-| 1 | `RainIntroScene` | 00:00–00:13 | Générique d'ouverture (logo officiel, « Série BTCS · épisode 3 », titre). Travelling avant continu vers la villa. Nuages qui s'assombrissent, vent, premières gouttes, pluie tropicale procédurale sur trois plans, éclaboussures au sol, deux éclairs. Fondu vers la version pluvieuse de la même villa. « UNE MAISON EN TERRE ? » puis « ET QUAND IL PLEUT ? ». |
+| 1 | `RainIntroScene` | 00:00–00:13 | Générique d'ouverture (logo officiel, « Série BTCS · épisode 3 », titre). Travelling avant continu vers la maison en BTCS (image client 632952). Le ciel bleu se couvre (étalonnage d'orage, nuages procéduraux), vent, premières gouttes, pluie tropicale procédurale sur trois plans, pavé qui se mouille avec le reflet de la maison, éclaboussures au sol, deux éclairs. « UNE MAISON EN TERRE ? » puis « ET QUAND IL PLEUT ? », sur la zone pavée. |
 | 2 | `RawEarthVsStabilizedEarth` | 00:13–00:28 | Studio : terre brute face au véritable bloc OHEL, parallaxe circulaire, signe ≠, « BTCS / BLOC DE TERRE COMPRIMÉE STABILISÉE ». Puis les 5 étapes avec rail animé : sélection de la terre (photo réelle, carrière), préparation (photo réelle, tamisage), mélange avec un stabilisant approprié (illustration), compression (vidéo réelle), cure et contrôles (photo réelle). « UN MATÉRIAU ÉLABORÉ ». |
 | 3 | `RainExposureScene` | 00:28–00:41 | Mur en perspective rasante (faces réelles), impacts de gouttes, ruissellement, humidification progressive, « RÉSISTANCE À L'EAU ». Coupe pédagogique : bloc adapté (la surface se mouille, absorption et érosion limitées) contre matériau inadapté ou non protégé (front d'humidité profond, érosion, grains qui se détachent). « STABILISATION + QUALITÉ DE FABRICATION », puces Formulation / Stabilisation / Contrôles qualité. « UN BON MATÉRIAU NE SUFFIT PAS ! ». |
-| 4 | `HouseProtectionCutaway` | 00:41–01:03 | La caméra s'élève au-dessus de la villa, puis passe en coupe architecturale. La toiture devient semi-transparente. Zooms successifs : **A.** soubassement (fondation, rupture de capillarité qui arrête les remontées animées, pied de mur protégé du rejaillissement) ; **B.** toiture (débords, pente et étanchéité, zones abritées) ; **C.** évacuation (gouttière, descente, rejet loin des fondations, abords en pente, flux d'eau animés) ; **D.** murs (protection selon l'exposition ; murs apparents si la conception et les blocs le permettent ; sinon enduit ou traitement adapté, entretien). |
-| 5 | `AfterRainArchitecture` | 01:03–01:15 | La pluie faiblit, le ciel s'éclaircit, travelling latéral. Repères : débords de toiture, descente pluviale, soubassement, drainage. « UNE CONSTRUCTION DURABLE SE CONÇOIT. », puis « FABRICATION + CONCEPTION + MISE EN ŒUVRE » calé mot à mot sur la voix. |
+| 4 | `HouseProtectionCutaway` | 00:41–01:03 | La caméra s'élève au-dessus de la maison sous la pluie (632952), puis passe en coupe architecturale. La toiture devient semi-transparente. Zooms successifs : **A.** soubassement (fondation, rupture de capillarité qui arrête les remontées animées, pied de mur protégé du rejaillissement) ; **B.** toiture (débords, pente et étanchéité, zones abritées) ; **C.** évacuation (gouttière, descente, rejet loin des fondations, abords en pente, flux d'eau animés) ; **D.** murs (protection selon l'exposition ; murs apparents si la conception et les blocs le permettent ; sinon enduit ou traitement adapté, entretien). |
+| 5 | `AfterRainArchitecture` | 01:03–01:15 | La pluie faiblit, l'orage se dissipe jusqu'à la photo d'origine ensoleillée (632952), le pavé reste un temps mouillé, travelling latéral. Repères : débords de toiture, murs en BTCS apparents, soubassement, abords pavés. « UNE CONSTRUCTION DURABLE SE CONÇOIT. », puis « FABRICATION + CONCEPTION + MISE EN ŒUVRE » calé mot à mot sur la voix. |
 | 6 | `OhelRealProjects` | 01:15–01:31 | Médias réels uniquement : véritable bloc OHEL, pose des blocs sur chantier (« DES BLOCS ADAPTÉS, BIEN MIS EN ŒUVRE »), villas réalisées (« DES BÂTIMENTS DURABLES »), construction réelle en vidéo, puis galerie de 6 réalisations et intérieurs. Volets, zooms, cartes en rotation 2,5D, fondus. Logo officiel, « OHEL INTERNATIONAL / SPÉCIALISTE DE LA CONSTRUCTION EN BTCS / EN CÔTE D'IVOIRE ». |
 | 7 | `OhelContactScene` | 01:31–01:41 | Image client 632952 en fond (maison BTCS : débords, soubassement, abords pavés), logo officiel. « VOUS AVEZ UN PROJET DE CONSTRUCTION ? », « FAITES APPEL À UN SPÉCIALISTE DU BTCS », « CONTACTEZ OHEL INTERNATIONAL », **+225 07 07 63 03 35** (groupes de chiffres surlignés au moment où la voix les prononce), appel ou WhatsApp (wa.me/2250707630335), ohelintermondial.com. Numéro à l'écran pendant 6 s ici, puis en bandeau permanent jusqu'à la fin (≈ 20 s au total). |
 | 8 | `OhelBrandEndCard` (réutilisable) | 01:41–01:55 | « ABONNEZ-VOUS ! » (bouton, main, clic illustratif), cloche animée avec son discret, « ACTIVEZ LA CLOCHE », « POUR NE RIEN MANQUER ! ». Signature : logo, « OHEL INTERNATIONAL », « SPÉCIALISTE DE LA CONSTRUCTION EN BTCS », « CONSTRUISONS AUTREMENT. / CONSTRUISONS DURABLEMENT. », « ABONNEZ-VOUS ET ACTIVEZ LA CLOCHE », bandeau « CONTACTEZ-NOUS AU 07 07 63 03 35 ». |
@@ -127,16 +127,16 @@ Coût des images : 8 générations, 6 571 crédits. **Total ElevenLabs : 8 168 c
 
 | # | Point de contrôle | Résultat |
 |---|---|---|
-| 1 | Scènes ultra-réalistes | ✅ Villa, ciel et jardin photoréalistes (Seedream 5 Pro 2K), médias réels OHEL, grain et vignettage cinéma. Les schémas techniques sont volontairement pédagogiques (autorisé par le brief). |
+| 1 | Scènes ultra-réalistes | ✅ Maison réelle (image client 632952) sous une pluie simulée, terre et mélange photoréalistes (Seedream 5 Pro 2K), médias réels OHEL, grain et vignettage cinéma. Les schémas techniques sont volontairement pédagogiques (autorisé par le brief). |
 | 2 | Ciel et pluie crédibles | ✅ Vrais nuages d'orage, pluie procédurale sur trois plans de profondeur, éclaboussures, impacts, brume, éclairs |
-| 3 | Constructions modernes | ✅ Villa contemporaine : baies vitrées, débords, soubassement, gouttières |
+| 3 | Constructions modernes | ✅ Maison contemporaine en BTCS : débords, soubassement surélevé, abords pavés (632952) ; réalisations OHEL réelles en scène 6 |
 | 4 | Blocs conformes aux références OHEL | ✅ Photos réelles 627115 et 627007 uniquement (rainure, encoche, teinte ocre, texture). L'image IA de mur, qui avait des trous inventés, a été rejetée. |
 | 5 | Stabilisation correctement présentée | ✅ « peut améliorer la résistance à l'eau et à l'érosion », sans dosage |
 | 6 | BTCS jamais « totalement imperméable » | ✅ Même le bloc adapté montre une surface qui se mouille |
 | 7 | Risques liés à l'humidité visibles | ✅ Coupe « matériau inadapté ou non protégé » : absorption, érosion |
 | 8 | Soubassements correctement représentés | ✅ Fondation, soubassement en béton, rupture de capillarité « si nécessaire », rejaillissement reçu par le soubassement |
 | 9 | Toitures techniquement plausibles | ✅ Pente unique vers la gouttière, débords des deux côtés, étanchéité « adaptée », égouttement loin du mur |
-| 10 | Évacuation des eaux cohérente | ✅ Toiture → gouttière → descente → dalle de réception → rejet loin des fondations, abords en pente. Le débordement de gouttière de l'image IA a été retouché. |
+| 10 | Évacuation des eaux cohérente | ✅ Coupe de principe (scène 4) : toiture → gouttière → descente → dalle de réception → rejet loin des fondations, abords en pente. Sur l'image 632952, aucune descente n'est visible : la scène 5 ne la signale donc pas (repères limités à ce qui est réellement visible). |
 | 11 | Protections de façade bien expliquées | ✅ Protection selon l'exposition ; murs apparents si la conception et les blocs le permettent ; sinon enduit ou traitement adapté ; entretien |
 | 12 | Aucun résultat d'essai inventé | ✅ Aucun chiffre ni essai ; mentions « Illustration du principe · aucune valeur mesurée » |
 | 13 | Réalisations OHEL authentiques | ✅ Scène 6 : médias réels uniquement (dont les photos client), étiquetés ; fond du contact : image client 632952 (origine à confirmer, étiquetée « Image fournie par OHEL ») |
@@ -174,7 +174,8 @@ Captures de contrôle (extraites du MP4 final) dans `output/controle/` :
 - étiquettes de la vue D agrandies et recadrées ;
 - front d'humidité rendu plus contrasté ;
 - sous-titres redécoupés à la ponctuation ;
-- intégration des photos fournies par le client à la place d'images créées : 632882 à 632896 dans les scènes 2 et 6, 632952 en fond du contact.
+- intégration des photos fournies par le client à la place d'images créées : 632882 à 632896 dans les scènes 2 et 6, 632952 dans les scènes de pluie, la couverture et le contact ;
+- **fond uniforme** du studio « terre brute ≠ bloc BTCS » (demande client) : halo et bande de sol supprimés, terre détourée localement par sa couleur (`scripts/cutout_raw_earth.py`) et posée sur un noir uni.
 
 
 ## 11. Points à fournir par OHEL (facultatif)

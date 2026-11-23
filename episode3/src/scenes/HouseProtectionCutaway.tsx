@@ -3,6 +3,8 @@ import {AbsoluteFill, Img, random, staticFile, useCurrentFrame, useVideoConfig} 
 import {C, FONT} from '../theme';
 import {CONFIG} from '../config';
 import {Banner, easeOut, Grain, lerp, SlamText, Tag, Vignette} from '../components/ui';
+import {StormHouse} from '../components/StormHouse';
+import {Rain} from '../fx/Rain';
 
 /**
  * SCÈNE 4 — « Le secret d'une maison durable »
@@ -85,12 +87,13 @@ export const HouseProtectionCutaway: React.FC<{t0: number}> = ({t0}) => {
         <AbsoluteFill style={{opacity: 1 - sectionIn}}>
           <AbsoluteFill
             style={{
-              transform: `translateY(${lerp(f, 0, F(42.9), 0, 520)}px) scale(${lerp(f, 0, F(42.9), 1.15, 1.55)})`,
-              transformOrigin: '50% 60%',
+              transform: `translateY(${lerp(f, 0, F(42.9), 0, 300)}px) scale(${lerp(f, 0, F(42.9), 1.15, 1.55)})`,
+              transformOrigin: '50% 30%',
               filter: `blur(${lerp(f, F(41.8), F(42.9), 0, 8)}px)`,
             }}
           >
-            <Img src={staticFile(CONFIG.media.generated.villaRain)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+            <StormHouse storm={1} wet={1} />
+            <Rain intensity={0.8} wind={0.15} seed="s4" />
           </AbsoluteFill>
         </AbsoluteFill>
       ) : null}
